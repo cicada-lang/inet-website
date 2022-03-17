@@ -1,14 +1,22 @@
-- setup website project -- `inet-website`
+- setup vue pure frontend project
+- setup tailwind
+- setup vercel -- `inet.cicada-lang.org`
 
-- setup website to render inet online
+- import `@cicada-lang/inet`
 
-  - `inet.cicada-lang.org/playground`
+# homepage
 
-    - try atomic design
+- try atomic design
 
-      https://bradfrost.com/blog/post/atomic-web-design/
+  https://bradfrost.com/blog/post/atomic-web-design/
 
-    - encode code in the url -- like ts playground
+# playground
+
+- `inet.cicada-lang.org/playground`
+
+  - encode code in the url -- like ts playground
+
+# readonlylink
 
 - link to playground from readonlylink code block
 
