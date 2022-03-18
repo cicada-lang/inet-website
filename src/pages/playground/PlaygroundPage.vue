@@ -1,8 +1,12 @@
 <template>
   <PlaygroundLayout>
     <div class="h-full flex">
-      <div class="w-7/12">CodeEditor</div>
-      <div class="w-5/12 border-l">NetViewer</div>
+      <div class="px-3 py-2 w-7/12">
+        CodeEditor
+      </div>
+      <div class="px-3 py-2 w-5/12 border-l-2 border-rose-300">
+        NetViewer
+      </div>
     </div>
   </PlaygroundLayout>
 </template>
