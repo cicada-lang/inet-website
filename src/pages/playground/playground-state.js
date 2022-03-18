@@ -25,6 +25,7 @@ export class PlaygroundState {
     }
     render() {
         return __awaiter(this, void 0, void 0, function* () {
+            delete this.error;
             try {
                 const url = new URL(window.location.href);
                 const mod = new Module(url);

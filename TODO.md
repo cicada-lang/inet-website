@@ -1,9 +1,13 @@
-- `PageLayout` vs `PlaygroundLayout`
 - `PlaygroundHeader` has `PlaygroundToolbar`
-- `PlaygroundToolbar` -- RUN button
+
+- [refactor] `PlaygroundState`
+
+- `PlaygroundState` -- delay net rendering
 
 - `NetViewer` -- initial and finial for each net
 - `NetViewer` -- handle error
+- `NetViewer` -- has tabs for each net
+
 - `PlaygroundPage` -- run inet code and render can generate svg
 - `PlaygroundPage` -- encode code in the url
 

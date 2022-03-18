@@ -10,6 +10,8 @@ export class PlaygroundState {
   error?: unknown
 
   async render(): Promise<void> {
+    delete this.error
+
     try {
       const url = new URL(window.location.href)
       const mod = new Module(url)

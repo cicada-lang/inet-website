@@ -1,5 +1,5 @@
 <template>
-  <PlaygroundLayout>
+  <PageLayout>
     <div class="flex h-full">
       <div class="w-7/12">
         <CodeEditor :state="state" />
@@ -11,7 +11,7 @@
         <NetViewer :state="state" />
       </div>
     </div>
-  </PlaygroundLayout>
+  </PageLayout>
 </template>
 
 <script setup>
@@ -20,7 +20,7 @@ import { PlaygroundState as State } from "./playground-state"
 
 import CodeEditor from "../../components/molecules/CodeEditor.vue"
 import NetViewer from "../../components/molecules/NetViewer.vue"
-import PlaygroundLayout from "./PlaygroundLayout.vue"
+import PageLayout from "../../components/layouts/page-layout/PageLayout.vue"
 
 const state = reactive(new State())
 

@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center justify-between">
-    <PlaygroundLogo />
+    <PageLogo />
     <a href="https://github.com/cicada-lang/inet" target="_blank">
       <IconGithub class="h-5 w-5" />
     </a>
@@ -8,6 +8,6 @@
 </template>
 
 <script setup>
-import PlaygroundLogo from "./PlaygroundLogo.vue"
-import IconGithub from "../../components/icons/IconGithub.vue"
+import IconGithub from "../../../components/icons/IconGithub.vue"
+import PageLogo from "./PageLogo.vue"
 </script>
