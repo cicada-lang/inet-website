@@ -1,4 +1,3 @@
-- playground watch route change
 - playground title link to playground
 - `PlaygroundToolbar` -- `SHARE` button
 - fix the use of wasm

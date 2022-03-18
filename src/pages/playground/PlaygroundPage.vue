@@ -16,7 +16,7 @@
 
 <script setup>
 import { watch, reactive, onMounted, onErrorCaptured } from "vue"
-import { useRouter } from "vue-router"
+import { useRouter, useRoute } from "vue-router"
 import { PlaygroundState as State } from "./playground-state"
 import debounce from "lodash/debounce"
 import { Base64 } from "js-base64"
@@ -27,6 +27,7 @@ import PlaygroundOutput from "./PlaygroundOutput.vue"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
 
 const router = useRouter()
+const route = useRoute()
 
 const props = defineProps({
   encoded: String,
@@ -39,11 +40,13 @@ onErrorCaptured((error, component, info) => {
   return false
 })
 
-onMounted(() => {
-  if (props.encoded) {
-    state.text = Base64.decode(props.encoded)
-  }
-})
+watch(
+  route,
+  () => {
+    state.text = Base64.decode(route.params.encoded)
+  },
+  { immediate: true }
+)
 
 watch(
   () => state.text,

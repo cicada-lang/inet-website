@@ -71,6 +71,9 @@ watch(
 )
 
 async function render() {
+  initial.value = ""
+  finial.value = ""
+
   if (props.state.name) {
     const net = props.state.mod.buildNet(props.state.name)
     initial.value = await renderer.render(net)
