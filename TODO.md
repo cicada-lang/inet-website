@@ -1,3 +1,6 @@
+- `playground` -- layout
+- `playground` -- code-editor
+- `playground` -- net-viewer
 - `playground` -- encode code in the url
   - like ts playground https://www.typescriptlang.org/play
 - link to playground from readonlylink code block
