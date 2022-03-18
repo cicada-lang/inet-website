@@ -1,3 +1,4 @@
+- `PlaygroundToolbar` -- `SHARE` button
 - fix the use of wasm
 
 # readonlylink
