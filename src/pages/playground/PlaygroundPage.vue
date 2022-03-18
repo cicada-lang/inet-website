@@ -2,11 +2,11 @@
   <PageLayout>
     <div class="flex h-full flex-col">
       <PlaygroundHeader :state="state" />
-      <div class="flex h-full overflow-y-auto">
-        <div class="w-7/12">
+      <div class="flex h-full flex-col overflow-y-auto md:flex-row">
+        <div class="min-h-[50%] md:w-6/12">
           <PlaygroundEditor :state="state" />
         </div>
-        <div class="w-6/12 border-l border-rose-300">
+        <div class="border-l border-rose-300 md:w-6/12">
           <PlaygroundOutput :state="state" />
         </div>
       </div>

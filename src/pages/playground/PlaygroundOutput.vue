@@ -1,8 +1,10 @@
 <template>
   <div class="h-full w-full overflow-y-auto">
-    <div v-if="state.error" class="h-full w-full overflow-y-auto px-3 py-2">
-      <div class="pb-2 text-xl font-bold">{{ state.error.kind }}</div>
-      <pre class="text-base" v-html="state.error.message"></pre>
+    <div v-if="state.error" class="h-full w-full overflow-y-auto">
+      <div class="bg-rose-400 px-3 py-1 text-xl font-bold text-white">
+        {{ state.error.kind }}
+      </div>
+      <pre class="px-3 py-2 text-base" v-html="state.error.message"></pre>
     </div>
 
     <div
