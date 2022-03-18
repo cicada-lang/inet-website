@@ -1,6 +1,6 @@
 <template>
   <PlaygroundLayout>
-    <div>Playground</div>
+    <div class="h-full">Playground</div>
   </PlaygroundLayout>
 </template>
 

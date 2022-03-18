@@ -18,6 +18,7 @@ module.exports = {
         "monospace",
       ],
       logo: ["Bodoni Moda", "Source Han Serif SC", "serif"],
+      cute: ["Kodchasan", "LXGW WenKai", "serif"],
     },
     extend: {
       colors: {

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <PlaygroundHeader />
+  <div class="h-screen flex flex-col text-xl">
+    <PlaygroundHeader class="p-2 bg-rose-500 text-white" />
     <slot />
     <PlaygroundFooter />
   </div>

@@ -1,8 +1,8 @@
+- `PlaygroundHeader` -- link to github
 - `PlaygroundLayout`
-- `PlaygroundHeader`
-- `PlaygroundFooter`
 
-- `playground` -- code-editor
+
+- `CodeEditor`
 - `playground` -- net-viewer
 - `playground` -- encode code in the url
   - like ts playground https://www.typescriptlang.org/play
