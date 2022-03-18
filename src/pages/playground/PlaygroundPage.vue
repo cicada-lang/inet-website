@@ -6,7 +6,7 @@
         <div class="w-7/12">
           <PlaygroundEditor :state="state" />
         </div>
-        <div class="w-6/12 border-l-2 border-rose-300">
+        <div class="w-6/12 border-l border-rose-300">
           <PlaygroundOutput :state="state" />
         </div>
       </div>

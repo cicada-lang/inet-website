@@ -1,3 +1,5 @@
+- logo link to homepage
+- playground title link to playground
 - `PlaygroundToolbar` -- `SHARE` button
 - fix the use of wasm
 
