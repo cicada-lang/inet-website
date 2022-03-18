@@ -17,7 +17,7 @@ export class PlaygroundState {
             writable: true,
             value: void 0
         });
-        Object.defineProperty(this, "name", {
+        Object.defineProperty(this, "_name", {
             enumerable: true,
             configurable: true,
             writable: true,
@@ -34,12 +34,22 @@ export class PlaygroundState {
     get names() {
         return this.mod.allNetNames();
     }
+    get name() {
+        if (this._name && this.names.includes(this._name)) {
+            return this._name;
+        }
+        else {
+            return this.names[0];
+        }
+    }
+    set name(name) {
+        this._name = name;
+    }
     refresh() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 delete this.error;
                 this.mod = load(this.text);
-                this.name = this.name || this.names[0];
             }
             catch (error) {
                 if (!(error instanceof Error))

@@ -40,8 +40,6 @@ const initial = ref()
 watch(
   () => props.state.name,
   async () => {
-    console.log(props.state.name)
-
     if (props.state.name) {
       const net = props.state.mod.buildNet(props.state.name)
       initial.value = await renderer.render(net)

@@ -8,7 +8,7 @@ import { ParsingError } from "@cicada-lang/sexp/lib/errors"
 export class PlaygroundState {
   text = ""
   mod: Module
-  name?: string
+  _name?: string
   error?: {
     kind: string
     message: string
@@ -22,11 +22,22 @@ export class PlaygroundState {
     return this.mod.allNetNames()
   }
 
+  get name(): string | undefined {
+    if (this._name && this.names.includes(this._name)) {
+      return this._name
+    } else {
+      return this.names[0]
+    }
+  }
+
+  set name(name: string | undefined) {
+    this._name = name
+  }
+
   async refresh(): Promise<void> {
     try {
       delete this.error
       this.mod = load(this.text)
-      this.name = this.name || this.names[0]
     } catch (error) {
       if (!(error instanceof Error)) throw error
       if (error instanceof ParsingError) {
