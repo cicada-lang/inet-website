@@ -1,3 +1,5 @@
+- fix the use of wasm
+
 # readonlylink
 
 - docs on readonlylink
