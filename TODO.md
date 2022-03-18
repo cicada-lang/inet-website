@@ -1,6 +1,3 @@
-- `playground` -- PlaygroundHeader
-- `playground` -- PlaygroundFooter
-
 - `PlaygroundLayout`
 - `PlaygroundHeader`
 - `PlaygroundFooter`
