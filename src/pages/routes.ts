@@ -4,6 +4,6 @@ export const routes: Array<RouteRecordRaw> = [
   { path: "/", redirect: "/playground" },
   {
     path: "/playground",
-    component: () => import("./playground/Playground.vue"),
+    component: () => import("./playground/PlaygroundPage.vue"),
   },
 ]

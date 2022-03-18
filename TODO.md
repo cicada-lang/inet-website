@@ -1,4 +1,10 @@
-- `playground` -- layout
+- `playground` -- PlaygroundHeader
+- `playground` -- PlaygroundFooter
+
+- `PlaygroundLayout`
+- `PlaygroundHeader`
+- `PlaygroundFooter`
+
 - `playground` -- code-editor
 - `playground` -- net-viewer
 - `playground` -- encode code in the url
