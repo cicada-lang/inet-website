@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <div class="flex flex-col h-full">
+    <div class="flex h-full flex-col">
       <PlaygroundHeader />
       <div class="flex h-full overflow-y-auto">
         <div class="w-7/12">
@@ -17,6 +17,7 @@
 <script setup>
 import { watch, reactive, ref } from "vue"
 import { PlaygroundState as State } from "./playground-state"
+import debounce from "lodash/debounce"
 
 import CodeEditor from "../../components/molecules/CodeEditor.vue"
 import NetViewer from "../../components/molecules/NetViewer.vue"
@@ -27,9 +28,9 @@ const state = reactive(new State())
 
 watch(
   () => state.text,
-  async () => {
+  debounce(async () => {
     await state.render()
-  },
+  }, 300),
   { immediate: true }
 )
 </script>
