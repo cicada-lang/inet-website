@@ -49,7 +49,7 @@ watch(
   debounce(async () => {
     await state.refresh()
     router.replace({
-      path: `/playground/${Base64.encode(state.text)}`,
+      path: `/playground/${Base64.encodeURI(state.text)}`,
     })
   }, 300),
   { immediate: true }
