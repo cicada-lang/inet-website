@@ -7,7 +7,23 @@
 </template>
 
 <script setup>
-function share() {
-  //
+import { useRoute } from "vue-router"
+
+import { PlaygroundState as State } from "./playground-state"
+
+const route = useRoute()
+
+const props = defineProps({
+  state: State,
+})
+
+async function share() {
+  try {
+    const url = window.location.href
+    await navigator.clipboard.writeText(url)
+    window.alert(`URL copied to clipboard!`)
+  } catch (error) {
+    window.alert(error.message)
+  }
 }
 </script>

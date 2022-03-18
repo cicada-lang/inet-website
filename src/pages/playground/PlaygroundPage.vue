@@ -1,7 +1,7 @@
 <template>
   <PageLayout>
     <div class="flex h-full flex-col">
-      <PlaygroundHeader />
+      <PlaygroundHeader :state="state" />
       <div class="flex h-full overflow-y-auto">
         <div class="w-7/12">
           <PlaygroundEditor :state="state" />
