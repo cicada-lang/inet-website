@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap items-baseline">
-    <div class="font-cute text-3xl font-bold pr-2">INet</div>
+    <div class="pr-2 font-cute text-3xl font-bold">INet</div>
     <div class="font-cute text-xl font-semibold">(interaction-nets)</div>
   </div>
 </template>

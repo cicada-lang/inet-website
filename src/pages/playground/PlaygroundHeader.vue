@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between items-center">
+  <div class="flex items-center justify-between">
     <PlaygroundLogo />
     <a href="https://github.com/cicada-lang/inet" target="_blank">
       <IconGithub class="h-5 w-5" />

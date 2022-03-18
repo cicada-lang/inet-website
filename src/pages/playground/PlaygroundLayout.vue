@@ -1,6 +1,6 @@
 <template>
-  <div class="h-screen flex flex-col text-xl">
-    <PlaygroundHeader class="px-3 py-2 bg-rose-500 text-white" />
+  <div class="flex h-screen flex-col text-xl">
+    <PlaygroundHeader class="bg-rose-500 px-3 py-2 text-white" />
     <div class="h-full">
       <slot />
     </div>

@@ -1,5 +1,7 @@
-- `CodeEditor`
-- `NetViewer`
+- `PlaygroundPage` -- run inet code and render can generate svg
+
+- `NetViewer` -- take svg
+
 - `PlaygroundPage` -- encode code in the url
 
 # readonlylink
