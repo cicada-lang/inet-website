@@ -4,7 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "watch": "tsc --watch",
+    "format": "prettier src --write"
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -12,6 +18,9 @@
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
+    "prettier": "^2.6.0",
+    "prettier-plugin-organize-imports": "^2.3.4",
+    "prettier-plugin-tailwindcss": "^0.1.8",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",

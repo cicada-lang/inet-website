@@ -1,4 +1,3 @@
-- setup typescript for .ts but not .vue
 - setup tailwind
 - setup vercel -- `inet.cicada-lang.org`
 
