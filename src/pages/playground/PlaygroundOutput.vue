@@ -22,21 +22,21 @@
       </div>
 
       <div class="flex h-full flex-wrap overflow-x-auto overflow-y-auto">
-        <div class="px-2 py-2">
+        <div v-if="initial" class="px-2 py-2">
           <div
             class="max-w-max rounded bg-rose-100 px-2 py-1 font-cute text-base text-rose-900"
           >
             initial
           </div>
-          <div v-if="initial" v-html="initial"></div>
+          <div v-html="initial"></div>
         </div>
-        <div class="px-2 py-2">
+        <div v-if="finial" class="px-2 py-2">
           <div
             class="max-w-max rounded bg-rose-100 px-2 py-1 font-cute text-base text-rose-900"
           >
             finial
           </div>
-          <div v-if="finial" v-html="finial"></div>
+          <div v-html="finial"></div>
         </div>
       </div>
     </div>
