@@ -1,5 +1,3 @@
-- `atoms/label`
-
 - `PlaygroundPage` -- encode code in the url
 
 # readonlylink
