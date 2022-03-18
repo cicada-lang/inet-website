@@ -4,7 +4,7 @@
       <PlaygroundHeader />
       <div class="flex h-full overflow-y-auto">
         <div class="w-7/12">
-          <CodeEditor :state="state" />
+          <PlaygroundEditor :state="state" />
         </div>
         <div class="w-6/12 border-l-2 border-rose-300">
           <PlaygroundOutput :state="state" />
@@ -15,16 +15,21 @@
 </template>
 
 <script setup>
-import { watch, reactive, ref } from "vue"
+import { watch, reactive, onMounted } from "vue"
 import { PlaygroundState as State } from "./playground-state"
 import debounce from "lodash/debounce"
 
-import CodeEditor from "../../components/molecules/CodeEditor.vue"
+
 import PageLayout from "../../components/layouts/page-layout/PageLayout.vue"
 import PlaygroundHeader from "./PlaygroundHeader.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
+import PlaygroundEditor from "./PlaygroundEditor.vue"
 
 const state = reactive(new State())
+
+onMounted(() => {
+  //
+})
 
 watch(
   () => state.text,

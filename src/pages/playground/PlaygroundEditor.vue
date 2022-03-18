@@ -9,14 +9,9 @@
 </template>
 
 <script setup>
-import ty from "@xieyuheng/ty"
-import { createProps } from "../../utilities/create-props"
+import { PlaygroundState as State } from "./playground-state"
 
-defineProps(
-  createProps({
-    state: ty.object({
-      text: ty.string(),
-    }),
-  })
-)
+defineProps({
+  state: State,
+})
 </script>
