@@ -1,5 +1,3 @@
-- favicon.ico
-
 # homepage
 
 - try atomic design

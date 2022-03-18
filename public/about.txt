@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Kodchasan
+- Font Author: Copyright 2018 The Kodchasan Project Authors (https://github.com/cadsondemak/Kodchasan)
+- Font Source: http://fonts.gstatic.com/s/kodchasan/v14/1cX0aUPOAJv9sG4I-DJeM1Sggeqo3eMeoA.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
