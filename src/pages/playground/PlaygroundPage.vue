@@ -7,7 +7,16 @@
           <CodeEditor :state="state" />
         </div>
         <div class="w-6/12 border-l-2 border-rose-300">
-          <NetViewer :state="state" />
+          <div class="flex space-x-2">
+            <button
+              v-for="name in state.names"
+              :key="name"
+              @click="state.render(state.load(), name)"
+            >
+              {{ name }}
+            </button>
+          </div>
+          <PlaygroundOutput :state="state" />
         </div>
       </div>
     </div>
@@ -20,16 +29,16 @@ import { PlaygroundState as State } from "./playground-state"
 import debounce from "lodash/debounce"
 
 import CodeEditor from "../../components/molecules/CodeEditor.vue"
-import NetViewer from "../../components/molecules/NetViewer.vue"
 import PageLayout from "../../components/layouts/page-layout/PageLayout.vue"
 import PlaygroundHeader from "./PlaygroundHeader.vue"
+import PlaygroundOutput from "./PlaygroundOutput.vue"
 
 const state = reactive(new State())
 
 watch(
   () => state.text,
   debounce(async () => {
-    await state.render()
+    await state.render(state.load(), "two")
   }, 300),
   { immediate: true }
 )

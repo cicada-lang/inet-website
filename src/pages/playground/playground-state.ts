@@ -1,19 +1,22 @@
 import { Module } from "@cicada-lang/inet/lib/lang/module"
 import { Net } from "@cicada-lang/inet/lib/lang/net"
+import { Node } from "@cicada-lang/inet/lib/lang/node"
 import { parseStmts } from "@cicada-lang/inet/lib/lang/parser"
 import { NetRenderer } from "@cicada-lang/inet/lib/renderers/net-renderer"
 import { ParsingError } from "@cicada-lang/sexp/lib/errors"
 
 export class PlaygroundState {
   text = ""
-  renderer = new NetRenderer()
-  nets: Record<string, string> = {}
+  name?: string
+  names: Array<string> = []
+  net?: Net
   error?: {
     kind: string
     message: string
   }
 
   load(): Module {
+    Node.counter = 0
     const url = new URL(window.location.href)
     const mod = new Module(url)
     const stmts = parseStmts(this.text)
@@ -21,19 +24,16 @@ export class PlaygroundState {
       stmt.execute(mod)
     }
 
+    this.names = mod.allNetNames()
     return mod
   }
 
-  async render(): Promise<void> {
+  async render(mod: Module, name: string): Promise<void> {
+    this.name = name
     delete this.error
 
     try {
-      const mod = this.load()
-
-      for (const name of mod.allNetNames()) {
-        const net = mod.buildNet(name)
-        this.nets[name] = await this.renderer.render(net)
-      }
+      this.net = mod.buildNet(name)
     } catch (error) {
       if (!(error instanceof Error)) throw error
       if (error instanceof ParsingError) {

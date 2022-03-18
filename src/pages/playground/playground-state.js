@@ -1,7 +1,7 @@
 import { __awaiter } from "tslib";
 import { Module } from "@cicada-lang/inet/lib/lang/module";
+import { Node } from "@cicada-lang/inet/lib/lang/node";
 import { parseStmts } from "@cicada-lang/inet/lib/lang/parser";
-import { NetRenderer } from "@cicada-lang/inet/lib/renderers/net-renderer";
 import { ParsingError } from "@cicada-lang/sexp/lib/errors";
 export class PlaygroundState {
     constructor() {
@@ -11,17 +11,23 @@ export class PlaygroundState {
             writable: true,
             value: ""
         });
-        Object.defineProperty(this, "renderer", {
+        Object.defineProperty(this, "name", {
             enumerable: true,
             configurable: true,
             writable: true,
-            value: new NetRenderer()
+            value: void 0
         });
-        Object.defineProperty(this, "nets", {
+        Object.defineProperty(this, "names", {
             enumerable: true,
             configurable: true,
             writable: true,
-            value: {}
+            value: []
+        });
+        Object.defineProperty(this, "net", {
+            enumerable: true,
+            configurable: true,
+            writable: true,
+            value: void 0
         });
         Object.defineProperty(this, "error", {
             enumerable: true,
@@ -31,23 +37,22 @@ export class PlaygroundState {
         });
     }
     load() {
+        Node.counter = 0;
         const url = new URL(window.location.href);
         const mod = new Module(url);
         const stmts = parseStmts(this.text);
         for (const stmt of stmts) {
             stmt.execute(mod);
         }
+        this.names = mod.allNetNames();
         return mod;
     }
-    render() {
+    render(mod, name) {
         return __awaiter(this, void 0, void 0, function* () {
+            this.name = name;
             delete this.error;
             try {
-                const mod = this.load();
-                for (const name of mod.allNetNames()) {
-                    const net = mod.buildNet(name);
-                    this.nets[name] = yield this.renderer.render(net);
-                }
+                this.net = mod.buildNet(name);
             }
             catch (error) {
                 if (!(error instanceof Error))
