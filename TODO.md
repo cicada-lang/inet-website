@@ -1,4 +1,3 @@
-- setup tailwind
 - setup vercel -- `inet.cicada-lang.org`
 
 - import `@cicada-lang/inet`
