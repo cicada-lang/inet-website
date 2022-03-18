@@ -9,9 +9,9 @@
         <div class="w-6/12 border-l-2 border-rose-300">
           <div class="flex space-x-2">
             <button
-              v-for="name in state.names"
+              v-for="name in state.mod.allNetNames()"
               :key="name"
-              @click="state.render(state.load(), name)"
+              @click="state.name = name"
             >
               {{ name }}
             </button>
@@ -38,7 +38,7 @@ const state = reactive(new State())
 watch(
   () => state.text,
   debounce(async () => {
-    await state.render(state.load(), "two")
+    await state.refresh()
   }, 300),
   { immediate: true }
 )

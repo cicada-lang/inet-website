@@ -5,9 +5,9 @@
       <pre class="text-base" v-html="state.error.message"></pre>
     </div>
 
-    <div v-else-if="state.net">
+    <div v-else-if="initial">
       <div class="text-bold">{{ state.name }}</div>
-      <div v-if="initial" v-html="initial"></div>
+      <div v-html="initial"></div>
     </div>
   </div>
 </template>
@@ -27,11 +27,15 @@ const props = defineProps({
 const initial = ref()
 
 watch(
-  () => props.state.net,
+  () => props.state.name,
   async () => {
-    if (props.state.net) {
-      initial.value = await renderer.render(props.state.net)
+    console.log(props.state.name)
+
+    if (props.state.name) {
+      const net = props.state.mod.buildNet(props.state.name)
+      initial.value = await renderer.render(net)
     }
-  }
+  },
+  { immediate: true }
 )
 </script>

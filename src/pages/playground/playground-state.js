@@ -11,19 +11,13 @@ export class PlaygroundState {
             writable: true,
             value: ""
         });
-        Object.defineProperty(this, "name", {
+        Object.defineProperty(this, "mod", {
             enumerable: true,
             configurable: true,
             writable: true,
             value: void 0
         });
-        Object.defineProperty(this, "names", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: []
-        });
-        Object.defineProperty(this, "net", {
+        Object.defineProperty(this, "name", {
             enumerable: true,
             configurable: true,
             writable: true,
@@ -35,24 +29,14 @@ export class PlaygroundState {
             writable: true,
             value: void 0
         });
+        this.mod = load(this.text);
     }
-    load() {
-        Node.counter = 0;
-        const url = new URL(window.location.href);
-        const mod = new Module(url);
-        const stmts = parseStmts(this.text);
-        for (const stmt of stmts) {
-            stmt.execute(mod);
-        }
-        this.names = mod.allNetNames();
-        return mod;
-    }
-    render(mod, name) {
+    refresh() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.name = name;
-            delete this.error;
             try {
-                this.net = mod.buildNet(name);
+                delete this.error;
+                this.mod = load(this.text);
+                this.name = this.name || this.mod.allNetNames()[0];
             }
             catch (error) {
                 if (!(error instanceof Error))
@@ -72,4 +56,14 @@ export class PlaygroundState {
             }
         });
     }
+}
+function load(text) {
+    Node.counter = 0;
+    const url = new URL(window.location.href);
+    const mod = new Module(url);
+    const stmts = parseStmts(text);
+    for (const stmt of stmts) {
+        stmt.execute(mod);
+    }
+    return mod;
 }

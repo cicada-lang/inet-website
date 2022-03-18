@@ -1,5 +1,3 @@
-- fix error handling
-
 - `PlaygroundOutput` -- one tab one net
 - `PlaygroundOutput` -- initial and finial for each net
 
