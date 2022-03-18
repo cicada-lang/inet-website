@@ -49,7 +49,7 @@ export class PlaygroundState {
     }
   }
 
-  async refresh(): Promise<void> {
+  refresh(): void {
     try {
       delete this.error
       this.mod = load(this.text)

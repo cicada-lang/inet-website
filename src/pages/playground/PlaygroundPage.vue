@@ -47,8 +47,8 @@ onMounted(() => {
 
 watch(
   () => state.text,
-  debounce(async () => {
-    await state.refresh()
+  debounce(() => {
+    state.refresh()
     router.replace({
       path: `/playground/${Base64.encodeURI(state.text)}`,
     })

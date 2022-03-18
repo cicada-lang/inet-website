@@ -1,4 +1,3 @@
-import { __awaiter } from "tslib";
 import { Module } from "@cicada-lang/inet/lib/lang/module";
 import { Node } from "@cicada-lang/inet/lib/lang/node";
 import { parseStmts } from "@cicada-lang/inet/lib/lang/parser";
@@ -62,15 +61,13 @@ export class PlaygroundState {
         }
     }
     refresh() {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                delete this.error;
-                this.mod = load(this.text);
-            }
-            catch (error) {
-                this.catchError(error);
-            }
-        });
+        try {
+            delete this.error;
+            this.mod = load(this.text);
+        }
+        catch (error) {
+            this.catchError(error);
+        }
     }
 }
 function load(text) {

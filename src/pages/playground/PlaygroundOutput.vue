@@ -59,7 +59,7 @@ const initial = ref()
 const finial = ref()
 
 watch(
-  () => props.state.name,
+  () => props.state.mod,
   async () => {
     if (props.state.name) {
       const net = props.state.mod.buildNet(props.state.name)
