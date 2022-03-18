@@ -11,6 +11,12 @@ export class PlaygroundState {
             writable: true,
             value: ""
         });
+        Object.defineProperty(this, "renderer", {
+            enumerable: true,
+            configurable: true,
+            writable: true,
+            value: new NetRenderer()
+        });
         Object.defineProperty(this, "nets", {
             enumerable: true,
             configurable: true,
@@ -24,20 +30,23 @@ export class PlaygroundState {
             value: void 0
         });
     }
+    load() {
+        const url = new URL(window.location.href);
+        const mod = new Module(url);
+        const stmts = parseStmts(this.text);
+        for (const stmt of stmts) {
+            stmt.execute(mod);
+        }
+        return mod;
+    }
     render() {
         return __awaiter(this, void 0, void 0, function* () {
             delete this.error;
             try {
-                const url = new URL(window.location.href);
-                const mod = new Module(url);
-                const stmts = parseStmts(this.text);
-                for (const stmt of stmts) {
-                    stmt.execute(mod);
-                }
-                const renderer = new NetRenderer();
+                const mod = this.load();
                 for (const name of mod.allNetNames()) {
                     const net = mod.buildNet(name);
-                    this.nets[name] = yield renderer.render(net);
+                    this.nets[name] = yield this.renderer.render(net);
                 }
             }
             catch (error) {

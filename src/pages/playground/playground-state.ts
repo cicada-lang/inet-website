@@ -6,29 +6,33 @@ import { ParsingError } from "@cicada-lang/sexp/lib/errors"
 
 export class PlaygroundState {
   text = ""
-
+  renderer = new NetRenderer()
   nets: Record<string, string> = {}
   error?: {
     kind: string
     message: string
   }
 
+  load(): Module {
+    const url = new URL(window.location.href)
+    const mod = new Module(url)
+    const stmts = parseStmts(this.text)
+    for (const stmt of stmts) {
+      stmt.execute(mod)
+    }
+
+    return mod
+  }
+
   async render(): Promise<void> {
     delete this.error
 
     try {
-      const url = new URL(window.location.href)
-      const mod = new Module(url)
-      const stmts = parseStmts(this.text)
-      for (const stmt of stmts) {
-        stmt.execute(mod)
-      }
-
-      const renderer = new NetRenderer()
+      const mod = this.load()
 
       for (const name of mod.allNetNames()) {
         const net = mod.buildNet(name)
-        this.nets[name] = await renderer.render(net)
+        this.nets[name] = await this.renderer.render(net)
       }
     } catch (error) {
       if (!(error instanceof Error)) throw error
