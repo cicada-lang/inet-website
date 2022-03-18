@@ -60,14 +60,22 @@ const finial = ref()
 
 watch(
   () => props.state.mod,
-  async () => {
-    if (props.state.name) {
-      const net = props.state.mod.buildNet(props.state.name)
-      initial.value = await renderer.render(net)
-      net.run()
-      finial.value = await renderer.render(net)
-    }
-  },
+  () => render(),
   { immediate: true }
 )
+
+watch(
+  () => props.state.name,
+  () => render(),
+  { immediate: true }
+)
+
+async function render() {
+  if (props.state.name) {
+    const net = props.state.mod.buildNet(props.state.name)
+    initial.value = await renderer.render(net)
+    net.run()
+    finial.value = await renderer.render(net)
+  }
+}
 </script>
