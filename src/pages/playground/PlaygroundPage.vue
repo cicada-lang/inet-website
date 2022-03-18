@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { watch, reactive, onMounted } from "vue"
+import { watch, reactive, onMounted, onErrorCaptured } from "vue"
 import { useRouter } from "vue-router"
 import { PlaygroundState as State } from "./playground-state"
 import debounce from "lodash/debounce"
@@ -34,13 +34,14 @@ const props = defineProps({
 
 const state = reactive(new State())
 
+onErrorCaptured((error, component, info) => {
+  state.catchError(error)
+  return false
+})
+
 onMounted(() => {
   if (props.encoded) {
-    try {
-      state.text = Base64.decode(props.encoded)
-    } catch (error) {
-      state.catchError(error)
-    }
+    state.text = Base64.decode(props.encoded)
   }
 })
 
