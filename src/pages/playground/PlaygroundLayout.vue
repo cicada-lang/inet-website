@@ -1,7 +1,9 @@
 <template>
   <div class="h-screen flex flex-col text-xl">
-    <PlaygroundHeader class="p-2 bg-rose-500 text-white" />
-    <slot />
+    <PlaygroundHeader class="px-3 py-2 bg-rose-500 text-white" />
+    <div class="h-full px-3 py-2">
+      <slot />
+    </div>
     <PlaygroundFooter />
   </div>
 </template>
