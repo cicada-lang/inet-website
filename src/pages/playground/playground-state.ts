@@ -2,12 +2,16 @@ import { Module } from "@cicada-lang/inet/lib/lang/module"
 import { Net } from "@cicada-lang/inet/lib/lang/net"
 import { parseStmts } from "@cicada-lang/inet/lib/lang/parser"
 import { NetRenderer } from "@cicada-lang/inet/lib/renderers/net-renderer"
+import { ParsingError } from "@cicada-lang/sexp/lib/errors"
 
 export class PlaygroundState {
   text = ""
 
   nets: Record<string, string> = {}
-  error?: unknown
+  error?: {
+    kind: string
+    message: string
+  }
 
   async render(): Promise<void> {
     delete this.error
@@ -27,7 +31,18 @@ export class PlaygroundState {
         this.nets[name] = await renderer.render(net)
       }
     } catch (error) {
-      this.error = error
+      if (!(error instanceof Error)) throw error
+      if (error instanceof ParsingError) {
+        this.error = {
+          kind: "ParsingError",
+          message: error.message + "\n" + error.span.report(this.text),
+        }
+      } else {
+        this.error = {
+          kind: error.name,
+          message: error.message,
+        }
+      }
     }
   }
 }

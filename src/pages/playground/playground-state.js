@@ -2,6 +2,7 @@ import { __awaiter } from "tslib";
 import { Module } from "@cicada-lang/inet/lib/lang/module";
 import { parseStmts } from "@cicada-lang/inet/lib/lang/parser";
 import { NetRenderer } from "@cicada-lang/inet/lib/renderers/net-renderer";
+import { ParsingError } from "@cicada-lang/sexp/lib/errors";
 export class PlaygroundState {
     constructor() {
         Object.defineProperty(this, "text", {
@@ -40,7 +41,20 @@ export class PlaygroundState {
                 }
             }
             catch (error) {
-                this.error = error;
+                if (!(error instanceof Error))
+                    throw error;
+                if (error instanceof ParsingError) {
+                    this.error = {
+                        kind: "ParsingError",
+                        message: error.message + "\n" + error.span.report(this.text),
+                    };
+                }
+                else {
+                    this.error = {
+                        kind: error.name,
+                        message: error.message,
+                    };
+                }
             }
         });
     }

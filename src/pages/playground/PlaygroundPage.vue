@@ -6,10 +6,7 @@
         <div class="w-7/12">
           <CodeEditor :state="state" />
         </div>
-        <div v-if="state.error" class="w-6/12 border-l-2 border-rose-300">
-          {{ state.error.message }}
-        </div>
-        <div v-else class="w-6/12 border-l-2 border-rose-300">
+        <div class="w-6/12 border-l-2 border-rose-300">
           <NetViewer :state="state" />
         </div>
       </div>
