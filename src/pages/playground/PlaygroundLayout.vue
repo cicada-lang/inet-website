@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-screen flex-col text-xl">
     <PlaygroundHeader class="bg-rose-500 px-3 py-2 text-white" />
-    <div class="h-full">
+    <div class="h-full overflow-y-auto">
       <slot />
     </div>
     <PlaygroundFooter />

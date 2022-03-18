@@ -1,7 +1,10 @@
-- `NetViewer` -- take `nets` -- use `ty` and `createProps` to validate `state`
+- `PageLayout` vs `PlaygroundLayout`
+- `PlaygroundHeader` has `PlaygroundToolbar`
+- `PlaygroundToolbar` -- RUN button
 
+- `NetViewer` -- initial and finial for each net
+- `NetViewer` -- handle error
 - `PlaygroundPage` -- run inet code and render can generate svg
-
 - `PlaygroundPage` -- encode code in the url
 
 # readonlylink

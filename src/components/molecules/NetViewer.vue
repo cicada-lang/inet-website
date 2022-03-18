@@ -1,6 +1,7 @@
 <template>
   <div class="h-full w-full overflow-y-auto px-3 py-2">
-    <div v-for="(svg, key) in state.nets" :key="key">
+    <div v-for="(svg, name) in state.nets" :key="name">
+      <div class="text-bold">{{ name }}</div>
       <div v-html="svg"></div>
     </div>
   </div>
