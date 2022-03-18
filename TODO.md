@@ -1,5 +1,3 @@
-- `PlaygroundHeader` has `PlaygroundToolbar`
-
 - [refactor] `PlaygroundState`
 
 - `PlaygroundState` -- delay net rendering
