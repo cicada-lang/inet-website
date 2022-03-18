@@ -5,7 +5,10 @@
       <pre class="text-base" v-html="state.error.message"></pre>
     </div>
 
-    <div v-else>
+    <div
+      v-else
+      class="flex h-full w-full flex-col overflow-x-auto overflow-y-auto"
+    >
       <div class="flex">
         <button
           class="w-full p-1 font-cute text-base text-rose-900"
@@ -18,7 +21,24 @@
         </button>
       </div>
 
-      <div v-if="initial" class="px-3 py-2" v-html="initial"></div>
+      <div class="flex h-full flex-wrap overflow-x-auto overflow-y-auto">
+        <div class="px-2 py-2">
+          <div
+            class="max-w-max rounded border border-rose-300 bg-rose-100 px-2 py-1 font-cute text-base text-rose-900"
+          >
+            initial
+          </div>
+          <div v-if="initial" v-html="initial"></div>
+        </div>
+        <div class="px-2 py-2">
+          <div
+            class="max-w-max rounded border border-rose-300 bg-rose-100 px-2 py-1 font-cute text-base text-rose-900"
+          >
+            finial
+          </div>
+          <div v-if="finial" v-html="finial"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -36,6 +56,7 @@ const props = defineProps({
 })
 
 const initial = ref()
+const finial = ref()
 
 watch(
   () => props.state.name,
@@ -43,6 +64,8 @@ watch(
     if (props.state.name) {
       const net = props.state.mod.buildNet(props.state.name)
       initial.value = await renderer.render(net)
+      net.run()
+      finial.value = await renderer.render(net)
     }
   },
   { immediate: true }
