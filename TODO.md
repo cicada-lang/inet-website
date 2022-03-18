@@ -1,5 +1,3 @@
-- `PlaygroundPage` -- encode code in the url
-
 # readonlylink
 
 - docs on readonlylink

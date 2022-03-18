@@ -16,24 +16,41 @@
 
 <script setup>
 import { watch, reactive, onMounted } from "vue"
+import { useRouter } from "vue-router"
 import { PlaygroundState as State } from "./playground-state"
 import debounce from "lodash/debounce"
+import { Base64 } from "js-base64"
 
 import PageLayout from "../../components/layouts/page-layout/PageLayout.vue"
 import PlaygroundHeader from "./PlaygroundHeader.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
 
+const router = useRouter()
+
+const props = defineProps({
+  encoded: String,
+})
+
 const state = reactive(new State())
 
 onMounted(() => {
-  //
+  if (props.encoded) {
+    try {
+      state.text = Base64.decode(props.encoded)
+    } catch (error) {
+      state.catchError(error)
+    }
+  }
 })
 
 watch(
   () => state.text,
   debounce(async () => {
     await state.refresh()
+    router.replace({
+      path: `/playground/${Base64.encode(state.text)}`,
+    })
   }, 300),
   { immediate: true }
 )

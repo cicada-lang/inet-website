@@ -45,6 +45,22 @@ export class PlaygroundState {
     set name(name) {
         this._name = name;
     }
+    catchError(error) {
+        if (!(error instanceof Error))
+            throw error;
+        if (error instanceof ParsingError) {
+            this.error = {
+                kind: "ParsingError",
+                message: error.message + "\n" + error.span.report(this.text),
+            };
+        }
+        else {
+            this.error = {
+                kind: error.name,
+                message: error.message,
+            };
+        }
+    }
     refresh() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -52,20 +68,7 @@ export class PlaygroundState {
                 this.mod = load(this.text);
             }
             catch (error) {
-                if (!(error instanceof Error))
-                    throw error;
-                if (error instanceof ParsingError) {
-                    this.error = {
-                        kind: "ParsingError",
-                        message: error.message + "\n" + error.span.report(this.text),
-                    };
-                }
-                else {
-                    this.error = {
-                        kind: error.name,
-                        message: error.message,
-                    };
-                }
+                this.catchError(error);
             }
         });
     }

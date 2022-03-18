@@ -34,23 +34,27 @@ export class PlaygroundState {
     this._name = name
   }
 
+  catchError(error: unknown): void {
+    if (!(error instanceof Error)) throw error
+    if (error instanceof ParsingError) {
+      this.error = {
+        kind: "ParsingError",
+        message: error.message + "\n" + error.span.report(this.text),
+      }
+    } else {
+      this.error = {
+        kind: error.name,
+        message: error.message,
+      }
+    }
+  }
+
   async refresh(): Promise<void> {
     try {
       delete this.error
       this.mod = load(this.text)
     } catch (error) {
-      if (!(error instanceof Error)) throw error
-      if (error instanceof ParsingError) {
-        this.error = {
-          kind: "ParsingError",
-          message: error.message + "\n" + error.span.report(this.text),
-        }
-      } else {
-        this.error = {
-          kind: error.name,
-          message: error.message,
-        }
-      }
+      this.catchError(error)
     }
   }
 }

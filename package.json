@@ -19,6 +19,7 @@
     "@cicada-lang/sexp": "^0.0.14",
     "@xieyuheng/ty": "^0.1.12",
     "core-js": "^3.21.1",
+    "js-base64": "^3.7.2",
     "lodash": "^4.17.21",
     "vue": "^3.2.31",
     "vue-router": "^4.0.14"
