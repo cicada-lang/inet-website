@@ -31,12 +31,15 @@ export class PlaygroundState {
         });
         this.mod = load(this.text);
     }
+    get names() {
+        return this.mod.allNetNames();
+    }
     refresh() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 delete this.error;
                 this.mod = load(this.text);
-                this.name = this.name || this.mod.allNetNames()[0];
+                this.name = this.name || this.names[0];
             }
             catch (error) {
                 if (!(error instanceof Error))

@@ -7,15 +7,6 @@
           <CodeEditor :state="state" />
         </div>
         <div class="w-6/12 border-l-2 border-rose-300">
-          <div class="flex space-x-2">
-            <button
-              v-for="name in state.mod.allNetNames()"
-              :key="name"
-              @click="state.name = name"
-            >
-              {{ name }}
-            </button>
-          </div>
           <PlaygroundOutput :state="state" />
         </div>
       </div>
