@@ -4,8 +4,11 @@
       <div class="w-7/12">
         <CodeEditor :state="state" />
       </div>
-      <div class="w-5/12 border-l-2 border-rose-300">
-        <NetViewer />
+      <div v-if="state.error" class="w-5/12 border-l-2 border-rose-300">
+        {{ state.error.message }}
+      </div>
+      <div v-else class="w-5/12 border-l-2 border-rose-300">
+        <NetViewer :state="state" />
       </div>
     </div>
   </PlaygroundLayout>
@@ -23,8 +26,8 @@ const state = reactive(new State())
 
 watch(
   () => state.text,
-  () => {
-    console.log(state.text)
+  async () => {
+    await state.render()
   },
   { immediate: true }
 )

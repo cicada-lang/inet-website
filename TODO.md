@@ -1,8 +1,6 @@
-- `CodeEditor` -- use `ty` and `createProps` to validate `state`
+- `NetViewer` -- take `nets` -- use `ty` and `createProps` to validate `state`
 
 - `PlaygroundPage` -- run inet code and render can generate svg
-
-- `NetViewer` -- take svg
 
 - `PlaygroundPage` -- encode code in the url
 

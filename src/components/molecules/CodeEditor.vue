@@ -9,7 +9,14 @@
 </template>
 
 <script setup>
-defineProps({
-  state: Object,
-})
+import ty from "@xieyuheng/ty"
+import { createProps } from "../../utilities/create-props"
+
+defineProps(
+  createProps({
+    state: ty.object({
+      text: ty.string(),
+    }),
+  })
+)
 </script>

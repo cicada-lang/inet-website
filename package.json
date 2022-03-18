@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@cicada-lang/inet": "^0.0.6",
+    "@xieyuheng/ty": "^0.1.12",
     "core-js": "^3.21.1",
     "vue": "^3.2.31",
     "vue-router": "^4.0.14"
