@@ -1,6 +1,4 @@
-- setup vercel -- `inet.cicada-lang.org`
-
-- import `@cicada-lang/inet`
+- favicon.ico
 
 # homepage
 
