@@ -1,6 +1,4 @@
-- `PlaygroundHeader` -- link to github
 - `PlaygroundLayout`
-
 
 - `CodeEditor`
 - `playground` -- net-viewer
