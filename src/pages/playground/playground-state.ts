@@ -1,7 +1,7 @@
 import { Mod } from "@cicada-lang/inet/lib/lang/mod"
 import { Net } from "@cicada-lang/inet/lib/lang/net"
 import { Node } from "@cicada-lang/inet/lib/lang/node"
-import { parseStmts } from "@cicada-lang/inet/lib/lang/parser"
+import { Parser } from "@cicada-lang/inet/lib/lang/parser"
 import { NetRenderer } from "@cicada-lang/inet/lib/renderers/net-renderer"
 import { ParsingError } from "@cicada-lang/sexp/lib/errors"
 
@@ -61,9 +61,13 @@ export class PlaygroundState {
 
 function load(text: string): Mod {
   Node.counter = 0
+
   const url = new URL(window.location.href)
   const mod = new Mod(url)
-  const stmts = parseStmts(text)
+
+  const parser = new Parser()
+
+  const stmts = parser.parseStmts(text)
   for (const stmt of stmts) {
     stmt.execute(mod)
   }
