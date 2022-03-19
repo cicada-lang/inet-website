@@ -3,10 +3,10 @@
     <div class="flex h-full flex-col">
       <PlaygroundHeader :state="state" />
       <div class="flex h-full flex-col overflow-y-auto md:flex-row">
-        <div class="min-h-[50%] md:w-6/12">
+        <div class="min-h-[50%]">
           <PlaygroundEditor :state="state" />
         </div>
-        <div class="border-l border-rose-300 md:w-6/12">
+        <div class="w-full border-l border-rose-300">
           <PlaygroundOutput :state="state" />
         </div>
       </div>
