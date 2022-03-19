@@ -1,4 +1,4 @@
-import { Module } from "@cicada-lang/inet/lib/lang/module";
+import { Mod } from "@cicada-lang/inet/lib/lang/mod";
 import { Node } from "@cicada-lang/inet/lib/lang/node";
 import { parseStmts } from "@cicada-lang/inet/lib/lang/parser";
 import { ParsingError } from "@cicada-lang/sexp/lib/errors";
@@ -73,7 +73,7 @@ export class PlaygroundState {
 function load(text) {
     Node.counter = 0;
     const url = new URL(window.location.href);
-    const mod = new Module(url);
+    const mod = new Mod(url);
     const stmts = parseStmts(text);
     for (const stmt of stmts) {
         stmt.execute(mod);
