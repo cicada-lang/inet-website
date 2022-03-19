@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "sh prepare.sh && vue-cli-service serve",
+    "build": "sh prepare.sh && vue-cli-service build",
     "watch": "tsc --watch",
     "format:ts": "prettier src/**/*.ts --write",
     "format:vue": "prettier src/**/*.vue --write",
