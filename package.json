@@ -15,8 +15,8 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@cicada-lang/inet": "^0.0.10",
-    "@cicada-lang/sexp": "^0.0.16",
+    "@cicada-lang/inet": "^0.0.11",
+    "@cicada-lang/sexp": "^0.0.18",
     "@xieyuheng/ty": "^0.1.12",
     "core-js": "^3.21.1",
     "js-base64": "^3.7.2",
