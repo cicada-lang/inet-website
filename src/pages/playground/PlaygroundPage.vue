@@ -4,7 +4,8 @@
       <PlaygroundHeader :state="state" />
       <div class="flex h-full flex-col overflow-y-auto md:flex-row">
         <PlaygroundEditor
-          class="min-h-[50%] shrink grow md:w-1/2 md:resize-x"
+          class="shrink grow md:w-1/2 md:resize-x"
+          style="min-height: 30rem"
           :state="state"
         />
         <PlaygroundOutput
