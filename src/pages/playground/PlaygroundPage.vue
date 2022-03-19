@@ -3,12 +3,14 @@
     <div class="flex h-full flex-col">
       <PlaygroundHeader :state="state" />
       <div class="flex h-full flex-col overflow-y-auto md:flex-row">
-        <div class="min-h-[50%]">
-          <PlaygroundEditor :state="state" />
-        </div>
-        <div class="w-full border-l border-rose-300">
-          <PlaygroundOutput :state="state" />
-        </div>
+        <PlaygroundEditor
+          class="min-h-[50%] shrink grow md:w-1/2 md:resize-x"
+          :state="state"
+        />
+        <PlaygroundOutput
+          class="shrink grow border-l border-rose-300 md:w-1/2"
+          :state="state"
+        />
       </div>
     </div>
   </PageLayout>
