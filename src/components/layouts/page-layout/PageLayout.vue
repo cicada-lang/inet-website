@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-screen flex-col">
-    <PageHeader class="bg-rose-500 px-3 py-2 text-white" />
+    <PageHeader class="bg-theme-500 px-3 py-2 text-white" />
     <div class="h-full overflow-y-auto">
       <slot />
     </div>

@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex items-center justify-between border-b border-rose-300 bg-rose-200 px-3 py-2"
+    class="flex items-center justify-between border-b border-theme-300 bg-theme-200 px-3 py-2"
   >
     <router-link
       to="/playground"
-      class="font-cute text-xl font-semibold text-rose-900"
+      class="font-cute text-xl font-semibold text-theme-900"
     >
       Playground
     </router-link>
