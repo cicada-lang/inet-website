@@ -1,7 +1,6 @@
 import { createHead } from "@vueuse/head"
 import { createApp } from "vue"
 import App from "./App.vue"
-import "./fonts/index.css"
 import router from "./router"
 import "./styles/index.css"
 
