@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <div class="flex flex-wrap items-baseline">
     <div class="pr-2 font-cute text-3xl font-bold">iNet</div>

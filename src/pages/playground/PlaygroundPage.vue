@@ -1,3 +1,43 @@
+<script setup lang="ts">
+import { Base64 } from "js-base64"
+import debounce from "lodash/debounce"
+import { reactive, watch } from "vue"
+import { useRoute, useRouter } from "vue-router"
+import PageLayout from "../../components/layouts/page-layout/PageLayout.vue"
+import PlaygroundEditor from "./PlaygroundEditor.vue"
+import PlaygroundHeader from "./PlaygroundHeader.vue"
+import PlaygroundOutput from "./PlaygroundOutput.vue"
+import { PlaygroundState as State } from "./playground-state"
+
+const router = useRouter()
+const route = useRoute()
+
+defineProps<{
+  encoded: String
+}>()
+
+const state = reactive(new State())
+
+watch(
+  route,
+  () => {
+    state.text = Base64.decode(String(route.params.encoded))
+  },
+  { immediate: true },
+)
+
+watch(
+  () => state.text,
+  debounce(() => {
+    // state.refresh()
+    router.replace({
+      path: `/playground/${Base64.encodeURI(state.text)}`,
+    })
+  }, 300),
+  { immediate: true },
+)
+</script>
+
 <template>
   <PageLayout>
     <div class="flex h-full flex-col">
@@ -16,49 +56,3 @@
     </div>
   </PageLayout>
 </template>
-
-<script setup>
-import { watch, reactive, onMounted, onErrorCaptured } from "vue"
-import { useRouter, useRoute } from "vue-router"
-import { PlaygroundState as State } from "./playground-state"
-import debounce from "lodash/debounce"
-import { Base64 } from "js-base64"
-
-import PageLayout from "../../components/layouts/page-layout/PageLayout.vue"
-import PlaygroundHeader from "./PlaygroundHeader.vue"
-import PlaygroundOutput from "./PlaygroundOutput.vue"
-import PlaygroundEditor from "./PlaygroundEditor.vue"
-
-const router = useRouter()
-const route = useRoute()
-
-const props = defineProps({
-  encoded: String,
-})
-
-const state = reactive(new State())
-
-onErrorCaptured((error, component, info) => {
-  state.catchError(error)
-  return false
-})
-
-watch(
-  route,
-  () => {
-    state.text = Base64.decode(route.params.encoded)
-  },
-  { immediate: true }
-)
-
-watch(
-  () => state.text,
-  debounce(() => {
-    state.refresh()
-    router.replace({
-      path: `/playground/${Base64.encodeURI(state.text)}`,
-    })
-  }, 300),
-  { immediate: true }
-)
-</script>

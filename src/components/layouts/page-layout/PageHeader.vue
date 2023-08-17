@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import IconGithub from "../../../components/icons/IconGithub.vue"
+import PageLogo from "./PageLogo.vue"
+</script>
+
 <template>
   <div class="flex items-center justify-between">
     <PageLogo />
@@ -6,8 +11,3 @@
     </a>
   </div>
 </template>
-
-<script setup>
-import IconGithub from "../../../components/icons/IconGithub.vue"
-import PageLogo from "./PageLogo.vue"
-</script>

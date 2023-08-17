@@ -1,21 +1,9 @@
-<template>
-  <div>
-    <button class="font-cute text-base text-theme-900" @click="share()">
-      SHARE
-    </button>
-  </div>
-</template>
-
-<script setup>
-import { useRoute } from "vue-router"
-
+<script setup lang="ts">
 import { PlaygroundState as State } from "./playground-state"
 
-const route = useRoute()
-
-const props = defineProps({
-  state: State,
-})
+defineProps<{
+  state: State
+}>()
 
 async function share() {
   try {
@@ -23,7 +11,15 @@ async function share() {
     await navigator.clipboard.writeText(url)
     window.alert(`URL copied to clipboard!`)
   } catch (error) {
-    window.alert(error.message)
+    console.error(error)
   }
 }
 </script>
+
+<template>
+  <div>
+    <button class="font-cute text-base text-theme-900" @click="share()">
+      SHARE
+    </button>
+  </div>
+</template>

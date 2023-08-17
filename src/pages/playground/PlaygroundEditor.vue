@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { PlaygroundState as State } from "./playground-state"
+
+defineProps<{
+  state: State
+}>()
+</script>
+
 <template>
   <textarea
     spellcheck="false"
@@ -5,11 +13,3 @@
     v-model="state.text"
   ></textarea>
 </template>
-
-<script setup>
-import { PlaygroundState as State } from "./playground-state"
-
-defineProps({
-  state: State,
-})
-</script>

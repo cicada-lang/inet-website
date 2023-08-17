@@ -1,5 +1,3 @@
-vue should use ts
-remove old code
 fix naming
 move layouts out
 use new inet
