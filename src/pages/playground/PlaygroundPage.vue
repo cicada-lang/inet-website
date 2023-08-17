@@ -3,7 +3,6 @@ import { Base64 } from "js-base64"
 import debounce from "lodash/debounce"
 import { reactive, watch } from "vue"
 import { useRoute, useRouter } from "vue-router"
-import PageLayout from "../../layouts/page-layout/PageLayout.vue"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
 import PlaygroundHeader from "./PlaygroundHeader.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
@@ -39,8 +38,8 @@ watch(
 </script>
 
 <template>
-  <PageLayout>
-    <div class="flex h-full flex-col">
+  <div class="flex h-screen flex-col">
+    <div class="flex h-full overflow-auto flex-col">
       <PlaygroundHeader :state="state" />
       <div class="flex h-full flex-col overflow-y-auto md:flex-row">
         <PlaygroundEditor
@@ -54,5 +53,5 @@ watch(
         />
       </div>
     </div>
-  </PageLayout>
+  </div>
 </template>

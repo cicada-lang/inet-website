@@ -1,7 +1,5 @@
 # playground
 
-[playground] simple header -- no need `PageLayout`
-
 [playground] simple color
 
 [playground] `State` should be a type -- instead of a class
