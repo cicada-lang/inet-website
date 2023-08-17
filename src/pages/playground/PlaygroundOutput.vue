@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue"
-import { PlaygroundState as State } from "./playground-state"
+import { State } from "./State"
 
 defineProps<{
   state: State
@@ -44,3 +44,4 @@ const finial = ref()
     </div>
   </div>
 </template>
+./State

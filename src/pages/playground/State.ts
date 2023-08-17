@@ -1,4 +1,4 @@
-export class PlaygroundState {
+export class State {
   text = ""
   // mod: Mod
   error?: {

@@ -7,7 +7,7 @@ import PageLayout from "../../layouts/page-layout/PageLayout.vue"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
 import PlaygroundHeader from "./PlaygroundHeader.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
-import { PlaygroundState as State } from "./playground-state"
+import { State } from "./State"
 
 const router = useRouter()
 const route = useRoute()
@@ -56,3 +56,4 @@ watch(
     </div>
   </PageLayout>
 </template>
+./State

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PlaygroundState as State } from "./playground-state"
+import { State } from "./State"
 
 defineProps<{
   state: State
@@ -23,3 +23,4 @@ async function share() {
     </button>
   </div>
 </template>
+./State

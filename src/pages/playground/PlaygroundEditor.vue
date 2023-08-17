@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PlaygroundState as State } from "./playground-state"
+import { State } from "./State"
 
 defineProps<{
   state: State
@@ -13,3 +13,4 @@ defineProps<{
     v-model="state.text"
   ></textarea>
 </template>
+./State
