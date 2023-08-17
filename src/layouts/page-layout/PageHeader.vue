@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import IconGithub from "../../../components/icons/IconGithub.vue"
+import IconGithub from "../../components/icons/IconGithub.vue"
 import PageLogo from "./PageLogo.vue"
 </script>
 
