@@ -13,7 +13,7 @@ const finial = ref()
 <template>
   <div class="h-full w-full overflow-y-auto">
     <div v-if="state.error" class="h-full w-full overflow-y-auto">
-      <div class="bg-theme-400 px-3 py-1 text-xl font-bold text-white">
+      <div class="px-3 py-1 text-xl font-bold">
         {{ state.error.kind }}
       </div>
       <pre class="px-3 py-2 text-base" v-html="state.error.message"></pre>
@@ -25,17 +25,13 @@ const finial = ref()
     >
       <div class="flex h-full flex-wrap overflow-x-auto overflow-y-auto">
         <div v-if="initial" class="px-2 py-2">
-          <div
-            class="max-w-max rounded bg-theme-100 px-2 py-1 font-cute text-base text-theme-900"
-          >
+          <div class="max-w-max rounded px-2 py-1 font-cute text-base">
             initial
           </div>
           <div v-html="initial"></div>
         </div>
         <div v-if="finial" class="px-2 py-2">
-          <div
-            class="max-w-max rounded bg-theme-100 px-2 py-1 font-cute text-base text-theme-900"
-          >
+          <div class="max-w-max rounded px-2 py-1 font-cute text-base">
             finial
           </div>
           <div v-html="finial"></div>

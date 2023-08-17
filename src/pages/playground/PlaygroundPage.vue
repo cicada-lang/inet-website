@@ -48,7 +48,7 @@ watch(
           :state="state"
         />
         <PlaygroundOutput
-          class="shrink grow border-l border-theme-300 md:w-1/2"
+          class="shrink grow border-l border-black md:w-1/2"
           :state="state"
         />
       </div>
