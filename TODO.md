@@ -1,4 +1,5 @@
-use vite
+vue should use ts
+remove old code
 use new inet
 output text of module first
 add canvas

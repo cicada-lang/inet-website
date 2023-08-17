@@ -1,4 +1,4 @@
-import ty, { Schema } from "@xieyuheng/ty"
+import {  Schema } from "@xieyuheng/ty"
 
 export function createProps(
   schemas: Record<string, Schema<unknown>>
