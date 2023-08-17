@@ -1,5 +1,4 @@
 vue should use ts
-remove `utilities/`
 remove old code
 move layouts out
 use new inet
