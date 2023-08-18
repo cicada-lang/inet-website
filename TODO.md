@@ -1,10 +1,6 @@
 # playground
 
-[playground] [maybe] editor and output larger text
-
-[playground] [maybe] explicit `Run` button
-
-[playground] be able to resize editer
+[playground] `PlaygroundToolbar` explicit `Run` button
 
 # dark mode
 
