@@ -43,9 +43,9 @@ watch(
 </script>
 
 <template>
-  <div class="flex h-screen-dynamic flex-col">
+  <div class="flex h-screen-dynamic flex-col dark:bg-stone-800 dark:text-white">
     <div class="flex h-full overflow-auto flex-col">
-      <PageHead class="border-b border-black px-3 py-2" />
+      <PageHead class="border-b border-black dark:border-white px-3 py-2" />
 
       <div
         v-if="state"
@@ -58,7 +58,7 @@ watch(
         />
 
         <PlaygroundOutput
-          class="sm:border-l border-black sm:w-1/2"
+          class="sm:border-l border-black dark:border-white sm:w-1/2"
           :state="state"
         />
       </div>
