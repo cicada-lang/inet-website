@@ -3,9 +3,10 @@ import { Base64 } from "js-base64"
 import { debounce } from "lodash"
 import { onMounted, ref, watch } from "vue"
 import { useRoute, useRouter } from "vue-router"
+import PageHead from "../../layouts/page-layout/PageHead.vue"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
-import PlaygroundHead from "./PlaygroundHead.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
+import PlaygroundToolbar from "./PlaygroundToolbar.vue"
 import { State } from "./State"
 import { loadStateReactive } from "./loadStateReactive"
 import { stateReload } from "./stateReload"
@@ -51,7 +52,11 @@ watch(
 <template>
   <div class="flex h-screen flex-col">
     <div class="flex h-full overflow-auto flex-col">
-      <PlaygroundHead v-if="state" :state="state" />
+      <PageHead
+        class="flex justify-between border-b border-black px-3 py-2"
+      >
+        <PlaygroundToolbar v-if="state" :state="state" />
+      </PageHead>
 
       <div class="flex h-full flex-col overflow-y-auto md:flex-row">
         <PlaygroundEditor

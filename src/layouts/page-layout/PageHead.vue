@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import IconGithub from "../../components/icons/IconGithub.vue"
 import PageLogo from "./PageLogo.vue"
 </script>
 
 <template>
-  <div class="flex items-center justify-between">
-    <div class="flex items-center space-x-2">
+  <div class="flex items-baseline justify-between">
+    <div class="flex items-baseline space-x-4">
       <RouterLink to="/"> <PageLogo /> </RouterLink>
+
+      <slot></slot>
     </div>
 
-    <div class="flex items-center space-x-4">
+    <div class="flex items-baseline space-x-4">
       <RouterLink to="/playground" class="text-xl"> Playground </RouterLink>
 
       <a
@@ -20,8 +21,12 @@ import PageLogo from "./PageLogo.vue"
         Docs
       </a>
 
-      <a target="_blank" href="https://github.com/cicada-lang/inet">
-        <IconGithub class="h-5 w-5" />
+      <a
+        target="_blank"
+        href="https://github.com/cicada-lang/inet"
+        class="text-xl"
+      >
+        GitHub
       </a>
     </div>
   </div>

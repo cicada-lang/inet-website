@@ -1,8 +1,6 @@
+[page-layout] active link for navbar
+
 # playground
-
-[playground] active link for navbar
-
-[playground] move toolbar to the left
 
 [playground] `PlaygroundToolbar` explicit `Run` button
 
