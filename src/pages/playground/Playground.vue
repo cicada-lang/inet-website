@@ -49,16 +49,16 @@ watch(
 
       <div
         v-if="state"
-        class="flex h-full flex-col sm:overflow-y-auto sm:flex-row"
+        class="flex flex-col sm:h-full sm:max-h-full  sm:overflow-auto sm:flex-row"
       >
         <PlaygroundEditor
-          class="sm:w-1/2 sm:resize-x"
+          class="sm:w-1/2 h-full  sm:resize-x"
           style="min-height: 30rem"
           :state="state"
         />
 
         <PlaygroundOutput
-          class="sm:border-l border-black dark:border-white sm:w-1/2"
+          class="sm:border-l h-full border-black  min-h-max dark:border-white sm:w-1/2"
           :state="state"
         />
       </div>
