@@ -18,7 +18,7 @@ async function share() {
 
 <template>
   <div>
-    <button class="text-lg" @click="share()">SHARE</button>
+    <button class="text-lg" @click="share()">Share</button>
   </div>
 </template>
 ./State

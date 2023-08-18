@@ -1,6 +1,4 @@
-# home page
-
-[home] navbar
+# home
 
 [home] mimimal like alpinejs
 

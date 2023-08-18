@@ -5,9 +5,16 @@ import PageLogo from "./PageLogo.vue"
 
 <template>
   <div class="flex items-center justify-between">
-    <PageLogo />
-    <a href="https://github.com/cicada-lang/inet" target="_blank">
-      <IconGithub class="h-5 w-5" />
-    </a>
+    <div class="flex items-center space-x-2">
+      <RouterLink to="/"> <PageLogo /> </RouterLink>
+    </div>
+
+    <div  class="flex items-center space-x-2">
+      <RouterLink to="/playground"  class="text-lg"> Playground </RouterLink>
+
+      <a href="https://github.com/cicada-lang/inet" target="_blank">
+        <IconGithub class="h-5 w-5" />
+      </a>
+    </div>
   </div>
 </template>
