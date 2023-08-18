@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { State } from "./State"
+import { stateReload } from "./stateReload"
 
 defineProps<{
   state: State
@@ -17,7 +18,18 @@ async function share() {
 </script>
 
 <template>
-  <div>
-    <button class="text-xl" @click="share()">Share</button>
+  <div class="flex space-x-4">
+    <button
+      class="text-xl hover:underline underline-offset-4 decoration-2"
+      @click="stateReload(state)"
+    >
+      Run
+    </button>
+    <button
+      class="text-xl hover:underline underline-offset-4 decoration-2"
+      @click="share()"
+    >
+      Share
+    </button>
   </div>
 </template>

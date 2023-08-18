@@ -1,7 +1,5 @@
 # playground
 
-[playground] `PlaygroundToolbar` explicit `Run` button
-
 [playground] `PlaygroundToolbar` -- `Run` measure running time
 
 # chinese support

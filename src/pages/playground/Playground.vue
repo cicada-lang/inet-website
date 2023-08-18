@@ -9,7 +9,6 @@ import PlaygroundOutput from "./PlaygroundOutput.vue"
 import PlaygroundToolbar from "./PlaygroundToolbar.vue"
 import { State } from "./State"
 import { loadStateReactive } from "./loadStateReactive"
-import { stateReload } from "./stateReload"
 
 const router = useRouter()
 const route = useRoute()
@@ -39,11 +38,6 @@ watch(
       router.replace({
         path: `/playground/${Base64.encodeURI(value)}`,
       })
-
-      // NOTE When `oldValue` is empty, no reload is needed.
-      if (oldValue) {
-        await stateReload(state.value)
-      }
     }
   }, 300),
 )
@@ -52,9 +46,7 @@ watch(
 <template>
   <div class="flex h-screen flex-col">
     <div class="flex h-full overflow-auto flex-col">
-      <PageHead
-        class="flex justify-between border-b border-black px-3 py-2"
-      >
+      <PageHead class="border-b border-black px-3 py-2">
         <PlaygroundToolbar v-if="state" :state="state" />
       </PageHead>
 
