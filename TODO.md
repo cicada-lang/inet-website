@@ -1,8 +1,8 @@
 # playground
 
-use new inet
+[playground] handle error
 
-output text of module first
+[playground] output text of module first
 
 # dark mode
 

@@ -6,14 +6,14 @@
     "dev": "vite",
     "build": "vite build",
     "check:vue": "vue-tsc --noEmit",
-    "check:vue:watch": "while true; do vue-tsc --noEmit --watch && break; done",
-    "check": "tsc --noEmit",
-    "check:watch": "tsc --noEmit --watch",
+    "check:vue:watch": "vue-tsc --noEmit --watch",
+    "check:ts": "tsc --noEmit",
+    "check:ts:watch": "tsc --noEmit --watch",
     "test": "vitest --run",
     "format": "prettier src --write"
   },
   "dependencies": {
-    "@cicada-lang/inet": "^0.1.9",
+    "@cicada-lang/inet": "^0.1.10",
     "@heroicons/vue": "^2.0.18",
     "@vueuse/core": "^10.3.0",
     "@vueuse/head": "^1.3.1",
