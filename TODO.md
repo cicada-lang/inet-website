@@ -1,5 +1,3 @@
-[playground] fix editor height on mobile
-
 [home] lang support
 
 [playground] lang support

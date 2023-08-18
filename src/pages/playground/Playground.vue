@@ -47,17 +47,18 @@ watch(
     <div class="flex h-full overflow-auto flex-col">
       <PageHead class="border-b border-black px-3 py-2" />
 
-      <div class="flex h-full flex-col overflow-y-auto sm:flex-row">
+      <div
+        v-if="state"
+        class="flex h-full flex-col overflow-y-auto sm:flex-row"
+      >
         <PlaygroundEditor
-          v-if="state"
-          class="shrink grow sm:w-1/2 sm:resize-x"
+          class="sm:w-1/2 sm:resize-x"
           style="min-height: 30rem"
           :state="state"
         />
 
         <PlaygroundOutput
-          v-if="state"
-          class="shrink grow border-l border-black sm:w-1/2"
+          class="sm:border-l border-black sm:w-1/2"
           :state="state"
         />
       </div>

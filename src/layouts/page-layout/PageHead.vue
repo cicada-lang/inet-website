@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router"
 import PageLogo from "./PageLogo.vue"
+import IconGitHub from "../../components/icons/IconGitHub.vue"
 
 const route = useRoute()
 </script>
@@ -35,7 +36,7 @@ const route = useRoute()
         href="https://github.com/cicada-lang/inet"
         class="text-xl hover:underline underline-offset-4 decoration-2"
       >
-        GitHub
+        <IconGitHub class="w-5 h-5" />
       </a>
     </div>
   </div>
