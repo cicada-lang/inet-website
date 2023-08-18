@@ -1,1 +1,5 @@
 @import "./tailwind.css";
+
+.text-balance {
+  text-wrap: balance;
+}
