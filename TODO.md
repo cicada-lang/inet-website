@@ -1,4 +1,19 @@
+# home page
+
+[home] setup `/home` to test `PageLayout`
+
+[home] navbar
+
+[home] mimimal like alpinejs
+
+https://alpinejs.dev/
+
+8 statements: type node rule claim define check -- module system import require
+7 words: Call Local TypeVar Label NodeRearrange -- in rule PortPush PortReconnect
+
 # playground
+
+[playground] logo link to home
 
 [playground] `State` should be a type -- instead of a class
 
@@ -8,6 +23,8 @@ use new inet
 
 output text of module first
 
+# dark mode
+
 # canvas
 
 add canvas
@@ -16,4 +33,8 @@ render stack
 
 render top graph
 
-be able to select value in the stack
+select value in the stack -- like tab
+
+run a connected component from a port
+
+click active to run one step
