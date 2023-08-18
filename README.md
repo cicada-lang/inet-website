@@ -1,7 +1,7 @@
-# INet Website
+# iNet Website
 
-[ [VISIT](https://inet.cicada-lang.org)
-| [REPO](https://github.com/cicada-lang/inet.sexp) ]
+[ [Visit](https://inet.cicada-lang.org)
+| [Main Repo](https://github.com/cicada-lang/inet) ]
 
 ## Contributions
 
