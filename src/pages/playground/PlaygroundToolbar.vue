@@ -43,7 +43,7 @@ async function share() {
     >
       Run
 
-      <span v-if="timeUsedToRun" class="text-stone-500 text-lg"
+      <span v-if="timeUsedToRun" class="text-stone-500 text-base"
         >({{ Math.floor(timeUsedToRun) }} ms)</span
       >
     </button>

@@ -1,14 +1,10 @@
-# chinese support
+[home] lang support
 
-add `Lang`
+[playground] lang support
 
-add `Hyperlink`
+[home] dark mode support
 
-# dark mode
-
-[home] dark mode
-
-[playground] dark mode
+[playground] dark mode support
 
 # canvas
 
