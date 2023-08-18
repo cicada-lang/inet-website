@@ -27,4 +27,3 @@ defineProps<{
     </div>
   </div>
 </template>
-./State

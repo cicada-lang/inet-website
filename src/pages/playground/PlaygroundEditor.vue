@@ -13,4 +13,3 @@ defineProps<{
     v-model="state.text"
   ></textarea>
 </template>
-./State
