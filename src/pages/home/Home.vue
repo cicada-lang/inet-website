@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Lang from '../../components/lang/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 
 const exampleCode = `\
@@ -20,7 +21,10 @@ end
     <div class="flex flex-col p-3">
       <div class="text-7xl text-center text-blance pt-16 font-bold">iNet</div>
       <div class="text-3xl text-center text-blance py-10">
-        Programming with interaction nets.
+        <Lang>
+          <template #zh> 用可反应的网编程。 </template>
+          <template #en> Programming with interaction nets. </template>
+        </Lang>
       </div>
 
       <div class="flex sm:flex-row flex-col sm:max-w-3xl my-12 self-center">
@@ -35,16 +39,15 @@ end
         </div>
       </div>
 
-      <div
-        class="sm:text-7xl text-6xl px-6 max-w-sm self-center text-blance py-10 font-bold"
-      >
-        Fun. <br />
-        Simple. <br />
-        Inspiring. <br />
-      </div>
+      <div class="flex flex-col items-start px-6 py-10 self-center max-w-md">
+        <div class="sm:text-4xl text-3xl text-blance font-bold">
+          <Lang>
+            <template #zh> 语言参考手册 </template>
+            <template #en> Language Reference Manual </template>
+          </Lang>
+        </div>
 
-      <div class="max-w-sm self-center py-10 text-xl">
-        TODO 8 statements and 7 words.
+        <div class="py-6 text-xl">TODO 8 statements and 7 words.</div>
       </div>
     </div>
   </PageLayout>

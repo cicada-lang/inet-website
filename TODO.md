@@ -1,5 +1,3 @@
-[home] lang support
-
 # canvas
 
 add canvas
@@ -18,7 +16,7 @@ click active to run one step
 
 [home] code example -- play with canvas
 
-[home] list mimimal core -- like alpinejs
+[home] homepage as language reference manual -- mimimal core -- like alpinejs
 
 - https://alpinejs.dev/
 - 8 statements: type node rule claim define check -- module system import require
