@@ -16,16 +16,15 @@ defineProps<{
     <div class="flex items-baseline space-x-2">
       <PageLogo />
 
-      <RouterLink to="/playground" class="text-2xl">
-        Playground
-      </RouterLink>
+      <RouterLink to="/playground" class="text-2xl"> Playground </RouterLink>
     </div>
 
     <div class="flex items-center space-x-2">
+      <PlaygroundToolbar :state="state" />
+
       <a href="https://github.com/cicada-lang/inet" target="_blank">
         <IconGithub class="h-5 w-5" />
       </a>
-      <PlaygroundToolbar :state="state" />
     </div>
   </div>
 </template>

@@ -1,7 +1,5 @@
 # home page
 
-[home] setup `/home` to test `PageLayout`
-
 [home] navbar
 
 [home] mimimal like alpinejs

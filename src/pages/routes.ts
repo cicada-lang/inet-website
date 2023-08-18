@@ -1,13 +1,12 @@
 import { RouteRecordRaw } from "vue-router"
-import PlaygroundPage from "./playground/PlaygroundPage.vue"
+import Home from "./home/Home.vue"
+import Playground from "./playground/Playground.vue"
 
 export const routes: Array<RouteRecordRaw> = [
-  { path: "/", redirect: "/playground" },
+  { path: "/", component: Home },
   {
     path: "/playground/:encoded?",
-    component: PlaygroundPage,
-    props: (route) => ({
-      encoded: route.params.encoded,
-    }),
+    component: Playground,
+    props: (route) => ({ encoded: route.params.encoded }),
   },
 ]

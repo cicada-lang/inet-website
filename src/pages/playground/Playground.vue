@@ -4,7 +4,7 @@ import debounce from "lodash/debounce"
 import { reactive, watch } from "vue"
 import { useRoute, useRouter } from "vue-router"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
-import PlaygroundHeader from "./PlaygroundHeader.vue"
+import PlaygroundHead from "./PlaygroundHead.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
 import { State } from "./State"
 
@@ -40,7 +40,7 @@ watch(
 <template>
   <div class="flex h-screen flex-col">
     <div class="flex h-full overflow-auto flex-col">
-      <PlaygroundHeader :state="state" />
+      <PlaygroundHead :state="state" />
       <div class="flex h-full flex-col overflow-y-auto md:flex-row">
         <PlaygroundEditor
           class="shrink grow md:w-1/2 md:resize-x"
