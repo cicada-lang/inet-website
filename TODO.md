@@ -1,3 +1,5 @@
+[settings] dark mode support
+
 [home] dark mode support
 [page-layout] dark mode support
 [playground] dark mode support

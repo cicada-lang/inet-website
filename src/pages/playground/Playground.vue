@@ -49,7 +49,7 @@ watch(
 
       <div
         v-if="state"
-        class="flex h-full flex-col overflow-y-auto sm:flex-row"
+        class="flex h-full flex-col sm:overflow-y-auto sm:flex-row"
       >
         <PlaygroundEditor
           class="sm:w-1/2 sm:resize-x"

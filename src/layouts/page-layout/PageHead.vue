@@ -19,6 +19,16 @@ const route = useRoute()
       Playground
     </RouterLink>
 
+    <RouterLink
+      to="/settings"
+      class="text-xl pr-4 flex items-center hover:underline underline-offset-4 decoration-2"
+      :class="{
+        underline: route.path.startsWith('/settings'),
+      }"
+    >
+      Settings
+    </RouterLink>
+
     <a
       target="_blank"
       href="https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json"
@@ -34,15 +44,5 @@ const route = useRoute()
     >
       GitHub
     </a>
-
-    <RouterLink
-      to="/settings"
-      class="text-xl pr-4 flex items-center hover:underline underline-offset-4 decoration-2"
-      :class="{
-        underline: route.path.startsWith('/settings'),
-      }"
-    >
-      Settings
-    </RouterLink>
   </div>
 </template>

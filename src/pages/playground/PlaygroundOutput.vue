@@ -16,7 +16,7 @@ defineProps<{
 
     <div v-if="state.errorMessage" class="flex flex-col h-full w-full">
       <div class="px-3 py-1 text-xl text-rose-500 font-bold">Error</div>
-      <pre class="px-3 py-2 text-base" v-html="state.errorMessage"></pre>
+      <pre class="px-3 py-2 text-sm sm:text-base text-base" v-html="state.errorMessage"></pre>
     </div>
 
     <div v-if="state.output" class="flex h-full flex-col w-full">
@@ -26,7 +26,7 @@ defineProps<{
       >
         Output
       </div>
-      <pre class="px-3 py-2">{{ state.output }}</pre>
+      <pre class="px-3 py-2 text-sm sm:text-base">{{ state.output }}</pre>
     </div>
   </div>
 </template>
