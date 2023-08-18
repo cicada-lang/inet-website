@@ -14,8 +14,7 @@ defineProps<{
     class="flex items-center justify-between border-b border-black px-3 py-2"
   >
     <div class="flex items-baseline space-x-2">
-      <PageLogo />
-
+      <RouterLink to="/"> <PageLogo /> </RouterLink>
       <RouterLink to="/playground" class="text-2xl"> Playground </RouterLink>
     </div>
 

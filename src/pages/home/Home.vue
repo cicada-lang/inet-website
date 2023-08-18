@@ -4,6 +4,6 @@ import PageLayout from "../../layouts/page-layout/PageLayout.vue"
 
 <template>
   <PageLayout>
-    <div>    TODO</div>
+    <div class="p-3">    TODO</div>
   </PageLayout>
 </template>

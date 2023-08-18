@@ -11,8 +11,6 @@ https://alpinejs.dev/
 
 # playground
 
-[playground] logo link to home
-
 [playground] `State` should be a type -- instead of a class
 
 - `createState`
