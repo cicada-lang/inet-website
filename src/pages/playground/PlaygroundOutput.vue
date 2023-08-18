@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col h-full w-full overflow-y-auto min-h-[20rem]">
+  <div class="flex flex-col h-full w-full sm:overflow-y-auto min-h-[20rem]">
     <PlaygroundToolbar
       class="border-b sm:border-t-0 border-t border-black px-3 py-2"
       :state="state"
