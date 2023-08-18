@@ -1,7 +1,3 @@
-# playground
-
-[playground] `PlaygroundToolbar` -- `Run` measure running time
-
 # chinese support
 
 add `Lang`

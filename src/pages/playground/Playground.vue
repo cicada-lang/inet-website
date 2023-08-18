@@ -33,7 +33,7 @@ watch(route, () => {
 
 watch(
   () => state.value?.text,
-  debounce(async (value, oldValue) => {
+  debounce(async (value) => {
     if (state.value) {
       router.replace({
         path: `/playground/${Base64.encodeURI(value)}`,
