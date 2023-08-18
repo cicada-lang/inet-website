@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import PageLogo from './PageLogo.vue'
 import Lang from '../../components/lang/Lang.vue'
+import PageLogo from './PageLogo.vue'
 
 const route = useRoute()
 </script>
@@ -19,8 +19,8 @@ const route = useRoute()
         }"
       >
         <Lang>
-          <template #zh>演算</template>
-          <template #en>Play</template>
+          <template #zh> 演算 </template>
+          <template #en> Play </template>
         </Lang>
       </RouterLink>
 
@@ -32,8 +32,8 @@ const route = useRoute()
         }"
       >
         <Lang>
-          <template #zh>设置</template>
-          <template #en>Settings</template>
+          <template #zh> 设置 </template>
+          <template #en> Settings </template>
         </Lang>
       </RouterLink>
 
@@ -43,8 +43,8 @@ const route = useRoute()
         class="pr-4 text-xl hover:underline underline-offset-4 decoration-2"
       >
         <Lang>
-          <template #zh>文档</template>
-          <template #en>Docs</template>
+          <template #zh> 文档 </template>
+          <template #en> Docs </template>
         </Lang>
       </a>
 
@@ -54,8 +54,8 @@ const route = useRoute()
         class="text-xl hover:underline underline-offset-4 decoration-2"
       >
         <Lang>
-          <template #zh>GitHub</template>
-          <template #en>GitHub</template>
+          <template #zh> GitHub </template>
+          <template #en> GitHub </template>
         </Lang>
       </a>
     </div>

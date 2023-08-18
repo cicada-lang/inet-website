@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import Lang from '../../components/lang/Lang.vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { State } from './State'
 import { stateReload } from './stateReload'
 
 const props = defineProps<{
   state: State
 }>()
+
+const lang = useGlobalLang()
 
 const timeUsedToRun = ref<number | undefined>(undefined)
 
@@ -21,7 +25,10 @@ async function share() {
   try {
     const url = window.location.href
     await navigator.clipboard.writeText(url)
-    window.alert(`URL copied to clipboard!`)
+    const message = lang.isZh()
+      ? `网址（URL）已复制到剪切板！`
+      : `URL copied to clipboard!`
+    window.alert(message)
   } catch (error) {
     console.error(error)
   }
@@ -34,16 +41,24 @@ async function share() {
       class="text-xl hover:underline underline-offset-4 decoration-2"
       @click="share()"
     >
-      Share
+      <Lang>
+        <template #zh> 分享 </template>
+        <template #en> Share </template>
+      </Lang>
     </button>
 
     <button
-      class="text-xl hover:underline underline-offset-4 decoration-2"
+      class="text-xl hover:underline underline-offset-4 decoration-2 "
       @click="run()"
     >
-      Run
+      <Lang class="inline">
+        <template #zh> 运行 </template>
+        <template #en> Run </template>
+      </Lang>
 
-      <span v-if="timeUsedToRun" class="text-stone-500 dark:text-stone-300 text-base"
+      <span
+        v-if="timeUsedToRun"
+        class="text-stone-500 dark:text-stone-300 text-base"
         >({{ Math.floor(timeUsedToRun) }} ms)</span
       >
     </button>
