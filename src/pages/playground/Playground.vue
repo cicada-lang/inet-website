@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Base64 } from "js-base64"
 import debounce from "lodash/debounce"
-import { onMounted, reactive, ref, watch } from "vue"
+import { onMounted, ref, watch } from "vue"
 import { useRoute, useRouter } from "vue-router"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
 import PlaygroundHead from "./PlaygroundHead.vue"
@@ -18,10 +18,10 @@ defineProps<{
 
 const state = ref<State | undefined>(undefined)
 
-const options = reactive({})
-
 onMounted(async () => {
-  state.value = await loadStateReactive(options)
+  state.value = await loadStateReactive({
+    text: Base64.decode(String(route.params.encoded)),
+  })
 })
 
 watch(
