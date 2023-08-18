@@ -25,7 +25,7 @@ end
 
       <div class="flex sm:flex-row flex-col sm:max-w-3xl my-12 self-center">
         <div
-          class="border-4 border-black mx-3 rounded-lg sm:px-8 sm:py-6 px-3 py-2 text-xl"
+          class="border-4 border-black dark:border-white mx-3 rounded-lg sm:px-8 sm:py-6 px-3 py-2 text-xl"
         >
           <pre class="whitespace-pre">{{ exampleCode }}</pre>
         </div>

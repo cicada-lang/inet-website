@@ -17,7 +17,7 @@ const lang = useGlobalLang()
     </Head>
 
     <div
-      class="font-content border-t border-black flex h-full flex-col space-y-3 overflow-y-auto p-3 text-xl"
+      class="font-content border-t border-black dark:border-white flex h-full flex-col space-y-3 overflow-y-auto p-3 text-xl"
     >
       <div class="flex flex-col space-y-2 sm:w-[27rem]">
         <div class="flex items-baseline">
