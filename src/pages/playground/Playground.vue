@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { Base64 } from "js-base64"
-import debounce  from "lodash/debounce"
+import debounce from "lodash/debounce"
 import { onMounted, ref, watch } from "vue"
 import { useRoute, useRouter } from "vue-router"
 import PageHead from "../../layouts/page-layout/PageHead.vue"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
-import PlaygroundToolbar from "./PlaygroundToolbar.vue"
 import { State } from "./State"
 import { loadStateReactive } from "./loadStateReactive"
 
@@ -46,9 +45,7 @@ watch(
 <template>
   <div class="flex h-screen flex-col">
     <div class="flex h-full overflow-auto flex-col">
-      <PageHead class="border-b border-black px-3 py-2">
-        <PlaygroundToolbar v-if="state" :state="state" />
-      </PageHead>
+      <PageHead class="border-b border-black px-3 py-2" />
 
       <div class="flex h-full flex-col overflow-y-auto md:flex-row">
         <PlaygroundEditor

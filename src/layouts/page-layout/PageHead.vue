@@ -7,19 +7,16 @@ const route = useRoute()
 
 <template>
   <div class="flex items-baseline justify-between">
-    <div class="flex items-baseline space-x-4">
+    <div class="flex items-baseline pr-4">
       <RouterLink to="/"> <PageLogo /> </RouterLink>
-
-      <slot></slot>
     </div>
 
     <div class="flex items-baseline space-x-4">
       <RouterLink
         to="/playground"
-        class="text-xl hover:underline  underline-offset-4 decoration-2"
+        class="text-xl hover:underline underline-offset-4 decoration-2"
         :class="{
-          'underline':
-            route.path.startsWith('/playground'),
+          underline: route.path.startsWith('/playground'),
         }"
       >
         Playground
@@ -28,7 +25,7 @@ const route = useRoute()
       <a
         target="_blank"
         href="https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json"
-        class="text-xl hover:underline  underline-offset-4 decoration-2"
+        class="text-xl hover:underline underline-offset-4 decoration-2"
       >
         Docs
       </a>
@@ -36,7 +33,7 @@ const route = useRoute()
       <a
         target="_blank"
         href="https://github.com/cicada-lang/inet"
-        class="text-xl hover:underline  underline-offset-4 decoration-2"
+        class="text-xl hover:underline underline-offset-4 decoration-2"
       >
         GitHub
       </a>
