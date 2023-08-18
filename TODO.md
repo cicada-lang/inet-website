@@ -1,6 +1,22 @@
+[page-layout] should not fix head
+
+[page-layout] link to docs
+
 # playground
 
+[playground] active link for navbar
+
+[playground] move toolbar to the left
+
 [playground] `PlaygroundToolbar` explicit `Run` button
+
+[playground] `PlaygroundToolbar` -- `Run` measure running time
+
+# chinese support
+
+add `Lang`
+
+add `Hyperlink`
 
 # dark mode
 
