@@ -1,11 +1,11 @@
-import { RouteRecordRaw } from "vue-router"
-import Home from "./home/Home.vue"
-import Playground from "./playground/Playground.vue"
+import { RouteRecordRaw } from 'vue-router'
+import Home from './home/Home.vue'
+import Playground from './playground/Playground.vue'
 
 export const routes: Array<RouteRecordRaw> = [
-  { path: "/", component: Home },
+  { path: '/', component: Home },
   {
-    path: "/playground/:encoded?",
+    path: '/playground/:encoded?',
     component: Playground,
     props: (route) => ({ encoded: route.params.encoded }),
   },

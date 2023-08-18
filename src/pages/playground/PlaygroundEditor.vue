@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { State } from "./State"
+import { State } from './State'
 
 defineProps<{
   state: State

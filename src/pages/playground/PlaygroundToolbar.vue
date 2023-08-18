@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from "vue"
-import { State } from "./State"
-import { stateReload } from "./stateReload"
+import { ref } from 'vue'
+import { State } from './State'
+import { stateReload } from './stateReload'
 
 const props = defineProps<{
   state: State

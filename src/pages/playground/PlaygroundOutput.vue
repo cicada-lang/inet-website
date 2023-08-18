@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import PlaygroundToolbar from "./PlaygroundToolbar.vue"
-import { State } from "./State"
+import PlaygroundToolbar from './PlaygroundToolbar.vue'
+import { State } from './State'
 
 defineProps<{
   state: State

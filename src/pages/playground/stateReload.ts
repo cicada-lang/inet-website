@@ -1,15 +1,14 @@
-import { ParsingError, Report, createMod, parseStmts } from "@cicada-lang/inet"
-import { State } from "./State"
+import { ParsingError, Report, createMod, parseStmts } from '@cicada-lang/inet'
+import { State } from './State'
 
 export async function stateReload(state: State): Promise<void> {
-  state.errorMessage = ""
-  state.output = ""
-
+  state.errorMessage = ''
+  state.output = ''
 
   state.mod.loader.onOutput = (output) => {
     console.log(output)
     state.output += output
-    state.output += "\n"
+    state.output += '\n'
   }
 
   state.mod = createMod({

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router"
-import PageLogo from "./PageLogo.vue"
-import IconGitHub from "../../components/icons/IconGitHub.vue"
+import { useRoute } from 'vue-router'
+import IconGitHub from '../../components/icons/IconGitHub.vue'
+import PageLogo from './PageLogo.vue'
 
 const route = useRoute()
 </script>

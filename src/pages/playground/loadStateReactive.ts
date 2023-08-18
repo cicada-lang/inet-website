@@ -1,6 +1,6 @@
-import { State } from "./State"
-import { StateOptions, loadState } from "./loadState"
-import { stateReactive } from "./stateReactive"
+import { State } from './State'
+import { StateOptions, loadState } from './loadState'
+import { stateReactive } from './stateReactive'
 
 let cache: State | undefined = undefined
 
