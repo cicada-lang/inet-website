@@ -1,4 +1,0 @@
-<template>
-  <div class="h-full w-full overflow-y-auto">
-    <div v-if="state.error" class="h-full w-full overflow-y-auto">
-      <div class="bg-

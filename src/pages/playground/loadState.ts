@@ -1,5 +1,6 @@
-import { Fetcher, Loader, createMod, parseStmts } from "@cicada-lang/inet"
+import { Fetcher, Loader, createMod } from "@cicada-lang/inet"
 import { State } from "./State"
+import { stateReload } from "./stateReload"
 
 export type StateOptions = {
   text: string
@@ -13,15 +14,9 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const url = new URL(window.location.href)
 
-  const stmts = parseStmts(text)
-  const mod = createMod({ loader, url, text, stmts })
+  const mod = createMod({ loader, url, text, stmts: [] })
 
-  for (const stmt of stmts) {
-    await stmt.execute(mod)
-  }
-
-  return {
-    text,
-    mod,
-  }
+  const state: State = { text, mod }
+  await stateReload(state)
+  return state
 }

@@ -1,7 +1,5 @@
 # playground
 
-[playground] handle error
-
 [playground] output text of module first
 
 [playground] be able to resize editer

@@ -8,6 +8,7 @@ import PlaygroundHead from "./PlaygroundHead.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
 import { State } from "./State"
 import { loadStateReactive } from "./loadStateReactive"
+import { stateReload } from "./stateReload"
 
 const router = useRouter()
 const route = useRoute()
@@ -38,7 +39,7 @@ watch(
   () => state.value?.text,
   debounce(() => {
     if (state.value) {
-      // state.refresh()
+      stateReload(state.value)
       router.replace({
         path: `/playground/${Base64.encodeURI(state.value.text)}`,
       })
