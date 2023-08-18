@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Base64 } from "js-base64"
-import debounce from "lodash/debounce"
+import { debounce } from "lodash"
 import { onMounted, ref, watch } from "vue"
 import { useRoute, useRouter } from "vue-router"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
@@ -25,24 +25,24 @@ onMounted(async () => {
   })
 })
 
-watch(
-  route,
-  () => {
-    if (state.value) {
-      state.value.text = Base64.decode(String(route.params.encoded))
-    }
-  },
-
-)
+watch(route, () => {
+  if (state.value) {
+    state.value.text = Base64.decode(String(route.params.encoded))
+  }
+})
 
 watch(
   () => state.value?.text,
-  debounce(async () => {
+  debounce(async (value, oldValue) => {
     if (state.value) {
-      await stateReload(state.value)
       router.replace({
-        path: `/playground/${Base64.encodeURI(state.value.text)}`,
+        path: `/playground/${Base64.encodeURI(value)}`,
       })
+
+      // NOTE When `oldValue` is empty, no reload is needed.
+      if (oldValue) {
+        await stateReload(state.value)
+      }
     }
   }, 300),
 )
