@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import PageLogo from './PageLogo.vue'
+import Lang from '../../components/lang/Lang.vue'
 
 const route = useRoute()
 </script>
@@ -17,7 +18,10 @@ const route = useRoute()
           underline: route.path.startsWith('/playground'),
         }"
       >
-        Playground
+        <Lang>
+          <template #zh>演算</template>
+          <template #en>Play</template>
+        </Lang>
       </RouterLink>
 
       <RouterLink
@@ -27,7 +31,10 @@ const route = useRoute()
           underline: route.path.startsWith('/settings'),
         }"
       >
-        Settings
+        <Lang>
+          <template #zh>设置</template>
+          <template #en>Settings</template>
+        </Lang>
       </RouterLink>
 
       <a
@@ -35,7 +42,10 @@ const route = useRoute()
         href="https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json"
         class="pr-4 text-xl hover:underline underline-offset-4 decoration-2"
       >
-        Docs
+        <Lang>
+          <template #zh>文档</template>
+          <template #en>Docs</template>
+        </Lang>
       </a>
 
       <a
@@ -43,7 +53,10 @@ const route = useRoute()
         href="https://github.com/cicada-lang/inet"
         class="text-xl hover:underline underline-offset-4 decoration-2"
       >
-        GitHub
+        <Lang>
+          <template #zh>GitHub</template>
+          <template #en>GitHub</template>
+        </Lang>
       </a>
     </div>
   </div>

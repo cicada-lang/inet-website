@@ -1,5 +1,4 @@
 [home] lang support
-[page-layout] lang support
 [playground] lang support
 
 # canvas
