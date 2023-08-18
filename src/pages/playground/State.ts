@@ -1,12 +1,8 @@
-export class State {
-  text = ""
-  // mod: Mod
+export type State = {
+  text: string
+
   error?: {
     kind: string
     message: string
-  }
-
-  constructor() {
-    // this.mod = load(this.text)
   }
 }

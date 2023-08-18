@@ -6,7 +6,7 @@ import { useRoute, useRouter } from "vue-router"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
 import PlaygroundHead from "./PlaygroundHead.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
-import { State } from "./State"
+import { createState } from "./createState"
 
 const router = useRouter()
 const route = useRoute()
@@ -15,7 +15,7 @@ defineProps<{
   encoded: String
 }>()
 
-const state = reactive(new State())
+const state = reactive(createState())
 
 watch(
   route,
