@@ -1,5 +1,3 @@
-[page-layout] should not fix head
-
 [page-layout] link to docs
 
 # playground

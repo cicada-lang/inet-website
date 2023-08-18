@@ -6,7 +6,7 @@ import PageHead from "./PageHead.vue"
 <template>
   <div class="flex h-screen flex-col">
     <PageHead class="px-3 py-2 " />
-    <div class="h-full overflow-y-auto">
+    <div class="h-full">
       <slot />
     </div>
     <PageFoot />
