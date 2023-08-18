@@ -1,5 +1,3 @@
-[page-layout] active link for navbar
-
 # playground
 
 [playground] `PlaygroundToolbar` explicit `Run` button

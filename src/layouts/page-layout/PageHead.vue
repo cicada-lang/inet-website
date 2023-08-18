@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useRoute } from "vue-router"
 import PageLogo from "./PageLogo.vue"
+
+const route = useRoute()
 </script>
 
 <template>
@@ -11,12 +14,21 @@ import PageLogo from "./PageLogo.vue"
     </div>
 
     <div class="flex items-baseline space-x-4">
-      <RouterLink to="/playground" class="text-xl"> Playground </RouterLink>
+      <RouterLink
+        to="/playground"
+        class="text-xl hover:underline  underline-offset-4 decoration-2"
+        :class="{
+          'underline':
+            route.path.startsWith('/playground'),
+        }"
+      >
+        Playground
+      </RouterLink>
 
       <a
         target="_blank"
         href="https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json"
-        class="text-xl"
+        class="text-xl hover:underline  underline-offset-4 decoration-2"
       >
         Docs
       </a>
@@ -24,7 +36,7 @@ import PageLogo from "./PageLogo.vue"
       <a
         target="_blank"
         href="https://github.com/cicada-lang/inet"
-        class="text-xl"
+        class="text-xl hover:underline  underline-offset-4 decoration-2"
       >
         GitHub
       </a>
