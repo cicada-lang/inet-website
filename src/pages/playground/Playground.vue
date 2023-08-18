@@ -43,7 +43,7 @@ watch(
 </script>
 
 <template>
-  <div class="flex h-screen flex-col">
+  <div class="flex h-screen-dynamic flex-col">
     <div class="flex h-full overflow-auto flex-col">
       <PageHead class="border-b border-black px-3 py-2" />
 
