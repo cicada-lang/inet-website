@@ -1,8 +1,10 @@
 [home] dark mode support
 [page-layout] dark mode support
 [playground] dark mode support
+[settings] dark mode support
 
 [home] lang support
+[page-layout] lang support
 [playground] lang support
 
 # canvas

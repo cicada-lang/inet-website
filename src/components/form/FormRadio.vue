@@ -22,11 +22,11 @@ defineEmits<{
       <div
         v-for="(entry, index) of entries"
         :key="index"
-        class="flex max-w-min space-x-2 px-3"
+        class="flex max-w-min px-3"
       >
         <input
           type="radio"
-          class="disabled:bg-stone-100 dark:disabled:bg-stone-700"
+          class="disabled:bg-stone-100 dark:disabled:bg-stone-700 hidden"
           :id="entry.value"
           :name="name"
           :value="entry.value"
@@ -35,7 +35,17 @@ defineEmits<{
           :checked="entry.value === modelValue"
         />
 
-        <label :for="entry.value" class="font-ui shrink-0">
+        <label
+          :for="entry.value"
+          class="font-ui flex space-x-2 items-center shrink-0"
+        >
+          <pre v-if="entry.value === modelValue" class="font-code text-sm">{{
+            '[x]'
+          }}</pre>
+          <pre v-if="entry.value !== modelValue" class="font-code text-sm">{{
+            '[ ]'
+          }}</pre
+          >
           <span>{{ entry.label }}</span>
         </label>
       </div>
