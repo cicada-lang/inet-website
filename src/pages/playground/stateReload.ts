@@ -1,8 +1,23 @@
-import { ParsingError, Report, parseStmts } from "@cicada-lang/inet"
+import { ParsingError, Report, createMod, parseStmts } from "@cicada-lang/inet"
 import { State } from "./State"
 
 export async function stateReload(state: State): Promise<void> {
-  delete state.errorMessage
+  state.errorMessage = ""
+  state.output = ""
+
+
+  state.mod.loader.onOutput = (output) => {
+    console.log(output)
+    state.output += output
+    state.output += "\n"
+  }
+
+  state.mod = createMod({
+    loader: state.mod.loader,
+    url: state.mod.url,
+    text: state.text,
+    stmts: [],
+  })
 
   try {
     state.mod.stmts = parseStmts(state.text)
@@ -11,8 +26,6 @@ export async function stateReload(state: State): Promise<void> {
       await stmt.execute(state.mod)
     }
   } catch (error) {
-    console.error(error)
-
     if (error instanceof ParsingError) {
       state.errorMessage = error.report(state.text)
     } else if (error instanceof Report) {

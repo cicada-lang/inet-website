@@ -16,7 +16,9 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const mod = createMod({ loader, url, text, stmts: [] })
 
-  const state: State = { text, mod }
+  const state: State = { text, mod, output: "", errorMessage: "" }
+
   await stateReload(state)
+
   return state
 }

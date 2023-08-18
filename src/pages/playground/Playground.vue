@@ -32,20 +32,19 @@ watch(
       state.value.text = Base64.decode(String(route.params.encoded))
     }
   },
-  { immediate: true },
+
 )
 
 watch(
   () => state.value?.text,
-  debounce(() => {
+  debounce(async () => {
     if (state.value) {
-      stateReload(state.value)
+      await stateReload(state.value)
       router.replace({
         path: `/playground/${Base64.encodeURI(state.value.text)}`,
       })
     }
   }, 300),
-  { immediate: true },
 )
 </script>
 

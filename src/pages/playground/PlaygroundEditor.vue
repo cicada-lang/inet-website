@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <textarea
     spellcheck="false"
-    class="h-full w-full overflow-y-auto whitespace-pre p-3 font-mono text-sm md:text-base"
+    class="h-full w-full overflow-y-auto whitespace-pre p-3 font-code text-sm md:text-base"
     v-model="state.text"
   ></textarea>
 </template>

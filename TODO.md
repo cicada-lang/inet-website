@@ -1,6 +1,6 @@
 # playground
 
-[playground] output text of module first
+[playground] [maybe] editor and output larger text
 
 [playground] be able to resize editer
 
