@@ -4,3 +4,7 @@
 .text-balance {
   text-wrap: balance;
 }
+
+input[type='radio'] {
+  -webkit-appearance: radio;
+}
