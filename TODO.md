@@ -1,5 +1,3 @@
-[page-layout] link to docs
-
 # playground
 
 [playground] active link for navbar
