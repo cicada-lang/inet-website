@@ -8,7 +8,8 @@ rule zero add
 end
 
 rule add1 add
-  (add)-addend (add1)-prev add
+  (add)-addend
+  (add1)-prev add
   add1 return-(add)
 end
 `
@@ -22,9 +23,9 @@ end
         Programming with interaction nets.
       </div>
 
-      <div class="flex md:max-w-3xl my-12 self-center">
-        <div class="border-4 border-black rounded-lg px-10 py-6 text-xl">
-          <pre>{{ exampleCode }}</pre>
+      <div class="flex md:flex-row flex-col md:max-w-3xl my-12 self-center">
+        <div class="border-4 border-black mx-3 rounded-lg md:px-8 md:py-6 px-3 py-2 text-xl">
+          <pre class="whitespace-pre">{{ exampleCode }}</pre>
         </div>
 
         <div class="px-10 py-6 text-xl">
@@ -33,7 +34,7 @@ end
       </div>
 
       <div
-        class="text-7xl px-6 max-w-sm self-center text-blance py-10 font-bold"
+        class="md:text-7xl text-6xl px-6 max-w-sm self-center text-blance py-10 font-bold"
       >
         Fun. <br />
         Simple. <br />
