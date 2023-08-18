@@ -6,7 +6,6 @@ import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import SettingsSelectLang from './SettingsSelectLang.vue'
 import SettingsSelectTheme from './SettingsSelectTheme.vue'
 
-
 const lang = useGlobalLang()
 </script>
 
@@ -18,7 +17,7 @@ const lang = useGlobalLang()
     </Head>
 
     <div
-      class="font-content flex h-full flex-col space-y-3 overflow-y-auto p-3 text-xl"
+      class="font-content border-t border-black flex h-full flex-col space-y-3 overflow-y-auto p-3 text-xl"
     >
       <div class="flex flex-col space-y-2 sm:w-[27rem]">
         <div class="flex items-baseline">
