@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Base64 } from "js-base64"
-import { debounce } from "lodash"
+import debounce  from "lodash/debounce"
 import { onMounted, ref, watch } from "vue"
 import { useRoute, useRouter } from "vue-router"
 import PageHead from "../../layouts/page-layout/PageHead.vue"
