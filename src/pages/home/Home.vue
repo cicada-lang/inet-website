@@ -23,8 +23,8 @@ end
         Programming with interaction nets.
       </div>
 
-      <div class="flex md:flex-row flex-col md:max-w-3xl my-12 self-center">
-        <div class="border-4 border-black mx-3 rounded-lg md:px-8 md:py-6 px-3 py-2 text-xl">
+      <div class="flex sm:flex-row flex-col sm:max-w-3xl my-12 self-center">
+        <div class="border-4 border-black mx-3 rounded-lg sm:px-8 sm:py-6 px-3 py-2 text-xl">
           <pre class="whitespace-pre">{{ exampleCode }}</pre>
         </div>
 
@@ -34,7 +34,7 @@ end
       </div>
 
       <div
-        class="md:text-7xl text-6xl px-6 max-w-sm self-center text-blance py-10 font-bold"
+        class="sm:text-7xl text-6xl px-6 max-w-sm self-center text-blance py-10 font-bold"
       >
         Fun. <br />
         Simple. <br />
