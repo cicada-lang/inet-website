@@ -4,7 +4,13 @@
 
 [playground] output text of module first
 
+[playground] be able to resize editer
+
 # dark mode
+
+[home] dark mode
+
+[playground] dark mode
 
 # canvas
 

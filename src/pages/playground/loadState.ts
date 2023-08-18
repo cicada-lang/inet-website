@@ -1,7 +1,4 @@
-import { Fetcher } from "@cicada-lang/inet/lib/fetcher"
-import { createMod } from "@cicada-lang/inet/lib/lang/mod/createMod"
-import { parseStmts } from "@cicada-lang/inet/lib/lang/syntax"
-import { Loader } from "@cicada-lang/inet/lib/loader"
+import { Fetcher, Loader, createMod, parseStmts } from "@cicada-lang/inet"
 import { State } from "./State"
 
 export type StateOptions = {
@@ -13,10 +10,15 @@ export async function loadState(options: StateOptions): Promise<State> {
 
   const fetcher = new Fetcher()
   const loader = new Loader({ fetcher })
-  const url = new URL(window.location.href)
-  const stmts = parseStmts(text)
 
+  const url = new URL(window.location.href)
+
+  const stmts = parseStmts(text)
   const mod = createMod({ loader, url, text, stmts })
+
+  for (const stmt of stmts) {
+    await stmt.execute(mod)
+  }
 
   return {
     text,
