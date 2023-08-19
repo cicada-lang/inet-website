@@ -24,12 +24,6 @@ onMounted(async () => {
   })
 })
 
-watch(route, () => {
-  if (state.value) {
-    state.value.text = Base64.decode(String(route.params.encoded))
-  }
-})
-
 watch(
   () => state.value?.text,
   debounce(async (value) => {

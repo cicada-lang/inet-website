@@ -1,6 +1,12 @@
+[playground] move `PlaygroundToolbar` out of `PlaygroundOutput`
+[playground] `PlaygroundControl`
+[playground] `PlaygroundNavbar` -- show Output or Stage
+
 # canvas
 
 add canvas
+
+`canvasUseMathCoordinate`
 
 render stack
 
