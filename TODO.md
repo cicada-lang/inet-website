@@ -1,7 +1,5 @@
 # play
 
-[play] `Play` -- add canvas
-
 `canvasUseMathCoordinate`
 
 [play] render stack
