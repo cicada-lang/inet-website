@@ -27,9 +27,9 @@ end
         </Lang>
       </div>
 
-      <div class="flex sm:flex-row flex-col sm:max-w-3xl my-12 self-center">
+      <div class="flex md:flex-row flex-col md:max-w-3xl my-12 self-center">
         <div
-          class="border-4 border-black dark:border-white mx-3 rounded-lg sm:px-8 sm:py-6 px-3 py-2 text-xl"
+          class="border-4 border-black dark:border-white mx-3 rounded-lg md:px-8 md:py-6 px-3 py-2 text-xl"
         >
           <pre class="whitespace-pre">{{ exampleCode }}</pre>
         </div>
@@ -40,7 +40,7 @@ end
       </div>
 
       <div class="flex flex-col items-start px-6 py-10 self-center max-w-md">
-        <div class="sm:text-4xl text-3xl text-blance font-bold">
+        <div class="md:text-4xl text-3xl text-blance font-bold">
           <Lang>
             <template #zh> 语言参考手册 </template>
             <template #en> Language Reference Manual </template>

@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <div class="flex flex-col h-full w-full min-h-[20rem]">
     <PlaygroundToolbar
-      class="border-b sm:border-t-0 border-t dark:border-white border-black px-3 py-2"
+      class="border-b md:border-t-0 border-t dark:border-white border-black px-3 py-2"
       :state="state"
     />
 
@@ -26,7 +26,7 @@ defineProps<{
           </Lang>
         </div>
         <pre
-          class="text-sm sm:text-base text-base"
+          class="text-sm md:text-base text-base"
           v-html="state.errorMessage"
         ></pre>
       </div>
@@ -41,7 +41,7 @@ defineProps<{
             <template #en> Output </template>
           </Lang>
         </div>
-        <pre class="text-sm sm:text-base">{{ state.output }}</pre>
+        <pre class="text-sm md:text-base">{{ state.output }}</pre>
       </div>
     </div>
   </div>

@@ -19,7 +19,7 @@ const lang = useGlobalLang()
     <div
       class="font-content border-t border-black dark:border-white flex h-full flex-col space-y-3 overflow-y-auto p-3 text-xl"
     >
-      <div class="flex flex-col space-y-2 sm:w-[27rem]">
+      <div class="flex flex-col space-y-2 md:w-[27rem]">
         <div class="flex items-baseline">
           <div class="font-logo text-2xl font-bold">
             <Lang>
