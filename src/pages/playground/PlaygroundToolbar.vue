@@ -48,7 +48,7 @@ async function share() {
     </button>
 
     <button
-      class="text-xl hover:underline underline-offset-4 decoration-2 "
+      class="text-xl hover:underline underline-offset-4 decoration-2"
       @click="run()"
     >
       <Lang class="inline">

@@ -1,6 +1,13 @@
 # play
 
-`canvasUseMathCoordinate`
+[vector] `vectorAdd`
+[vector] `vectorMul`
+[vector] `vectorAddScalar`
+[vector] `vectorMulScalar`
+
+[canvas] `canvasUseMathCoordinate`
+
+[playground] fix scroll
 
 [play] render stack
 
@@ -11,13 +18,6 @@
 [play] run a connected component from a port
 
 [play] click active to run one step
-
-# vector
-
-`vectorAdd`
-`vectorMul`
-`vectorAddScalar`
-`vectorMulScalar`
 
 # home
 

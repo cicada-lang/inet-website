@@ -24,7 +24,10 @@ watch(
 </script>
 
 <template>
-  <div class="h-full w-full" ref="containerElement">
+  <div
+    class="h-full w-full min-h-[20rem] overflow-y-auto"
+    ref="containerElement"
+  >
     <canvas ref="canvasElement"></canvas>
   </div>
 </template>

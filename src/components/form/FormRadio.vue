@@ -44,8 +44,7 @@ defineEmits<{
           }}</pre>
           <pre v-if="entry.value !== modelValue" class="font-code text-sm">{{
             '[ ]'
-          }}</pre
-          >
+          }}</pre>
           <span>{{ entry.label }}</span>
         </label>
       </div>
