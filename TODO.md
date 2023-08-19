@@ -7,8 +7,6 @@
 
 [canvas] `canvasUseMathCoordinate`
 
-[playground] fix scroll
-
 [play] render stack
 
 [play] render top graph

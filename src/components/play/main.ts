@@ -8,11 +8,11 @@ export function main(
   mod: Mod,
 ): void {
   canvas.width = containerElement.offsetWidth
-  canvas.height = containerElement.offsetHeight
+  canvas.height = (containerElement.offsetHeight)
 
   new ResizeObserver(() => {
     canvas.width = containerElement.offsetWidth
-    canvas.height = containerElement.offsetHeight
+    canvas.height = (containerElement.offsetHeight)
   }).observe(containerElement)
 
   const ctx = canvas.getContext('2d') as CanvasRenderingContext2D

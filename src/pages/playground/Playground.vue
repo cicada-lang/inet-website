@@ -50,13 +50,12 @@ watch(
       class="flex flex-col md:h-full md:overflow-auto md:flex-row"
     >
       <PlaygroundEditor
-        class="md:w-1/2 h-full md:resize-x"
-        style="min-height: 30rem"
+        class="md:w-1/2 h-full md:min-h-full min-h-[23rem] md:resize-x"
         :state="state"
       />
 
       <div
-        class="md:border-l flex flex-col overflow-auto h-full border-black min-h-max dark:border-white md:w-1/2"
+        class="md:border-l grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black min-h-max dark:border-white md:w-1/2"
       >
         <div
           class="border-b flex justify-between sm:border-t-0 border-t dark:border-white border-black px-3 py-2"
