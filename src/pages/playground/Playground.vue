@@ -5,6 +5,7 @@ import { onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import PageHead from '../../layouts/page-layout/PageHead.vue'
 import PlaygroundEditor from './PlaygroundEditor.vue'
+import PlaygroundStage from './PlaygroundStage.vue'
 import PlaygroundNavbar from './PlaygroundNavbar.vue'
 import PlaygroundOutput from './PlaygroundOutput.vue'
 import PlaygroundToolbar from './PlaygroundToolbar.vue'
@@ -62,8 +63,9 @@ watch(
             <PlaygroundToolbar :state="state" />
             <PlaygroundNavbar :state="state" />
           </div>
-
-          <PlaygroundOutput :state="state" />
+          
+          <PlaygroundOutput v-if="state.kind === 'Output'" :state="state" />
+          <PlaygroundStage v-if="state.kind === 'Stage'" :state="state" />
         </div>
       </div>
     </div>

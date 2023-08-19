@@ -1,5 +1,3 @@
-[playground] `PlaygroundStage`
-
 # canvas
 
 add canvas
