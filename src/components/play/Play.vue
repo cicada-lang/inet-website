@@ -3,7 +3,7 @@ import { Mod } from '@cicada-lang/inet'
 import { ref, watch } from 'vue'
 import { main } from './main'
 
-defineProps<{
+const props = defineProps<{
   mod: Mod
 }>()
 
@@ -14,7 +14,7 @@ watch(
   canvasElement,
   () => {
     if (canvasElement.value && containerElement.value) {
-      main(canvasElement.value, containerElement.value)
+      main(canvasElement.value, containerElement.value, props.mod)
     }
   },
   {

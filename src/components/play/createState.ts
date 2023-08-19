@@ -1,7 +1,15 @@
+import { Mod } from '@cicada-lang/inet'
 import { State } from './State.ts'
 // import { createCamera } from "./camera/createCamera.ts"
 
-export function createState(canvas: HTMLCanvasElement): State {
+export type StateOptions = {
+  canvas: HTMLCanvasElement
+  mod: Mod
+}
+
+export function createState(options: StateOptions): State {
+  const { mod, canvas } = options
+
   // const camera = createCamera()
 
   const mouse = {
@@ -14,5 +22,6 @@ export function createState(canvas: HTMLCanvasElement): State {
     canvas,
     // camera,
     mouse,
+    mod,
   }
 }
