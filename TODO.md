@@ -1,5 +1,4 @@
-[playground] `PlaygroundControl`
-[playground] `PlaygroundNavbar` -- show Output or Stage
+[playground] `PlaygroundStage`
 
 # canvas
 

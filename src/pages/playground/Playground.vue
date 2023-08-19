@@ -5,6 +5,7 @@ import { onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import PageHead from '../../layouts/page-layout/PageHead.vue'
 import PlaygroundEditor from './PlaygroundEditor.vue'
+import PlaygroundNavbar from './PlaygroundNavbar.vue'
 import PlaygroundOutput from './PlaygroundOutput.vue'
 import PlaygroundToolbar from './PlaygroundToolbar.vue'
 import { State } from './State'
@@ -55,10 +56,12 @@ watch(
         <div
           class="md:border-l flex flex-col h-full border-black min-h-max dark:border-white md:w-1/2"
         >
-          <PlaygroundToolbar
-            class="border-b sm:border-t-0 border-t dark:border-white border-black px-3 py-2"
-            :state="state"
-          />
+          <div
+            class="border-b flex justify-between sm:border-t-0 border-t dark:border-white border-black px-3 py-2"
+          >
+            <PlaygroundToolbar :state="state" />
+            <PlaygroundNavbar :state="state" />
+          </div>
 
           <PlaygroundOutput :state="state" />
         </div>
