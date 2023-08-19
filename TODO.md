@@ -1,20 +1,18 @@
 # play
 
-play
-
-add canvas
+[play] `Play` -- add canvas
 
 `canvasUseMathCoordinate`
 
-render stack
+[play] render stack
 
-render top graph
+[play] render top graph
 
-select value in the stack -- like tab
+[play] select value in the stack -- like tab
 
-run a connected component from a port
+[play] run a connected component from a port
 
-click active to run one step
+[play] click active to run one step
 
 # vector
 

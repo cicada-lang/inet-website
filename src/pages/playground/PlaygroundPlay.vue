@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { State } from './State'
+import Play from '../../components/play/Play.vue'
 
 defineProps<{
   state: State
@@ -7,5 +8,5 @@ defineProps<{
 </script>
 
 <template>
-  TODO PlaygroundPlay
+  <Play :mod="state.mod" />
 </template>
