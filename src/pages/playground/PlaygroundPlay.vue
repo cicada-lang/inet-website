@@ -6,4 +6,6 @@ defineProps<{
 }>()
 </script>
 
-<template>TODO PlaygroundStage</template>
+<template>
+  TODO PlaygroundPlay
+</template>

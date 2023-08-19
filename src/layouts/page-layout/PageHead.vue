@@ -19,8 +19,8 @@ const route = useRoute()
         }"
       >
         <Lang>
-          <template #zh> 演算 </template>
-          <template #en> Play </template>
+          <template #zh> 演算场 </template>
+          <template #en> Playground </template>
         </Lang>
       </RouterLink>
 

@@ -28,13 +28,13 @@ const lang = useGlobalLang()
     <button
       class="text-xl hover:underline underline-offset-4 decoration-2"
       :class="{
-        underline: state.kind === 'Stage',
+        underline: state.kind === 'Play',
       }"
-      @click="state.kind = 'Stage'"
+      @click="state.kind = 'Play'"
     >
       <Lang class="inline">
-        <template #zh> 舞台 </template>
-        <template #en> Stage </template>
+        <template #zh> 演算 </template>
+        <template #en> Play </template>
       </Lang>
     </button>
   </div>

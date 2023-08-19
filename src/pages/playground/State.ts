@@ -1,7 +1,7 @@
 import { Mod } from '@cicada-lang/inet'
 
 export type State = {
-  kind: "Output" | "Stage"
+  kind: "Output" | "Play"
   text: string
   mod: Mod
   output: string
