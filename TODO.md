@@ -1,4 +1,3 @@
-[playground] move `PlaygroundToolbar` out of `PlaygroundOutput`
 [playground] `PlaygroundControl`
 [playground] `PlaygroundNavbar` -- show Output or Stage
 

@@ -6,6 +6,7 @@ import { useRoute, useRouter } from 'vue-router'
 import PageHead from '../../layouts/page-layout/PageHead.vue'
 import PlaygroundEditor from './PlaygroundEditor.vue'
 import PlaygroundOutput from './PlaygroundOutput.vue'
+import PlaygroundToolbar from './PlaygroundToolbar.vue'
 import { State } from './State'
 import { loadStateReactive } from './loadStateReactive'
 
@@ -43,18 +44,24 @@ watch(
 
       <div
         v-if="state"
-        class="flex flex-col md:h-full md:max-h-full  md:overflow-auto md:flex-row"
+        class="flex flex-col md:h-full md:max-h-full md:overflow-auto md:flex-row"
       >
         <PlaygroundEditor
-          class="md:w-1/2 h-full  md:resize-x"
+          class="md:w-1/2 h-full md:resize-x"
           style="min-height: 30rem"
           :state="state"
         />
 
-        <PlaygroundOutput
-          class="md:border-l h-full border-black  min-h-max dark:border-white md:w-1/2"
-          :state="state"
-        />
+        <div
+          class="md:border-l flex flex-col h-full border-black min-h-max dark:border-white md:w-1/2"
+        >
+          <PlaygroundToolbar
+            class="border-b sm:border-t-0 border-t dark:border-white border-black px-3 py-2"
+            :state="state"
+          />
+
+          <PlaygroundOutput :state="state" />
+        </div>
       </div>
     </div>
   </div>

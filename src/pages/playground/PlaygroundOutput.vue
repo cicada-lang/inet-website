@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
-import PlaygroundToolbar from './PlaygroundToolbar.vue'
 import { State } from './State'
 
 defineProps<{
@@ -9,17 +8,10 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col h-full w-full min-h-[20rem]">
-    <PlaygroundToolbar
-      class="border-b md:border-t-0 border-t dark:border-white border-black px-3 py-2"
-      :state="state"
-    />
-
+  <div class="flex flex-col h-full w-full">
     <div class="flex flex-col h-full w-full overflow-auto p-3">
       <div v-if="state.errorMessage" class="flex flex-col h-full w-full">
-        <div
-          class="pb-3 text-xl text-rose-500 dark:text-rose-400 font-bold"
-        >
+        <div class="pb-3 text-xl text-rose-500 dark:text-rose-400 font-bold">
           <Lang>
             <template #zh> 错误 </template>
             <template #en> Error </template>
