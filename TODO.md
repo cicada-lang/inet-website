@@ -12,6 +12,13 @@ run a connected component from a port
 
 click active to run one step
 
+# vector
+
+`vectorAdd`
+`vectorMul`
+`vectorAddScalar`
+`vectorMulScalar`
+
 # home
 
 [home] code example -- play with canvas
