@@ -1,6 +1,5 @@
 # play
 
-[vector] `vectorAdd`
 [vector] `vectorMul`
 [vector] `vectorAddScalar`
 [vector] `vectorMulScalar`
