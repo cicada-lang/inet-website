@@ -1,8 +1,5 @@
 # play
 
-[vector] `vectorAddScalar`
-[vector] `vectorMulScalar`
-
 [canvas] `canvasUseMathCoordinate`
 
 [play] render stack
