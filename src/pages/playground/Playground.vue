@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Head } from '@vueuse/head'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { Base64 } from 'js-base64'
 import debounce from 'lodash/debounce'
 import { onMounted, ref, watch } from 'vue'
@@ -13,12 +15,14 @@ import PlaygroundToolbar from './PlaygroundToolbar.vue'
 import { State } from './State'
 import { loadStateReactive } from './loadStateReactive'
 
-const router = useRouter()
-const route = useRoute()
-
 defineProps<{
   encoded: String
 }>()
+
+const router = useRouter()
+const route = useRoute()
+
+const lang = useGlobalLang()
 
 const state = ref<State | undefined>(undefined)
 
@@ -44,6 +48,11 @@ watch(
   <div
     class="flex overflow-auto h-screen-dynamic flex-col dark:bg-stone-800 dark:text-white"
   >
+    <Head>
+      <title v-if="lang.isZh()">演算场 | iNet</title>
+      <title v-else>Playground | iNet</title>
+    </Head>
+
     <PageHead class="border-b border-black dark:border-white px-3 py-2" />
 
     <div
