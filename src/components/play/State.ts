@@ -1,5 +1,5 @@
 import { Mod } from '@cicada-lang/inet'
-import { Mouse } from './Mouse.ts'
+import { Mouse } from './mouse/Mouse'
 
 export type State = {
   canvas: HTMLCanvasElement

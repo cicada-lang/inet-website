@@ -1,9 +1,5 @@
 # play
 
-copy `mouse/` from `graphwind`
-
-[canvas] `canvasUseMathCoordinate`
-
 [play] render stack
 
 [play] render top graph

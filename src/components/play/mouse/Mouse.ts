@@ -1,5 +1,4 @@
 export type Mouse = {
-  x: number
-  y: number
+  position: [number, number]
   isDown: boolean
 }
