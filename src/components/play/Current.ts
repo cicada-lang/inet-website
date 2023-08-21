@@ -1,6 +1,4 @@
-import { Net } from '@cicada-lang/inet'
-import { Port } from '@cicada-lang/inet'
-import { Value } from '@cicada-lang/inet'
+import { Net, Port, Value } from '@cicada-lang/inet'
 import { NetLayout } from './NetLayout'
 
 export type Current = CurrentPort | CurrentValue

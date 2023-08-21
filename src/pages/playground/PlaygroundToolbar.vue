@@ -24,7 +24,7 @@ async function run() {
     props.state.kind = 'Error'
   } else {
     props.state.kind = 'Play'
-}
+  }
 }
 
 async function share() {

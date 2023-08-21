@@ -9,5 +9,4 @@ export function resizeCanvas(
     canvas.width = containerElement.offsetWidth
     canvas.height = containerElement.offsetHeight
   }).observe(containerElement)
-
 }

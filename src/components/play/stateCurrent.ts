@@ -1,5 +1,4 @@
-import { copyConnectedComponent } from '@cicada-lang/inet'
-import { createNet } from '@cicada-lang/inet'
+import { copyConnectedComponent, createNet } from '@cicada-lang/inet'
 import { Current } from './Current.ts'
 import { State } from './State.ts'
 import { createInitialNetLayout } from './createInitialNetLayout.ts'
