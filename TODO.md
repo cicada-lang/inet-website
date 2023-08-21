@@ -1,7 +1,5 @@
 # play
 
-[play] `nodeNeighbors`
-
 [play] `evolveNet`
 
 [play] `renderNode` -- improve style

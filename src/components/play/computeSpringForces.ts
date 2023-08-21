@@ -1,7 +1,7 @@
 import { Net } from '@cicada-lang/inet/lib/lang/net'
 import { NetLayout } from './NetLayout'
 import { computeSpringForce } from './computeSpringForce'
-import { nodeNeighborsOrFail } from './nodeNeighborsOrFail'
+import { netNodeNeighbors } from './netNodeNeighbors'
 
 export function computeSpringForces(
   net: Net,
@@ -14,7 +14,7 @@ export function computeSpringForces(
     if (position === undefined) continue
 
     const force: [number, number] = [0, 0]
-    for (const neighborId of nodeNeighborsOrFail(net, nodeId)) {
+    for (const neighborId of netNodeNeighbors(net, nodeId)) {
       if (neighborId !== nodeId) {
         const neighborPosition = layout.nodePositions.get(neighborId)
         if (neighborPosition === undefined) continue
