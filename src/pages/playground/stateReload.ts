@@ -6,7 +6,6 @@ export async function stateReload(state: State): Promise<void> {
   state.output = ''
 
   state.mod.loader.onOutput = (output) => {
-    console.log(output)
     state.output += output
     state.output += '\n'
   }
@@ -24,6 +23,10 @@ export async function stateReload(state: State): Promise<void> {
     for (const stmt of state.mod.stmts) {
       await stmt.execute(state.mod)
     }
+
+    // NOTE After async execution, update `tick`
+    // for `Play` component to refresh state.
+    state.tick++
   } catch (error) {
     if (error instanceof ParsingError) {
       state.errorMessage = error.report(state.text)

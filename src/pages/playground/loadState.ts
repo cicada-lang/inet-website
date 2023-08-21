@@ -22,6 +22,7 @@ export async function loadState(options: StateOptions): Promise<State> {
     mod,
     output: '',
     errorMessage: '',
+    tick: 0,
   }
 
   await stateReload(state)

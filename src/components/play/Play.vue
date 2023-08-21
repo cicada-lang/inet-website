@@ -10,6 +10,7 @@ import { stateRefresh } from './stateRefresh'
 
 const props = defineProps<{
   mod: Mod
+  tick: number
 }>()
 
 const state = ref<State | undefined>(undefined)
@@ -23,6 +24,7 @@ onMounted(() => {
       canvas: canvasElement.value,
       mod: props.mod,
     })
+
     trackMouse(state.value.mouse)
     stateRefresh(state.value)
     animate(state.value)
@@ -30,10 +32,10 @@ onMounted(() => {
 })
 
 watch(
-  () => props.mod,
+  () => props.tick,
   () => {
     if (state.value) {
-      state.mod = props.mod
+      state.value.mod = props.mod
       stateRefresh(state.value)
     }
   },
@@ -45,3 +47,4 @@ watch(
     <canvas ref="canvasElement"></canvas>
   </div>
 </template>
+./stateCurrent

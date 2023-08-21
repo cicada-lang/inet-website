@@ -6,4 +6,5 @@ export type State = {
   mod: Mod
   output: string
   errorMessage: string
+  tick: number
 }

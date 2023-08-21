@@ -8,5 +8,5 @@ defineProps<{
 </script>
 
 <template>
-  <Play :mod="state.mod" />
+  <Play :mod="state.mod" :tick="state.tick" />
 </template>

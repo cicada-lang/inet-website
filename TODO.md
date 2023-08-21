@@ -1,7 +1,5 @@
 # play
 
-[play] [maybe] `Play` watch `mod.tick`
-
 [play] `evolveNet`
 
 [play] `renderNode` -- improve style
