@@ -1,7 +1,10 @@
 # play
 
-[play] `renderNode`
 [play] `evolveNet`
+
+[play] `renderNode` -- improve style
+[play] `renderNode` -- show port
+
 [play] select value in the stack -- like tab
 [play] run a connected component from a port
 [play] click active edge to run one step
