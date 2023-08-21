@@ -1,16 +1,36 @@
 # play
 
-[play] introduce gravity and fix current node
-[play] `renderNode` -- improve style
+[play] select value in the stack can switch the current value -- like tabs
+
+[play] `renderLocals`
+
+[play] select value in locals can switch the current value -- like tabs
+
+[play] `renderStack` -- long stack can scroll -- add a limit to the top
+
 [play] `renderNode` -- hover to show info
 [play] `renderEdge` -- hover to show info
-[play] select value in the stack -- like tab
-[play] run a connected component from a port
-[play] click active edge to run one step
-[play] `renderStack` -- limit to the top
-[play] render local variables
+
+[play] `CurrentPort` -- support `Interact` button to run a net
+
+[play] `CurrentPort` -- support click an active edge to run one step
+
+[play] introduce gravity and fix current node
+
+[play] `renderNode` -- improve style
+
 [play] control to route view to list of types, nodes (rules about it) and words
-[play] animate rule building
+
+[play] router and routes
+
+[play] node page -- show node definition
+[play] type page -- type node definition
+
+[play] rule page -- show node definition
+[play] rule page -- animate rule building
+
+[play] word page -- show word definition
+[play] word page -- animate word building
 
 # home
 
