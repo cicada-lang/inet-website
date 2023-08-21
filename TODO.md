@@ -1,7 +1,8 @@
 # play
 
-[play] `createInitialNetLayout`
 [play] `renderNet`
+[play] `renderNode`
+[play] `renderEdge`
 [play] select value in the stack -- like tab
 [play] run a connected component from a port
 [play] click active edge to run one step
