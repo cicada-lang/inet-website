@@ -17,7 +17,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   const mod = createMod({ loader, url, text, stmts: [] })
 
   const state: State = {
-    kind: 'Output',
+    kind: 'Play',
     text,
     mod,
     output: '',

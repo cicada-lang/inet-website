@@ -1,6 +1,6 @@
 # play
 
-[play] render stack
+[play] `renderStack`
 [play] render the top port on the stack as a graph
 [play] select value in the stack -- like tab
 [play] run a connected component from a port
