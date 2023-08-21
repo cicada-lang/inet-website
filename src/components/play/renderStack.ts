@@ -1,4 +1,4 @@
-import { formatValue } from '@cicada-lang/inet/lib/lang/value/formatValue'
+import { formatValue } from '@cicada-lang/inet'
 import { State } from './State'
 
 export function renderStack(state: State): void {

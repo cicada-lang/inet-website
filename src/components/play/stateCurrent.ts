@@ -1,5 +1,5 @@
-import { copyConnectedComponent } from '@cicada-lang/inet/lib/lang/net/copyConnectedComponent'
-import { createNet } from '@cicada-lang/inet/lib/lang/net/createNet'
+import { copyConnectedComponent } from '@cicada-lang/inet'
+import { createNet } from '@cicada-lang/inet'
 import { Current } from './Current.ts'
 import { State } from './State.ts'
 import { createInitialNetLayout } from './createInitialNetLayout.ts'
@@ -22,7 +22,7 @@ export function stateCurrent(state: State): Current | undefined {
       port: currentValue,
       net,
       layout,
-      evolvingStep: 0
+      evolvingStep: 0,
     }
   } else {
     return {

@@ -1,5 +1,5 @@
-import { Net } from '@cicada-lang/inet/lib/lang/net'
-import { nodeKeyId } from '@cicada-lang/inet/lib/lang/node/nodeKeyId'
+import { Net } from '@cicada-lang/inet'
+import { nodeKey } from '@cicada-lang/inet'
 
 export function netNodeNeighbors(net: Net, nodeId: string): Set<string> {
   const neighbors: Set<string> = new Set()
@@ -16,7 +16,7 @@ export function netNodeNeighbors(net: Net, nodeId: string): Set<string> {
 
   for (const [portName, portEntry] of Object.entries(nodeEntry.ports)) {
     if (portEntry.connection) {
-      neighbors.add(nodeKeyId(portEntry.connection.port.node))
+      neighbors.add(nodeKey(portEntry.connection.port.node))
     }
   }
 

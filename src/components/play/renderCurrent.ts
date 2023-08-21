@@ -1,4 +1,4 @@
-import { formatValue } from '@cicada-lang/inet/lib/lang/value/formatValue'
+import { formatValue } from '@cicada-lang/inet'
 import { Current } from './Current'
 import { State } from './State'
 import { renderNet } from './renderNet'

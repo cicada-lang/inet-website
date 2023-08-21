@@ -1,4 +1,4 @@
-import { Net } from '@cicada-lang/inet/lib/lang/net'
+import { Net } from '@cicada-lang/inet'
 import { NetLayout } from './NetLayout'
 import { computeSpringForce } from './computeSpringForce'
 import { netNodeNeighbors } from './netNodeNeighbors'

@@ -1,5 +1,5 @@
-import { NodeEntry } from '@cicada-lang/inet/lib/lang/net'
-import { formatNode } from '@cicada-lang/inet/lib/lang/node/formatNode'
+import { NodeEntry } from '@cicada-lang/inet'
+import { formatNode } from '@cicada-lang/inet'
 import { State } from './State'
 
 export function renderNode(

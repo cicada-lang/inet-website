@@ -1,6 +1,6 @@
-import { Net } from '@cicada-lang/inet/lib/lang/net'
-import { allEdges } from '@cicada-lang/inet/lib/lang/net/allEdges'
-import { nodeKeyId } from '@cicada-lang/inet/lib/lang/node/nodeKeyId'
+import { Net } from '@cicada-lang/inet'
+import { allEdges } from '@cicada-lang/inet'
+import { nodeKey } from '@cicada-lang/inet'
 import { NetLayout } from './NetLayout'
 import { State } from './State'
 import { renderEdge } from './renderEdge'
@@ -8,9 +8,9 @@ import { renderNode } from './renderNode'
 
 export function renderNet(state: State, net: Net, layout: NetLayout): void {
   for (const edge of allEdges(net)) {
-    const firstPosition = layout.nodePositions.get(nodeKeyId(edge.first.node))
+    const firstPosition = layout.nodePositions.get(nodeKey(edge.first.node))
     if (firstPosition === undefined) continue
-    const secondPosition = layout.nodePositions.get(nodeKeyId(edge.second.node))
+    const secondPosition = layout.nodePositions.get(nodeKey(edge.second.node))
     if (secondPosition === undefined) continue
     renderEdge(state, firstPosition, secondPosition)
   }
