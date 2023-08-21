@@ -1,5 +1,7 @@
 # play
 
+[play] `computeElectricalForces` & `computeSpringForces`
+
 [play] `evolveNet`
 
 [play] `renderNode` -- improve style

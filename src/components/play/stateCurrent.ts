@@ -22,6 +22,7 @@ export function stateCurrent(state: State): Current | undefined {
       port: currentValue,
       net,
       layout,
+      evolvingStep: 0
     }
   } else {
     return {

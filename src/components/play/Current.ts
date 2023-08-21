@@ -11,6 +11,7 @@ export type CurrentPort = {
   port: Port
   net: Net
   layout: NetLayout
+  evolvingStep : number
 }
 
 export type CurrentValue = {
