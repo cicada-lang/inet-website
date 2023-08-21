@@ -5,6 +5,7 @@ import { onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import PageHead from '../../layouts/page-layout/PageHead.vue'
 import PlaygroundEditor from './PlaygroundEditor.vue'
+import PlaygroundError from './PlaygroundError.vue'
 import PlaygroundNavbar from './PlaygroundNavbar.vue'
 import PlaygroundOutput from './PlaygroundOutput.vue'
 import PlaygroundPlay from './PlaygroundPlay.vue'
@@ -55,7 +56,7 @@ watch(
       />
 
       <div
-        class="md:border-l grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black min-h-max dark:border-white md:w-1/2"
+        class="md:border-l grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-1/2"
       >
         <div
           class="border-b flex justify-between sm:border-t-0 border-t dark:border-white border-black px-3 py-2"
@@ -64,8 +65,19 @@ watch(
           <PlaygroundNavbar :state="state" />
         </div>
 
-        <PlaygroundOutput v-if="state.kind === 'Output'" :state="state" />
         <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
+
+        <PlaygroundOutput
+          v-if="state.output && state.kind === 'Output'"
+          :state="state"
+          :output="state.output"
+        />
+
+        <PlaygroundError
+          v-if="state.errorMessage && state.kind === 'Error'"
+          :state="state"
+          :errorMessage="state.errorMessage"
+        />
       </div>
     </div>
   </div>

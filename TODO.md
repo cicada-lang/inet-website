@@ -1,12 +1,9 @@
 # play
 
 [play] introduce gravity and fix current node
-
 [play] `renderNode` -- improve style
 [play] `renderNode` -- hover to show info
-
 [play] `renderEdge` -- hover to show info
-
 [play] select value in the stack -- like tab
 [play] run a connected component from a port
 [play] click active edge to run one step
@@ -14,10 +11,6 @@
 [play] render local variables
 [play] control to route view to list of types, nodes (rules about it) and words
 [play] animate rule building
-
-# playground
-
-[playground] show output and error in different tabs
 
 # home
 

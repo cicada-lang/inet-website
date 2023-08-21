@@ -3,12 +3,12 @@ import { State } from './State'
 
 defineProps<{
   state: State
-  output: string
+  errorMessage: string
 }>()
 </script>
 
 <template>
   <div class="flex flex-col h-full w-full overflow-auto p-3">
-      <pre class="text-sm md:text-base">{{ output }}</pre>
+    <pre class="text-sm md:text-base text-base" v-html="errorMessage"></pre>
   </div>
 </template>
