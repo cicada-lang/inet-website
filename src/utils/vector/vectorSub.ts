@@ -1,10 +1,10 @@
 import { Vector } from "./Vector"
 
-export function vectorAdd(x: Vector, y: Vector): Vector {
+export function vectorSub(x: Vector, y: Vector): Vector {
   if (x.length !== y.length) {
     throw new Error(
       [
-        `[vectorAdd] Vector length mismatch.`,
+        `[vectorSub] Vector length mismatch.`,
         ``,
         `  x.length: ${x.length}`,
         `  y.length: ${y.length}`,
@@ -14,7 +14,7 @@ export function vectorAdd(x: Vector, y: Vector): Vector {
 
   const z: Vector = []
   for (let i = 0; i < x.length; i++) {
-    z.push(x[i] + y[i])
+    z.push(x[i] - y[i])
   }
 
   return z
