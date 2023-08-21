@@ -2,7 +2,7 @@ export function computeElectricalForce(
   first: [number, number],
   second: [number, number],
 ): [number, number] {
-  const C = 1000 * 1000
+  const C = 1000 * 50
 
   const deltaX = second[0] - first[0]
   const deltaY = second[1] - first[1]

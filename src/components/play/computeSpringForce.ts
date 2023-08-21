@@ -2,8 +2,8 @@ export function computeSpringForce(
   first: [number, number],
   second: [number, number],
 ): [number, number] {
-  const C = 1 / 20
-  const springLength = 100
+  const C = 1 / 30
+  const springLength = 5
 
   const deltaX = second[0] - first[0]
   const deltaY = second[1] - first[1]

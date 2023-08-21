@@ -5,7 +5,7 @@ import { computeElectricalForce } from './computeElectricalForce'
 export function computeElectricalForces(
   net: Net,
   layout: NetLayout,
-): Map<Node, [number, number]> {
+): Map<string, [number, number]> {
   const forces = new Map()
 
   for (const [nodeId, nodeEntry] of net.nodeEntries) {

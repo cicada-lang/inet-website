@@ -1,9 +1,11 @@
 # play
 
-[play] `evolveNet`
+[play] introduce gravity and fix current node
 
 [play] `renderNode` -- improve style
-[play] `renderNode` -- show port
+[play] `renderNode` -- hover to show info
+
+[play] `renderEdge` -- hover to show info
 
 [play] select value in the stack -- like tab
 [play] run a connected component from a port
