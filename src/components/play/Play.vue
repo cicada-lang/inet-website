@@ -6,6 +6,7 @@ import { animate } from './animate'
 import { createState } from './createState'
 import { trackMouse } from './mouse/trackMouse'
 import { resizeCanvas } from './resizeCanvas'
+import { stateRefresh } from './stateRefresh'
 
 const props = defineProps<{
   mod: Mod
@@ -23,15 +24,17 @@ onMounted(() => {
       mod: props.mod,
     })
     trackMouse(state.value.mouse)
+    stateRefresh(state.value)
     animate(state.value)
   }
 })
 
 watch(
   () => props.mod,
-  (value) => {
+  () => {
     if (state.value) {
-      state.value.mod = value
+      state.mod = props.mod
+      stateRefresh(state.value)
     }
   },
 )
