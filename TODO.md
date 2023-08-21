@@ -1,7 +1,6 @@
 # play
 
 [play] `renderNode`
-[play] `renderEdge`
 [play] `evolveNet`
 [play] select value in the stack -- like tab
 [play] run a connected component from a port
