@@ -1,6 +1,6 @@
 # play
 
-[play] `computeElectricalForces` & `computeSpringForces`
+[play] `nodeNeighbors`
 
 [play] `evolveNet`
 
