@@ -7,7 +7,7 @@ export function renderCurrent(state: State, current: Current): void {
   state.ctx.save()
 
   if (current['@kind'] === 'CurrentPort') {
-    renderNet(state, current.net)
+    renderNet(state, current.net, current.layout)
   } else {
     const valueText = formatValue(current.value)
     state.ctx.font = '38px monospace'

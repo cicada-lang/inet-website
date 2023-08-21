@@ -1,6 +1,5 @@
 # play
 
-[play] `renderNet`
 [play] `renderNode`
 [play] `renderEdge`
 [play] `evolveNet`
