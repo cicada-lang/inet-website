@@ -1,6 +1,6 @@
 # iNet Website
 
-[ [Visit](https://inet.cicada-lang.org)
+[ [Visit](https://inet.run)
 | [Main Repo](https://github.com/cicada-lang/inet) ]
 
 ## Contributions
