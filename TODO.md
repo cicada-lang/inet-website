@@ -1,12 +1,17 @@
 # play
 
-[play] render the top port on the stack as a graph
+[play] `renderNet`
 [play] select value in the stack -- like tab
 [play] run a connected component from a port
 [play] click active edge to run one step
+[play] `renderStack` -- limit to the top
 [play] render local variables
 [play] control to route view to list of types, nodes (rules about it) and words
 [play] animate rule building
+
+# playground
+
+[playground] show output and error in different tabs
 
 # home
 

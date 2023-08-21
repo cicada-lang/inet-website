@@ -6,7 +6,7 @@ export function renderStack(state: State): void {
 
   for (const [i, value] of state.mod.env.stack.entries()) {
     const valueText = formatValue(value)
-    state.ctx.font = '18px sans-serif'
+    state.ctx.font = '18px monospace'
     const valueTextMetrics = state.ctx.measureText(valueText)
     const unitHeight = 36
     const x = 0
