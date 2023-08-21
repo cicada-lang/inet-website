@@ -15,7 +15,6 @@ export function main(
     canvas.height = containerElement.offsetHeight
   }).observe(containerElement)
 
-  const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
   const state = createState({ canvas, mod })
-  animate(ctx, state)
+  animate(state)
 }
