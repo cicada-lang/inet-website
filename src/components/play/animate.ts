@@ -4,7 +4,7 @@ import { renderCurrent } from './renderCurrent'
 import { renderStack } from './renderStack'
 
 export function animate(state: State): void {
-  state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height)
+  state.ctx.clearRect(0, 0, state.width, state.height)
 
   renderStack(state)
   if (state.current) {

@@ -19,13 +19,13 @@ const canvasElement = ref<HTMLCanvasElement | undefined>(undefined)
 
 onMounted(() => {
   if (canvasElement.value && containerElement.value) {
-    resizeCanvas(canvasElement.value, containerElement.value)
     state.value = createState({
       canvas: canvasElement.value,
       container: containerElement.value,
       mod: props.mod,
     })
 
+    resizeCanvas(state.value)
     trackMouse(state.value)
     stateRefresh(state.value)
     animate(state.value)

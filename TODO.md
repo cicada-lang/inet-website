@@ -1,7 +1,3 @@
-[play] fix canvas size by `window.devicePixelRatio`
-
-- use state width and height instead of canvas width and height
-
 [playground] move toolbar to the left
 [playground] support tabs
 
