@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { Base64 } from 'js-base64'
 import debounce from 'lodash/debounce'
 import { onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageHead from '../../layouts/page-layout/PageHead.vue'
 import PlaygroundEditor from './PlaygroundEditor.vue'
 import PlaygroundError from './PlaygroundError.vue'

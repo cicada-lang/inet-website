@@ -1,5 +1,5 @@
-import { State } from './State.ts'
-import { stateCurrent } from './stateCurrent.ts'
+import { State } from './State'
+import { stateCurrent } from './stateCurrent'
 
 export function stateRefresh(state: State): void {
   state.current = stateCurrent(state)

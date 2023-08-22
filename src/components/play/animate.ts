@@ -1,7 +1,7 @@
-import { State } from './State.ts'
-import { evolveNet } from './evolveNet.ts'
-import { renderCurrent } from './renderCurrent.ts'
-import { renderStack } from './renderStack.ts'
+import { State } from './State'
+import { evolveNet } from './evolveNet'
+import { renderCurrent } from './renderCurrent'
+import { renderStack } from './renderStack'
 
 export function animate(state: State): void {
   state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height)

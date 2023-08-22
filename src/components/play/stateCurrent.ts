@@ -1,7 +1,7 @@
 import { copyConnectedComponent, createNet } from '@cicada-lang/inet'
-import { Current } from './Current.ts'
-import { State } from './State.ts'
-import { createInitialNetLayout } from './createInitialNetLayout.ts'
+import { Current } from './Current'
+import { State } from './State'
+import { createInitialNetLayout } from './createInitialNetLayout'
 
 export function stateCurrent(state: State): Current | undefined {
   const currentValue = state.mod.env.stack[state.mod.env.stack.length - 1]
