@@ -13,20 +13,6 @@ const lang = useGlobalLang()
 <template>
   <div class="flex space-x-4">
     <button
-      v-if="state.output"
-      class="text-xl hover:underline underline-offset-4 decoration-2"
-      :class="{
-        underline: state.kind === 'Output',
-      }"
-      @click="state.kind = 'Output'"
-    >
-      <Lang>
-        <template #zh> 输出 </template>
-        <template #en> Output </template>
-      </Lang>
-    </button>
-
-    <button
       v-if="state.errorMessage"
       class="text-xl hover:underline text-rose-500 dark:text-rose-400 underline-offset-4 decoration-2"
       :class="{
@@ -37,6 +23,20 @@ const lang = useGlobalLang()
       <Lang>
         <template #zh> 错误 </template>
         <template #en> Error </template>
+      </Lang>
+    </button>
+
+    <button
+      v-if="state.output"
+      class="text-xl hover:underline underline-offset-4 decoration-2"
+      :class="{
+        underline: state.kind === 'Output',
+      }"
+      @click="state.kind = 'Output'"
+    >
+      <Lang>
+        <template #zh> 输出 </template>
+        <template #en> Output </template>
       </Lang>
     </button>
 

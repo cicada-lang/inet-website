@@ -25,7 +25,7 @@ onMounted(() => {
       mod: props.mod,
     })
 
-    trackMouse(state.value.mouse)
+    trackMouse(state.value)
     stateRefresh(state.value)
     animate(state.value)
   }
@@ -47,4 +47,3 @@ watch(
     <canvas ref="canvasElement"></canvas>
   </div>
 </template>
-./stateCurrent

@@ -1,15 +1,15 @@
-import { Mouse } from './Mouse'
+import { State } from '../State'
 
-export function trackMouse(mouse: Mouse) {
-  window.addEventListener('mousedown', (event) => {
-    mouse.isDown = true
+export function trackMouse(state: State) {
+  state.canvas.addEventListener('mousedown', (event) => {
+    state.mouse.isDown = true
   })
 
-  window.addEventListener('mouseup', (event) => {
-    mouse.isDown = false
+  state.canvas.addEventListener('mouseup', (event) => {
+    state.mouse.isDown = false
   })
 
-  window.addEventListener('mousemove', (event) => {
-    mouse.position = [event.x, event.y]
+  state.canvas.addEventListener('mousemove', (event) => {
+    state.mouse.position = [event.offsetX, event.offsetY]
   })
 }
