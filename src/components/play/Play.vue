@@ -22,6 +22,7 @@ onMounted(() => {
     resizeCanvas(canvasElement.value, containerElement.value)
     state.value = createState({
       canvas: canvasElement.value,
+      container: containerElement.value,
       mod: props.mod,
     })
 

@@ -1,7 +1,13 @@
+[play] `createMouse` take `state`
+
+[play] fix canvas size by `window.devicePixelRatio`
+
+- use state width and height instead of canvas width and height
+
 [playground] move toolbar to the left
 [playground] support tabs
 
-components/utils/Await -- #then #catch
+[maybe] `components/utils/Await` -- #then #catch
 
 # play
 

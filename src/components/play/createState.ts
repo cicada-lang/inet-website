@@ -4,18 +4,26 @@ import { createMouse } from './mouse/createMouse'
 
 export type StateOptions = {
   canvas: HTMLCanvasElement
+  container: HTMLElement
   mod: Mod
 }
 
 export function createState(options: StateOptions): State {
-  const { mod, canvas } = options
+  const { mod, canvas, container } = options
 
   const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
+
+  const width = container.offsetWidth
+  const height = container.offsetHeight
+
   const mouse = createMouse(canvas)
 
   return {
+    container,
     canvas,
     ctx,
+    width,
+    height,
     mouse,
     mod,
   }
