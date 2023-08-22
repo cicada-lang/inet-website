@@ -16,7 +16,7 @@ export function createState(options: StateOptions): State {
   const width = container.offsetWidth
   const height = container.offsetHeight
 
-  const mouse = createMouse(canvas)
+  const mouse = createMouse({ width, height })
 
   return {
     container,
