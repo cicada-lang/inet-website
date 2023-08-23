@@ -1,5 +1,3 @@
-[playground] `PlaygroundTabs` instead of `PlaygroundNavbar`
-
 # play
 
 [play] select value in the stack can switch the current value -- like tabs

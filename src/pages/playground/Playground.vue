@@ -8,9 +8,9 @@ import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageHead from '../../layouts/page-layout/PageHead.vue'
 import PlaygroundEditor from './PlaygroundEditor.vue'
 import PlaygroundError from './PlaygroundError.vue'
-import PlaygroundNavbar from './PlaygroundNavbar.vue'
 import PlaygroundOutput from './PlaygroundOutput.vue'
 import PlaygroundPlay from './PlaygroundPlay.vue'
+import PlaygroundTabs from './PlaygroundTabs.vue'
 import PlaygroundToolbar from './PlaygroundToolbar.vue'
 import { State } from './State'
 import { loadStateReactive } from './loadStateReactive'
@@ -72,11 +72,7 @@ watch(
       <div
         class="md:border-l flex flex-col min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-1/2"
       >
-        <div
-          class="border-b flex md:border-t-0 border-t dark:border-white border-black px-3 py-2"
-        >
-          <PlaygroundNavbar :state="state" />
-        </div>
+        <PlaygroundTabs :state="state" />
 
         <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
 
