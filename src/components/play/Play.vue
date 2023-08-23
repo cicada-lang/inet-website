@@ -45,6 +45,10 @@ watch(
 
 <template>
   <div class="h-full w-full" ref="containerElement">
-    <canvas ref="canvasElement"></canvas>
+    <canvas
+      @click="canvasElement?.focus()"
+      tabindex="1"
+      ref="canvasElement"
+    ></canvas>
   </div>
 </template>
