@@ -1,7 +1,7 @@
 import { CurrentPort } from './Current'
 import { State } from './State'
-import { computeElectricalForces } from './computeElectricalForces'
-import { computeSpringForces } from './computeSpringForces'
+import { computeElectricalForces } from './forces/computeElectricalForces'
+import { computeSpringForces } from './forces/computeSpringForces'
 
 export function evolveNet(state: State, current: CurrentPort): void {
   const { net, layout } = current
