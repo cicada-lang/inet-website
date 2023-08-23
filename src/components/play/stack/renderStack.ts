@@ -1,5 +1,5 @@
 import { formatValue } from '@cicada-lang/inet'
-import { State } from './State'
+import { State } from '../State'
 
 export function renderStack(state: State): void {
   state.ctx.save()
