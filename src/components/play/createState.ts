@@ -26,5 +26,6 @@ export function createState(options: StateOptions): State {
     height,
     mouse,
     mod,
+    buttons: new Map(),
   }
 }
