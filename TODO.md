@@ -1,7 +1,4 @@
-[playground] move toolbar to the left
-[playground] support tabs
-
-[maybe] `components/utils/Await` -- #then #catch
+[playground] `PlaygroundTabs` instead of `PlaygroundNavbar`
 
 # play
 
@@ -20,7 +17,7 @@
 [play] `renderNode` -- hover to show info
 [play] `renderEdge` -- hover to show info
 
-[play] `CurrentPort` -- support `Interact` button to run a net
+[play] `CurrentPort` -- support `Run` button to run a net
 
 [play] `CurrentPort` -- support click an active edge to run one step
 
@@ -48,3 +45,9 @@
 - https://alpinejs.dev/
 - 8 statements: type node rule claim define check -- module system import require
 - 7 words: Call Local TypeVar Label NodeRearrange -- in rule PortPush PortReconnect
+
+# maybe
+
+[maybe] `components/utils/Await` -- #then #catch
+
+[maybe] [playground] support tabs

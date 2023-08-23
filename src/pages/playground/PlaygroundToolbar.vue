@@ -43,15 +43,7 @@ async function share() {
 
 <template>
   <div class="flex space-x-4">
-    <button
-      class="text-xl hover:underline underline-offset-4 decoration-2"
-      @click="share()"
-    >
-      <Lang>
-        <template #zh> 分享 </template>
-        <template #en> Share </template>
-      </Lang>
-    </button>
+    
 
     <button
       class="text-xl hover:underline underline-offset-4 decoration-2"
@@ -67,6 +59,16 @@ async function share() {
         class="text-stone-500 dark:text-stone-300 text-base"
         >({{ Math.floor(timeUsedToRun) }} ms)</span
       >
+    </button>
+
+<button
+      class="text-xl hover:underline underline-offset-4 decoration-2"
+      @click="share()"
+    >
+      <Lang>
+        <template #zh> 分享 </template>
+        <template #en> Share </template>
+      </Lang>
     </button>
   </div>
 </template>

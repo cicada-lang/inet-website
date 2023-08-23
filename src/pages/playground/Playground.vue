@@ -55,22 +55,26 @@ watch(
 
     <PageHead class="border-b border-black dark:border-white px-3 py-2" />
 
-    <div
-      v-if="state"
-      class="flex flex-col md:h-full md:overflow-auto md:flex-row"
-    >
-      <PlaygroundEditor
-        class="md:w-1/2 h-full md:min-h-full min-h-[23rem] md:resize-x"
-        :state="state"
-      />
-
-      <div
-        class="md:border-l grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-1/2"
-      >
+    <div v-if="state" class="flex flex-col h-full overflow-auto md:flex-row">
+      <div class="flex min-h-[23rem] flex-col overflow-auto h-full md:w-1/2">
         <div
-          class="border-b flex justify-between sm:border-t-0 border-t dark:border-white border-black px-3 py-2"
+          class="border-b flex dark:border-white border-black px-3 py-2 justify-end"
         >
           <PlaygroundToolbar :state="state" />
+        </div>
+
+        <PlaygroundEditor
+          class="h-full overflow-auto md:resize-x"
+          :state="state"
+        />
+      </div>
+
+      <div
+        class="md:border-l flex flex-col min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-1/2"
+      >
+        <div
+          class="border-b flex md:border-t-0 border-t dark:border-white border-black px-3 py-2"
+        >
           <PlaygroundNavbar :state="state" />
         </div>
 
