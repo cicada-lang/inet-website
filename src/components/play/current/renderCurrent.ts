@@ -1,7 +1,7 @@
 import { formatValue } from '@cicada-lang/inet'
+import { State } from '../State'
+import { renderNet } from '../net/renderNet'
 import { Current } from './Current'
-import { State } from './State'
-import { renderNet } from './net/renderNet'
 
 export function renderCurrent(state: State, current: Current): void {
   state.ctx.save()

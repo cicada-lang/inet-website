@@ -1,6 +1,6 @@
 import { Mod } from '@cicada-lang/inet'
-import { Current } from './Current'
 import { Button } from './button/Button'
+import { Current } from './current/Current'
 import { Mouse } from './mouse/Mouse'
 
 export type State = {

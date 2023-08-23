@@ -1,5 +1,5 @@
-import { CurrentPort } from '../Current'
 import { State } from '../State'
+import { CurrentPort } from '../current/Current'
 import { computeElectricalForces } from '../forces/computeElectricalForces'
 import { computeSpringForces } from '../forces/computeSpringForces'
 

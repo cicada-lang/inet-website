@@ -1,6 +1,6 @@
 import { State } from './State'
+import { renderCurrent } from './current/renderCurrent'
 import { evolveNet } from './net/evolveNet'
-import { renderCurrent } from './renderCurrent'
 import { renderStack } from './stack/renderStack'
 
 export function animate(state: State): void {
