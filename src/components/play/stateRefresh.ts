@@ -1,6 +1,6 @@
 import { State } from './State'
-import { createCurrent } from './current/createCurrent'
+import { createSelected } from './selected/createSelected'
 
 export function stateRefresh(state: State): void {
-  state.current = createCurrent(state)
+  state.selected = createSelected(state)
 }
