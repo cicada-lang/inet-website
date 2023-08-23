@@ -1,7 +1,5 @@
 # play
 
-[play] move code about net to `net/`
-
 [play] `renderStack` create buttons
 
 [play] select value in the stack can switch the current value -- like tabs

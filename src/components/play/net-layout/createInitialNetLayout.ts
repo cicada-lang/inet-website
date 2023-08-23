@@ -1,6 +1,6 @@
 import { Net } from '@cicada-lang/inet'
+import { State } from '../State'
 import { NetLayout } from './NetLayout'
-import { State } from './State'
 
 export function createInitialNetLayout(state: State, net: Net): NetLayout {
   const nodePositions = new Map()

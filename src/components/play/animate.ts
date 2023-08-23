@@ -1,5 +1,5 @@
 import { State } from './State'
-import { evolveNet } from './evolveNet'
+import { evolveNet } from './net/evolveNet'
 import { renderCurrent } from './renderCurrent'
 import { renderStack } from './stack/renderStack'
 
