@@ -4,22 +4,21 @@
 
 [play] support dark mode
 
-[play] `renderNode` -- improve style
-
 [play] `renderLocals`
 
 [play] select value in locals can switch the current value -- like tabs
 
 [play] `renderStack` -- long stack can scroll -- add a limit to the top
 
-[play] `renderNode` -- hover to show info
-[play] `renderEdge` -- hover to show info
+[play] `renderNode` -- hover to highlight ports and neighbours
+
+[play] `renderEdge` -- hover to highlight connected nodes
 
 [play] `CurrentPort` -- support `Run` button to run a net
 
 [play] `CurrentPort` -- support click an active edge to run one step
 
-[play] introduce gravity and fix current node
+[play] optionally introduce gravity and fix current node
 
 [play] control to route view to list of types, nodes (rules about it) and words
 
