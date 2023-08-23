@@ -60,7 +60,7 @@ watch(
         <PlaygroundToolbar :state="state" />
 
         <PlaygroundEditor
-          class="h-full md:overflow-auto md:resize-x"
+          class="h-full md:overflow-auto resize-none"
           :state="state"
         />
       </div>
