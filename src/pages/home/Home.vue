@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
+import HomeFoot from "./HomeFoot.vue"
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 
 type TabName = 'statements' | 'words' | 'builtins'
@@ -311,7 +312,7 @@ from "https://cdn.inet.run/tests/datatype/Nat.i"
             </div>
 
             <div
-              class="md:border-b-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white"
+              class="md:border-t-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white"
             >
               <pre class="md:p-6 p-4 text-xl font-code">
 require "./Nat.i"
@@ -352,5 +353,7 @@ require "./Nat.i"
         </div>
       </div>
     </div>
+
+    <HomeFoot />
   </PageLayout>
 </template>
