@@ -13,7 +13,7 @@ const theme = useGlobalTheme()
     <title v-else>iNet</title>
 
     <meta v-if="theme.name === 'light'" name="theme-color" content="white" />
-    <meta v-if="theme.name === 'dark'" name="theme-color" content="#1c1917" />
+    <meta v-if="theme.name === 'dark'" name="theme-color" content="black" />
   </Head>
 
   <RouterView />
