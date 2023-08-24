@@ -10,7 +10,7 @@ export function renderNode(
 
   state.ctx.strokeStyle = 'black'
   state.ctx.lineWidth = 1
-  state.ctx.font = '20px monospace'
+  state.ctx.font = '16px monospace'
   state.ctx.textBaseline = 'middle'
   state.ctx.textAlign = 'center'
 

@@ -1,16 +1,18 @@
 # play
 
-[play] `renderStack` create buttons
+[play] `renderStackEntry` create button
 
 [play] select value in the stack can switch the current value -- like tabs
-
-[play] support dark mode
 
 [play] `renderLocals`
 
 [play] select value in locals can switch the current value -- like tabs
 
-[play] `renderStack` -- long stack can scroll -- add a limit to the top
+[play] support dark mode
+
+[play] `isMobile(state)` -- small font for mobile
+
+[play] `renderStack` -- stack has a limit to the top -- show number of more stack
 
 [play] `renderNode` -- hover to highlight ports and neighbours
 
