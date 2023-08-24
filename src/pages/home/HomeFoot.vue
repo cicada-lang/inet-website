@@ -11,7 +11,7 @@ import Lang from '../../components/lang/Lang.vue'
       </template>
       <template #en>
         <div>Computation is but directed change.</div>
-        -- <a class="hover:underline" target="_blank" href="https://xieyuheng.com">Xie Yuheng</a>
+        -- <a class="pr-1 hover:underline" target="_blank" href="https://xieyuheng.com">Xie Yuheng</a>
       </template>
     </Lang>
 
