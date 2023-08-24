@@ -12,7 +12,7 @@ defineProps<{
 
     <div class="flex w-full items-center border border-black dark:border-white">
       <input
-        class="w-full p-3 font-bold disabled:bg-stone-100 dark:bg-stone-900 dark:text-white dark:disabled:bg-stone-700"
+        class="w-full p-3 font-bold disabled:bg-stone-100 dark:bg-black dark:text-white dark:disabled:bg-stone-700"
         :id="name"
         :name="name"
         v-bind="$attrs"

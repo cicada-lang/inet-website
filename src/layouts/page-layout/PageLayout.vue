@@ -5,7 +5,7 @@ import PageHead from './PageHead.vue'
 
 <template>
   <div
-    class="flex h-screen-dynamic flex-col dark:bg-stone-800 dark:text-white overflow-auto"
+    class="flex h-screen-dynamic flex-col dark:bg-black dark:text-white overflow-auto"
   >
     <PageHead class="px-3 py-2" />
 

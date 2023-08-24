@@ -46,7 +46,7 @@ watch(
 
 <template>
   <div
-    class="flex overflow-auto h-screen-dynamic flex-col dark:bg-stone-800 dark:text-white"
+    class="flex overflow-auto h-screen-dynamic flex-col dark:bg-black dark:text-white"
   >
     <Head>
       <title v-if="lang.isZh()">演算场 | iNet</title>
