@@ -24,4 +24,5 @@ export type State = {
 
   // Interactions:
   selectedValue?: SelectedValue
+  selectedStackIndex?: number
 }

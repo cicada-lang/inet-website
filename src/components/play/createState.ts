@@ -18,6 +18,8 @@ export function createState(options: StateOptions): State {
 
   const mouse = createMouse({ width, height })
 
+  const selectedStackIndex = mod.env.stack.length - 1
+
   return {
     container,
     canvas,
@@ -29,5 +31,6 @@ export function createState(options: StateOptions): State {
     mouse,
     mod,
     buttons: new Map(),
+    selectedStackIndex,
   }
 }
