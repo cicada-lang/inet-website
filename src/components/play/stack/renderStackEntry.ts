@@ -1,6 +1,7 @@
 import { Value, formatValue } from '@cicada-lang/inet'
 import { State } from '../State'
 import { Rect } from '../button/Rect'
+import { createSelectedValue } from '../selected-value/createSelectedValue'
 
 export function renderStackEntry(state: State, i: number, value: Value): void {
   const unitHeight = 36
@@ -25,7 +26,7 @@ export function renderStackEntry(state: State, i: number, value: Value): void {
   state.buttons.set(`state[${i}]`, {
     rect,
     handler: (state) => {
-      console.log(i)
+      state.selectedValue = createSelectedValue(state, value)
     },
   })
 

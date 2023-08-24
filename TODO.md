@@ -1,9 +1,5 @@
 # play
 
-[play] `renderStackEntry` create button
-
-[play] select value in the stack can switch the current value -- like tabs
-
 [play] `renderLocals`
 
 [play] select value in locals can switch the current value -- like tabs
