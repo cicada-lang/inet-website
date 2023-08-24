@@ -6,8 +6,8 @@ import { createSelectedValue } from '../selected-value/createSelectedValue'
 export function renderStackEntry(state: State, i: number, value: Value): void {
   state.ctx.save()
 
+  state.ctx.font = state.breakpoints.md ? '16px monospace' : '14px monospace'
   const valueText = formatValue(value)
-  state.ctx.font = '16px monospace'
   const valueTextMetrics = state.ctx.measureText(valueText)
   const paddingX = 10
   const width = valueTextMetrics.width + paddingX * 2

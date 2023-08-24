@@ -1,4 +1,5 @@
 import { Mod } from '@cicada-lang/inet'
+import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './button/Button'
 import { Mouse } from './mouse/Mouse'
@@ -13,6 +14,7 @@ export type State = {
   width: number
   height: number
   theme: Theme
+  breakpoints: ReturnType<typeof useBreakpoints>
 
   // Frame rate control:
   lastTime: number

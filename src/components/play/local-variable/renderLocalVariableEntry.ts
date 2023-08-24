@@ -11,8 +11,8 @@ export function renderLocalVariableEntry(
 ): void {
   state.ctx.save()
 
+  state.ctx.font = state.breakpoints.md ? '16px monospace' : '14px monospace'
   const nameText = '$' + name
-  state.ctx.font = '16px monospace'
   const nameTextMetrics = state.ctx.measureText(nameText)
   const paddingX = 10
   const width = nameTextMetrics.width + paddingX * 2
