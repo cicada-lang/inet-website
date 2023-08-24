@@ -12,15 +12,16 @@ export function render(state: State, passedTime?: number): void {
 
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  renderStack(state)
-  renderLocalVariables(state)
-
   if (state.selectedValue) {
     renderSelectedValue(state, state.selectedValue)
+
     if (state.selectedValue['@kind'] === 'SelectedValuePort') {
       evolveNet(state, state.selectedValue)
     }
   }
+
+  renderStack(state)
+  renderLocalVariables(state)
 
   const clickPeriod = 120
   if (state.clickCoollingTimer <= 0) {

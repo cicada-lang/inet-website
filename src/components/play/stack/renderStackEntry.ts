@@ -17,9 +17,10 @@ export function renderStackEntry(state: State, i: number, value: Value): void {
   const boxWdith = Math.max(100, valueTextMetrics.width + xPadding * 2)
   const boxHeight = unitHeight
   state.ctx.beginPath()
+  const rect: Rect = [x, y - unitHeight, boxWdith, boxHeight]
+  state.ctx.clearRect(...rect)
   state.ctx.strokeStyle = 'black'
   state.ctx.lineWidth = 1
-  const rect: Rect = [x, y - unitHeight, boxWdith, boxHeight]
   state.ctx.strokeRect(...rect)
   state.ctx.fillText(valueText, x + xPadding, y - 12)
 
