@@ -12,7 +12,9 @@ export function renderNode(
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
   state.ctx.lineWidth = 1
-  state.ctx.font = '16px monospace'
+
+  state.ctx.font = state.breakpoints.md ? '16px monospace' : '14px monospace'
+
   state.ctx.textBaseline = 'middle'
   state.ctx.textAlign = 'center'
 
