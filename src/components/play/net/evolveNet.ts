@@ -1,13 +1,13 @@
 import { State } from '../State'
-import { SelectedPort } from '../selected/Selected'
+import { SelectedValuePort } from '../selected-value/SelectedValue'
 import { computeElectricalForces } from '../forces/computeElectricalForces'
 import { computeSpringForces } from '../forces/computeSpringForces'
 
-export function evolveNet(state: State, selected: SelectedPort): void {
-  const { net, layout } = selected
+export function evolveNet(state: State, selectedValue: SelectedValuePort): void {
+  const { net, layout } = selectedValue
 
   const coolingFactor = 0.999
-  const step = selected.evolvingStep
+  const step = selectedValue.evolvingStep
 
   const springForces = computeSpringForces(net, layout)
   const electricalForces = computeElectricalForces(net, layout)
@@ -29,5 +29,5 @@ export function evolveNet(state: State, selected: SelectedPort): void {
     }
   }
 
-  selected.evolvingStep++
+  selectedValue.evolvingStep++
 }

@@ -1,7 +1,5 @@
 # play
 
-ambr Selected SelectedValue
-
 [play] `renderStack` create buttons
 
 [play] select value in the stack can switch the current value -- like tabs

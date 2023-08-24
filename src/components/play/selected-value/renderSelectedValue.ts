@@ -1,15 +1,15 @@
 import { formatValue } from '@cicada-lang/inet'
 import { State } from '../State'
 import { renderNet } from '../net/renderNet'
-import { Selected } from './Selected'
+import { SelectedValue } from './SelectedValue'
 
-export function renderSelected(state: State, selected: Selected): void {
+export function renderSelectedValue(state: State, selectedValue: SelectedValue): void {
   state.ctx.save()
 
-  if (selected['@kind'] === 'SelectedPort') {
-    renderNet(state, selected.net, selected.layout)
+  if (selectedValue['@kind'] === 'SelectedValuePort') {
+    renderNet(state, selectedValue.net, selectedValue.layout)
   } else {
-    const valueText = formatValue(selected.value)
+    const valueText = formatValue(selectedValue.value)
     state.ctx.font = '38px monospace'
     const valueTextMetrics = state.ctx.measureText(valueText)
     const x = state.width / 2 - valueTextMetrics.width / 2

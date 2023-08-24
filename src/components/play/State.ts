@@ -1,6 +1,6 @@
 import { Mod } from '@cicada-lang/inet'
 import { Button } from './button/Button'
-import { Selected } from './selected/Selected'
+import { SelectedValue } from './selected-value/SelectedValue'
 import { Mouse } from './mouse/Mouse'
 
 export type State = {
@@ -19,5 +19,5 @@ export type State = {
   buttons: Map<string, Button>
 
   // Interactions:
-  selected?: Selected
+  selectedValue?: SelectedValue
 }
