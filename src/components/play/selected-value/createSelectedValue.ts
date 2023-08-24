@@ -26,7 +26,7 @@ export function createSelectedValue(state: State): SelectedValue | undefined {
   } else {
     return {
       '@type': 'SelectedValue',
-      '@kind': 'SelectedValueValue',
+      '@kind': 'SelectedValueGeneric',
       value: selectedValueValue,
     }
   }

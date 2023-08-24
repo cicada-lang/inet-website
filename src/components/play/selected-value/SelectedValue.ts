@@ -1,7 +1,7 @@
 import { Net, Port, Value } from '@cicada-lang/inet'
 import { NetLayout } from '../net-layout/NetLayout'
 
-export type SelectedValue = SelectedValuePort | SelectedValueValue
+export type SelectedValue = SelectedValuePort | SelectedValueGeneric
 
 export type SelectedValuePort = {
   '@type': 'SelectedValue'
@@ -12,8 +12,8 @@ export type SelectedValuePort = {
   evolvingStep: number
 }
 
-export type SelectedValueValue = {
+export type SelectedValueGeneric = {
   '@type': 'SelectedValue'
-  '@kind': 'SelectedValueValue'
+  '@kind': 'SelectedValueGeneric'
   value: Value
 }
