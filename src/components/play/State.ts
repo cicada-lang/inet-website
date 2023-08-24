@@ -12,6 +12,10 @@ export type State = {
   width: number
   height: number
 
+  // Frame rate control:
+  lastTime: number
+  clickCoollingTimer: number
+
   // Abstract devices:
   mouse: Mouse
 

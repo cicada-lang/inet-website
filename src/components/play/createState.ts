@@ -24,6 +24,8 @@ export function createState(options: StateOptions): State {
     ctx,
     width,
     height,
+    lastTime: 0,
+    clickCoollingTimer: 0,
     mouse,
     mod,
     buttons: new Map(),
