@@ -9,31 +9,30 @@ export function renderLocalVariableEntry(
   name: string,
   value: Value,
 ): void {
-  const unitHeight = 32
-
   state.ctx.save()
 
   const nameText = '$' + name
   state.ctx.font = '16px monospace'
   const nameTextMetrics = state.ctx.measureText(nameText)
-  const x = 0
-  const y = 0 + unitHeight * i
-  const xPadding = 5
+  const xPadding = 10
   const width = nameTextMetrics.width + xPadding * 2
-  const height = unitHeight
+  const height = 34
+  const x = 0
+  const y = 0 + height * i
+
   state.ctx.beginPath()
   const rect: Rect = [x, y, width, height]
   state.ctx.clearRect(...rect)
   state.ctx.strokeStyle = 'black'
   state.ctx.lineWidth = 1
   // state.ctx.strokeRect(...rect)
-  state.ctx.fillText(nameText, x + xPadding, y + unitHeight - 12)
+  state.ctx.fillText(nameText, x + xPadding, y + height - 12)
 
   if (name === state.selectedLocalName) {
     state.ctx.beginPath()
     state.ctx.lineWidth = 1.3
-    state.ctx.moveTo(x + 5, y + unitHeight - 5)
-    state.ctx.lineTo(x + width - 5, y + unitHeight - 5)
+    state.ctx.moveTo(x + xPadding, y + height - 5)
+    state.ctx.lineTo(x + width - xPadding, y + height - 5)
     state.ctx.stroke()
   }
 
