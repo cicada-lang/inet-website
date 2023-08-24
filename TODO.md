@@ -1,8 +1,5 @@
 # play
 
-[play] `renderLocalVariableEntry`
-[play] `renderLocalVariableEntry` -- create button
-
 [play] support dark mode
 
 [play] `isMobile(state)` -- small font for mobile

@@ -14,7 +14,7 @@ export function renderStackEntry(state: State, i: number, value: Value): void {
   const x = 0
   const y = state.height - unitHeight * (i + 1)
   const xPadding = 5
-  const width = Math.max(100, valueTextMetrics.width + xPadding * 2)
+  const width = valueTextMetrics.width + xPadding * 2
   const height = unitHeight
   state.ctx.beginPath()
   const rect: Rect = [x, y, width, height]

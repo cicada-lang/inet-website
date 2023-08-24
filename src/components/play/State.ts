@@ -1,7 +1,7 @@
 import { Mod } from '@cicada-lang/inet'
 import { Button } from './button/Button'
-import { SelectedValue } from './selected-value/SelectedValue'
 import { Mouse } from './mouse/Mouse'
+import { SelectedValue } from './selected-value/SelectedValue'
 
 export type State = {
   // Contexts:
@@ -25,4 +25,5 @@ export type State = {
   // Interactions:
   selectedValue?: SelectedValue
   selectedStackIndex?: number
+  selectedLocalName?: string
 }
