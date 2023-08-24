@@ -24,7 +24,7 @@ const tabName = ref<TabName>('statements')
         class="px-6 flex md:flex-row space-x-6 flex-col md:max-w-4xl my-12 w-full self-center"
       >
         <div class="border-2 border-black dark:border-white">
-          <pre class="p-6 text-xl whitespace-pre font-code">
+          <pre class="md:p-6 p-4 text-xl whitespace-pre font-code">
 rule zero add
   (add)-addend
   return-(add)
@@ -98,7 +98,7 @@ end</pre
       >
         <div v-show="tabName === 'statements'" class="w-full">
           <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 py-6">
+            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
               <div class="font-bold">type</div>
 
               <Lang>
@@ -112,14 +112,14 @@ end</pre
             </div>
 
             <div
-              class="border-t-2 border-x-2 md:w-2/3 border-black dark:border-white"
+              class="md:border-b-0 overflow-auto border-2 md:w-2/3 border-black dark:border-white"
             >
-              <pre class="p-6 text-xl font-code">type Nat -- Type end</pre>
+              <pre class="md:p-6 p-4 text-xl font-code">type Nat -- Type end</pre>
             </div>
           </div>
 
           <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 py-6">
+            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
               <div class="font-bold">node</div>
 
               <Lang>
@@ -132,8 +132,10 @@ end</pre
               </Lang>
             </div>
 
-            <div class="border-x-2 md:w-2/3 border-black dark:border-white">
-              <pre class="p-6 text-xl font-code">
+            <div
+              class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white"
+            >
+              <pre class="md:p-6 p-4 text-xl font-code">
 node zero -- Nat :value! end
 
 node add1 Nat :prev -- Nat :value! end
@@ -150,7 +152,7 @@ end
           </div>
 
           <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 py-6">
+            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
               <div class="font-bold">rule</div>
 
               <Lang>
@@ -165,8 +167,8 @@ end
               </Lang>
             </div>
 
-            <div class="border-x-2 md:w-2/3 border-black dark:border-white">
-              <pre class="p-6 text-xl font-code">
+            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
+              <pre class="md:p-6 p-4 text-xl font-code">
 rule zero add
   (add)-addend
   return-(add)
@@ -183,7 +185,7 @@ end
           </div>
 
           <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 py-6">
+            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
               <div class="font-bold">claim</div>
 
               <Lang>
@@ -198,8 +200,8 @@ end
               </Lang>
             </div>
 
-            <div class="border-x-2 md:w-2/3 border-black dark:border-white">
-              <pre class="p-6 text-xl font-code">
+            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
+              <pre class="md:p-6 p-4 text-xl font-code">
 claim one -- Nat end
 claim two -- Nat end
 claim three -- Nat end
@@ -209,7 +211,7 @@ claim three -- Nat end
           </div>
 
           <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 py-6">
+            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
               <div class="font-bold">define</div>
 
               <Lang>
@@ -222,8 +224,8 @@ claim three -- Nat end
               </Lang>
             </div>
 
-            <div class="border-x-2 md:w-2/3 border-black dark:border-white">
-              <pre class="p-6 text-xl font-code">
+            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
+              <pre class="md:p-6 p-4 text-xl font-code">
 define one zero add1 end
 define two one one add end
 define three two one add end
@@ -233,7 +235,7 @@ define three two one add end
           </div>
 
           <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 py-6">
+            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
               <div class="font-bold">check</div>
 
               <Lang>
@@ -248,8 +250,8 @@ define three two one add end
               </Lang>
             </div>
 
-            <div class="border-x-2 md:w-2/3 border-black dark:border-white">
-              <pre class="p-6 text-xl font-code">
+            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
+              <pre class="md:p-6 p-4 text-xl font-code">
 check
   Nat Nat -- Nat
 then
@@ -267,7 +269,7 @@ end
           </div>
 
           <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 py-6">
+            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
               <div class="font-bold">import</div>
 
               <Lang>
@@ -281,17 +283,20 @@ end
               </Lang>
             </div>
 
-            <div class="border-x-2 md:w-2/3 border-black dark:border-white">
-              <pre class="p-6 text-xl font-code">
+            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
+              <pre class="md:p-6 p-4 text-xl font-code">
 import Nat, zero, add1, add from "./Nat.i"
-import one, two, three from "./Nat.i"
+
+import
+   one, two, three
+from "https://cdn.inet.run/tests/datatype/Nat.i"
 </pre
               >
             </div>
           </div>
 
           <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 py-6">
+            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
               <div class="font-bold">require</div>
 
               <Lang>
@@ -305,8 +310,10 @@ import one, two, three from "./Nat.i"
               </Lang>
             </div>
 
-            <div class="border-x-2 border-b-2 md:w-2/3 border-black dark:border-white">
-              <pre class="p-6 text-xl font-code">
+            <div
+              class="md:border-b-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white"
+            >
+              <pre class="md:p-6 p-4 text-xl font-code">
 require "./Nat.i"
 </pre
               >
