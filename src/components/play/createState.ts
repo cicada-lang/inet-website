@@ -1,4 +1,5 @@
 import { Mod } from '@cicada-lang/inet'
+import { useGlobalTheme } from '../../reactives/useGlobalTheme'
 import { State } from './State'
 import { createMouse } from './mouse/createMouse'
 
@@ -12,6 +13,8 @@ export function createState(options: StateOptions): State {
   const { mod, canvas, container } = options
 
   const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
+
+  const theme = useGlobalTheme()
 
   const width = container.offsetWidth
   const height = container.offsetHeight
@@ -32,5 +35,6 @@ export function createState(options: StateOptions): State {
     mod,
     buttons: new Map(),
     selectedStackIndex,
+    theme,
   }
 }

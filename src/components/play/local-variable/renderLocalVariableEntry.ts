@@ -21,16 +21,17 @@ export function renderLocalVariableEntry(
   const y = 0 + height * i
 
   state.ctx.beginPath()
+  state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
+  state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
+
   const rect: Rect = [x, y, width, height]
   state.ctx.clearRect(...rect)
-  state.ctx.strokeStyle = 'black'
   state.ctx.lineWidth = 1
   // state.ctx.strokeRect(...rect)
   const textOffset = 12
   state.ctx.fillText(nameText, x + paddingX, y + height - textOffset)
 
   if (name === state.selectedLocalName) {
-    state.ctx.beginPath()
     state.ctx.lineWidth = 1.5
     const underlineOffset = 5
     state.ctx.moveTo(x + paddingX, y + height - underlineOffset)

@@ -1,4 +1,5 @@
 import { Mod } from '@cicada-lang/inet'
+import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './button/Button'
 import { Mouse } from './mouse/Mouse'
 import { SelectedValue } from './selected-value/SelectedValue'
@@ -11,6 +12,7 @@ export type State = {
   mod: Mod
   width: number
   height: number
+  theme: Theme
 
   // Frame rate control:
   lastTime: number

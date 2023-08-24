@@ -1,7 +1,5 @@
 # play
 
-[play] support dark mode
-
 [play] `isMobile(state)` -- small font for mobile
 
 [play] `renderStack` -- stack has a limit to the top -- show number of more stack

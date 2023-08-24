@@ -7,7 +7,9 @@ export function renderEdge(
 ): void {
   state.ctx.save()
 
-  state.ctx.strokeStyle = 'black'
+  state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
+  state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
+
   state.ctx.lineWidth = 1
 
   state.ctx.beginPath()

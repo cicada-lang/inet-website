@@ -1,6 +1,6 @@
 import { reactive, watch } from 'vue'
 
-type Theme = {
+export type Theme = {
   name: string
   knownThemeNames: Array<string>
 }
