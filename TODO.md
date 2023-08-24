@@ -1,8 +1,7 @@
 # play
 
-[play] `renderLocals`
-
-[play] select value in locals can switch the current value -- like tabs
+[play] `renderLocalVariableEntry`
+[play] `renderLocalVariableEntry` -- create button
 
 [play] support dark mode
 

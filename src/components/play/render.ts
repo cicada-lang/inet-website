@@ -1,4 +1,5 @@
 import { State } from './State'
+import { renderLocalVariables } from './local-variable/renderLocalVariables'
 import { onClick } from './mouse/onClick'
 import { evolveNet } from './net/evolveNet'
 import { renderSelectedValue } from './selected-value/renderSelectedValue'
@@ -12,6 +13,7 @@ export function render(state: State, passedTime?: number): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   renderStack(state)
+  renderLocalVariables(state)
 
   if (state.selectedValue) {
     renderSelectedValue(state, state.selectedValue)
