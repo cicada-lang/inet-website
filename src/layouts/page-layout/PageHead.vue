@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
-import PageLogo from './PageLogo.vue'
 
 const route = useRoute()
 </script>
 
 <template>
-  <div class="flex-wrap flex items-baseline md:justify-between">
-    <RouterLink to="/" class="pr-4"> <PageLogo /> </RouterLink>
+  <div class="flex-wrap flex md:justify-between">
+    <RouterLink to="/" class="flex items-baseline text-xl font-bold pr-4">
+      iNet
+    </RouterLink>
 
     <div class="flex-wrap flex">
       <RouterLink
