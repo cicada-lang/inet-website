@@ -2,9 +2,9 @@
 import { Mod } from '@cicada-lang/inet'
 import { onMounted, ref, watch } from 'vue'
 import { State } from './State'
-import { animate } from './animate'
 import { createState } from './createState'
 import { trackMouse } from './mouse/trackMouse'
+import { render } from './render'
 import { resizeCanvas } from './resizeCanvas'
 import { stateRefresh } from './stateRefresh'
 
@@ -28,7 +28,7 @@ onMounted(() => {
     resizeCanvas(state.value)
     trackMouse(state.value)
     stateRefresh(state.value)
-    animate(state.value)
+    render(state.value)
   }
 })
 
@@ -52,3 +52,4 @@ watch(
     ></canvas>
   </div>
 </template>
+./render

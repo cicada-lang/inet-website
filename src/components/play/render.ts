@@ -1,9 +1,9 @@
 import { State } from './State'
-import { renderSelected } from './selected/renderSelected'
 import { evolveNet } from './net/evolveNet'
+import { renderSelected } from './selected/renderSelected'
 import { renderStack } from './stack/renderStack'
 
-export function animate(state: State): void {
+export function render(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   renderStack(state)
@@ -14,5 +14,5 @@ export function animate(state: State): void {
     }
   }
 
-  requestAnimationFrame(() => animate(state))
+  requestAnimationFrame(() => render(state))
 }
