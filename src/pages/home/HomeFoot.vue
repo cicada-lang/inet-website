@@ -7,11 +7,11 @@ import Lang from '../../components/lang/Lang.vue'
     <Lang>
       <template #zh>
         <div>演算者，有向之变化也。</div>
-        <div class="pr-4">-- 谢宇恒</div>
+        -- <a class="pr-4 hover:underline" target="_blank" href="https://xieyuheng.com">谢宇恒</a>
       </template>
       <template #en>
         <div>Computation is but directed change.</div>
-        <div>-- Xie Yuheng</div>
+        -- <a class="hover:underline" target="_blank" href="https://xieyuheng.com">Xie Yuheng</a>
       </template>
     </Lang>
 
