@@ -3,10 +3,7 @@ import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
 import { RenderOptions } from '../../route/Route'
 
-export function renderNodeDefinitions(
-  state: State,
-  options: RenderOptions,
-): void {
+export function renderWords(state: State, options: RenderOptions): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   renderNavbar(state)
@@ -14,5 +11,5 @@ export function renderNodeDefinitions(
     renderButtonBack(state)
   }
 
-  state.ctx.fillText('nodes', state.width / 4, state.height / 2)
+  state.ctx.fillText('words', state.width / 4, state.height / 2)
 }

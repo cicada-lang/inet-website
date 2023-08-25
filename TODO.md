@@ -1,12 +1,14 @@
 # play
 
-[play] `renderTypeDefinitions`
+[play] `renderTypeDefinitionList` -- add buttons
 
-[play] `renderNodeDefinitions`
-[play] `renderNodeDefinitions` -- show all rules about a node -- including imported
+[play] `RouteExp`
 
-[play] `renderRuleDefinitions`
-[play] `renderWordDefinitions`
+[play] `renderNodes`
+[play] `renderNodes` -- show all rules about a node -- including imported
+
+[play] `renderRules`
+[play] `renderWords`
 
 [play] `renderStack` -- has a limit to the top -- show number of more entries
 [play] `renderLocalVariables` -- has a limit to the button -- show number of more entries
