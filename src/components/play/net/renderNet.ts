@@ -1,6 +1,6 @@
 import { Net, allEdges, nodeKey } from '@cicada-lang/inet'
-import { NetLayout } from '../net-layout/NetLayout'
 import { State } from '../State'
+import { NetLayout } from '../net-layout/NetLayout'
 import { renderEdge } from './renderEdge'
 import { renderNode } from './renderNode'
 

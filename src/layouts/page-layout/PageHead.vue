@@ -44,9 +44,9 @@ const route = useRoute()
       <a
         target="_blank"
         :href="
-        lang.isZh()
-        ? 'https://readonly.link/books/https://cdn.inet.cic.run/docs/books/反应网编程/book.json'
-        : 'https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json'
+          lang.isZh()
+            ? 'https://readonly.link/books/https://cdn.inet.cic.run/docs/books/反应网编程/book.json'
+            : 'https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json'
         "
         class="pr-4 text-xl hover:underline underline-offset-4 decoration-2"
       >
@@ -64,6 +64,5 @@ const route = useRoute()
         <IconGitHub class="w-5 h-5" />
       </a>
     </div>
-
   </div>
 </template>

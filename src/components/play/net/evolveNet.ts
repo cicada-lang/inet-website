@@ -1,9 +1,12 @@
 import { State } from '../State'
-import { SelectedValuePort } from '../selected-value/SelectedValue'
 import { computeElectricalForces } from '../forces/computeElectricalForces'
 import { computeSpringForces } from '../forces/computeSpringForces'
+import { SelectedValuePort } from '../selected-value/SelectedValue'
 
-export function evolveNet(state: State, selectedValue: SelectedValuePort): void {
+export function evolveNet(
+  state: State,
+  selectedValue: SelectedValuePort,
+): void {
   const { net, layout } = selectedValue
 
   const coolingFactor = 0.999
