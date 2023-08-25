@@ -17,7 +17,7 @@ export function renderButtonWords(state: State): void {
   const x = state.width - width - marginR
   const y = marginT
 
-  state.ctx.beginPath()
+
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
@@ -25,12 +25,14 @@ export function renderButtonWords(state: State): void {
   const rect: Rect = [x - radius / 2, y, radius * 2, radius * 2]
   // state.ctx.strokeRect(...rect)
   state.ctx.lineWidth = 1
+    state.ctx.beginPath()
   state.ctx.arc(x + width / 2, y + height / 2, radius, 0, Math.PI * 2)
   state.ctx.stroke()
   const textOffset = 13
   state.ctx.fillText(text, x, y + height - textOffset)
 
   if (state.path === 'words') {
+      state.ctx.beginPath()
     state.ctx.arc(x + width / 2, y + height / 2, radius - 4, 0, Math.PI * 2)
     state.ctx.stroke()
     state.buttons.delete('words')
