@@ -1,7 +1,5 @@
 # play
 
-[play] `renderLoop` -- use `routes`
-
 [play] `nav/renderNavCircle` -- to route view to list of
 
 - type
