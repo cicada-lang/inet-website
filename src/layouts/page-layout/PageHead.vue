@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
+import IconGitHub from '../../components/icons/IconGitHub.vue'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 
@@ -58,12 +59,9 @@ const route = useRoute()
       <a
         target="_blank"
         href="https://github.com/cicada-lang/inet"
-        class="text-xl hover:underline underline-offset-4 decoration-2"
+        class="mt-1"
       >
-        <Lang>
-          <template #zh> GitHub </template>
-          <template #en> GitHub </template>
-        </Lang>
+        <IconGitHub class="w-5 h-5" />
       </a>
     </div>
   </div>
