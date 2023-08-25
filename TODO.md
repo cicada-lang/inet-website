@@ -1,10 +1,17 @@
 # play
 
-[play] control to route view to list of types, nodes (rules about it) and words
-
 [play] router and routes
 
+[play] `nav/renderNavCircle` -- to route view to list of
+
+- type
+- node
+- word
+
+[play] control to route view to list of
+
 [play] node page -- show node definition
+[play] node page -- show all rules about a node -- including imported
 [play] type page -- type node definition
 
 [play] rule page -- show node definition
