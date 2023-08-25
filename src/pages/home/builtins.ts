@@ -32,7 +32,6 @@ two two add inspect
       en: 'Run the connected component of the port at the top of the stack, without taking it.',
     },
     code: `\
-two two add inspect
 two two add run inspect
 `,
   },
