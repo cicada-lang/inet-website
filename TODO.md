@@ -1,5 +1,5 @@
-[home] 7 words
-[home] 6 builtins
+[home] `words`
+[home] `builtins`
 
 # play
 

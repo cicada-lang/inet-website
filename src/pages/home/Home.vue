@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
-import HomeFoot from "./HomeFoot.vue"
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
+import HomeFoot from './HomeFoot.vue'
+import { statements } from './statements.ts'
 
 type TabName = 'statements' | 'words' | 'builtins'
 const tabName = ref<TabName>('statements')
@@ -98,226 +99,39 @@ end</pre
         class="w-full md:max-w-[64rem] flex flex-col items-start px-6 pt-4 self-center"
       >
         <div v-show="tabName === 'statements'" class="w-full">
-          <div class="flex md:flex-row flex-col w-full">
+          <div
+            v-for="(statement, index) of statements"
+            :key="index"
+            class="flex md:flex-row flex-col w-full"
+          >
             <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">type</div>
+              <div class="font-bold">{{ statement.name }}</div>
 
               <Lang>
                 <template #zh>
-                  <div>定义一个类型</div>
+                  <div v-for="(line, index) of statement.description.zh">
+                    {{ line }}
+                  </div>
                 </template>
                 <template #en>
-                  <div>define a type</div>
+                  <div v-for="(line, index) of statement.description.en">
+                    {{ line }}
+                  </div>
                 </template>
               </Lang>
             </div>
 
             <div
-              class="md:border-b-0 overflow-auto border-2 md:w-2/3 border-black dark:border-white"
+              class="overflow-auto border-2 md:w-2/3 border-black dark:border-white"
+              :class="{
+                'md:border-b-0': index === 0,
+                'md:border-t-0': index !== 0 && index === statements.length - 1,
+                'md:border-y-0': index !== 0 && index !== statements.length - 1,
+              }"
             >
-              <pre class="md:p-6 p-4 text-xl font-code">type Nat -- Type end</pre>
-            </div>
-          </div>
-
-          <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">node</div>
-
-              <Lang>
-                <template #zh>
-                  <div>定义一个节点</div>
-                </template>
-                <template #en>
-                  <div>define a node</div>
-                </template>
-              </Lang>
-            </div>
-
-            <div
-              class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white"
-            >
-              <pre class="md:p-6 p-4 text-xl font-code">
-node zero -- Nat :value! end
-
-node add1 Nat :prev -- Nat :value! end
-
-node add
-  Nat :target!
-  Nat :addend
-  -----------
-  Nat :return
-end
-</pre
-              >
-            </div>
-          </div>
-
-          <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">rule</div>
-
-              <Lang>
-                <template #zh>
-                  <div>针对两个节点</div>
-                  <div>定义一条规则</div>
-                </template>
-                <template #en>
-                  <div>define a rule</div>
-                  <div>between two nodes</div>
-                </template>
-              </Lang>
-            </div>
-
-            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
-              <pre class="md:p-6 p-4 text-xl font-code">
-rule zero add
-  (add)-addend
-  return-(add)
-end
-
-rule add1 add
-  (add)-addend
-  (add1)-prev add
-  add1 return-(add)
-end
-</pre
-              >
-            </div>
-          </div>
-
-          <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">claim</div>
-
-              <Lang>
-                <template #zh>
-                  <div>在定义一个词之前</div>
-                  <div>声明这个词的类型</div>
-                </template>
-                <template #en>
-                  <div>claim the type of a word</div>
-                  <div>before defining the word</div>
-                </template>
-              </Lang>
-            </div>
-
-            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
-              <pre class="md:p-6 p-4 text-xl font-code">
-claim one -- Nat end
-claim two -- Nat end
-claim three -- Nat end
-</pre
-              >
-            </div>
-          </div>
-
-          <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">define</div>
-
-              <Lang>
-                <template #zh>
-                  <div>定义一个词</div>
-                </template>
-                <template #en>
-                  <div>define a word</div>
-                </template>
-              </Lang>
-            </div>
-
-            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
-              <pre class="md:p-6 p-4 text-xl font-code">
-define one zero add1 end
-define two one one add end
-define three two one add end
-</pre
-              >
-            </div>
-          </div>
-
-          <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">check</div>
-
-              <Lang>
-                <template #zh>
-                  <div>检查一段话</div>
-                  <div>是否符合类型</div>
-                </template>
-                <template #en>
-                  <div>check if a sentence</div>
-                  <div>is of given type</div>
-                </template>
-              </Lang>
-            </div>
-
-            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
-              <pre class="md:p-6 p-4 text-xl font-code">
-check
-  Nat Nat -- Nat
-then
-  add
-end
-
-check
-  Nat -- Nat
-then
-  one add
-end
-</pre
-              >
-            </div>
-          </div>
-
-          <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">import</div>
-
-              <Lang>
-                <template #zh>
-                  <div>从模块引入某些定义</div>
-                </template>
-                <template #en>
-                  <div>import definitions</div>
-                  <div>from module</div>
-                </template>
-              </Lang>
-            </div>
-
-            <div class="md:border-y-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white">
-              <pre class="md:p-6 p-4 text-xl font-code">
-import Nat, zero, add1, add from "./Nat.i"
-
-import
-   one, two, three
-from "https://cdn.inet.run/tests/datatype/Nat.i"
-</pre
-              >
-            </div>
-          </div>
-
-          <div class="flex md:flex-row flex-col w-full">
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">require</div>
-
-              <Lang>
-                <template #zh>
-                  <div>从模块引入所有定义</div>
-                </template>
-                <template #en>
-                  <div>import all definitions</div>
-                  <div>from module</div>
-                </template>
-              </Lang>
-            </div>
-
-            <div
-              class="md:border-t-0 border-2 overflow-auto md:w-2/3 border-black dark:border-white"
-            >
-              <pre class="md:p-6 p-4 text-xl font-code">
-require "./Nat.i"
-</pre
-              >
+              <pre class="md:p-6 p-4 text-xl font-code">{{
+                statement.code
+              }}</pre>
             </div>
           </div>
         </div>
