@@ -1,8 +1,8 @@
 export type Example = {
   name: string
   description: {
-    zh: Array<string>
-    en: Array<string>
+    zh: string
+    en: string
   }
   code: string
 }

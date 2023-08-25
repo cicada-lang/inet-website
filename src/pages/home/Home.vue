@@ -20,12 +20,12 @@ const tabs = {
 <template>
   <PageLayout>
     <div class="flex flex-col p-3">
-      <div class="w-full flex flex-col md:max-w-3xl self-center px-6">
-        <div class="text-7xl text-blance pt-16 font-bold">iNet</div>
-        <div class="text-3xl text-blance py-10">
+      <div class="w-full flex flex-col md:max-w-3xl self-center px-6 py-16">
+        <div class="text-7xl text-blance font-bold">iNet</div>
+        <div class="text-4xl text-blance pt-2">
           <Lang>
-            <template #zh> 用可反应的网编程。 </template>
-            <template #en> Programming with interaction nets. </template>
+            <template #zh> 用可反应的网编程 </template>
+            <template #en> Programming with interaction nets </template>
           </Lang>
         </div>
       </div>
@@ -103,25 +103,15 @@ const tabs = {
             :key="index"
             class="flex md:flex-row flex-col w-full"
           >
-            <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
+            <div class="text-2xl md:w-1/3 pr-6 pt-6 pb-2">
               <div class="font-bold">{{ example.name }}</div>
 
               <Lang>
                 <template #zh>
-                  <div
-                    v-for="(line, index) of example.description.zh"
-                    :key="index"
-                  >
-                    {{ line }}
-                  </div>
+                  <div>{{ example.description.zh }}</div>
                 </template>
                 <template #en>
-                  <div
-                    v-for="(line, index) of example.description.en"
-                    :key="index"
-                  >
-                    {{ line }}
-                  </div>
+                  <div>{{ example.description.en }}</div>
                 </template>
               </Lang>
             </div>

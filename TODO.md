@@ -1,3 +1,4 @@
+[home] smaller text on mobile
 [home] [maybe] no tabs
 
 # play
