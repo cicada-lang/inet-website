@@ -2,39 +2,8 @@
 import Lang from '../../components/lang/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import HomeFoot from './HomeFoot.vue'
-import { builtins } from './builtins'
 import { main } from './main'
-import { statements } from './statements'
-import { words } from './words'
-
-const sections = [
-  {
-    name: 'statements',
-    examples: statements,
-    title: {
-      zh: '8 种语句',
-      en: '8 kinds of statements',
-    },
-  },
-
-  {
-    name: 'words',
-    examples: words,
-    title: {
-      zh: '7 种词',
-      en: '7 kinds of words',
-    },
-  },
-
-  {
-    name: 'builtins',
-    examples: builtins,
-    title: {
-      zh: '6 个预定义词',
-      en: '6 built-in words',
-    },
-  },
-]
+import { sections } from './sections'
 </script>
 
 <template>
