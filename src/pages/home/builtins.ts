@@ -2,131 +2,82 @@ import { Example } from './Example'
 
 export const builtins: Array<Example> = [
   {
-    name: 'type',
+    name: 'connect',
     description: {
-      zh: ['定义一个类型'],
-      en: ['define a type'],
-    },
-    code: `type Nat -- Type end`,
-  },
-
-  {
-    name: 'node',
-    description: {
-      zh: ['定义一个节点'],
-      en: ['define a node'],
+      zh: ['取两个接口', '将它们相连'],
+      en: ['take two ports', 'and connect them'],
     },
     code: `\
-node zero
-  ----------
-  Nat :value!
-end
-
-node add1
-  Nat :prev
-  ----------
-  Nat :value!
-end
-
-node add
-  Nat :target!
-  Nat :addend
-  -----------
-  Nat :return
-end
+(add)-addend
+(add)-return
+connect
 `,
   },
 
   {
-    name: 'rule',
+    name: 'inspect',
     description: {
-      zh: ['针对两个节点', '定义一条规则'],
-      en: ['define a rule', 'between two nodes'],
+      zh: ['不取出栈顶值', '打印栈顶值的信息'],
+      en: [
+        'print info of the value at the top of the stack',
+        'without taking it',
+      ],
     },
     code: `\
-rule zero add
-  (add)-addend
-  return-(add)
-end
-
-rule add1 add
-  (add)-addend
-  (add1)-prev add
-  add1 return-(add)
-end
+two two add inspect
 `,
   },
 
   {
-    name: 'claim',
+    name: 'run',
     description: {
-      zh: ['在定义一个词之前', '声明这个词的类型'],
-      en: ['claim the type of a word', 'before defining the word'],
+      zh: ['不取出栈顶接口', '运行栈顶接口所在的连通分支'],
+      en: [
+        'run the connected component of the port at the top of the stack',
+        'without taking it',
+      ],
     },
     code: `\
-claim one -- Nat end
-claim two -- Nat end
-claim three -- Nat end
+two two add inspect
+two two add run inspect
 `,
   },
 
   {
-    name: 'define',
+    name: 'swap',
     description: {
-      zh: ['定义一个词'],
-      en: ['define a word'],
+      zh: ['交换栈顶的两个值'],
+      en: ['swap two values at the top of the stack'],
     },
     code: `\
-define one zero add1 end
-define two one one add end
-define three two one add end
+one two swap
+// the same as:
+//   two one
 `,
   },
 
   {
-    name: 'check',
+    name: 'rot',
     description: {
-      zh: ['检查一段话', '是否符合类型'],
-      en: ['check if a sentence', 'is of given type'],
+      zh: ['轮换栈顶的三个值'],
+      en: ['rotate three values at the top of the stack'],
     },
     code: `\
-check
-  Nat Nat -- Nat
-then
-  add
-end
-
-check
-  Nat -- Nat
-then
-  one add
-end
+one two three rot
+// the same as:
+//   two three one
 `,
   },
 
   {
-    name: 'import',
+    name: 'Type',
     description: {
-      zh: ['从模块引入某些定义'],
-      en: ['import some definitions', 'from a module'],
+      zh: ['返回 Type 这个值'],
+      en: ['return the value Type'],
     },
     code: `\
-import Nat, zero, add1, add from "./Nat.i"
-
-import
-   one, two, three
-from "https://cdn.inet.run/tests/datatype/Nat.i"
-`,
-  },
-
-  {
-    name: 'require',
-    description: {
-      zh: ['从模块引入所有定义'],
-      en: ['import all definitions', 'from a module'],
-    },
-    code: `\
-require "./Nat.i"
+define Nat -- Type end
+define List Type -- Type end
 `,
   },
 ]

@@ -1,4 +1,3 @@
-[home] `builtins`
 [home] [maybe] no tabs
 
 # play
