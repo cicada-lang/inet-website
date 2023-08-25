@@ -9,12 +9,12 @@ import { sections } from './sections'
 <template>
   <PageLayout>
     <div class="flex flex-col p-3">
-      <div class="w-full flex flex-col md:max-w-3xl self-center px-6 py-20">
+      <div class="w-full flex flex-col md:max-w-[64rem] self-center px-6 py-20">
         <div class="text-7xl text-blance font-bold">iNet</div>
         <div class="text-4xl text-blance pt-2">
           <Lang>
-            <template #zh> 用可反应的网编程 </template>
-            <template #en> Programming with interaction nets </template>
+            <template #zh> 用可反应的网编程。 </template>
+            <template #en> Programming with interaction nets. </template>
           </Lang>
         </div>
       </div>
