@@ -17,7 +17,6 @@ export function renderButtonNodes(state: State): void {
   const x = state.width - width - marginR
   const y = marginT
 
-
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
