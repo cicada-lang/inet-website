@@ -20,16 +20,18 @@ import { sections } from './sections'
       </div>
 
       <div
-        class="px-6 flex md:flex-row space-x-6 flex-col md:max-w-4xl my-12 w-full self-center"
+        class="px-6 flex md:flex-row flex-col md:max-w-[64rem] my-12 w-full self-center"
       >
-        <div class="border-2 border-black dark:border-white">
+        <div class="md:w-1/3 border-2 border-black dark:border-white">
           <pre
             class="md:p-6 p-4 md:text-lg text-base whitespace-pre font-code"
             >{{ main.code }}</pre
           >
         </div>
 
-        <pre>TODO Canvas animation</pre>
+        <div class="md:px-3 md:py-0 py-3 md:w-2/3">
+          <pre>TODO Canvas animation</pre>
+        </div>
       </div>
 
       <div class="w-full md:max-w-[64rem] flex px-6 pt-10 self-center">
@@ -43,7 +45,7 @@ import { sections } from './sections'
             </Lang>
           </div>
 
-          <div class="md:text-xl text-lg py-2">
+          <div class="md:text-xl text-lg py-1">
             <Lang>
               <template #zh>
                 iNet 有 <br />
