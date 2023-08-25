@@ -4,10 +4,8 @@ import { renderButtonNodes } from './renderButtonNodes'
 import { renderButtonTypes } from './renderButtonTypes'
 import { renderButtonWords } from './renderButtonWords'
 
-export function renderNavCircle(state: State): void {
-  if (state.historyPaths.length > 0) {
-    renderButtonBack(state)
-  }
+export function renderNavbar(state: State): void {
+
 
   state.ctx.save()
 

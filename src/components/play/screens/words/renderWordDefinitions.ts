@@ -1,5 +1,6 @@
 import { State } from '../../State'
-import { renderNavCircle } from '../../nav/renderNavCircle'
+import { renderButtonBack } from '../../nav/renderButtonBack'
+import { renderNavbar } from '../../nav/renderNavbar'
 import { RenderOptions } from '../../route/Route'
 
 export function renderWordDefinitions(
@@ -8,7 +9,10 @@ export function renderWordDefinitions(
 ): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  renderNavCircle(state)
+  renderNavbar(state)
+  if (state.historyPaths.length > 0) {
+    renderButtonBack(state)
+  }
 
   state.ctx.fillText('words', state.width / 4, state.height / 2)
 }

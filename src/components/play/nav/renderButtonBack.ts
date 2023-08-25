@@ -6,7 +6,7 @@ export function renderButtonBack(state: State): void {
   state.ctx.save()
 
   const lang = useGlobalLang()
-  state.ctx.font = state.breakpoints.md ? '16px sans-serif' : '14px sans-serif'
+  state.ctx.font = state.breakpoints.md ? '18px sans-serif' : '16px sans-serif'
 
   const text = lang.isZh() ? `返回` : `Back`
   const textMetrics = state.ctx.measureText(text)

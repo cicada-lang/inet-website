@@ -1,6 +1,6 @@
 import { State } from '../../State'
 import { renderLocalVariables } from '../../local-variable/renderLocalVariables'
-import { renderNavCircle } from '../../nav/renderNavCircle'
+import { renderNavbar } from '../../nav/renderNavbar'
 import { evolveNet } from '../../net/evolveNet'
 import { RenderOptions } from '../../route/Route'
 import { renderSelectedValue } from '../../selected-value/renderSelectedValue'
@@ -19,5 +19,5 @@ export function renderHome(state: State, options: RenderOptions): void {
 
   renderStack(state)
   renderLocalVariables(state)
-  renderNavCircle(state)
+  renderNavbar(state)
 }
