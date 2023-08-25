@@ -3,11 +3,18 @@ import { ref } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import HomeFoot from './HomeFoot.vue'
-import { statements } from './statements.ts'
-import { main } from './main.ts'
+import { builtins } from './builtins'
+import { main } from './main'
+import { statements } from './statements'
+import { words } from './words'
 
 type TabName = 'statements' | 'words' | 'builtins'
 const tabName = ref<TabName>('statements')
+const tabs = {
+  statements,
+  words,
+  builtins,
+}
 </script>
 
 <template>
@@ -88,25 +95,31 @@ const tabName = ref<TabName>('statements')
       </div>
 
       <div
-        class="w-full md:max-w-[64rem] flex flex-col items-start px-6 pt-4 self-center"
+        class="w-full space-y-6 md:max-w-[64rem] flex flex-col items-start px-6 pt-4 self-center"
       >
-        <div v-show="tabName === 'statements'" class="w-full">
+        <div v-for="(examples, name) of tabs" :key="name" class="w-full">
           <div
-            v-for="(statement, index) of statements"
+            v-for="(example, index) of examples"
             :key="index"
             class="flex md:flex-row flex-col w-full"
           >
             <div class="text-2xl md:w-1/3 md:text-end pr-6 pt-6 pb-2">
-              <div class="font-bold">{{ statement.name }}</div>
+              <div class="font-bold">{{ example.name }}</div>
 
               <Lang>
                 <template #zh>
-                  <div v-for="(line, index) of statement.description.zh">
+                  <div
+                    v-for="(line, index) of example.description.zh"
+                    :key="index"
+                  >
                     {{ line }}
                   </div>
                 </template>
                 <template #en>
-                  <div v-for="(line, index) of statement.description.en">
+                  <div
+                    v-for="(line, index) of example.description.en"
+                    :key="index"
+                  >
                     {{ line }}
                   </div>
                 </template>
@@ -117,45 +130,13 @@ const tabName = ref<TabName>('statements')
               class="overflow-auto border-2 md:w-2/3 border-black dark:border-white"
               :class="{
                 'md:border-b-0': index === 0,
-                'md:border-t-0': index !== 0 && index === statements.length - 1,
-                'md:border-y-0': index !== 0 && index !== statements.length - 1,
+                'md:border-t-0': index !== 0 && index === examples.length - 1,
+                'md:border-y-0': index !== 0 && index !== examples.length - 1,
               }"
             >
-              <pre class="md:p-6 p-4 text-xl font-code">{{
-                statement.code
-              }}</pre>
+              <pre class="md:p-6 p-4 text-xl font-code">{{ example.code }}</pre>
             </div>
           </div>
-        </div>
-
-        <div v-show="tabName === 'words'" class="w-full">
-          <div>Call</div>
-
-          <div>Local</div>
-
-          <div>TypeVar</div>
-
-          <div>Label</div>
-
-          <div>NodeRearrange</div>
-
-          <div>PortPush</div>
-
-          <div>PortReconnect</div>
-        </div>
-
-        <div v-show="tabName === 'builtins'" class="w-full">
-          <div>connect</div>
-
-          <div>inspect</div>
-
-          <div>run</div>
-
-          <div>swap</div>
-
-          <div>rot</div>
-
-          <div>Type</div>
         </div>
       </div>
     </div>
