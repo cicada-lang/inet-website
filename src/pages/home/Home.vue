@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import HomeFoot from './HomeFoot.vue'
@@ -8,19 +7,40 @@ import { main } from './main'
 import { statements } from './statements'
 import { words } from './words'
 
-type TabName = 'statements' | 'words' | 'builtins'
-const tabName = ref<TabName>('statements')
-const tabs = {
-  statements,
-  words,
-  builtins,
-}
+const sections = [
+  {
+    name: 'statements',
+    examples: statements,
+    title: {
+      zh: '8 种语句',
+      en: '8 kinds of statements',
+    },
+  },
+
+  {
+    name: 'words',
+    examples: words,
+    title: {
+      zh: '7 种词',
+      en: '7 kinds of words',
+    },
+  },
+
+  {
+    name: 'builtins',
+    examples: builtins,
+    title: {
+      zh: '6 个预定义词',
+      en: '6 built-in words',
+    },
+  },
+]
 </script>
 
 <template>
   <PageLayout>
     <div class="flex flex-col p-3">
-      <div class="w-full flex flex-col md:max-w-3xl self-center px-6 py-16">
+      <div class="w-full flex flex-col md:max-w-3xl self-center px-6 py-20">
         <div class="text-7xl text-blance font-bold">iNet</div>
         <div class="text-4xl text-blance pt-2">
           <Lang>
@@ -43,66 +63,61 @@ const tabs = {
         <pre>TODO Canvas animation</pre>
       </div>
 
-      <div
-        class="w-full md:max-w-sm ml-1.5 flex flex-col items-start px-6 pt-10 self-center"
-      >
-        <div class="md:text-2xl text-xl text-blance font-bold">
-          <Lang>
-            <template #zh> 语言 </template>
-            <template #en> The Language </template>
-          </Lang>
-        </div>
+      <div class="w-full md:max-w-[64rem] flex px-6 pt-10 self-center">
+        <div class="md:w-1/3"></div>
 
-        <div class="pt-4">
-          <button
-            class="block underline-offset-4 decoration-2 hover:underline md:text-xl text-lg"
-            :class="{
-              underline: tabName === 'statements',
-            }"
-            @click="tabName = 'statements'"
-          >
+        <div class="w-full md:w-2/3">
+          <div class="md:text-3xl text-2xl text-blance font-bold">
             <Lang>
-              <template #zh> 8 种语句 </template>
-              <template #en> 8 kinds of statements </template>
+              <template #zh> 语言 </template>
+              <template #en> The Language </template>
             </Lang>
-          </button>
-          <button
-            class="block underline-offset-4 decoration-2 hover:underline md:text-xl text-lg"
-            :class="{
-              underline: tabName === 'words',
-            }"
-            @click="tabName = 'words'"
-          >
+          </div>
+
+          <div class="md:text-xl text-lg py-2">
             <Lang>
-              <template #zh> 7 种词 </template>
-              <template #en> 7 kinds of words </template>
+              <template #zh>
+                iNet 有 <br />
+                8 种语句，<br />
+                7 种词，<br />
+                6 个预定义词。<br />
+              </template>
+              <template #en>
+                iNet has <br />8 kinds of statements, <br />
+                7 kinds of words, <br />
+                6 built-in words. <br />
+              </template>
             </Lang>
-          </button>
-          <button
-            class="block underline-offset-4 decoration-2 hover:underline md:text-xl text-lg"
-            :class="{
-              underline: tabName === 'builtins',
-            }"
-            @click="tabName = 'builtins'"
-          >
-            <Lang>
-              <template #zh> 6 个预定义词 </template>
-              <template #en> 6 built-in words </template>
-            </Lang>
-          </button>
+          </div>
         </div>
       </div>
 
       <div
-        class="w-full space-y-6 md:max-w-[64rem] flex flex-col items-start px-6 pt-4 self-center"
+        class="w-full space-y-6 md:max-w-[64rem] flex flex-col items-start px-6 md:pt-4 pt-3 self-center"
       >
-        <div v-for="(examples, name) of tabs" :key="name" class="w-full">
+        <div
+          v-for="{ name, examples, title } of sections"
+          :key="name"
+          class="w-full"
+        >
+          <div class="flex md:flex-row flex-col w-full md:pb-1">
+            <div class="md:w-1/3"></div>
+            <div
+              class="overflow-auto md:w-2/3 text-start md:text-2xl text-xl font-bold"
+            >
+              <Lang>
+                <template #zh> {{ title.zh }} </template>
+                <template #en> {{ title.en }} </template>
+              </Lang>
+            </div>
+          </div>
+
           <div
             v-for="(example, index) of examples"
             :key="index"
             class="flex md:flex-row flex-col w-full"
           >
-            <div class="md:text-xl text-lg md:w-1/3 pr-6 pt-6 pb-2">
+            <div class="md:text-xl text-lg md:w-1/3 pr-6 md:pt-6 pt-2 pb-2">
               <div class="font-bold">{{ example.name }}</div>
 
               <Lang>

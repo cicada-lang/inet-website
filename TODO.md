@@ -1,5 +1,3 @@
-[home] no tabs
-
 # play
 
 [play] `renderStack` -- stack has a limit to the top -- show number of more stack
