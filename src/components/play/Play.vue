@@ -52,4 +52,3 @@ watch(
     ></canvas>
   </div>
 </template>
-./render ./renderLoop

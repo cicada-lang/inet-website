@@ -18,6 +18,7 @@ export type State = {
   breakpoints: ReturnType<typeof useBreakpoints>
   routes: Array<Route>
   path: string
+  historyPaths: Array<string>
 
   // Frame rate control:
   lastTime: number

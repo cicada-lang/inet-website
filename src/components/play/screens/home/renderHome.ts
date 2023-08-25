@@ -1,6 +1,6 @@
 import { State } from '../../State'
 import { renderLocalVariables } from '../../local-variable/renderLocalVariables'
-import { onClick } from '../../mouse/onClick'
+import { renderNavCircle } from '../../nav/renderNavCircle'
 import { evolveNet } from '../../net/evolveNet'
 import { RenderOptions } from '../../route/Route'
 import { renderSelectedValue } from '../../selected-value/renderSelectedValue'
@@ -19,14 +19,5 @@ export function renderHome(state: State, options: RenderOptions): void {
 
   renderStack(state)
   renderLocalVariables(state)
-
-  const clickPeriod = 120
-  if (state.clickCoollingTimer <= 0) {
-    if (state.mouse.isDown) {
-      onClick(state)
-      state.clickCoollingTimer = clickPeriod
-    }
-  } else {
-    state.clickCoollingTimer -= options.deltaTime
-  }
+  renderNavCircle(state)
 }

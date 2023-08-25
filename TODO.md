@@ -1,22 +1,12 @@
 # play
 
-[play] `nav/renderNavCircle` -- to route view to list of
+[play] `renderTypeDefinitions`
 
-- type
-- node
-- word
+[play] `renderNodeDefinitions`
+[play] `renderNodeDefinitions` -- show all rules about a node -- including imported
 
-[play] control to route view to list of
-
-[play] node page -- show node definition
-[play] node page -- show all rules about a node -- including imported
-[play] type page -- type node definition
-
-[play] rule page -- show node definition
-[play] rule page -- animate rule building
-
-[play] word page -- show word definition
-[play] word page -- animate word building
+[play] `renderRuleDefinitions`
+[play] `renderWordDefinitions`
 
 [play] `renderStack` -- has a limit to the top -- show number of more entries
 [play] `renderLocalVariables` -- has a limit to the button -- show number of more entries

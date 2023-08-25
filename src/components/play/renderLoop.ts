@@ -1,9 +1,11 @@
 import { State } from './State'
-import { findRoute } from './findRoute'
+import { handleClick } from './mouse/handleClick'
+import { findRoute } from './route/findRoute'
 
 export function renderLoop(state: State, passedTime?: number): void {
   passedTime = passedTime || 0
   const deltaTime = passedTime - state.lastTime
+  state.lastTime = passedTime
 
   const route = findRoute(state)
   if (route === undefined) {
@@ -17,6 +19,8 @@ export function renderLoop(state: State, passedTime?: number): void {
   }
 
   route.render(state, { passedTime, deltaTime })
+
+  handleClick(state, { deltaTime })
 
   requestAnimationFrame((passedTime) => renderLoop(state, passedTime))
 }
