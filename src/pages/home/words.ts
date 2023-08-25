@@ -14,7 +14,7 @@ export const words: Array<Example> = [
     name: 'Local',
     description: {
       zh: '将栈顶的值保存到局部变量种，以在后面的段落中引用。',
-      en: 'Save the value at the top of the stack to a local variable, to reference it later.',
+      en: 'Save the value at the top of the stack to a local variable to reference it later.',
     },
     code: `\
 ... $result ... result ...
@@ -47,7 +47,7 @@ export const words: Array<Example> = [
     name: 'NodeRearrange',
     description: {
       zh: '在调用一个节点之前，重新排列它的输入与输出接口。',
-      en: `Rearrange a node's input and output ports, before calling it.`,
+      en: `Rearrange a node's input and output ports before calling it.`,
     },
     code: `\
 ... (cons :tail) ...

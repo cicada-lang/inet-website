@@ -41,7 +41,7 @@ end
     name: 'rule',
     description: {
       zh: '针对两个节点，定义一条规则。',
-      en: 'Define a rule, between two nodes.',
+      en: 'Define a rule between two nodes.',
     },
     code: `\
 rule zero add
@@ -61,7 +61,7 @@ end
     name: 'claim',
     description: {
       zh: '在定义一个词之前，声明这个词的类型。',
-      en: 'Claim the type of a word, before defining the word.',
+      en: 'Claim the type of a word before defining the word.',
     },
     code: `\
 claim one -- Nat end
@@ -87,7 +87,7 @@ define three two one add end
     name: 'check',
     description: {
       zh: '检查一段话，是否符合类型。',
-      en: 'Check if a sentence, is of given type.',
+      en: 'Check if a sentence is of given type.',
     },
     code: `\
 check
@@ -108,7 +108,7 @@ end
     name: 'import',
     description: {
       zh: '从模块引入某些定义。',
-      en: 'Import some definitions, from a module.',
+      en: 'Import some definitions from a module.',
     },
     code: `\
 import
@@ -125,7 +125,7 @@ from "https://cdn.inet.run/tests/datatype/Nat.i"
     name: 'require',
     description: {
       zh: '从模块引入所有定义。',
-      en: 'Import all definitions, from a module.',
+      en: 'Import all definitions from a module.',
     },
     code: `\
 require "./Nat.i"
