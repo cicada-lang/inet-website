@@ -1,5 +1,4 @@
-[home] smaller text on mobile
-[home] [maybe] no tabs
+[home] no tabs
 
 # play
 

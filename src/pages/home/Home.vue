@@ -34,20 +34,19 @@ const tabs = {
         class="px-6 flex md:flex-row space-x-6 flex-col md:max-w-4xl my-12 w-full self-center"
       >
         <div class="border-2 border-black dark:border-white">
-          <pre class="md:p-6 p-4 text-xl whitespace-pre font-code">{{
-            main.code
-          }}</pre>
+          <pre
+            class="md:p-6 p-4 md:text-lg text-base whitespace-pre font-code"
+            >{{ main.code }}</pre
+          >
         </div>
 
-        <div class="text-xl w-full">
-          <pre>TODO Canvas of rules.</pre>
-        </div>
+        <pre>TODO Canvas animation</pre>
       </div>
 
       <div
         class="w-full md:max-w-sm ml-1.5 flex flex-col items-start px-6 pt-10 self-center"
       >
-        <div class="text-2xl text-blance font-bold">
+        <div class="md:text-2xl text-xl text-blance font-bold">
           <Lang>
             <template #zh> 语言 </template>
             <template #en> The Language </template>
@@ -56,7 +55,7 @@ const tabs = {
 
         <div class="pt-4">
           <button
-            class="block underline-offset-4 decoration-2 hover:underline text-2xl"
+            class="block underline-offset-4 decoration-2 hover:underline md:text-xl text-lg"
             :class="{
               underline: tabName === 'statements',
             }"
@@ -68,7 +67,7 @@ const tabs = {
             </Lang>
           </button>
           <button
-            class="block underline-offset-4 decoration-2 hover:underline text-2xl"
+            class="block underline-offset-4 decoration-2 hover:underline md:text-xl text-lg"
             :class="{
               underline: tabName === 'words',
             }"
@@ -80,7 +79,7 @@ const tabs = {
             </Lang>
           </button>
           <button
-            class="block underline-offset-4 decoration-2 hover:underline text-2xl"
+            class="block underline-offset-4 decoration-2 hover:underline md:text-xl text-lg"
             :class="{
               underline: tabName === 'builtins',
             }"
@@ -103,7 +102,7 @@ const tabs = {
             :key="index"
             class="flex md:flex-row flex-col w-full"
           >
-            <div class="text-2xl md:w-1/3 pr-6 pt-6 pb-2">
+            <div class="md:text-xl text-lg md:w-1/3 pr-6 pt-6 pb-2">
               <div class="font-bold">{{ example.name }}</div>
 
               <Lang>
@@ -124,7 +123,9 @@ const tabs = {
                 'md:border-y-0': index !== 0 && index !== examples.length - 1,
               }"
             >
-              <pre class="md:p-6 p-4 text-xl font-code">{{ example.code }}</pre>
+              <pre class="md:p-6 p-4 md:text-lg text-base font-code">{{
+                example.code
+              }}</pre>
             </div>
           </div>
         </div>
