@@ -111,7 +111,9 @@ end
       en: 'Import some definitions, from a module.',
     },
     code: `\
-import Nat, zero, add1, add from "./Nat.i"
+import
+  Nat, zero, add1, add
+from "./Nat.i"
 
 import
    one, two, three
