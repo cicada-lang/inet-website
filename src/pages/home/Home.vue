@@ -48,13 +48,14 @@ import { sections } from './sections'
           <div class="md:text-xl text-lg py-1">
             <Lang>
               <template #zh>
-                iNet 有 <br />
+                <span class="font-bold">iNet</span> 有 <br />
                 8 种语句，<br />
                 7 种词，<br />
                 6 个预定义词。<br />
               </template>
               <template #en>
-                iNet has <br />8 kinds of statements, <br />
+                <span class="font-bold">iNet</span> has <br />
+                8 kinds of statements, <br />
                 7 kinds of words, <br />
                 6 built-in words. <br />
               </template>
