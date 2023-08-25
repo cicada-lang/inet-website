@@ -44,8 +44,7 @@ two two add run inspect
     },
     code: `\
 one two swap
-// the same as:
-//   two one
+two one
 `,
   },
 
@@ -57,8 +56,7 @@ one two swap
     },
     code: `\
 one two three rot
-// the same as:
-//   two three one
+two three one
 `,
   },
 
