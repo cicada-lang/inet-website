@@ -5,7 +5,7 @@ import { evolveNet } from './net/evolveNet'
 import { renderSelectedValue } from './selected-value/renderSelectedValue'
 import { renderStack } from './stack/renderStack'
 
-export function render(state: State, passedTime?: number): void {
+export function renderLoop(state: State, passedTime?: number): void {
   passedTime = passedTime || 0
   const deltaTime = passedTime - state.lastTime
   state.lastTime = passedTime
@@ -33,5 +33,5 @@ export function render(state: State, passedTime?: number): void {
     state.clickCoollingTimer -= deltaTime
   }
 
-  requestAnimationFrame((passedTime) => render(state, passedTime))
+  requestAnimationFrame((passedTime) => renderLoop(state, passedTime))
 }
