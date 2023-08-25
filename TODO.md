@@ -1,8 +1,6 @@
 # play
 
-[play] `pages/routes`
-
-[play] `State` has `path`
+[play] `renderLoop` -- use `routes`
 
 [play] `nav/renderNavCircle` -- to route view to list of
 

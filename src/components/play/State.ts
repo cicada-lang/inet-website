@@ -3,6 +3,7 @@ import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './button/Button'
 import { Mouse } from './mouse/Mouse'
+import { Route } from './route/Route'
 import { SelectedValue } from './selected-value/SelectedValue'
 
 export type State = {
@@ -15,6 +16,8 @@ export type State = {
   height: number
   theme: Theme
   breakpoints: ReturnType<typeof useBreakpoints>
+  routes: Array<Route>
+  path: string
 
   // Frame rate control:
   lastTime: number
