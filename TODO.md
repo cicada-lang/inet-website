@@ -1,6 +1,8 @@
 # play
 
-[play] router and routes
+[play] `pages/routes`
+
+[play] `State` has `path`
 
 [play] `nav/renderNavCircle` -- to route view to list of
 
