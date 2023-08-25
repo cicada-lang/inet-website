@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 
+const lang = useGlobalLang()
 const route = useRoute()
 </script>
 
@@ -40,7 +42,11 @@ const route = useRoute()
 
       <a
         target="_blank"
-        href="https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json"
+        :href="
+          lang.isZh()
+            ? 'https://readonly.link/books/https://cdn.inet.cic.run/docs/books/反应网编程/book.json'
+            : 'https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json'
+        "
         class="pr-4 text-xl hover:underline underline-offset-4 decoration-2"
       >
         <Lang>
