@@ -4,6 +4,7 @@ import Lang from '../../components/lang/Lang.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import HomeFoot from './HomeFoot.vue'
 import { statements } from './statements.ts'
+import { main } from './main.ts'
 
 type TabName = 'statements' | 'words' | 'builtins'
 const tabName = ref<TabName>('statements')
@@ -26,18 +27,9 @@ const tabName = ref<TabName>('statements')
         class="px-6 flex md:flex-row space-x-6 flex-col md:max-w-4xl my-12 w-full self-center"
       >
         <div class="border-2 border-black dark:border-white">
-          <pre class="md:p-6 p-4 text-xl whitespace-pre font-code">
-rule zero add
-  (add)-addend
-  return-(add)
-end
-
-rule add1 add
-  (add)-addend
-  (add1)-prev add
-  add1 return-(add)
-end</pre
-          >
+          <pre class="md:p-6 p-4 text-xl whitespace-pre font-code">{{
+            main.code
+          }}</pre>
         </div>
 
         <div class="text-xl w-full">

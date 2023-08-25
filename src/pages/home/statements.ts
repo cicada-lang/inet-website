@@ -17,9 +17,16 @@ export const statements: Array<Example> = [
       en: ['define a node'],
     },
     code: `\
-node zero -- Nat :value! end
+node zero
+  ----------
+  Nat :value!
+end
 
-node add1 Nat :prev -- Nat :value! end
+node add1
+  Nat :prev
+  ----------
+  Nat :value!
+end
 
 node add
   Nat :target!
