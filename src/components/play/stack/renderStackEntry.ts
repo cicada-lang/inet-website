@@ -11,7 +11,7 @@ export function renderStackEntry(state: State, i: number, value: Value): void {
   const valueTextMetrics = state.ctx.measureText(valueText)
   const paddingX = 10
   const width = valueTextMetrics.width + paddingX * 2
-  const height = 36
+  const height = 34
   const x = 0
   const y = state.height - height * (i + 1)
 

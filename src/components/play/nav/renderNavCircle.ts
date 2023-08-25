@@ -9,7 +9,15 @@ export function renderNavCircle(state: State): void {
     renderButtonBack(state)
   }
 
+  state.ctx.save()
+
+  const paddingT = 5
+  const paddingR = 10
+  state.ctx.translate(-paddingR, paddingT)
+
   renderButtonTypes(state)
   renderButtonNodes(state)
   renderButtonWords(state)
+
+  state.ctx.restore()
 }
