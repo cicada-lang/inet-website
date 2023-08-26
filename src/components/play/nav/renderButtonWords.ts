@@ -1,50 +1,31 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
-import { Rect } from '../button/Rect'
+import { renderButton } from '../button/renderButton'
 
 export function renderButtonWords(state: State): void {
-  state.ctx.save()
-
   const lang = useGlobalLang()
-  state.ctx.font = state.breakpoints.md ? '18px sans-serif' : '16px sans-serif'
   const text = lang.isZh() ? `词` : `Words`
-  const textMetrics = state.ctx.measureText(text)
-
+  const paddingX = 10
   const height = 34
-
-
-  const width = textMetrics.width
-  const x = state.width - width
+  const x = state.width
   const y = height * 2
+  const name = 'words'
 
-  state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
-  state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
-  state.ctx.lineWidth = 1
-
-  state.ctx.beginPath()
-  const rect: Rect = [x, y, width, height]
-  // state.ctx.strokeRect(...rect)
-
-  const textOffset = 13
-  state.ctx.fillText(text, x, y + height - textOffset)
-
-  if (state.path === 'words') {
-    state.ctx.lineWidth = 1.5
-    const underlineOffset = 8
-    state.ctx.beginPath()
-    state.ctx.moveTo(x, y + height - underlineOffset)
-    state.ctx.lineTo(x + width, y + height - underlineOffset)
-    state.ctx.stroke()
-    state.buttons.delete('words')
-  } else {
-    state.buttons.set('words', {
-      rect,
-      handler: (state) => {
+  renderButton(state, text, x, y, {
+    name,
+    height,
+    paddingX,
+    align: 'right',
+    font: state.breakpoints.md ? '18px sans-serif' : '16px sans-serif',
+    isActive: (state) => state.path === name,
+    withActiveUnderline: true,
+    underlineOffset: 8,
+    handler: (state) => {
+      if (state.path !== name) {
         state.historyPaths.push(state.path)
-        state.path = 'words'
-      },
-    })
-  }
+      }
 
-  state.ctx.restore()
+      state.path = name
+    },
+  })
 }

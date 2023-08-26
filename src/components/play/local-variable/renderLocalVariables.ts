@@ -4,9 +4,9 @@ import { renderLocalVariableEntry } from './renderLocalVariableEntry'
 export function renderLocalVariables(state: State): void {
   state.ctx.save()
 
-  const paddingT = 5
+  const marginT = 5
 
-  state.ctx.translate(0, paddingT)
+  state.ctx.translate(0, marginT)
 
   let i = 0
   for (const [name, value] of state.mod.env.locals.entries()) {

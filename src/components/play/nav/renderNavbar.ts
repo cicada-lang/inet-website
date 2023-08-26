@@ -1,17 +1,14 @@
 import { State } from '../State'
-import { renderButtonBack } from './renderButtonBack'
 import { renderButtonNodes } from './renderButtonNodes'
 import { renderButtonTypes } from './renderButtonTypes'
 import { renderButtonWords } from './renderButtonWords'
 
 export function renderNavbar(state: State): void {
-
-
   state.ctx.save()
 
-  const paddingT = 5
-  const paddingR = 10
-  state.ctx.translate(-paddingR, paddingT)
+  const marginT = 5
+
+  state.ctx.translate(0, marginT)
 
   renderButtonTypes(state)
   renderButtonNodes(state)

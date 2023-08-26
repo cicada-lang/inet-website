@@ -6,6 +6,7 @@ export type RenderButtonOptions = {
   font: string
   height: number
   paddingX: number
+  align?: 'left' | 'right'
   withBorder?: boolean
   handler: (state: State) => void
   isActive?: (state: State) => void
@@ -29,6 +30,10 @@ export function renderButton(
   const textMetrics = state.ctx.measureText(text)
   const width = textMetrics.width + paddingX * 2
   const height = options.height
+
+  if (options.align === 'right') {
+    x = x - width
+  }
 
   state.ctx.beginPath()
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
