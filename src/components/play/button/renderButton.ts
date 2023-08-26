@@ -10,9 +10,10 @@ export type RenderButtonOptions = {
   withBorder?: boolean
   handler: (state: State) => void
   isActive?: (state: State) => void
-  withActiveUnderline?: boolean
-  underlineOffset?: number
-  underlineWidth?: number
+  activeUnderline?: {
+    offset: number
+    width: number
+  }
 }
 
 export function renderButton(
@@ -49,9 +50,9 @@ export function renderButton(
   const textOffset = 12
   state.ctx.fillText(text, x + paddingX, y + height - textOffset)
 
-  if (options.isActive?.(state) && options.withActiveUnderline) {
-    state.ctx.lineWidth = options.underlineWidth || 1.5
-    const underlineOffset = options.underlineOffset || 5
+  if (options.isActive?.(state) && options.activeUnderline) {
+    state.ctx.lineWidth = options.activeUnderline.width
+    const underlineOffset = options.activeUnderline.offset
     state.ctx.moveTo(x + paddingX, y + height - underlineOffset)
     state.ctx.lineTo(x + width - paddingX, y + height - underlineOffset)
     state.ctx.stroke()

@@ -18,8 +18,7 @@ export function renderButtonTypes(state: State): void {
     align: 'right',
     font: state.breakpoints.md ? '18px sans-serif' : '16px sans-serif',
     isActive: (state) => state.path === name,
-    withActiveUnderline: true,
-    underlineOffset: 8,
+    activeUnderline: { offset: 8, width: 1.5 },
     handler: (state) => {
       if (state.path !== name) {
         state.historyPaths.push(state.path)

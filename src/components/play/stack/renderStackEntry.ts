@@ -16,7 +16,7 @@ export function renderStackEntry(state: State, i: number, value: Value): void {
     height,
     paddingX,
     isActive: (state) => i === state.selectedStackIndex,
-    withActiveUnderline: true,
+    activeUnderline: { offset: 5, width: 1.5 },
     withBorder: true,
     handler: (state) => {
       state.selectedValue = createSelectedValue(state, value)

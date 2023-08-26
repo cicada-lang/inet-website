@@ -20,7 +20,7 @@ export function renderLocalVariableEntry(
     height,
     paddingX,
     isActive: () => name === state.selectedLocalName,
-    withActiveUnderline: true,
+    activeUnderline: { offset: 5, width: 1.5 },
     handler: (state) => {
       state.selectedValue = createSelectedValue(state, value)
       state.selectedLocalName = name
