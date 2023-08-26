@@ -6,9 +6,10 @@ export function renderButtonNodes(state: State): void {
   const lang = useGlobalLang()
   const text = lang.isZh() ? `节点` : `Nodes`
   const paddingX = 10
+  const marginT = 5
   const height = 34
   const x = state.width
-  const y = height
+  const y = height + marginT
   const name = 'nodes'
 
   renderButton(state, text, x, y, {

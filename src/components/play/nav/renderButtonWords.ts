@@ -6,9 +6,10 @@ export function renderButtonWords(state: State): void {
   const lang = useGlobalLang()
   const text = lang.isZh() ? `词` : `Words`
   const paddingX = 10
+  const marginT = 5
   const height = 34
   const x = state.width
-  const y = height * 2
+  const y = height * 2 + marginT
   const name = 'words'
 
   renderButton(state, text, x, y, {

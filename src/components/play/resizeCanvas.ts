@@ -13,7 +13,7 @@ function resizeCanvasOnce(state: State) {
   state.width = width
   state.height = height
 
-  const ratio = window.devicePixelRatio || 1
+  const ratio = state.devicePixelRatio
 
   state.canvas.width = width * ratio
   state.canvas.height = height * ratio

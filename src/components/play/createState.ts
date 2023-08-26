@@ -30,6 +30,7 @@ export function createState(options: StateOptions): State {
   return {
     container,
     canvas,
+    devicePixelRatio: window.devicePixelRatio || 1,
     ctx,
     theme,
     breakpoints,

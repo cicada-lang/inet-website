@@ -10,6 +10,7 @@ export type State = {
   // Contexts:
   container: HTMLElement
   canvas: HTMLCanvasElement
+  devicePixelRatio: number
   ctx: CanvasRenderingContext2D
   mod: Mod
   width: number

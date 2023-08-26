@@ -16,6 +16,9 @@ export type RenderButtonOptions = {
   }
 }
 
+// Can not be used after transform,
+// because we need to record rect.
+
 export function renderButton(
   state: State,
   text: string,
@@ -58,10 +61,7 @@ export function renderButton(
     state.ctx.stroke()
   }
 
-  state.buttons.set(name, {
-    rect,
-    handler: options.handler,
-  })
+  state.buttons.set(name, { rect, handler: options.handler })
 
   state.ctx.restore()
 }

@@ -6,9 +6,10 @@ export function renderButtonTypes(state: State): void {
   const lang = useGlobalLang()
   const text = lang.isZh() ? `类型` : `Types`
   const paddingX = 10
+  const marginT = 5
   const height = 34
   const x = state.width
-  const y = 0
+  const y = 0 + marginT
   const name = 'types'
 
   renderButton(state, text, x, y, {

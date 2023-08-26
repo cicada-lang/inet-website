@@ -10,9 +10,10 @@ export function renderLocalVariableEntry(
   value: Value,
 ): void {
   const paddingX = 10
+  const marginT = 5
   const height = 34
   const x = 0
-  const y = 0 + height * i
+  const y = 0 + height * i + marginT
 
   renderButton(state, '$' + name, x, y, {
     name: `locals.${name}`,
