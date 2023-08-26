@@ -1,36 +1,21 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
-import { Rect } from '../button/Rect'
+import { renderButton } from '../button/renderButton'
 
 export function renderButtonBack(state: State): void {
-  state.ctx.save()
-
   const lang = useGlobalLang()
-  state.ctx.font = state.breakpoints.md ? '18px sans-serif' : '16px sans-serif'
-
   const text = lang.isZh() ? `返回` : `Back`
-  const textMetrics = state.ctx.measureText(text)
-
+  const paddingX = 10
   const height = 34
-
-  const marginL = 10
   const marginT = 5
-  const width = textMetrics.width
-
-  const x = marginL
+  const x = 0
   const y = marginT
 
-  state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
-  state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
-
-  const rect: Rect = [x, y, width, height]
-  // state.ctx.strokeRect(...rect)
-  state.ctx.lineWidth = 1
-  const textOffset = 13
-  state.ctx.fillText(text, x, y + height - textOffset)
-
-  state.buttons.set('back', {
-    rect,
+  renderButton(state, text, x, y, {
+    name: 'back',
+    height,
+    paddingX,
+    font: state.breakpoints.md ? '18px sans-serif' : '16px sans-serif',
     handler: (state) => {
       const path = state.historyPaths.pop()
       if (path) {
@@ -38,6 +23,4 @@ export function renderButtonBack(state: State): void {
       }
     },
   })
-
-  state.ctx.restore()
 }
