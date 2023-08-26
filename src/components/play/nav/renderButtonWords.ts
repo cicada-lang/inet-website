@@ -25,7 +25,9 @@ export function renderButtonWords(state: State): void {
         state.history.push(state.currentRoute)
       }
 
-      state.currentRoute = { name }
+      if (state.currentRoute.name !==  name) {
+        state.currentRoute = { name }
+      }
     },
   })
 }

@@ -2,6 +2,7 @@ import { State } from '../../State'
 import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
 import { RenderOptions } from '../../route/Route'
+import { renderTypeDefinition } from './renderTypeDefinition'
 import { renderTypeDefinitionList } from './renderTypeDefinitionList'
 
 export function renderTypes(state: State, options: RenderOptions): void {
@@ -16,6 +17,8 @@ export function renderTypes(state: State, options: RenderOptions): void {
       }
     }
   }
+
+  renderTypeDefinition(state)
 
   renderNavbar(state)
   if (state.history.length > 0) {

@@ -1,6 +1,8 @@
 # play
 
-[play] `renderTypeDefinition`
+[play] use DOM to implement buttons and texts
+
+[play] `renderTypeDefinition` add input output lebal
 
 [play] `renderNodes`
 [play] `renderNodes` -- show all rules about a node -- including imported
