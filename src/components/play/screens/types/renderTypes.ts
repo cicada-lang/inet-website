@@ -8,7 +8,7 @@ export function renderTypes(state: State, options: RenderOptions): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   renderNavbar(state)
-  if (state.historyPaths.length > 0) {
+  if (state.history.length > 0) {
     renderButtonBack(state)
   }
 

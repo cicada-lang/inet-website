@@ -18,14 +18,14 @@ export function renderButtonNodes(state: State): void {
     paddingX,
     align: 'right',
     font: state.breakpoints.md ? '18px sans-serif' : '16px sans-serif',
-    isActive: (state) => state.path === name,
+    isActive: (state) => state.currentRoute.name === name,
     activeUnderline: { offset: 8, width: 1.5 },
     handler: (state) => {
-      if (state.path !== name) {
-        state.historyPaths.push(state.path)
+      if (state.currentRoute.name === "home") {
+        state.history.push(state.currentRoute)
       }
 
-      state.path = name
+      state.currentRoute = { name }
     },
   })
 }

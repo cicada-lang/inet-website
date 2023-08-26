@@ -17,9 +17,9 @@ export function renderButtonBack(state: State): void {
     paddingX,
     font: state.breakpoints.md ? '18px sans-serif' : '16px sans-serif',
     handler: (state) => {
-      const path = state.historyPaths.pop()
+      const path = state.history.pop()
       if (path) {
-        state.path = path
+        state.currentRoute = path
       }
     },
   })

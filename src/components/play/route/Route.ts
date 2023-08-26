@@ -5,7 +5,11 @@ export type RenderOptions = {
   deltaTime: number
 }
 
-export type Route = {
-  path: string
+export type RouteExp = {
+  name: string
+  properties?: Record<string, string>
+}
+
+export type Route = RouteExp & {
   render: (state: State, options: RenderOptions) => void
 }

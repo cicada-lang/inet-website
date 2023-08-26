@@ -2,8 +2,6 @@
 
 [play] `renderTypeDefinitionList` -- add buttons
 
-[play] `RouteExp`
-
 [play] `renderNodes`
 [play] `renderNodes` -- show all rules about a node -- including imported
 

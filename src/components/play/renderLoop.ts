@@ -13,7 +13,7 @@ export function renderLoop(state: State, passedTime?: number): void {
       [
         `[renderLoop] I can not find route.`,
         ``,
-        `  state.path: ${state.path}`,
+        `  state.path: ${state.currentRoute}`,
       ].join('\n'),
     )
   }
