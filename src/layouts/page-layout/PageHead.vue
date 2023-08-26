@@ -45,8 +45,8 @@ const route = useRoute()
         target="_blank"
         :href="
           lang.isZh()
-            ? 'https://readonly.link/books/https://cdn.inet.cic.run/docs/books/反应网编程/book.json'
-            : 'https://readonly.link/books/https://cdn.inet.cic.run/docs/books/programming-with-interaction-nets/book.json'
+            ? 'https://readonly.link/articles/https://cdn.inet.cic.run/docs/articles/反应网编程.md'
+            : 'https://readonly.link/articles/https://cdn.inet.cic.run/docs/articles/programming-with-interaction-nets.md'
         "
         class="pr-4 text-xl hover:underline underline-offset-4 decoration-2"
       >
