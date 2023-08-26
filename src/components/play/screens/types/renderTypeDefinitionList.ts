@@ -16,11 +16,11 @@ export function renderTypeDefinitionList(state: State): void {
         height,
         paddingX: 10,
         font: state.breakpoints.md ? '18px sans-serif' : '16px sans-serif',
-        isActive: () => false, // TODO
+        isActive: (state) => state.currentRoute.properties?.name === name,
         activeUnderline: { offset: 8, width: 1.5 },
-        handler: () => {
-          // TODO
-          console.log(`types/${name}`)
+        handler: (state) => {
+          state.currentRoute.properties = state.currentRoute.properties || {}
+          state.currentRoute.properties.name = name
         },
       })
 

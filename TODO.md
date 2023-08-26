@@ -1,6 +1,6 @@
 # play
 
-[play] `renderTypeDefinitionList` -- add buttons
+[play] `renderTypeDefinition`
 
 [play] `renderNodes`
 [play] `renderNodes` -- show all rules about a node -- including imported
