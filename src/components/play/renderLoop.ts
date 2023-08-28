@@ -19,10 +19,10 @@ export function renderLoop(state: State, passedTime?: number): void {
     )
   }
 
+  state.buttons = new Map()
+
   route.render(state, { passedTime, deltaTime })
-
   renderButtonToggleUI(state)
-
   handleClick(state, { deltaTime })
 
   requestAnimationFrame((passedTime) => renderLoop(state, passedTime))
