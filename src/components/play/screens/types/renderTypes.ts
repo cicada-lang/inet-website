@@ -1,11 +1,10 @@
 import { State } from '../../State'
 import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
-import { RenderOptions } from '../../route/Route'
 import { renderTypeDefinition } from './renderTypeDefinition'
 import { renderTypeDefinitionList } from './renderTypeDefinitionList'
 
-export function renderTypes(state: State, options: RenderOptions): void {
+export function renderTypes(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   state.currentRoute.properties = state.currentRoute.properties || {}

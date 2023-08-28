@@ -1,5 +1,6 @@
 import { NodeEntry, formatNode } from '@cicada-lang/inet'
 import { State } from '../State'
+import themeFontMono from '../theme/themeFontMono'
 
 export function renderNode(
   state: State,
@@ -13,7 +14,9 @@ export function renderNode(
 
   state.ctx.lineWidth = 1
 
-  state.ctx.font = state.breakpoints.md ? '16px monospace' : '14px monospace'
+  state.ctx.font = state.breakpoints.md
+    ? themeFontMono('base')
+    : themeFontMono('sm')
 
   state.ctx.textBaseline = 'middle'
   state.ctx.textAlign = 'center'

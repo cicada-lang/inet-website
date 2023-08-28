@@ -1,8 +1,6 @@
 # play
 
-[play] `renderText`
-
-[play] `renderTypeDefinition` -- show `name`, `input` and `output`
+[play] `findCurrentTypeDefinition` & `setupCurrentTypeDefinition`
 
 [play] `renderNodes`
 [play] `renderNodes` -- show all rules about a node -- including imported
