@@ -1,6 +1,6 @@
 # play
 
-[play] `renderLines`
+[play] `renderText`
 
 [play] `renderTypeDefinition` -- show `name`, `input` and `output`
 

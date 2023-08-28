@@ -1,20 +1,24 @@
-import { State } from '../State'
-import { FontSize } from './FontSize'
+const fontSizeRecord: Record<string, string> = {
+  xs: '12px',
+  sm: '14px',
+  base: '16px',
+  lg: '18px',
+  xl: '20px',
+  '2xl': '24px',
+  '3xl': '30px',
+  '4xl': '36px',
+  '5xl': '48px',
+  '6xl': '60px',
+  '7xl': '72px',
+  '8xl': '96px',
+  '9xl': '128px',
+}
 
-export function formatFontSize(state: State, size: FontSize): string {
-  if (state.breakpoints.md) {
-    switch (size) {
-      case 'sm':
-        return '16px'
-      case 'base':
-        return '18px'
-    }
-  } else {
-    switch (size) {
-      case 'sm':
-        return '14px'
-      case 'base':
-        return '16px'
-    }
+export function formatFontSize(size: string): string {
+  const found = fontSizeRecord[size]
+  if (found) {
+    return found
   }
+
+  return size
 }

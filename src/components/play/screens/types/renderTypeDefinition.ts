@@ -20,7 +20,6 @@ export function renderTypeDefinition(state: State): void {
     state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
     state.ctx.font = state.breakpoints.md ? '30px monospace' : '38px monospace'
 
-    
     const outputText = typeDefinition.output.map(formatWord).join(' ')
     const outputTextMetrics = state.ctx.measureText(outputText)
     const x = state.width / 2 - 100

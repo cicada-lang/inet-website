@@ -12,7 +12,7 @@ export function renderButtonBack(state: State): void {
   const x = 0
   const y = marginT
 
-  themeFontSans(state, 'base')
+  state.ctx.font = state.breakpoints.md ? themeFontSans('lg') : themeFontSans('base')
 
   renderButton(state, text, x, y, {
     name: 'back',

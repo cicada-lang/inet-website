@@ -11,7 +11,9 @@ export function renderStackEntry(state: State, i: number, value: Value): void {
   const x = 0
   const y = state.height - height * (i + 1)
 
-  themeFontMono(state, 'sm')
+  state.ctx.font = state.breakpoints.md
+    ? themeFontMono('base')
+    : themeFontMono('sm')
 
   renderButton(state, text, x, y, {
     name: `state[${i}]`,
