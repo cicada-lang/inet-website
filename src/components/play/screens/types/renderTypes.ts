@@ -11,9 +11,9 @@ export function renderTypes(state: State): void {
 
   setupCurrentTypeDefinition(state)
 
-  const typeDefinition = findCurrentTypeDefinition(state)
-  if (typeDefinition) {
-    renderTypeDefinition(state)
+  const definition = findCurrentTypeDefinition(state)
+  if (definition) {
+    renderTypeDefinition(state, definition)
   }
 
   if (!state.isHidingUI) {
