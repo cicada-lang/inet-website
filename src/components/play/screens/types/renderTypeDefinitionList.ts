@@ -1,10 +1,12 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
+import { themeFontSans } from '../../utils/themeFontSans'
 
 export function renderTypeDefinitionList(state: State): void {
   state.ctx.save()
 
   const marginT = 80
+  themeFontSans(state, 'base')
 
   let i = 0
   for (const [name, definition] of state.mod.definitions) {
@@ -15,7 +17,6 @@ export function renderTypeDefinitionList(state: State): void {
         name: `types/${name}`,
         height,
         paddingX: 10,
-        font: state.breakpoints.md ? '18px sans-serif' : '16px sans-serif',
         isActive: (state) => state.currentRoute.properties?.name === name,
         activeUnderline: { offset: 8, width: 1.5 },
         handler: (state) => {

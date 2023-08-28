@@ -2,6 +2,7 @@ import { Value } from '@cicada-lang/inet'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { createSelectedValue } from '../selected-value/createSelectedValue'
+import themeFontMono from '../utils/themeFontMono'
 
 export function renderLocalVariableEntry(
   state: State,
@@ -15,9 +16,10 @@ export function renderLocalVariableEntry(
   const x = 0
   const y = 0 + height * i + marginT
 
+  themeFontMono(state, 'sm')
+
   renderButton(state, '$' + name, x, y, {
     name: `locals.${name}`,
-    font: state.breakpoints.md ? '16px monospace' : '14px monospace',
     height,
     paddingX,
     isActive: () => name === state.selectedLocalName,

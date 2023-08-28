@@ -2,6 +2,7 @@ import { Value, formatValue } from '@cicada-lang/inet'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { createSelectedValue } from '../selected-value/createSelectedValue'
+import themeFontMono from '../utils/themeFontMono'
 
 export function renderStackEntry(state: State, i: number, value: Value): void {
   const text = formatValue(value)
@@ -10,9 +11,10 @@ export function renderStackEntry(state: State, i: number, value: Value): void {
   const x = 0
   const y = state.height - height * (i + 1)
 
+  themeFontMono(state, 'sm')
+
   renderButton(state, text, x, y, {
     name: `state[${i}]`,
-    font: state.breakpoints.md ? '16px monospace' : '14px monospace',
     height,
     paddingX,
     isActive: (state) => i === state.selectedStackIndex,

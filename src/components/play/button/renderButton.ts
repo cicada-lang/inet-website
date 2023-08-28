@@ -3,7 +3,6 @@ import { Rect } from './Rect'
 
 export type RenderButtonOptions = {
   name: string
-  font: string
   height: number
   paddingX: number
   align?: 'left' | 'right'
@@ -30,7 +29,6 @@ export function renderButton(
 
   state.ctx.save()
 
-  state.ctx.font = options.font
   const textMetrics = state.ctx.measureText(text)
   const width = textMetrics.width + paddingX * 2
   const height = options.height

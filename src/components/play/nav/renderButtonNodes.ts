@@ -1,6 +1,7 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
+import { themeFontSans } from '../utils/themeFontSans'
 
 export function renderButtonNodes(state: State): void {
   const lang = useGlobalLang()
@@ -12,20 +13,21 @@ export function renderButtonNodes(state: State): void {
   const y = height + marginT
   const name = 'nodes'
 
+  themeFontSans(state, 'base')
+
   renderButton(state, text, x, y, {
     name,
     height,
     paddingX,
     align: 'right',
-    font: state.breakpoints.md ? '18px sans-serif' : '16px sans-serif',
     isActive: (state) => state.currentRoute.name === name,
     activeUnderline: { offset: 8, width: 1.5 },
     handler: (state) => {
-      if (state.currentRoute.name === "home") {
+      if (state.currentRoute.name === 'home') {
         state.history.push(state.currentRoute)
       }
 
-      if (state.currentRoute.name !==  name) {
+      if (state.currentRoute.name !== name) {
         state.currentRoute = { name }
       }
     },
