@@ -1,15 +1,13 @@
 # play
 
-[play] `renderNodeList`
-[play] `renderNodeDefinition`
+[play] `renderWordList`
 [play] `renderNodeRuleList` -- including imported
 
-[play] `renderRules`
-[play] `renderRuleDefinition`
+[play] `renderRules` -- new route
 
-[play] `renderWords`
-[play] `renderWordList`
+[play] `renderNodeDefinition`
 [play] `renderWordDefinition`
+[play] `renderRuleDefinition`
 
 [play] `renderStack` -- with scrollbar -- show number of entries
 [play] `renderLocalVariables` -- with scrollbar -- show number of of entries
