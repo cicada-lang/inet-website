@@ -1,7 +1,5 @@
 # play
 
-[play] `findCurrentTypeDefinition` & `setupCurrentTypeDefinition`
-
 [play] `renderNodes`
 [play] `renderNodes` -- show all rules about a node -- including imported
 
