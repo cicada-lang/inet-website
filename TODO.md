@@ -6,8 +6,8 @@
 [play] `renderRules`
 [play] `renderWords`
 
-[play] `renderStack` -- has a limit to the top -- show number of more entries
-[play] `renderLocalVariables` -- has a limit to the button -- show number of more entries
+[play] `renderStack` -- with scrollbar -- show number of entries
+[play] `renderLocalVariables` -- with scrollbar -- show number of of entries
 
 [play] `renderNode` -- hover to highlight ports and neighbours
 [play] `renderEdge` -- hover to highlight connected nodes

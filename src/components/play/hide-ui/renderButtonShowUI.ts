@@ -3,13 +3,15 @@ import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { themeFontSans } from '../theme/themeFontSans'
 
-export function renderButtonBack(state: State): void {
+export function renderButtonShowUI(state: State): void {
   const lang = useGlobalLang()
-  const text = lang.isZh() ? `返回` : `Back`
+  const text = lang.isZh() ? `显示 UI` : `Show UI`
+
   const paddingX = 10
   const marginT = 5
   const height = 34
-  const x = 0
+
+  const x = state.width
   const y = marginT
 
   state.ctx.font = state.breakpoints.md
@@ -17,14 +19,12 @@ export function renderButtonBack(state: State): void {
     : themeFontSans('base')
 
   renderButton(state, text, x, y, {
-    name: 'back',
+    name: 'toggleUI',
     height,
     paddingX,
+    align: 'right',
     handler: (state) => {
-      const path = state.history.pop()
-      if (path) {
-        state.currentRoute = path
-      }
+      state.isHidingUI = false
     },
   })
 }

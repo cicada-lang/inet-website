@@ -3,19 +3,27 @@ import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { themeFontSans } from '../theme/themeFontSans'
 
-export function renderButtonTypes(state: State): void {
+export function renderButtonTypes(
+  state: State,
+  options: {
+    height: number
+    paddingX: number
+    marginT: number
+  },
+): void {
+  const { height, marginT, paddingX } = options
+
   const lang = useGlobalLang()
   const text = lang.isZh() ? `类型` : `Types`
-  const paddingX = 10
-  const marginT = 5
-  const height = 34
+
   const x = state.width
   const y = 0 + marginT
-  const name = 'types'
 
   state.ctx.font = state.breakpoints.md
     ? themeFontSans('lg')
     : themeFontSans('base')
+
+  const name = 'types'
 
   renderButton(state, text, x, y, {
     name,

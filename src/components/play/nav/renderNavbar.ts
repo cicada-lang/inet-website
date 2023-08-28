@@ -4,7 +4,11 @@ import { renderButtonTypes } from './renderButtonTypes'
 import { renderButtonWords } from './renderButtonWords'
 
 export function renderNavbar(state: State): void {
-  renderButtonTypes(state)
-  renderButtonNodes(state)
-  renderButtonWords(state)
+  const height = 34
+  const marginT = height + 5
+  const paddingX = 10
+
+  renderButtonTypes(state, { height, marginT, paddingX })
+  renderButtonNodes(state, { height, marginT, paddingX })
+  renderButtonWords(state, { height, marginT, paddingX })
 }

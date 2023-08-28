@@ -17,7 +17,9 @@ export function renderHome(state: State, options: RenderOptions): void {
     }
   }
 
-  renderStack(state)
-  renderLocalVariables(state)
-  renderNavbar(state)
+  if (!state.isHidingUI) {
+    renderStack(state)
+    renderLocalVariables(state)
+    renderNavbar(state)
+  }
 }

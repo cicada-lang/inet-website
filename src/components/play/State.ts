@@ -26,6 +26,7 @@ export type State = {
   clickCoollingTimer: number
 
   // Abstract devices:
+  isHidingUI?: boolean
   mouse: Mouse
 
   // Entity stores:

@@ -9,6 +9,7 @@ export type RenderButtonOptions = {
   withBorder?: boolean
   handler: (state: State) => void
   isActive?: (state: State) => void
+  isDisabled?: (state: State) => void
   activeUnderline?: {
     offset: number
     width: number
@@ -59,7 +60,9 @@ export function renderButton(
     state.ctx.stroke()
   }
 
-  state.buttons.set(name, { rect, handler: options.handler })
+  if (!options.isDisabled?.(state)) {
+    state.buttons.set(name, { rect, handler: options.handler })
+  }
 
   state.ctx.restore()
 }

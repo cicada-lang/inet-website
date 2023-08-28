@@ -16,10 +16,9 @@ export function renderTypes(state: State): void {
     renderTypeDefinition(state)
   }
 
-  renderNavbar(state)
-  if (state.history.length > 0) {
-    renderButtonBack(state)
+  if (!state.isHidingUI) {
+    renderTypeDefinitionList(state)
+    renderNavbar(state)
+    if (state.history.length > 0) renderButtonBack(state)
   }
-
-  renderTypeDefinitionList(state)
 }
