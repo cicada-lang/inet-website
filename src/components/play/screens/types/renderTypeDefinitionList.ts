@@ -5,7 +5,8 @@ import { themeFontSans } from '../../theme/themeFontSans'
 export function renderTypeDefinitionList(state: State): void {
   state.ctx.save()
 
-  const marginT = 80
+  const height = 34
+  const marginT = height + 15
 
   state.ctx.font = state.breakpoints.md
     ? themeFontSans('lg')

@@ -5,7 +5,7 @@ import { renderButtonWords } from './renderButtonWords'
 
 export function renderNavbar(state: State): void {
   const height = 34
-  const marginT = height + 5
+  const marginT = height + 15
   const paddingX = 10
 
   renderButtonTypes(state, { height, marginT, paddingX })

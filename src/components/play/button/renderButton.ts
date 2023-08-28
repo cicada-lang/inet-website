@@ -60,7 +60,9 @@ export function renderButton(
     state.ctx.stroke()
   }
 
-  if (!options.isDisabled?.(state)) {
+  if (options.isDisabled?.(state)) {
+    state.buttons.delete(name)
+  } else {
     state.buttons.set(name, { rect, handler: options.handler })
   }
 
