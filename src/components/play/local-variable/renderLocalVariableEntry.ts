@@ -2,7 +2,7 @@ import { Value } from '@cicada-lang/inet'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { createSelectedValue } from '../selected-value/createSelectedValue'
-import themeFontMono from '../utils/themeFontMono'
+import themeFontMono from '../theme/themeFontMono'
 
 export function renderLocalVariableEntry(
   state: State,

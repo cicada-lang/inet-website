@@ -2,7 +2,7 @@ import { Value, formatValue } from '@cicada-lang/inet'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { createSelectedValue } from '../selected-value/createSelectedValue'
-import themeFontMono from '../utils/themeFontMono'
+import themeFontMono from '../theme/themeFontMono'
 
 export function renderStackEntry(state: State, i: number, value: Value): void {
   const text = formatValue(value)

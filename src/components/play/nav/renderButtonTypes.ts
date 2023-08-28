@@ -1,7 +1,7 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
-import { themeFontSans } from '../utils/themeFontSans'
+import { themeFontSans } from '../theme/themeFontSans'
 
 export function renderButtonTypes(state: State): void {
   const lang = useGlobalLang()
