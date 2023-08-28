@@ -1,6 +1,5 @@
 import { State } from './State'
-import { renderButtonHideUI } from './hide-ui/renderButtonHideUI'
-import { renderButtonShowUI } from './hide-ui/renderButtonShowUI'
+import { renderButtonToggleUI } from './hide-ui/renderButtonToggleUI'
 import { handleClick } from './mouse/handleClick'
 import { findRoute } from './route/findRoute'
 
@@ -22,11 +21,7 @@ export function renderLoop(state: State, passedTime?: number): void {
 
   route.render(state, { passedTime, deltaTime })
 
-  if (state.isHidingUI) {
-    renderButtonShowUI(state)
-  } else {
-    renderButtonHideUI(state)
-  }
+  renderButtonToggleUI(state)
 
   handleClick(state, { deltaTime })
 

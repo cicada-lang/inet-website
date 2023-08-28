@@ -3,9 +3,12 @@ import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { themeFontSans } from '../theme/themeFontSans'
 
-export function renderButtonShowUI(state: State): void {
+export function renderButtonToggleUI(state: State): void {
   const lang = useGlobalLang()
-  const text = lang.isZh() ? `显示 UI` : `Show UI`
+
+  const hideText = lang.isZh() ? `隐藏 UI` : `Hide UI`
+  const showText = lang.isZh() ? `显示 UI` : `Show UI`
+  const text = state.isHidingUI ? showText : hideText
 
   const paddingX = 10
   const marginT = 5
@@ -24,7 +27,7 @@ export function renderButtonShowUI(state: State): void {
     paddingX,
     align: 'right',
     handler: (state) => {
-      state.isHidingUI = false
+      state.isHidingUI = !state.isHidingUI
     },
   })
 }
