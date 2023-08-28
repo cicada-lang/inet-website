@@ -3,7 +3,7 @@ import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
 import { findCurrentTypeDefinition } from './findCurrentTypeDefinition'
 import { renderTypeDefinition } from './renderTypeDefinition'
-import { renderTypeDefinitionList } from './renderTypeDefinitionList'
+import { renderTypeList } from './renderTypeList'
 import { setupCurrentTypeDefinition } from './setupCurrentTypeDefinition'
 
 export function renderTypes(state: State): void {
@@ -17,7 +17,7 @@ export function renderTypes(state: State): void {
   }
 
   if (!state.isHidingUI) {
-    renderTypeDefinitionList(state)
+    renderTypeList(state)
     renderNavbar(state)
     if (state.history.length > 0) renderButtonBack(state)
   }

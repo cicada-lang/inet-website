@@ -1,10 +1,15 @@
 # play
 
-[play] `renderNodes`
-[play] `renderNodes` -- show all rules about a node -- including imported
+[play] `renderNodeList`
+[play] `renderNodeDefinition`
+[play] `renderNodeRuleList` -- including imported
 
 [play] `renderRules`
+[play] `renderRuleDefinition`
+
 [play] `renderWords`
+[play] `renderWordList`
+[play] `renderWordDefinition`
 
 [play] `renderStack` -- with scrollbar -- show number of entries
 [play] `renderLocalVariables` -- with scrollbar -- show number of of entries

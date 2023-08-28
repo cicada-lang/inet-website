@@ -2,7 +2,7 @@ import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSans } from '../../theme/themeFontSans'
 
-export function renderTypeDefinitionList(state: State): void {
+export function renderTypeList(state: State): void {
   state.ctx.save()
 
   const height = 34
