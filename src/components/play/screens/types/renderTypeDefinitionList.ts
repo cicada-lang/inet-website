@@ -7,7 +7,9 @@ export function renderTypeDefinitionList(state: State): void {
 
   const marginT = 80
 
-  state.ctx.font = state.breakpoints.md ? themeFontSans('lg') : themeFontSans('base')
+  state.ctx.font = state.breakpoints.md
+    ? themeFontSans('lg')
+    : themeFontSans('base')
 
   let i = 0
   for (const [name, definition] of state.mod.definitions) {

@@ -13,7 +13,9 @@ export function renderButtonNodes(state: State): void {
   const y = height + marginT
   const name = 'nodes'
 
-  state.ctx.font = state.breakpoints.md ? themeFontSans('lg') : themeFontSans('base')
+  state.ctx.font = state.breakpoints.md
+    ? themeFontSans('lg')
+    : themeFontSans('base')
 
   renderButton(state, text, x, y, {
     name,

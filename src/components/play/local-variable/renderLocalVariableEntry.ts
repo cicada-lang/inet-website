@@ -16,7 +16,9 @@ export function renderLocalVariableEntry(
   const x = 0
   const y = 0 + height * i + marginT
 
-  state.ctx.font = state.breakpoints.md ? themeFontMono('base') : themeFontMono('sm')
+  state.ctx.font = state.breakpoints.md
+    ? themeFontMono('base')
+    : themeFontMono('sm')
 
   renderButton(state, '$' + name, x, y, {
     name: `locals.${name}`,
