@@ -3,6 +3,7 @@ import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
 import { RenderOptions } from '../../route/Route'
 import { findCurrentWordDefinition } from './findCurrentWordDefinition'
+import { renderWordDefinition } from './renderWordDefinition'
 import { renderWordList } from './renderWordList'
 import { setupCurrentWordDefinition } from './setupCurrentWordDefinition'
 
@@ -13,7 +14,7 @@ export function renderWords(state: State, options: RenderOptions): void {
 
   const definition = findCurrentWordDefinition(state)
   if (definition) {
-    // renderWordDefinition(state)
+    renderWordDefinition(state, definition)
   }
 
   if (!state.isHidingUI) {
