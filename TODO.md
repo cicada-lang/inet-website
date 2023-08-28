@@ -1,6 +1,5 @@
 # play
 
-[play] `renderWordList`
 [play] `renderNodeRuleList` -- including imported
 
 [play] `renderRules` -- new route
