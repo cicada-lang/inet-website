@@ -2,7 +2,9 @@
 
 [play] `renderNodeDefinition` -- show node
 
-[play] `renderNodeDefinition` -- show node rules
+[play] `renderNodeDefinition` -- show node rule
+
+[play] `renderNodeDefinition` -- add a button to only show current rule
 
 [play] `renderWordDefinition`
 

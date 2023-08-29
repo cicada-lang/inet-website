@@ -3,7 +3,7 @@ import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { useGlobalTheme } from '../../reactives/useGlobalTheme'
 import { State } from './State'
 import { createMouse } from './mouse/createMouse'
-import { routes } from './screens/routes'
+import { routes } from './pages/routes'
 
 export type StateOptions = {
   canvas: HTMLCanvasElement
