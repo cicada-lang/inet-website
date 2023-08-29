@@ -1,4 +1,4 @@
-import { TypeDefinition } from '@cicada-lang/inet/lib/lang/definition'
+import { TypeDefinition } from '@cicada-lang/inet'
 import { State } from '../../State'
 
 export function findCurrentTypeDefinition(

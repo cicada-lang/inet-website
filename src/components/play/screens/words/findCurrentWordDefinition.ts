@@ -1,4 +1,4 @@
-import { WordDefinition } from '@cicada-lang/inet/lib/lang/definition'
+import { WordDefinition } from '@cicada-lang/inet'
 import { State } from '../../State'
 
 export function findCurrentWordDefinition(

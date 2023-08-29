@@ -15,8 +15,6 @@ export function renderNodeList(state: State): void {
   let i = 0
   for (const [name, definition] of state.mod.definitions) {
     if (definition['@kind'] === 'NodeDefinition') {
-      const height = 34
-
       renderButton(state, name, 0, marginT + height * i, {
         name: `nodes/${name}`,
         height,

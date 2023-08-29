@@ -1,4 +1,4 @@
-import { NodeDefinition } from '@cicada-lang/inet/lib/lang/definition'
+import { NodeDefinition } from '@cicada-lang/inet'
 import { State } from '../../State'
 
 export function findCurrentNodeDefinition(

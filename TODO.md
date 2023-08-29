@@ -1,12 +1,19 @@
 # play
 
-[play] `renderNodeRuleList` -- including imported
-
 [play] `renderRules` -- new route
 
-[play] `renderNodeDefinition`
+- update inet for upstream support
+
+  - `lookupRule` -- by node without id
+
+  [play] `renderNodeDefinition`
+
+- update inet for upstream support
+
+  - placeholder as special node and port
+
 [play] `renderWordDefinition`
-[play] `renderRuleDefinition`
+[play] `renderRule`
 
 [play] `renderStack` -- with scrollbar -- show number of entries
 [play] `renderLocalVariables` -- with scrollbar -- show number of of entries

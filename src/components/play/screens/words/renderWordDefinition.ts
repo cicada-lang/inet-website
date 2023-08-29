@@ -1,4 +1,4 @@
-import { WordDefinition } from '@cicada-lang/inet/lib/lang/definition'
+import { WordDefinition } from '@cicada-lang/inet'
 import { State } from '../../State'
 import themeFontMono from '../../theme/themeFontMono'
 import { renderText } from '../../utils/renderText'

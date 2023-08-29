@@ -1,5 +1,4 @@
-import { TypeDefinition } from '@cicada-lang/inet/lib/lang/definition'
-import { formatWord } from '@cicada-lang/inet/lib/lang/word/formatWord'
+import { TypeDefinition, formatWord } from '@cicada-lang/inet'
 import { State } from '../../State'
 import themeFontMono from '../../theme/themeFontMono'
 import { renderText } from '../../utils/renderText'
