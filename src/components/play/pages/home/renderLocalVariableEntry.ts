@@ -2,7 +2,6 @@ import { Value } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import themeFontMono from '../../theme/themeFontMono'
-import { clearSelectedValue } from './clearSelectedValue'
 import { createSelectedValue } from './createSelectedValue'
 
 export function renderLocalVariableEntry(
@@ -26,13 +25,12 @@ export function renderLocalVariableEntry(
     name: `locals.${name}`,
     height,
     paddingX,
-    isDisabled: (state) => name === state.selectedLocalName,
-    isActive: (state) => name === state.selectedLocalName,
+    isDisabled: (state) => name === state.selectedValue?.localName,
+    isActive: (state) => name === state.selectedValue?.localName,
     activeUnderline: { offset: 5, width: 1.5 },
     handler: (state) => {
-      clearSelectedValue(state)
       state.selectedValue = createSelectedValue(state, value)
-      state.selectedLocalName = name
+      state.selectedValue.localName = name
     },
   })
 }

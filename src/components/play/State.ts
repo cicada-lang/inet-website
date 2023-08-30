@@ -37,8 +37,6 @@ export type State = {
 
   // Sub-states:
   selectedValue?: SelectedValue
-  selectedStackIndex?: number
-  selectedLocalName?: string
   selectedType?: SelectedType
   selectedNode?: SelectedNode
   selectedWord?: SelectedWord

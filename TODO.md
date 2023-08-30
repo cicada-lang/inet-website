@@ -1,7 +1,5 @@
 # play
 
-[play] move `selectedStackIndex` and `selectedLocalName` to `SelectedValue`
-
 [play] `renderNodeDefinition` -- show node
 
 [play] `renderNodeDefinition` -- show node rule

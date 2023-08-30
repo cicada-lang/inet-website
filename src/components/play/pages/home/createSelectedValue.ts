@@ -4,6 +4,8 @@ import { createInitialNetLayout } from '../../net-layout/createInitialNetLayout'
 import { SelectedValue } from './SelectedValue'
 
 export function createSelectedValue(state: State, value: Value): SelectedValue {
+  const stackIndex = state.mod.env.stack.length - 1
+
   if (value['@kind'] === 'Port') {
     const net = createNet()
     copyConnectedComponent(state.mod.env.net, net, value.node)
@@ -16,12 +18,14 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
       net,
       layout,
       evolvingStep: 0,
+      stackIndex,
     }
   } else {
     return {
       '@type': 'SelectedValue',
       '@kind': 'SelectedValueGeneric',
       value,
+      stackIndex,
     }
   }
 }
