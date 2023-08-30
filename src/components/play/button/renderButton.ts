@@ -1,7 +1,7 @@
 import { State } from '../State'
 import { Rect } from './Rect'
 
-export type RenderButtonOptions = {
+type Options = {
   name: string
   height: number
   paddingX: number
@@ -24,7 +24,7 @@ export function renderButton(
   text: string,
   x: number,
   y: number,
-  options: RenderButtonOptions,
+  options: Options,
 ): void {
   const { name, paddingX } = options
 

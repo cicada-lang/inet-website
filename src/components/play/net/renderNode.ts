@@ -1,5 +1,7 @@
-import { NodeEntry, formatNode } from '@cicada-lang/inet'
+import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
+import { renderClickableArea } from '../button/renderClickableArea'
+import { selectNode } from '../pages/nodes/selectNode'
 import themeFontMono from '../theme/themeFontMono'
 
 export function renderNode(
@@ -36,6 +38,26 @@ export function renderNode(
   state.ctx.stroke()
 
   state.ctx.fillText(text, x, y)
+
+  const key = nodeKey(nodeEntry)
+
+  renderClickableArea(state, boxX, boxY, {
+    name: `nodes/${key}`,
+    width: boxWidth,
+    height: boxHeight,
+    isDisabled: (state) =>
+      state.currentRoute.name === 'nodes' &&
+      state.selectedNode?.name === nodeEntry.name,
+    handler: (state) => {
+      if (state.currentRoute.name === 'home') {
+        state.history.push(state.currentRoute)
+      }
+
+      state.currentRoute = { name: 'nodes' }
+
+      selectNode(state, nodeEntry.name)
+    },
+  })
 
   state.ctx.restore()
 }
