@@ -1,6 +1,7 @@
 import { State } from '../../State'
 import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
+import { evolveNet } from '../../net/evolveNet'
 import { RenderOptions } from '../../route/Route'
 import { renderSelectedWord } from './renderSelectedWord'
 import { renderWordList } from './renderWordList'
@@ -15,6 +16,7 @@ export function renderWords(state: State, options: RenderOptions): void {
 
   if (state.selectedWord) {
     renderSelectedWord(state, state.selectedWord)
+    evolveNet(state, state.selectedWord.rendering)
   }
 
   if (!state.isHidingUI) {

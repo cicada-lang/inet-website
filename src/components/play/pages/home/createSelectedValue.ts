@@ -11,10 +11,10 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
     copyConnectedComponent(state.mod.env.net, net, value.node)
     const layout = createRandomNetLayout(
       net,
-      state.width / 4,
-      state.height / 4,
-      state.width / 2,
-      state.height / 2,
+      state.width / 5,
+      state.height / 5,
+      (state.width * 3) / 5,
+      (state.height * 3) / 5,
     )
 
     const rendering = { net, layout, step: 0 }

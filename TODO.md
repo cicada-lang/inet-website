@@ -1,11 +1,11 @@
 # play
 
-[play] `renderSelectedWord` -- show net
-
 [play] `renderSelectedNode` -- add a button to only show current rule
 
 [play] `renderStack` -- with scrollbar -- show number of entries
 [play] `renderLocalVariables` -- with scrollbar -- show number of of entries
+
+[play] `renderSelectedWord` -- show stack
 
 [play] `renderNode` -- hover to highlight ports and neighbours
 [play] `renderEdge` -- hover to highlight connected nodes
