@@ -1,6 +1,7 @@
 import { Net, allEdges, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
 import { NetLayout } from '../net-layout/NetLayout'
+import { renderCap } from './renderCap'
 import { renderEdge } from './renderEdge'
 import { renderNode } from './renderNode'
 
@@ -16,6 +17,10 @@ export function renderNet(state: State, net: Net, layout: NetLayout): void {
   for (const [id, nodeEntry] of net.nodeEntries) {
     const position = layout.nodePositions.get(id)
     if (position === undefined) continue
-    renderNode(state, nodeEntry, position)
+    if (nodeEntry.asTypeCap || nodeEntry.asPortCap) {
+      renderCap(state, nodeEntry, position)
+    } else {
+      renderNode(state, nodeEntry, position)
+    }
   }
 }

@@ -1,7 +1,5 @@
 # play
 
-[play] `renderNode` handle cap
-
 [play] `renderNodeDefinition` -- show node rule
 
 [play] `renderNodeDefinition` -- add a button to only show current rule
