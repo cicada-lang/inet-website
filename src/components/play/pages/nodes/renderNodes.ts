@@ -18,7 +18,6 @@ export function renderNodes(state: State): void {
     renderSelectedNode(state, state.selectedNode)
     evolveNet(state, state.selectedNode.rendering)
 
-    renderNodeRuleList(state, state.selectedNode)
     if (state.selectedNode.selectedRule) {
       evolveNet(state, state.selectedNode.selectedRule.initial)
       evolveNet(state, state.selectedNode.selectedRule.final)
@@ -27,6 +26,11 @@ export function renderNodes(state: State): void {
 
   if (!state.isHidingUI) {
     renderNodeList(state)
+
+    if (state.selectedNode) {
+      renderNodeRuleList(state, state.selectedNode)
+    }
+
     renderNavbar(state)
     if (state.history.length > 0) renderButtonBack(state)
   }
