@@ -1,6 +1,7 @@
 import { findNodeRuleEntries, presentNodeAsNet } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { createRandomNetLayout } from '../../net-layout/createRandomNetLayout'
+import { createNetRendering } from '../../net-rendering/createNetRendering'
 import { selectRule } from './selectRule'
 
 export function selectNode(state: State, givenName: string): void {
@@ -21,16 +22,10 @@ export function selectNode(state: State, givenName: string): void {
           state.height / 3,
         )
 
-        const rendering = {
-          net,
-          layout,
-          step: 0,
-        }
-
         state.selectedNode = {
           name,
           definition,
-          rendering,
+          rendering: createNetRendering(net, layout),
           ruleEntries,
         }
 

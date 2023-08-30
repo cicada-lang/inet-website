@@ -1,6 +1,7 @@
 import { Value, copyConnectedComponent, createNet } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { createRandomNetLayout } from '../../net-layout/createRandomNetLayout'
+import { createNetRendering } from '../../net-rendering/createNetRendering'
 import { SelectedValue } from './SelectedValue'
 
 export function createSelectedValue(state: State, value: Value): SelectedValue {
@@ -17,13 +18,11 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
       (state.height * 3) / 5,
     )
 
-    const rendering = { net, layout, step: 0 }
-
     return {
       '@type': 'SelectedValue',
       '@kind': 'SelectedValuePort',
       port: value,
-      rendering,
+      rendering: createNetRendering(net, layout),
       stackIndex,
     }
   } else {
