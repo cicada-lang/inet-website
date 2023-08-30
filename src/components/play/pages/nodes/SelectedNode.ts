@@ -6,7 +6,7 @@ import { SelectedRule } from './SelectedRule'
 export type SelectedNode = {
   name: string
   definition: NodeDefinition
-  netRendering: NetRendering
+  rendering: NetRendering
   ruleEntries: Array<RuleEntry>
   selectedRule?: SelectedRule
 }

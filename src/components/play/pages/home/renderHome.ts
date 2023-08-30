@@ -13,7 +13,7 @@ export function renderHome(state: State, options: RenderOptions): void {
     renderSelectedValue(state, state.selectedValue)
 
     if (state.selectedValue['@kind'] === 'SelectedValuePort') {
-      evolveNet(state, state.selectedValue.netRendering)
+      evolveNet(state, state.selectedValue.rendering)
     }
   }
 
