@@ -1,8 +1,6 @@
 # play
 
-[play] `renderEdge` -- highlight half principle edge -- half orange -- use canvas gradient
-
-[play] `renderSelectedNode` -- add a button to only show current rule
+[play] `renderSelectedNode` -- add a button to only present current rule
 
 [play] `renderSelectedValue` -- support `Run` button to run a net
 [play] `renderSelectedValue` -- support click an active edge to run one step
