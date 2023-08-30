@@ -8,11 +8,11 @@ export type SelectedRule = {
   initial: {
     net: Net
     layout: NetLayout
-    evolvingStep: number
+    step: number
   }
   final: {
     net: Net
     layout: NetLayout
-    evolvingStep: number
+    step: number
   }
 }

@@ -12,7 +12,7 @@ export type SelectedValuePort = {
   port: Port
   net: Net
   layout: NetLayout
-  evolvingStep: number
+  step: number
 }
 
 export type SelectedValueGeneric = {

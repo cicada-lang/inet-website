@@ -21,7 +21,7 @@ export function selectRule(
         state.width / 3,
         state.height / 3,
       ),
-      evolvingStep: 0,
+      step: 0,
     }
 
     const final = {
@@ -34,7 +34,7 @@ export function selectRule(
         state.width / 3,
         state.height / 3,
       ),
-      evolvingStep: 0,
+      step: 0,
     }
 
     selectedNode.selectedRule = {

@@ -27,7 +27,7 @@ export function selectNode(state: State, givenName: string): void {
           definition,
           net,
           layout,
-          evolvingStep: 0,
+          step: 0,
           ruleEntries,
         }
 

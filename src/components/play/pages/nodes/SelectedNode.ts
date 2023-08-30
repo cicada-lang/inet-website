@@ -8,7 +8,7 @@ export type SelectedNode = {
   definition: NodeDefinition
   net: Net
   layout: NetLayout
-  evolvingStep: number
+  step: number
   ruleEntries: Array<RuleEntry>
   selectedRule?: SelectedRule
 }

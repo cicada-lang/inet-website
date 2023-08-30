@@ -24,7 +24,7 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
       port: value,
       net,
       layout,
-      evolvingStep: 0,
+      step: 0,
       stackIndex,
     }
   } else {

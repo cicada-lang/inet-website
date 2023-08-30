@@ -1,6 +1,5 @@
 # play
 
-[play] rename `evolvingStep` to `step`
 [play] extract `NetRendering`
 [play] position of net renderings
 

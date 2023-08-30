@@ -20,7 +20,7 @@ export function renderNodes(state: State): void {
       state,
       state.selectedNode.net,
       state.selectedNode.layout,
-      state.selectedNode.evolvingStep++,
+      state.selectedNode.step++,
     )
 
     renderNodeRuleList(state, state.selectedNode)
@@ -29,14 +29,14 @@ export function renderNodes(state: State): void {
         state,
         state.selectedNode.selectedRule.initial.net,
         state.selectedNode.selectedRule.initial.layout,
-        state.selectedNode.selectedRule.initial.evolvingStep++,
+        state.selectedNode.selectedRule.initial.step++,
       )
 
       evolveNet(
         state,
         state.selectedNode.selectedRule.final.net,
         state.selectedNode.selectedRule.final.layout,
-        state.selectedNode.selectedRule.final.evolvingStep++,
+        state.selectedNode.selectedRule.final.step++,
       )
     }
   }
