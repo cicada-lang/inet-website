@@ -1,4 +1,4 @@
-import { State } from '../State'
+import { State } from '../../State'
 import { renderLocalVariableEntry } from './renderLocalVariableEntry'
 
 export function renderLocalVariables(state: State): void {

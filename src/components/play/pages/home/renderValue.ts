@@ -1,6 +1,6 @@
 import { Value, formatValue } from '@cicada-lang/inet'
-import { State } from '../State'
-import themeFontMono from '../theme/themeFontMono'
+import { State } from '../../State'
+import themeFontMono from '../../theme/themeFontMono'
 
 export function renderValue(state: State, value: Value): void {
   state.ctx.save()

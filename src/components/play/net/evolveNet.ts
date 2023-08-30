@@ -1,7 +1,7 @@
 import { State } from '../State'
 import { computeElectricalForces } from '../forces/computeElectricalForces'
 import { computeSpringForces } from '../forces/computeSpringForces'
-import { SelectedValuePort } from '../selected-value/SelectedValue'
+import { SelectedValuePort } from '../pages/home/SelectedValue'
 
 export function evolveNet(
   state: State,

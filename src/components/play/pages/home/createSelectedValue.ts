@@ -1,6 +1,6 @@
 import { Value, copyConnectedComponent, createNet } from '@cicada-lang/inet'
-import { State } from '../State'
-import { createInitialNetLayout } from '../net-layout/createInitialNetLayout'
+import { State } from '../../State'
+import { createInitialNetLayout } from '../../net-layout/createInitialNetLayout'
 import { SelectedValue } from './SelectedValue'
 
 export function createSelectedValue(state: State, value: Value): SelectedValue {

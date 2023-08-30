@@ -3,9 +3,9 @@ import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './button/Button'
 import { Mouse } from './mouse/Mouse'
+import { SelectedValue } from './pages/home/SelectedValue'
 import { SelectedType } from './pages/types/SelectedType'
 import { Route, RouteExp } from './route/Route'
-import { SelectedValue } from './selected-value/SelectedValue'
 
 export type State = {
   // Contexts:

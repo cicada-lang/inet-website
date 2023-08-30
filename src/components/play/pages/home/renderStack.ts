@@ -1,4 +1,4 @@
-import { State } from '../State'
+import { State } from '../../State'
 import { renderStackEntry } from './renderStackEntry'
 
 export function renderStack(state: State): void {

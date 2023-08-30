@@ -1,5 +1,5 @@
-import { State } from '../State'
-import { renderNet } from '../net/renderNet'
+import { State } from '../../State'
+import { renderNet } from '../../net/renderNet'
 import { SelectedValue } from './SelectedValue'
 import { renderValue } from './renderValue'
 

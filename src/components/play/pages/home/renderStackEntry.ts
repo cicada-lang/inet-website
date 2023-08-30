@@ -1,9 +1,9 @@
 import { Value, formatValue } from '@cicada-lang/inet'
-import { State } from '../State'
-import { renderButton } from '../button/renderButton'
-import { clearSelectedValue } from '../selected-value/clearSelectedValue'
-import { createSelectedValue } from '../selected-value/createSelectedValue'
-import themeFontMono from '../theme/themeFontMono'
+import { State } from '../../State'
+import { renderButton } from '../../button/renderButton'
+import themeFontMono from '../../theme/themeFontMono'
+import { clearSelectedValue } from './clearSelectedValue'
+import { createSelectedValue } from './createSelectedValue'
 
 export function renderStackEntry(state: State, i: number, value: Value): void {
   const text = formatValue(value)
