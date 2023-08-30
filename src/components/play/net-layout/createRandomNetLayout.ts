@@ -7,7 +7,14 @@ export function createRandomNetLayout(
   y: number,
   width: number,
   height: number,
+  options?: {
+    paddingX: number
+    paddingY: number
+  },
 ): NetLayout {
+  const paddingX = options?.paddingX || 30
+  const paddingY = options?.paddingY || 30
+
   const nodePositions = new Map()
 
   for (const [id, nodeEntry] of net.nodeEntries) {
@@ -22,6 +29,8 @@ export function createRandomNetLayout(
     y,
     width,
     height,
+    paddingX,
+    paddingY,
     nodePositions,
   }
 }

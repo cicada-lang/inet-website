@@ -1,7 +1,5 @@
 # play
 
-[play] `NetLayout` has `paddingX` `paddingY`
-
 [play] `renderNodeDefinition` -- add a button to only show current rule
 
 [play] `renderWordDefinition`
