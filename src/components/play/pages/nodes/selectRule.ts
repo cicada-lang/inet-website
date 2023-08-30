@@ -1,6 +1,6 @@
 import { presentRuleAsNets } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { createInitialNetLayout } from '../../net-layout/createInitialNetLayout'
+import { createRandomNetLayout } from '../../net-layout/createRandomNetLayout'
 import { SelectedNode } from './SelectedNode'
 
 export function selectRule(
@@ -13,8 +13,7 @@ export function selectRule(
 
     const initial = {
       net: initialNet,
-      layout: createInitialNetLayout(
-        state,
+      layout: createRandomNetLayout(
         initialNet,
         state.width / 3,
         (state.height * 2) / 3,
@@ -26,8 +25,7 @@ export function selectRule(
 
     const final = {
       net: finalNet,
-      layout: createInitialNetLayout(
-        state,
+      layout: createRandomNetLayout(
         finalNet,
         (state.width * 2) / 3,
         (state.height * 2) / 3,

@@ -1,9 +1,7 @@
 import { Net } from '@cicada-lang/inet'
-import { State } from '../State'
 import { NetLayout } from './NetLayout'
 
-export function createInitialNetLayout(
-  state: State,
+export function createRandomNetLayout(
   net: Net,
   x: number,
   y: number,

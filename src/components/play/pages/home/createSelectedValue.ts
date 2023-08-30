@@ -1,6 +1,6 @@
 import { Value, copyConnectedComponent, createNet } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { createInitialNetLayout } from '../../net-layout/createInitialNetLayout'
+import { createRandomNetLayout } from '../../net-layout/createRandomNetLayout'
 import { SelectedValue } from './SelectedValue'
 
 export function createSelectedValue(state: State, value: Value): SelectedValue {
@@ -9,8 +9,7 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
   if (value['@kind'] === 'Port') {
     const net = createNet()
     copyConnectedComponent(state.mod.env.net, net, value.node)
-    const layout = createInitialNetLayout(
-      state,
+    const layout = createRandomNetLayout(
       net,
       state.width / 4,
       state.height / 4,
