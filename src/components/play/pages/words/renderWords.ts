@@ -2,7 +2,7 @@ import { State } from '../../State'
 import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
 import { RenderOptions } from '../../route/Route'
-import { renderWordDefinition } from './renderWordDefinition'
+import { renderSelectedWord } from './renderSelectedWord'
 import { renderWordList } from './renderWordList'
 import { selectFirstWord } from './selectFirstWord'
 
@@ -14,7 +14,7 @@ export function renderWords(state: State, options: RenderOptions): void {
   }
 
   if (state.selectedWord) {
-    renderWordDefinition(state, state.selectedWord.definition)
+    renderSelectedWord(state, state.selectedWord)
   }
 
   if (!state.isHidingUI) {

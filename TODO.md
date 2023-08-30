@@ -1,10 +1,8 @@
 # play
 
-[play] `renderNodeDefinition` -- add a button to only show current rule
+[play] `renderSelectedWord` -- show net
 
-[play] `renderWordDefinition`
-
-[play] `renderRule`
+[play] `renderSelectedNode` -- add a button to only show current rule
 
 [play] `renderStack` -- with scrollbar -- show number of entries
 [play] `renderLocalVariables` -- with scrollbar -- show number of of entries

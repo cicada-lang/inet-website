@@ -1,7 +1,7 @@
 import { State } from '../../State'
 import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
-import { renderTypeDefinition } from './renderTypeDefinition'
+import { renderSelectedType } from './renderSelectedType'
 import { renderTypeList } from './renderTypeList'
 import { selectFirstType } from './selectFirstType'
 
@@ -13,7 +13,7 @@ export function renderTypes(state: State): void {
   }
 
   if (state.selectedType) {
-    renderTypeDefinition(state, state.selectedType.definition)
+    renderSelectedType(state, state.selectedType)
   }
 
   if (!state.isHidingUI) {

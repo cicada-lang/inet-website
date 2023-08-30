@@ -1,11 +1,11 @@
-import { WordDefinition } from '@cicada-lang/inet'
 import { State } from '../../State'
 import themeFontMono from '../../theme/themeFontMono'
 import { renderText } from '../../utils/renderText'
+import { SelectedWord } from './SelectedWord'
 
-export function renderWordDefinition(
+export function renderSelectedWord(
   state: State,
-  definition: WordDefinition,
+  selectedWord: SelectedWord,
 ): void {
   state.ctx.save()
 
@@ -18,7 +18,7 @@ export function renderWordDefinition(
     ? themeFontMono('3xl')
     : themeFontMono('2xl')
 
-  renderText(state, definition.name, x, y - 60, {
+  renderText(state, selectedWord.definition.name, x, y - 60, {
     lineHeight: 30,
   })
 
