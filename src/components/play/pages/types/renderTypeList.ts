@@ -1,6 +1,7 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSans } from '../../theme/themeFontSans'
+import { selectType } from './selectType'
 
 export function renderTypeList(state: State): void {
   state.ctx.save()
@@ -22,7 +23,7 @@ export function renderTypeList(state: State): void {
         isActive: (state) => state.selectedType?.name === name,
         activeUnderline: { offset: 8, width: 1.5 },
         handler: (state) => {
-          state.selectedType = { ...state.selectedType, name }
+          selectType(state, name)
         },
       })
 

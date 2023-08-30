@@ -1,4 +1,4 @@
-import { Mod } from '@cicada-lang/inet'
+import { Mod, TypeDefinition } from '@cicada-lang/inet'
 import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './button/Button'
@@ -39,5 +39,6 @@ export type State = {
 
   selectedType?: {
     name: string
+    definition: TypeDefinition
   }
 }

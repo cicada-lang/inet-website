@@ -1,19 +1,19 @@
 import { State } from '../../State'
 import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
-import { findCurrentTypeDefinition } from './findCurrentTypeDefinition'
 import { renderTypeDefinition } from './renderTypeDefinition'
 import { renderTypeList } from './renderTypeList'
-import { setupCurrentTypeDefinition } from './setupCurrentTypeDefinition'
+import { selectFirstType } from './selectFirstType'
 
 export function renderTypes(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  setupCurrentTypeDefinition(state)
+  if (state.selectedType === undefined) {
+    selectFirstType(state)
+  }
 
-  const definition = findCurrentTypeDefinition(state)
-  if (definition) {
-    renderTypeDefinition(state, definition)
+  if (state.selectedType) {
+    renderTypeDefinition(state, state.selectedType.definition)
   }
 
   if (!state.isHidingUI) {
