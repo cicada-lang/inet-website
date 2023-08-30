@@ -1,7 +1,6 @@
 # play
 
-[play] extract `NetRendering`
-[play] position of net renderings
+[play] `NetLayout` has x, y, width, height -- bound the position to the region
 
 [play] `renderNodeDefinition` -- add a button to only show current rule
 

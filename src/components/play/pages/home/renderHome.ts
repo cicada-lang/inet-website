@@ -15,9 +15,9 @@ export function renderHome(state: State, options: RenderOptions): void {
     if (state.selectedValue['@kind'] === 'SelectedValuePort') {
       evolveNet(
         state,
-        state.selectedValue.net,
-        state.selectedValue.layout,
-        state.selectedValue.step++,
+        state.selectedValue.netRendering.net,
+        state.selectedValue.netRendering.layout,
+        state.selectedValue.netRendering.step++,
       )
     }
   }

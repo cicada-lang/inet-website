@@ -1,5 +1,5 @@
-import { Net, Port, Value } from '@cicada-lang/inet'
-import { NetLayout } from '../../net-layout/NetLayout'
+import { Port, Value } from '@cicada-lang/inet'
+import { NetRendering } from '../../net-rendering/NetRendering'
 
 export type SelectedValue = (SelectedValuePort | SelectedValueGeneric) & {
   stackIndex?: number
@@ -10,9 +10,7 @@ export type SelectedValuePort = {
   '@type': 'SelectedValue'
   '@kind': 'SelectedValuePort'
   port: Port
-  net: Net
-  layout: NetLayout
-  step: number
+  netRendering: NetRendering
 }
 
 export type SelectedValueGeneric = {

@@ -17,13 +17,13 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
       state.height / 2,
     )
 
+    const netRendering = { net, layout, step: 0 }
+
     return {
       '@type': 'SelectedValue',
       '@kind': 'SelectedValuePort',
       port: value,
-      net,
-      layout,
-      step: 0,
+      netRendering,
       stackIndex,
     }
   } else {
