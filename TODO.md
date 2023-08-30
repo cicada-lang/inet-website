@@ -1,6 +1,5 @@
 # play
 
-[play] `NetRendering` has `maximumStep`
 [play] `renderEdge` -- highlight half principle edge
 [play] `renderNode` -- click to go to node definition
 [play] `renderNet` -- scale by number of nodes

@@ -5,7 +5,11 @@ import { NetLayout } from '../net-layout/NetLayout'
 import { NetRendering } from '../net-rendering/NetRendering'
 
 export function evolveNet(state: State, rendering: NetRendering): void {
-  const { net, layout, step } = rendering
+  const { net, layout, step, maximumStep } = rendering
+
+  if (step > maximumStep) {
+    return
+  }
 
   rendering.step++
 
