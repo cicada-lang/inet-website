@@ -1,6 +1,6 @@
 # play
 
-[play] `NetLayout` has x, y, width, height -- bound the position to the region
+[play] `NetLayout` has `paddingX` `paddingY`
 
 [play] `renderNodeDefinition` -- add a button to only show current rule
 

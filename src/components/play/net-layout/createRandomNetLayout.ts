@@ -18,6 +18,10 @@ export function createRandomNetLayout(
   }
 
   return {
+    x,
+    y,
+    width,
+    height,
     nodePositions,
   }
 }
