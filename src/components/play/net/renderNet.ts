@@ -13,12 +13,18 @@ export function renderNet(state: State, rendering: NetRendering): void {
     if (firstPosition === undefined) continue
     const secondPosition = layout.nodePositions.get(nodeKey(edge.second.node))
     if (secondPosition === undefined) continue
-    renderEdge(state, firstPosition, secondPosition)
+
+    renderEdge(
+      state,
+      { port: edge.first, position: firstPosition },
+      { port: edge.second, position: secondPosition },
+    )
   }
 
   for (const [id, nodeEntry] of net.nodeEntries) {
     const position = layout.nodePositions.get(id)
     if (position === undefined) continue
+
     if (nodeEntry.asTypeCap || nodeEntry.asPortCap) {
       renderCap(state, nodeEntry, position)
     } else {

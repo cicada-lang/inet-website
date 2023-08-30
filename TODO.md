@@ -1,19 +1,21 @@
 # play
 
+[play] `renderEdge` -- highlight half principle edge
+[play] `NetRendering` -- has `maximumStep`
+[play] `renderNode` -- click to go to node definition
+[play] `renderNet` -- scale by number of nodes
+
 [play] `renderSelectedNode` -- add a button to only show current rule
+
+[play] `renderSelectedValue` -- support `Run` button to run a net
+[play] `renderSelectedValue` -- support click an active edge to run one step
 
 [play] `renderStack` -- with scrollbar -- show number of entries
 [play] `renderLocalVariables` -- with scrollbar -- show number of of entries
 
 [play] `renderSelectedWord` -- show stack
 
-[play] `renderNode` -- hover to highlight ports and neighbours
-[play] `renderEdge` -- hover to highlight connected nodes
-
-[play] `CurrentPort` -- support `Run` button to run a net
-[play] `CurrentPort` -- support click an active edge to run one step
-
-[play] optionally introduce gravity and fix current node
+[play] `forces/` -- a button to introduce gravity and fix root node
 
 # home
 
