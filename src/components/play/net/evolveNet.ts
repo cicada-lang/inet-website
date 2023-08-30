@@ -1,16 +1,16 @@
+import { Net } from '@cicada-lang/inet'
 import { State } from '../State'
 import { computeElectricalForces } from '../forces/computeElectricalForces'
 import { computeSpringForces } from '../forces/computeSpringForces'
-import { SelectedValuePort } from '../pages/home/SelectedValue'
+import { NetLayout } from '../net-layout/NetLayout'
 
 export function evolveNet(
   state: State,
-  selectedValue: SelectedValuePort,
+  net: Net,
+  layout: NetLayout,
+  step: number,
 ): void {
-  const { net, layout } = selectedValue
-
   const coolingFactor = 0.999
-  const step = selectedValue.evolvingStep
 
   const springForces = computeSpringForces(net, layout)
   const electricalForces = computeElectricalForces(net, layout)
@@ -31,6 +31,4 @@ export function evolveNet(
       position[1] += electricalForce[1] * coolingFactor ** step
     }
   }
-
-  selectedValue.evolvingStep++
 }
