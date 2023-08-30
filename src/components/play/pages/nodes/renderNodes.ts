@@ -1,9 +1,10 @@
 import { State } from '../../State'
 import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
-import { renderNodeDefinition } from './renderNodeDefinition'
+import { evolveNet } from '../../net/evolveNet'
 import { renderNodeList } from './renderNodeList'
 import { renderNodeRuleList } from './renderNodeRuleList'
+import { renderSelectedNode } from './renderSelectedNode'
 import { selectFirstNode } from './selectFirstNode'
 
 export function renderNodes(state: State): void {
@@ -14,7 +15,14 @@ export function renderNodes(state: State): void {
   }
 
   if (state.selectedNode) {
-    renderNodeDefinition(state, state.selectedNode.definition)
+    renderSelectedNode(state, state.selectedNode)
+    evolveNet(
+      state,
+      state.selectedNode.net,
+      state.selectedNode.layout,
+      state.selectedNode.evolvingStep++,
+    )
+
     renderNodeRuleList(state, state.selectedNode)
   }
 

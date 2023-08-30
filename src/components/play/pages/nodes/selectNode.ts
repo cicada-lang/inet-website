@@ -1,5 +1,6 @@
-import { findNodeRuleEntries } from '@cicada-lang/inet'
+import { findNodeRuleEntries, presentNodeAsNet } from '@cicada-lang/inet'
 import { State } from '../../State'
+import { createInitialNetLayout } from '../../net-layout/createInitialNetLayout'
 import { selectRule } from './selectRule'
 
 export function selectNode(state: State, givenName: string): void {
@@ -11,7 +12,24 @@ export function selectNode(state: State, givenName: string): void {
           name: definition.name,
         })
 
-        state.selectedNode = { name, definition, ruleEntries }
+        const net = presentNodeAsNet(state.mod, name)
+        const layout = createInitialNetLayout(
+          state,
+          net,
+          state.width / 4,
+          state.height / 4,
+          state.width / 2,
+          state.height / 2,
+        )
+
+        state.selectedNode = {
+          name,
+          definition,
+          net,
+          layout,
+          evolvingStep: 0,
+          ruleEntries,
+        }
 
         const [firstRuleEntry] = ruleEntries
         if (firstRuleEntry) {

@@ -1,6 +1,6 @@
 # play
 
-[play] `renderNodeDefinition` -- show node
+[play] `renderNode` handle cap
 
 [play] `renderNodeDefinition` -- show node rule
 
