@@ -17,7 +17,7 @@ export function renderHome(state: State, options: RenderOptions): void {
         state,
         state.selectedValue.net,
         state.selectedValue.layout,
-        state.selectedValue.evolvingStep,
+        state.selectedValue.evolvingStep++,
       )
     }
   }
