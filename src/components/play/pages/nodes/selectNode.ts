@@ -21,12 +21,16 @@ export function selectNode(state: State, givenName: string): void {
           state.height / 3,
         )
 
-        state.selectedNode = {
-          name,
-          definition,
+        const netRendering = {
           net,
           layout,
           step: 0,
+        }
+
+        state.selectedNode = {
+          name,
+          definition,
+          netRendering,
           ruleEntries,
         }
 

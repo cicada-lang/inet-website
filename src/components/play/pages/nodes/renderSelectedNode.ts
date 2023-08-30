@@ -8,7 +8,11 @@ export function renderSelectedNode(
 ): void {
   state.ctx.save()
 
-  renderNet(state, selectedNode.net, selectedNode.layout)
+  renderNet(
+    state,
+    selectedNode.netRendering.net,
+    selectedNode.netRendering.layout,
+  )
 
   if (selectedNode.selectedRule) {
     renderNet(

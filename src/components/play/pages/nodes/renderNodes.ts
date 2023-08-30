@@ -18,9 +18,9 @@ export function renderNodes(state: State): void {
     renderSelectedNode(state, state.selectedNode)
     evolveNet(
       state,
-      state.selectedNode.net,
-      state.selectedNode.layout,
-      state.selectedNode.step++,
+      state.selectedNode.netRendering.net,
+      state.selectedNode.netRendering.layout,
+      state.selectedNode.netRendering.step++,
     )
 
     renderNodeRuleList(state, state.selectedNode)

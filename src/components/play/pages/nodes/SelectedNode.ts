@@ -1,14 +1,12 @@
-import { Net, NodeDefinition } from '@cicada-lang/inet'
+import { NodeDefinition } from '@cicada-lang/inet'
 import { RuleEntry } from '@cicada-lang/inet/lib/lang/mod/RuleEntry'
-import { NetLayout } from '../../net-layout/NetLayout'
+import { NetRendering } from '../../net-rendering/NetRendering'
 import { SelectedRule } from './SelectedRule'
 
 export type SelectedNode = {
   name: string
   definition: NodeDefinition
-  net: Net
-  layout: NetLayout
-  step: number
+  netRendering: NetRendering
   ruleEntries: Array<RuleEntry>
   selectedRule?: SelectedRule
 }
