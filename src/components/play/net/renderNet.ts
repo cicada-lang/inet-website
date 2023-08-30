@@ -1,11 +1,13 @@
-import { Net, allEdges, nodeKey } from '@cicada-lang/inet'
+import { allEdges, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
-import { NetLayout } from '../net-layout/NetLayout'
+import { NetRendering } from '../net-rendering/NetRendering'
 import { renderCap } from './renderCap'
 import { renderEdge } from './renderEdge'
 import { renderNode } from './renderNode'
 
-export function renderNet(state: State, net: Net, layout: NetLayout): void {
+export function renderNet(state: State, rendering: NetRendering): void {
+  const { net, layout } = rendering
+
   for (const edge of allEdges(net)) {
     const firstPosition = layout.nodePositions.get(nodeKey(edge.first.node))
     if (firstPosition === undefined) continue

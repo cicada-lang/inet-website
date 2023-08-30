@@ -16,28 +16,12 @@ export function renderNodes(state: State): void {
 
   if (state.selectedNode) {
     renderSelectedNode(state, state.selectedNode)
-    evolveNet(
-      state,
-      state.selectedNode.netRendering.net,
-      state.selectedNode.netRendering.layout,
-      state.selectedNode.netRendering.step++,
-    )
+    evolveNet(state, state.selectedNode.netRendering)
 
     renderNodeRuleList(state, state.selectedNode)
     if (state.selectedNode.selectedRule) {
-      evolveNet(
-        state,
-        state.selectedNode.selectedRule.initial.net,
-        state.selectedNode.selectedRule.initial.layout,
-        state.selectedNode.selectedRule.initial.step++,
-      )
-
-      evolveNet(
-        state,
-        state.selectedNode.selectedRule.final.net,
-        state.selectedNode.selectedRule.final.layout,
-        state.selectedNode.selectedRule.final.step++,
-      )
+      evolveNet(state, state.selectedNode.selectedRule.initial)
+      evolveNet(state, state.selectedNode.selectedRule.final)
     }
   }
 
