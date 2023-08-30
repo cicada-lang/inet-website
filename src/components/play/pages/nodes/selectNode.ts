@@ -16,10 +16,10 @@ export function selectNode(state: State, givenName: string): void {
         const layout = createInitialNetLayout(
           state,
           net,
-          state.width / 4,
-          state.height / 4,
-          state.width / 2,
-          state.height / 2,
+          state.width / 3,
+          state.height / 5,
+          state.width / 3,
+          state.height / 3,
         )
 
         state.selectedNode = {

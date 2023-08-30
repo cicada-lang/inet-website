@@ -24,6 +24,21 @@ export function renderNodes(state: State): void {
     )
 
     renderNodeRuleList(state, state.selectedNode)
+    if (state.selectedNode.selectedRule) {
+      evolveNet(
+        state,
+        state.selectedNode.selectedRule.initial.net,
+        state.selectedNode.selectedRule.initial.layout,
+        state.selectedNode.selectedRule.initial.evolvingStep++,
+      )
+
+      evolveNet(
+        state,
+        state.selectedNode.selectedRule.final.net,
+        state.selectedNode.selectedRule.final.layout,
+        state.selectedNode.selectedRule.final.evolvingStep++,
+      )
+    }
   }
 
   if (!state.isHidingUI) {

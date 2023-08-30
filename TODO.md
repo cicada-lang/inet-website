@@ -1,6 +1,8 @@
 # play
 
-[play] `renderNodeDefinition` -- show node rule
+[play] rename `evolvingStep` to `step`
+[play] extract `NetRendering`
+[play] position of net renderings
 
 [play] `renderNodeDefinition` -- add a button to only show current rule
 

@@ -10,5 +10,19 @@ export function renderSelectedNode(
 
   renderNet(state, selectedNode.net, selectedNode.layout)
 
+  if (selectedNode.selectedRule) {
+    renderNet(
+      state,
+      selectedNode.selectedRule.initial.net,
+      selectedNode.selectedRule.initial.layout,
+    )
+
+    renderNet(
+      state,
+      selectedNode.selectedRule.final.net,
+      selectedNode.selectedRule.final.layout,
+    )
+  }
+
   state.ctx.restore()
 }
