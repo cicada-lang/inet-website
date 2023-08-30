@@ -1,17 +1,13 @@
-import { NodeDefinition, findNodeRuleEntries } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSans } from '../../theme/themeFontSans'
+import { SelectedNode } from './SelectedNode'
+import { selectRule } from './selectRule'
 
 export function renderNodeRuleList(
   state: State,
-  definition: NodeDefinition,
+  selectedNode: SelectedNode,
 ): void {
-  const ruleEntries = findNodeRuleEntries(state.mod, {
-    url: definition.mod.url,
-    name: definition.name,
-  })
-
   state.ctx.save()
 
   const height = 34
@@ -21,17 +17,14 @@ export function renderNodeRuleList(
     : themeFontSans('base')
 
   let i = 0
-  for (const { name } of ruleEntries) {
+  for (const { name } of [...selectedNode.ruleEntries].reverse()) {
     renderButton(state, name, 0, state.height - height - height * i, {
       name: `rules/${name}`,
       height,
       paddingX: 10,
-      isActive: (state) => state.currentRoute.properties?.ruleName === name,
+      isActive: (state) => state.selectedNode?.selectedRule?.name === name,
       activeUnderline: { offset: 8, width: 1.5 },
-      handler: (state) => {
-        state.currentRoute.properties = state.currentRoute.properties || {}
-        state.currentRoute.properties.ruleName = name
-      },
+      handler: (state) => selectRule(state, selectedNode, name),
     })
 
     i++

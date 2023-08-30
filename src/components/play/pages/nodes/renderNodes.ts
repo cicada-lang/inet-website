@@ -15,7 +15,7 @@ export function renderNodes(state: State): void {
 
   if (state.selectedNode) {
     renderNodeDefinition(state, state.selectedNode.definition)
-    renderNodeRuleList(state, state.selectedNode.definition)
+    renderNodeRuleList(state, state.selectedNode)
   }
 
   if (!state.isHidingUI) {
