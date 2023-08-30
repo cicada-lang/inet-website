@@ -1,7 +1,7 @@
 import { Value, formatValue } from '@cicada-lang/inet'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
-import { clearSelected } from '../selected-value/clearSelected'
+import { clearSelectedValue } from '../selected-value/clearSelectedValue'
 import { createSelectedValue } from '../selected-value/createSelectedValue'
 import themeFontMono from '../theme/themeFontMono'
 
@@ -25,7 +25,7 @@ export function renderStackEntry(state: State, i: number, value: Value): void {
     activeUnderline: { offset: 5, width: 1.5 },
     withBorder: true,
     handler: (state) => {
-      clearSelected(state)
+      clearSelectedValue(state)
       state.selectedValue = createSelectedValue(state, value)
       state.selectedStackIndex = i
     },

@@ -36,4 +36,8 @@ export type State = {
   selectedValue?: SelectedValue
   selectedStackIndex?: number
   selectedLocalName?: string
+
+  selectedType?: {
+    name: string
+  }
 }

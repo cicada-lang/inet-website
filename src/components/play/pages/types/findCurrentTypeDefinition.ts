@@ -6,7 +6,7 @@ export function findCurrentTypeDefinition(
 ): TypeDefinition | undefined {
   for (const [name, definition] of state.mod.definitions) {
     if (definition['@kind'] === 'TypeDefinition') {
-      if (name === state.currentRoute.properties?.name) {
+      if (name === state.selectedType?.name) {
         return definition
       }
     }

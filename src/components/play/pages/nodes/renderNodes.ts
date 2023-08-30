@@ -4,6 +4,7 @@ import { renderNavbar } from '../../nav/renderNavbar'
 import { findCurrentNodeDefinition } from './findCurrentNodeDefinition'
 import { renderNodeDefinition } from './renderNodeDefinition'
 import { renderNodeList } from './renderNodeList'
+import { renderNodeRuleList } from './renderNodeRuleList'
 import { setupCurrentNodeDefinition } from './setupCurrentNodeDefinition'
 
 export function renderNodes(state: State): void {
@@ -14,6 +15,7 @@ export function renderNodes(state: State): void {
   const definition = findCurrentNodeDefinition(state)
   if (definition) {
     renderNodeDefinition(state, definition)
+    renderNodeRuleList(state, definition)
   }
 
   if (!state.isHidingUI) {

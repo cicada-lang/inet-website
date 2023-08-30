@@ -1,5 +1,8 @@
 # play
 
+[play] use `selectedNode.name` instead of route properties
+[play] use `selectedWord.name` instead of route properties
+
 [play] `renderNodeDefinition` -- show node
 
 [play] `renderNodeDefinition` -- show node rule
