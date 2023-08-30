@@ -1,7 +1,10 @@
 # play
 
-[play] use `selectedNode.name` instead of route properties
+[play] `SelectedNode` has `selectedRule: SelectedRule`
+
 [play] use `selectedWord.name` instead of route properties
+
+[play] move `selectedStackIndex` and `selectedLocalName` to `SelectedValue`
 
 [play] `renderNodeDefinition` -- show node
 

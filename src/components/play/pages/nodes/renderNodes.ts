@@ -1,21 +1,21 @@
 import { State } from '../../State'
 import { renderButtonBack } from '../../nav/renderButtonBack'
 import { renderNavbar } from '../../nav/renderNavbar'
-import { findCurrentNodeDefinition } from './findCurrentNodeDefinition'
 import { renderNodeDefinition } from './renderNodeDefinition'
 import { renderNodeList } from './renderNodeList'
 import { renderNodeRuleList } from './renderNodeRuleList'
-import { setupCurrentNodeDefinition } from './setupCurrentNodeDefinition'
+import { selectFirstNode } from './selectFirstNode'
 
 export function renderNodes(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  setupCurrentNodeDefinition(state)
+  if (state.selectedNode === undefined) {
+    selectFirstNode(state)
+  }
 
-  const definition = findCurrentNodeDefinition(state)
-  if (definition) {
-    renderNodeDefinition(state, definition)
-    renderNodeRuleList(state, definition)
+  if (state.selectedNode) {
+    renderNodeDefinition(state, state.selectedNode.definition)
+    renderNodeRuleList(state, state.selectedNode.definition)
   }
 
   if (!state.isHidingUI) {

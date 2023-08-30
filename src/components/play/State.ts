@@ -4,6 +4,7 @@ import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './button/Button'
 import { Mouse } from './mouse/Mouse'
 import { SelectedValue } from './pages/home/SelectedValue'
+import { SelectedNode } from './pages/nodes/SelectedNode'
 import { SelectedType } from './pages/types/SelectedType'
 import { Route, RouteExp } from './route/Route'
 
@@ -33,10 +34,10 @@ export type State = {
   // Entity stores:
   buttons: Map<string, Button>
 
-  // Interactions:
+  // Sub-states:
   selectedValue?: SelectedValue
   selectedStackIndex?: number
   selectedLocalName?: string
-
   selectedType?: SelectedType
+  selectedNode?: SelectedNode
 }
