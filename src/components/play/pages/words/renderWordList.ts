@@ -1,6 +1,7 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSans } from '../../theme/themeFontSans'
+import { selectWord } from './selectWord'
 
 export function renderWordList(state: State): void {
   state.ctx.save()
@@ -19,12 +20,9 @@ export function renderWordList(state: State): void {
         name: `words/${name}`,
         height,
         paddingX: 10,
-        isActive: (state) => state.currentRoute.properties?.name === name,
+        isActive: (state) => state.selectedWord?.name === name,
         activeUnderline: { offset: 8, width: 1.5 },
-        handler: (state) => {
-          state.currentRoute.properties = state.currentRoute.properties || {}
-          state.currentRoute.properties.name = name
-        },
+        handler: (state) => selectWord(state, name),
       })
 
       i++

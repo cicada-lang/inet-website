@@ -22,9 +22,7 @@ export function renderNodeList(state: State): void {
         paddingX: 10,
         isActive: (state) => state.selectedNode?.name === name,
         activeUnderline: { offset: 8, width: 1.5 },
-        handler: (state) => {
-          selectNode(state, name)
-        },
+        handler: (state) => selectNode(state, name),
       })
 
       i++
