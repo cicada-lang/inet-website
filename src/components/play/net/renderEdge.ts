@@ -17,7 +17,7 @@ export function renderEdge(
 
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
-  state.ctx.lineWidth = 1.8
+  state.ctx.lineWidth = 1.3
 
   if (first.port.isPrincipal && second.port.isPrincipal) {
     if (state.theme.name === 'dark') {
@@ -26,7 +26,7 @@ export function renderEdge(
       state.ctx.strokeStyle = colors.rose[500]
     }
 
-    state.ctx.lineWidth = 2.8
+    state.ctx.lineWidth = 2
   }
 
   if (first.port.isPrincipal && !second.port.isPrincipal) {
@@ -48,7 +48,7 @@ export function renderEdge(
     }
 
     state.ctx.strokeStyle = gradient
-    state.ctx.lineWidth = 1.8
+    state.ctx.lineWidth = 1.3
   }
 
   if (!first.port.isPrincipal && second.port.isPrincipal) {
@@ -70,7 +70,7 @@ export function renderEdge(
     }
 
     state.ctx.strokeStyle = gradient
-    state.ctx.lineWidth = 1.8
+    state.ctx.lineWidth = 1.3
   }
 
   state.ctx.beginPath()
