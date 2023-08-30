@@ -23,6 +23,7 @@ export function renderNodeRuleList(
       height,
       paddingX: 10,
       isActive: (state) => state.selectedNode?.selectedRule?.name === name,
+      isDisabled: (state) => state.selectedNode?.selectedRule?.name === name,
       activeUnderline: { offset: 8, width: 1.5 },
       handler: (state) => selectRule(state, selectedNode, name),
     })

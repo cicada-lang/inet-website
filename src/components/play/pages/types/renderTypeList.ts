@@ -21,6 +21,7 @@ export function renderTypeList(state: State): void {
         height,
         paddingX: 10,
         isActive: (state) => state.selectedType?.name === name,
+        isDisabled: (state) => state.selectedType?.name === name,
         activeUnderline: { offset: 8, width: 1.5 },
         handler: (state) => selectType(state, name),
       })

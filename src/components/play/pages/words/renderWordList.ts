@@ -21,6 +21,7 @@ export function renderWordList(state: State): void {
         height,
         paddingX: 10,
         isActive: (state) => state.selectedWord?.name === name,
+        isDisabled: (state) => state.selectedWord?.name === name,
         activeUnderline: { offset: 8, width: 1.5 },
         handler: (state) => selectWord(state, name),
       })
