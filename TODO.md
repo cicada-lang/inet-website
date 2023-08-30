@@ -2,8 +2,20 @@
 
 [play] `renderSelectedNode` -- add a button to only present current rule
 
+- `Present` / `单独显示`
+
+[play] add label to stack
+[play] add label to locals
+[play] add label to nav
+[play] add label to type list
+[play] add label to node list
+[play] add label to word list
+[play] add label to rule list
+
 [play] `renderSelectedValue` -- support `Run` button to run a net
 [play] `renderSelectedValue` -- support click an active edge to run one step
+
+[play] big button size for mobile
 
 [play] `renderNet` -- scale by number of nodes
 
