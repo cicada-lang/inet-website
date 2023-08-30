@@ -1,8 +1,9 @@
-import { Mod, TypeDefinition } from '@cicada-lang/inet'
+import { Mod } from '@cicada-lang/inet'
 import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './button/Button'
 import { Mouse } from './mouse/Mouse'
+import { SelectedType } from './pages/types/SelectedType'
 import { Route, RouteExp } from './route/Route'
 import { SelectedValue } from './selected-value/SelectedValue'
 
@@ -37,8 +38,5 @@ export type State = {
   selectedStackIndex?: number
   selectedLocalName?: string
 
-  selectedType?: {
-    name: string
-    definition: TypeDefinition
-  }
+  selectedType?: SelectedType
 }
