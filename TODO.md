@@ -1,16 +1,25 @@
 # play
 
-[play] `renderSelectedNode` -- add a button to only present current rule
-
-- `Present` / `单独显示`
-
-[play] add label to stack
 [play] add label to locals
 [play] add label to nav
 [play] add label to type list
 [play] add label to node list
 [play] add label to word list
 [play] add label to rule list
+
+[play] hover an node show highlight
+
+[play] hover an edge make the edge longer -- to practice movement along a line
+
+- reset `maximumSteps` or quit using `maximumSteps`
+
+[play] `NetRendering` use circle instead of box as boundary
+
+[play] keyboard -- esc to go back
+
+[play] `renderSelectedNode` -- add a button to only present current rule
+
+- `Present` / `单独显示`
 
 [play] `renderSelectedValue` -- support `Run` button to run a net
 [play] `renderSelectedValue` -- support click an active edge to run one step

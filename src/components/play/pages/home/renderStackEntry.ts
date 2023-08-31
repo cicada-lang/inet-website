@@ -4,10 +4,18 @@ import { renderButton } from '../../button/renderButton'
 import themeFontMono from '../../theme/themeFontMono'
 import { createSelectedValue } from './createSelectedValue'
 
-export function renderStackEntry(state: State, i: number, value: Value): void {
+export function renderStackEntry(
+  state: State,
+  i: number,
+  value: Value,
+  options: {
+    height: number
+    paddingX: number
+  },
+): void {
+  const { height, paddingX } = options
+
   const text = formatValue(value)
-  const paddingX = 10
-  const height = 34
   const x = 0
   const y = state.height - height * (i + 1)
 
