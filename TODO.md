@@ -1,6 +1,5 @@
 # play
 
-[play] add label to Locals
 [play] add label to Definitions
 [play] add label to Types
 [play] add label to Nodes
