@@ -31,7 +31,6 @@ export function renderButtonType(
     paddingX,
     align: 'right',
     isActive: (state) => state.currentRoute.name === name,
-    activeUnderline: { offset: 8, width: 1.5 },
     handler: (state) => {
       if (state.currentRoute.name === 'home') {
         state.history.push(state.currentRoute)

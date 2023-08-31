@@ -26,7 +26,6 @@ export function renderNodeList(state: State): void {
         paddingX: themeSize(3),
         isActive: (state) => state.selectedNode?.name === name,
         isDisabled: (state) => state.selectedNode?.name === name,
-        activeUnderline: { offset: 8, width: 1.5 },
         handler: (state) => selectNode(state, name),
       })
 

@@ -29,7 +29,6 @@ export function renderStackEntry(
     paddingX,
     isDisabled: (state) => i === state.selectedValue?.stackIndex,
     isActive: (state) => i === state.selectedValue?.stackIndex,
-    activeUnderline: { offset: 5, width: 1.5 },
     handler: (state) => {
       state.selectedValue = createSelectedValue(state, value)
       state.selectedValue.stackIndex = i

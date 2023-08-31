@@ -1,5 +1,6 @@
 import { State } from '../State'
 import { Rect } from '../rect/Rect'
+import { withinRect } from './withinRect'
 
 type Options = {
   name: string
@@ -10,10 +11,6 @@ type Options = {
   handler: (state: State) => void
   isActive?: (state: State) => void
   isDisabled?: (state: State) => void
-  activeUnderline?: {
-    offset: number
-    width: number
-  }
 }
 
 // Can not be used after transform,
@@ -52,9 +49,9 @@ export function renderButton(
   const textOffset = 12
   state.ctx.fillText(text, x + paddingX, y + height - textOffset)
 
-  if (options.isActive?.(state) && options.activeUnderline) {
-    state.ctx.lineWidth = options.activeUnderline.width
-    const underlineOffset = options.activeUnderline.offset
+  if (withinRect(rect, state.mouse.position) || options.isActive?.(state)) {
+    state.ctx.lineWidth = 1.5
+    const underlineOffset = 8
     state.ctx.moveTo(x + paddingX, y + height - underlineOffset)
     state.ctx.lineTo(x + width - paddingX, y + height - underlineOffset)
     state.ctx.stroke()

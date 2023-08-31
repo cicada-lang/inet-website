@@ -1,6 +1,5 @@
 # play
 
-[play] hover a button show highlight
 [play] hover a node show highlight
 
 [play] hover an edge make the edge longer -- to practice movement along a line

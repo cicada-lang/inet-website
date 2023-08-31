@@ -28,7 +28,6 @@ export function renderLocalEntry(
     paddingX,
     isDisabled: (state) => name === state.selectedValue?.localName,
     isActive: (state) => name === state.selectedValue?.localName,
-    activeUnderline: { offset: 5, width: 1.5 },
     handler: (state) => {
       state.selectedValue = createSelectedValue(state, value)
       state.selectedValue.localName = name
