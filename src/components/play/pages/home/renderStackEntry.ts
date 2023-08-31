@@ -20,8 +20,8 @@ export function renderStackEntry(
   const y = state.height - height * (i + 1)
 
   state.ctx.font = state.breakpoints.md
-    ? `${themeFontSize('base')} monospace`
-    : `${themeFontSize('sm')} monospace`
+    ? `${themeFontSize('lg')} monospace`
+    : `${themeFontSize('base')} monospace`
 
   renderButton(state, text, x, y, {
     name: `state[${i}]`,

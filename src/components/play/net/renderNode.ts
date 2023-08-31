@@ -17,8 +17,8 @@ export function renderNode(
   state.ctx.lineWidth = 1
 
   state.ctx.font = state.breakpoints.md
-    ? `${themeFontSize('base')} monospace`
-    : `${themeFontSize('sm')} monospace`
+    ? `${themeFontSize('lg')} monospace`
+    : `${themeFontSize('base')} monospace`
 
   state.ctx.textBaseline = 'middle'
   state.ctx.textAlign = 'center'

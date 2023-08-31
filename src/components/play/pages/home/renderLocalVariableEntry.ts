@@ -19,8 +19,8 @@ export function renderLocalVariableEntry(
   const y = 0 + height * i + marginT
 
   state.ctx.font = state.breakpoints.md
-    ? `${themeFontSize('base')} monospace`
-    : `${themeFontSize('sm')} monospace`
+    ? `${themeFontSize('lg')} monospace`
+    : `${themeFontSize('base')} monospace`
 
   renderButton(state, '$' + name, x, y, {
     name: `locals.${name}`,
