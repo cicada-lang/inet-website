@@ -3,6 +3,7 @@ import { renderButton } from '../../button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 import { SelectedNode } from './SelectedNode'
+import { renderLabelRules } from './renderLabelRules'
 import { selectRule } from './selectRule'
 
 export function renderNodeRuleList(
@@ -11,6 +12,7 @@ export function renderNodeRuleList(
 ): void {
   state.ctx.save()
 
+  const marginTheight = themeSize(10)
   const height = themeSize(10)
 
   state.ctx.font = state.breakpoints.md
@@ -33,4 +35,6 @@ export function renderNodeRuleList(
   }
 
   state.ctx.restore()
+
+  renderLabelRules(state, selectedNode.ruleEntries.length)
 }

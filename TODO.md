@@ -1,7 +1,5 @@
 # play
 
-[play] `renderLabelRules`
-
 [play] hover a button show highlight
 [play] hover a node show highlight
 
