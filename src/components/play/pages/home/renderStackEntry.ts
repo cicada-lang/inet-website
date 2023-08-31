@@ -1,7 +1,7 @@
 import { Value, formatValue } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
-import { fontSize } from '../../theme/fontSize'
+import { themeFontSize } from '../../theme/themeFontSize'
 import { createSelectedValue } from './createSelectedValue'
 
 export function renderStackEntry(
@@ -20,8 +20,8 @@ export function renderStackEntry(
   const y = state.height - height * (i + 1)
 
   state.ctx.font = state.breakpoints.md
-    ? `${fontSize('base')} monospace`
-    : `${fontSize('sm')} monospace`
+    ? `${themeFontSize('base')} monospace`
+    : `${themeFontSize('sm')} monospace`
 
   renderButton(state, text, x, y, {
     name: `state[${i}]`,

@@ -1,7 +1,7 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
-import { fontSize } from '../theme/fontSize'
+import { themeFontSize } from '../theme/themeFontSize'
 
 export function renderButtonNodes(
   state: State,
@@ -20,8 +20,8 @@ export function renderButtonNodes(
   const y = height + marginT
 
   state.ctx.font = state.breakpoints.md
-    ? `${fontSize('lg')} monospace`
-    : `${fontSize('base')} monospace`
+    ? `${themeFontSize('lg')} monospace`
+    : `${themeFontSize('base')} monospace`
 
   const name = 'nodes'
 

@@ -1,7 +1,7 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
-import { fontSize } from '../theme/fontSize'
+import { themeFontSize } from '../theme/themeFontSize'
 
 export function renderButtonToggleUI(state: State): void {
   const lang = useGlobalLang()
@@ -11,15 +11,14 @@ export function renderButtonToggleUI(state: State): void {
   const text = state.isHidingUI ? showText : hideText
 
   const paddingX = 10
-  const marginT = 5
   const height = 34
 
   const x = state.width
-  const y = marginT
+  const y = 0
 
   state.ctx.font = state.breakpoints.md
-    ? `${fontSize('lg')} monospace`
-    : `${fontSize('base')} monospace`
+    ? `${themeFontSize('lg')} monospace`
+    : `${themeFontSize('base')} monospace`
 
   renderButton(state, text, x, y, {
     name: 'toggleUI',

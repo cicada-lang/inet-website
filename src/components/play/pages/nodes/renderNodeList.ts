@@ -1,6 +1,6 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
-import { fontSize } from '../../theme/fontSize'
+import { themeFontSize } from '../../theme/themeFontSize'
 import { selectNode } from './selectNode'
 
 export function renderNodeList(state: State): void {
@@ -10,8 +10,8 @@ export function renderNodeList(state: State): void {
   const marginT = height + 15
 
   state.ctx.font = state.breakpoints.md
-    ? `${fontSize('lg')} monospace`
-    : `${fontSize('base')} monospace`
+    ? `${themeFontSize('lg')} monospace`
+    : `${themeFontSize('base')} monospace`
 
   let i = 0
   for (const [name, definition] of state.mod.definitions) {

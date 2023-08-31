@@ -1,6 +1,6 @@
 import { Value, formatValue } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { fontSize } from '../../theme/fontSize'
+import { themeFontSize } from '../../theme/themeFontSize'
 
 export function renderValue(state: State, value: Value): void {
   state.ctx.save()
@@ -8,8 +8,8 @@ export function renderValue(state: State, value: Value): void {
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
   state.ctx.font = state.breakpoints.md
-    ? `${fontSize('3xl')} monospace`
-    : `${fontSize('2xl')} monospace`
+    ? `${themeFontSize('3xl')} monospace`
+    : `${themeFontSize('2xl')} monospace`
 
   const valueText = formatValue(value)
   const valueTextMetrics = state.ctx.measureText(valueText)

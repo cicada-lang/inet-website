@@ -14,7 +14,7 @@ const fontSizeRecord: Record<string, string> = {
   '9xl': '128px',
 }
 
-export function fontSize(size: string): string {
+export function themeFontSize(size: string): string {
   const found = fontSizeRecord[size]
   if (found) {
     return found
