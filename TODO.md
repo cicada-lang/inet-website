@@ -27,7 +27,7 @@
 [play] `renderNet` -- scale by number of nodes
 
 [play] `renderStack` -- with scrollbar -- show number of entries
-[play] `renderLocalVariables` -- with scrollbar -- show number of of entries
+[play] `renderLocals` -- with scrollbar -- show number of of entries
 
 [play] `renderSelectedWord` -- show stack
 

@@ -5,7 +5,7 @@ import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 import { createSelectedValue } from './createSelectedValue'
 
-export function renderLocalVariableEntry(
+export function renderLocalEntry(
   state: State,
   i: number,
   name: string,

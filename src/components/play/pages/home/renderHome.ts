@@ -2,7 +2,7 @@ import { State } from '../../State'
 import { renderNavbar } from '../../nav/renderNavbar'
 import { evolveNet } from '../../net/evolveNet'
 import { RenderOptions } from '../../route/Route'
-import { renderLocalVariables } from './renderLocalVariables'
+import { renderLocals } from './renderLocals'
 import { renderSelectedValue } from './renderSelectedValue'
 import { renderStack } from './renderStack'
 
@@ -19,7 +19,7 @@ export function renderHome(state: State, options: RenderOptions): void {
 
   if (!state.isHidingUI) {
     renderStack(state)
-    renderLocalVariables(state)
+    renderLocals(state)
     renderNavbar(state)
   }
 }
