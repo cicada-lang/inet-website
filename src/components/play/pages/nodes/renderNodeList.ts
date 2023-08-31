@@ -10,8 +10,8 @@ export function renderNodeList(state: State): void {
   const marginT = height + 15
 
   state.ctx.font = state.breakpoints.md
-    ? `${fontSize('lg')} sans-serif`
-    : `${fontSize('base')} sans-serif`
+    ? `${fontSize('lg')} monospace`
+    : `${fontSize('base')} monospace`
 
   let i = 0
   for (const [name, definition] of state.mod.definitions) {

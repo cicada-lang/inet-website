@@ -1,6 +1,5 @@
 # play
 
-[play] simple font
 [play] simple label
 [play] simple button
 [play] add label to locals

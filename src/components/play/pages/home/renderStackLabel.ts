@@ -20,8 +20,8 @@ export function renderStackLabel(
   const y = state.height - height * (i + 1)
 
   state.ctx.font = state.breakpoints.md
-    ? `bold ${fontSize('base')} sans-serif`
-    : `bold ${fontSize('sm')} sans-serif`
+    ? `bold ${fontSize('base')} monospace`
+    : `bold ${fontSize('sm')} monospace`
 
   // state.ctx.font = state.breakpoints.md
   //   ? themeFontSans('base')

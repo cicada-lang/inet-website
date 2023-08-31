@@ -13,8 +13,8 @@ export function renderNodeRuleList(
   const height = 34
 
   state.ctx.font = state.breakpoints.md
-    ? `${fontSize('lg')} sans-serif`
-    : `${fontSize('base')} sans-serif`
+    ? `${fontSize('lg')} monospace`
+    : `${fontSize('base')} monospace`
 
   let i = 0
   for (const { name } of [...selectedNode.ruleEntries].reverse()) {
