@@ -2,6 +2,7 @@ import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
+import { themeSize } from '../theme/themeSize'
 
 export function renderButtonToggleUI(state: State): void {
   const lang = useGlobalLang()
@@ -10,8 +11,8 @@ export function renderButtonToggleUI(state: State): void {
   const showText = lang.isZh() ? `显示 UI` : `Show UI`
   const text = state.isHidingUI ? showText : hideText
 
-  const paddingX = 10
-  const height = 34
+  const paddingX = themeSize(3)
+  const height = themeSize(10)
 
   const x = state.width
   const y = 0

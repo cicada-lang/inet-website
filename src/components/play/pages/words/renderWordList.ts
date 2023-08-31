@@ -1,12 +1,13 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
+import { themeSize } from '../../theme/themeSize'
 import { selectWord } from './selectWord'
 
 export function renderWordList(state: State): void {
   state.ctx.save()
 
-  const height = 34
+  const height = themeSize(10)
   const marginT = height + 15
 
   state.ctx.font = state.breakpoints.md
@@ -19,7 +20,7 @@ export function renderWordList(state: State): void {
       renderButton(state, name, 0, marginT + height * i, {
         name: `words/${name}`,
         height,
-        paddingX: 10,
+        paddingX: themeSize(3),
         isActive: (state) => state.selectedWord?.name === name,
         isDisabled: (state) => state.selectedWord?.name === name,
         activeUnderline: { offset: 8, width: 1.5 },

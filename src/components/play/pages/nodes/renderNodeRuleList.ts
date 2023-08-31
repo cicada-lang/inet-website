@@ -1,6 +1,7 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
+import { themeSize } from '../../theme/themeSize'
 import { SelectedNode } from './SelectedNode'
 import { selectRule } from './selectRule'
 
@@ -10,7 +11,7 @@ export function renderNodeRuleList(
 ): void {
   state.ctx.save()
 
-  const height = 34
+  const height = themeSize(10)
 
   state.ctx.font = state.breakpoints.md
     ? `${themeFontSize('lg')} monospace`
@@ -21,7 +22,7 @@ export function renderNodeRuleList(
     renderButton(state, name, 0, state.height - height - height * i, {
       name: `rules/${name}`,
       height,
-      paddingX: 10,
+      paddingX: themeSize(3),
       isActive: (state) => state.selectedNode?.selectedRule?.name === name,
       isDisabled: (state) => state.selectedNode?.selectedRule?.name === name,
       activeUnderline: { offset: 8, width: 1.5 },

@@ -2,12 +2,13 @@ import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
+import { themeSize } from '../theme/themeSize'
 
 export function renderButtonBack(state: State): void {
   const lang = useGlobalLang()
   const text = lang.isZh() ? `返回` : `Back`
-  const paddingX = 10
-  const height = 34
+  const paddingX = themeSize(3)
+  const height = themeSize(10)
   const x = 0
   const y = 0
 

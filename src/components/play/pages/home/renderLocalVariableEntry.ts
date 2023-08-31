@@ -2,6 +2,7 @@ import { Value } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
+import { themeSize } from '../../theme/themeSize'
 import { createSelectedValue } from './createSelectedValue'
 
 export function renderLocalVariableEntry(
@@ -10,8 +11,8 @@ export function renderLocalVariableEntry(
   name: string,
   value: Value,
 ): void {
-  const height = 34
-  const paddingX = 10
+  const height = themeSize(10)
+  const paddingX = themeSize(3)
   const marginT = height + 15
 
   const x = 0

@@ -24,8 +24,6 @@
 [play] `renderSelectedValue` -- support `Run` button to run a net
 [play] `renderSelectedValue` -- support click an active edge to run one step
 
-[play] big button size for mobile
-
 [play] `renderNet` -- scale by number of nodes
 
 [play] `renderStack` -- with scrollbar -- show number of entries
