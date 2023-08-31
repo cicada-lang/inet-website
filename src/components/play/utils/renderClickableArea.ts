@@ -1,5 +1,5 @@
 import { State } from '../State'
-import { Rect } from './Rect'
+import { Rect } from '../rect/Rect'
 
 type Options = {
   name: string

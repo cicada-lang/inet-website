@@ -1,8 +1,8 @@
 import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
-import { renderClickableArea } from '../button/renderClickableArea'
 import { selectNode } from '../pages/nodes/selectNode'
 import { fontSize } from '../theme/fontSize'
+import { renderClickableArea } from '../utils/renderClickableArea'
 
 export function renderNode(
   state: State,

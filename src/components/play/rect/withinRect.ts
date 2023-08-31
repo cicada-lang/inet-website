@@ -1,4 +1,4 @@
-import { Rect } from '../rect/Rect'
+import { Rect } from './Rect'
 
 export function withinRect(rect: Rect, position: [number, number]): boolean {
   const [x, y, width, height] = rect
