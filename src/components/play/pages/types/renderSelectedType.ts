@@ -1,6 +1,6 @@
 import { formatWord } from '@cicada-lang/inet'
 import { State } from '../../State'
-import themeFontMono from '../../theme/themeFontMono'
+import { fontSize } from '../../theme/fontSize'
 import { renderText } from '../../utils/renderText'
 import { SelectedType } from './SelectedType'
 
@@ -16,16 +16,16 @@ export function renderSelectedType(
   const y = state.height / 2
 
   state.ctx.font = state.breakpoints.md
-    ? themeFontMono('3xl')
-    : themeFontMono('2xl')
+    ? `${fontSize('3xl')} monospace`
+    : `${fontSize('2xl')} monospace`
 
   renderText(state, selectedType.definition.name, x, y - 60, {
     lineHeight: 30,
   })
 
   state.ctx.font = state.breakpoints.md
-    ? themeFontMono('2xl')
-    : themeFontMono('xl')
+    ? `${fontSize('2xl')} monospace`
+    : `${fontSize('xl')} monospace`
 
   const inputText = selectedType.definition.input.map(formatWord).join(' ')
   const outputText = selectedType.definition.output.map(formatWord).join(' ')

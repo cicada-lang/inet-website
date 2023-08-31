@@ -2,7 +2,7 @@ import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
 import { renderClickableArea } from '../button/renderClickableArea'
 import { selectNode } from '../pages/nodes/selectNode'
-import themeFontMono from '../theme/themeFontMono'
+import { fontSize } from '../theme/fontSize'
 
 export function renderNode(
   state: State,
@@ -17,8 +17,8 @@ export function renderNode(
   state.ctx.lineWidth = 1
 
   state.ctx.font = state.breakpoints.md
-    ? themeFontMono('base')
-    : themeFontMono('sm')
+    ? `${fontSize('base')} monospace`
+    : `${fontSize('sm')} monospace`
 
   state.ctx.textBaseline = 'middle'
   state.ctx.textAlign = 'center'

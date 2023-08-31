@@ -1,6 +1,6 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
-import { themeFontSans } from '../../theme/themeFontSans'
+import { fontSize } from '../../theme/fontSize'
 import { selectWord } from './selectWord'
 
 export function renderWordList(state: State): void {
@@ -10,8 +10,8 @@ export function renderWordList(state: State): void {
   const marginT = height + 15
 
   state.ctx.font = state.breakpoints.md
-    ? themeFontSans('lg')
-    : themeFontSans('base')
+    ? `${fontSize('lg')} monospace`
+    : `${fontSize('base')} monospace`
 
   let i = 0
   for (const [name, definition] of state.mod.definitions) {

@@ -1,6 +1,6 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
-import { themeFontSans } from '../../theme/themeFontSans'
+import { fontSize } from '../../theme/fontSize'
 import { renderLabel } from '../../utils/renderLabel'
 
 export function renderStackLabel(
@@ -20,8 +20,8 @@ export function renderStackLabel(
   const y = state.height - height * (i + 1)
 
   state.ctx.font = state.breakpoints.md
-    ? 'bold ' + themeFontSans('base')
-    : 'bold ' + themeFontSans('sm')
+    ? `bold ${fontSize('base')} sans-serif`
+    : `bold ${fontSize('sm')} sans-serif`
 
   // state.ctx.font = state.breakpoints.md
   //   ? themeFontSans('base')

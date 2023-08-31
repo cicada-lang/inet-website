@@ -1,6 +1,5 @@
 # play
 
-[play] inline themeFontMono themeFontSans themeFontSerif
 [play] simple font
 [play] simple label
 [play] simple button

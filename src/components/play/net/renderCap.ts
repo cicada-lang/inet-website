@@ -1,6 +1,6 @@
 import { NodeEntry } from '@cicada-lang/inet'
 import { State } from '../State'
-import themeFontMono from '../theme/themeFontMono'
+import { fontSize } from '../theme/fontSize'
 
 export function renderCap(
   state: State,
@@ -23,8 +23,8 @@ export function renderCap(
     state.ctx.lineWidth = 1
 
     state.ctx.font = state.breakpoints.md
-      ? themeFontMono('base')
-      : themeFontMono('sm')
+      ? `${fontSize('base')} monospace`
+      : `${fontSize('sm')} monospace`
 
     state.ctx.textBaseline = 'middle'
     state.ctx.textAlign = 'center'

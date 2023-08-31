@@ -1,7 +1,7 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
 import { renderButton } from '../button/renderButton'
-import { themeFontSans } from '../theme/themeFontSans'
+import { fontSize } from '../theme/fontSize'
 
 export function renderButtonWords(
   state: State,
@@ -20,8 +20,8 @@ export function renderButtonWords(
   const y = height * 2 + marginT
 
   state.ctx.font = state.breakpoints.md
-    ? themeFontSans('lg')
-    : themeFontSans('base')
+    ? `${fontSize('lg')} monospace`
+    : `${fontSize('base')} monospace`
 
   const name = 'words'
 

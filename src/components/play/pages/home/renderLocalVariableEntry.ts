@@ -1,7 +1,7 @@
 import { Value } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
-import themeFontMono from '../../theme/themeFontMono'
+import { fontSize } from '../../theme/fontSize'
 import { createSelectedValue } from './createSelectedValue'
 
 export function renderLocalVariableEntry(
@@ -18,8 +18,8 @@ export function renderLocalVariableEntry(
   const y = 0 + height * i + marginT
 
   state.ctx.font = state.breakpoints.md
-    ? themeFontMono('base')
-    : themeFontMono('sm')
+    ? `${fontSize('base')} monospace`
+    : `${fontSize('sm')} monospace`
 
   renderButton(state, '$' + name, x, y, {
     name: `locals.${name}`,

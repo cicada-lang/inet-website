@@ -1,6 +1,6 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
-import { themeFontSans } from '../../theme/themeFontSans'
+import { fontSize } from '../../theme/fontSize'
 import { selectNode } from './selectNode'
 
 export function renderNodeList(state: State): void {
@@ -10,8 +10,8 @@ export function renderNodeList(state: State): void {
   const marginT = height + 15
 
   state.ctx.font = state.breakpoints.md
-    ? themeFontSans('lg')
-    : themeFontSans('base')
+    ? `${fontSize('lg')} sans-serif`
+    : `${fontSize('base')} sans-serif`
 
   let i = 0
   for (const [name, definition] of state.mod.definitions) {

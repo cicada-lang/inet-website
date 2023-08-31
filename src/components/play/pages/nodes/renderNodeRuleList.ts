@@ -1,6 +1,6 @@
 import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
-import { themeFontSans } from '../../theme/themeFontSans'
+import { fontSize } from '../../theme/fontSize'
 import { SelectedNode } from './SelectedNode'
 import { selectRule } from './selectRule'
 
@@ -13,8 +13,8 @@ export function renderNodeRuleList(
   const height = 34
 
   state.ctx.font = state.breakpoints.md
-    ? themeFontSans('lg')
-    : themeFontSans('base')
+    ? `${fontSize('lg')} sans-serif`
+    : `${fontSize('base')} sans-serif`
 
   let i = 0
   for (const { name } of [...selectedNode.ruleEntries].reverse()) {
