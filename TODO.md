@@ -1,7 +1,11 @@
 # play
 
+[play] inline themeFontMono themeFontSans themeFontSerif
+[play] simple font
+[play] simple label
+[play] simple button
 [play] add label to locals
-[play] add label to nav
+[play] add label to definition
 [play] add label to type list
 [play] add label to node list
 [play] add label to word list

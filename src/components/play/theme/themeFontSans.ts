@@ -1,6 +1,6 @@
-import { formatFontSize } from './formatFontSize'
+import { fontSize } from './fontSize'
 
 export function themeFontSans(size: string): string {
-  const sizeText = formatFontSize(size)
+  const sizeText = fontSize(size)
   return `${sizeText} sans-serif`
 }

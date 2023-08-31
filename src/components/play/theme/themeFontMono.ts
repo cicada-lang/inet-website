@@ -1,6 +1,6 @@
-import { formatFontSize } from './formatFontSize'
+import { fontSize } from './fontSize'
 
 export default function themeFontMono(size: string): string {
-  const sizeText = formatFontSize(size)
+  const sizeText = fontSize(size)
   return `${sizeText} monospace`
 }
