@@ -14,7 +14,7 @@ export function renderButtonWord(
   const { height, marginT, paddingX } = options
 
   const lang = useGlobalLang()
-  const text = lang.isZh() ? `词` : `Word`
+  const text = lang.isZh() ? `词汇` : `Word`
 
   const x = state.width
   const y = height * 2 + marginT

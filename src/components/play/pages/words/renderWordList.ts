@@ -2,13 +2,16 @@ import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
+import { renderLabelWords } from './renderLabelWords'
 import { selectWord } from './selectWord'
 
 export function renderWordList(state: State): void {
+  renderLabelWords(state)
+
   state.ctx.save()
 
   const height = themeSize(10)
-  const marginT = height + themeSize(4)
+  const marginT = height * 2 + themeSize(4)
 
   state.ctx.font = state.breakpoints.md
     ? `${themeFontSize('lg')} monospace`
