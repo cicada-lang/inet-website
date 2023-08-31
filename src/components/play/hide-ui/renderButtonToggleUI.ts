@@ -11,7 +11,6 @@ export function renderButtonToggleUI(state: State): void {
   const showText = lang.isZh() ? `显示 UI` : `Show UI`
   const text = state.isHidingUI ? showText : hideText
 
-  const paddingX = themeSize(3)
   const height = themeSize(10)
 
   const x = state.width
@@ -24,7 +23,6 @@ export function renderButtonToggleUI(state: State): void {
   renderButton(state, text, x, y, {
     name: 'toggleUI',
     height,
-    paddingX,
     align: 'right',
     handler: (state) => {
       state.isHidingUI = !state.isHidingUI

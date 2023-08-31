@@ -23,7 +23,6 @@ export function renderWordList(state: State): void {
       renderButton(state, name, 0, marginT + height * i, {
         name: `words/${name}`,
         height,
-        paddingX: themeSize(3),
         isActive: (state) => state.selectedWord?.name === name,
         isDisabled: (state) => state.selectedWord?.name === name,
         handler: (state) => selectWord(state, name),

@@ -7,11 +7,10 @@ export function renderButtonWord(
   state: State,
   options: {
     height: number
-    paddingX: number
     marginT: number
   },
 ): void {
-  const { height, marginT, paddingX } = options
+  const { height, marginT } = options
 
   const lang = useGlobalLang()
   const text = lang.isZh() ? `词汇` : `Word`
@@ -28,7 +27,6 @@ export function renderButtonWord(
   renderButton(state, text, x, y, {
     name,
     height,
-    paddingX,
     align: 'right',
     isActive: (state) => state.currentRoute.name === name,
     handler: (state) => {

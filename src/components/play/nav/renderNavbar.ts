@@ -8,11 +8,10 @@ import { renderLabelDefinitions } from './renderLabelDefinitions'
 export function renderNavbar(state: State): void {
   const height = themeSize(10)
   const marginT = height * 2 + themeSize(4)
-  const paddingX = themeSize(3)
 
   renderLabelDefinitions(state)
 
-  renderButtonType(state, { height, marginT, paddingX })
-  renderButtonNode(state, { height, marginT, paddingX })
-  renderButtonWord(state, { height, marginT, paddingX })
+  renderButtonType(state, { height, marginT })
+  renderButtonNode(state, { height, marginT })
+  renderButtonWord(state, { height, marginT })
 }

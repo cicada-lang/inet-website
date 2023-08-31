@@ -6,7 +6,6 @@ import { renderLabel } from '../../utils/renderLabel'
 
 export function renderLabelRules(state: State, i: number): void {
   const height = themeSize(10)
-  const paddingX = themeSize(3)
 
   const lang = useGlobalLang()
 
@@ -20,6 +19,5 @@ export function renderLabelRules(state: State, i: number): void {
 
   renderLabel(state, text, x, y, {
     height,
-    paddingX,
   })
 }

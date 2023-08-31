@@ -1,11 +1,11 @@
 import { State } from '../State'
 import { Rect } from '../rect/Rect'
+import { themeSize } from '../theme/themeSize'
 import { withinRect } from './withinRect'
 
 type Options = {
   name: string
   height: number
-  paddingX: number
   align?: 'left' | 'right'
   noBorder?: boolean
   handler: (state: State) => void
@@ -23,7 +23,9 @@ export function renderButton(
   y: number,
   options: Options,
 ): void {
-  const { name, paddingX } = options
+  const { name } = options
+
+  const paddingX = themeSize(3)
 
   state.ctx.save()
 

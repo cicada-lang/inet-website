@@ -7,7 +7,6 @@ import { themeSize } from '../theme/themeSize'
 export function renderButtonBack(state: State): void {
   const lang = useGlobalLang()
   const text = lang.isZh() ? `返回` : `Back`
-  const paddingX = themeSize(3)
   const height = themeSize(10)
   const x = 0
   const y = 0
@@ -19,7 +18,6 @@ export function renderButtonBack(state: State): void {
   renderButton(state, text, x, y, {
     name: 'back',
     height,
-    paddingX,
     handler: (state) => {
       const path = state.history.pop()
       if (path) {

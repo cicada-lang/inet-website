@@ -12,7 +12,6 @@ export function renderLocalEntry(
   value: Value,
 ): void {
   const height = themeSize(10)
-  const paddingX = themeSize(3)
   const marginT = height * 2 + themeSize(4)
 
   const x = 0
@@ -25,7 +24,6 @@ export function renderLocalEntry(
   renderButton(state, '$' + name, x, y, {
     name: `locals.${name}`,
     height,
-    paddingX,
     isDisabled: (state) => name === state.selectedValue?.localName,
     isActive: (state) => name === state.selectedValue?.localName,
     handler: (state) => {

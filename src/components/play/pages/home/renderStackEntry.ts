@@ -10,10 +10,9 @@ export function renderStackEntry(
   value: Value,
   options: {
     height: number
-    paddingX: number
   },
 ): void {
-  const { height, paddingX } = options
+  const { height } = options
 
   const text = formatValue(value)
   const x = 0
@@ -26,7 +25,6 @@ export function renderStackEntry(
   renderButton(state, text, x, y, {
     name: `state[${i}]`,
     height,
-    paddingX,
     isDisabled: (state) => i === state.selectedValue?.stackIndex,
     isActive: (state) => i === state.selectedValue?.stackIndex,
     handler: (state) => {

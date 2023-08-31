@@ -8,10 +8,9 @@ export function renderLabelStack(
   i: number,
   options: {
     height: number
-    paddingX: number
   },
 ): void {
-  const { height, paddingX } = options
+  const { height } = options
 
   const lang = useGlobalLang()
 
@@ -25,6 +24,5 @@ export function renderLabelStack(
 
   renderLabel(state, text, x, y, {
     height,
-    paddingX,
   })
 }

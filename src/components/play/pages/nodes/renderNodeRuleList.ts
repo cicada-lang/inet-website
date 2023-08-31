@@ -12,7 +12,6 @@ export function renderNodeRuleList(
 ): void {
   state.ctx.save()
 
-  const marginTheight = themeSize(10)
   const height = themeSize(10)
 
   state.ctx.font = state.breakpoints.md
@@ -24,7 +23,6 @@ export function renderNodeRuleList(
     renderButton(state, name, 0, state.height - height - height * i, {
       name: `rules/${name}`,
       height,
-      paddingX: themeSize(3),
       isActive: (state) => state.selectedNode?.selectedRule?.name === name,
       isDisabled: (state) => state.selectedNode?.selectedRule?.name === name,
       handler: (state) => selectRule(state, selectedNode, name),

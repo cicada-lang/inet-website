@@ -23,7 +23,6 @@ export function renderTypeList(state: State): void {
       renderButton(state, name, 0, marginT + height * i, {
         name: `types/${name}`,
         height,
-        paddingX: themeSize(3),
         isActive: (state) => state.selectedType?.name === name,
         isDisabled: (state) => state.selectedType?.name === name,
         handler: (state) => selectType(state, name),

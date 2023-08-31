@@ -1,9 +1,9 @@
 import { State } from '../State'
 import { Rect } from '../rect/Rect'
+import { themeSize } from '../theme/themeSize'
 
 type Options = {
   height: number
-  paddingX: number
   align?: 'left' | 'right'
 }
 
@@ -17,7 +17,7 @@ export function renderLabel(
   y: number,
   options: Options,
 ): void {
-  const { paddingX } = options
+  const paddingX = themeSize(3)
 
   state.ctx.save()
 

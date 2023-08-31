@@ -23,7 +23,6 @@ export function renderNodeList(state: State): void {
       renderButton(state, name, 0, marginT + height * i, {
         name: `nodes/${name}`,
         height,
-        paddingX: themeSize(3),
         isActive: (state) => state.selectedNode?.name === name,
         isDisabled: (state) => state.selectedNode?.name === name,
         handler: (state) => selectNode(state, name),
