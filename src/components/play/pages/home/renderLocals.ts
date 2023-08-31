@@ -1,9 +1,9 @@
 import { State } from '../../State'
+import { renderLabelLocals } from './renderLabelLocals'
 import { renderLocalEntry } from './renderLocalEntry'
-import { renderLocalsLabel } from './renderLocalsLabel'
 
 export function renderLocals(state: State): void {
-  renderLocalsLabel(state)
+  renderLabelLocals(state)
 
   let i = 0
   for (const [name, value] of state.mod.env.locals.entries()) {

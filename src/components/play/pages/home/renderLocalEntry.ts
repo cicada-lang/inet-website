@@ -13,7 +13,7 @@ export function renderLocalEntry(
 ): void {
   const height = themeSize(10)
   const paddingX = themeSize(3)
-  const marginT = height * 2 + 15
+  const marginT = height * 2 + themeSize(4)
 
   const x = 0
   const y = 0 + height * i + marginT

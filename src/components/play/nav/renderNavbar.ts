@@ -6,7 +6,7 @@ import { renderButtonWord } from './renderButtonWord'
 
 export function renderNavbar(state: State): void {
   const height = themeSize(10)
-  const marginT = height + 15
+  const marginT = height + themeSize(4)
   const paddingX = themeSize(3)
 
   renderButtonType(state, { height, marginT, paddingX })

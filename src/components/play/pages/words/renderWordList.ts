@@ -8,7 +8,7 @@ export function renderWordList(state: State): void {
   state.ctx.save()
 
   const height = themeSize(10)
-  const marginT = height + 15
+  const marginT = height + themeSize(4)
 
   state.ctx.font = state.breakpoints.md
     ? `${themeFontSize('lg')} monospace`

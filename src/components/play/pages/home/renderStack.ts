@@ -1,7 +1,7 @@
 import { State } from '../../State'
 import { themeSize } from '../../theme/themeSize'
+import { renderLabelStack } from './renderLabelStack'
 import { renderStackEntry } from './renderStackEntry'
-import { renderStackLabel } from './renderStackLabel'
 
 export function renderStack(state: State): void {
   const height = themeSize(10)
@@ -11,5 +11,5 @@ export function renderStack(state: State): void {
     renderStackEntry(state, i, value, { height, paddingX })
   }
 
-  renderStackLabel(state, state.mod.env.stack.length, { height, paddingX })
+  renderLabelStack(state, state.mod.env.stack.length, { height, paddingX })
 }

@@ -1,23 +1,18 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
 import { themeFontSize } from '../../theme/themeFontSize'
+import { themeSize } from '../../theme/themeSize'
 import { renderLabel } from '../../utils/renderLabel'
 
-export function renderStackLabel(
-  state: State,
-  i: number,
-  options: {
-    height: number
-    paddingX: number
-  },
-): void {
-  const { height, paddingX } = options
+export function renderLabelLocals(state: State): void {
+  const height = themeSize(10)
+  const paddingX = themeSize(3)
 
   const lang = useGlobalLang()
 
-  const text = lang.isZh() ? '栈' : 'Stack'
+  const text = lang.isZh() ? '局部变元' : 'Locals'
   const x = 0
-  const y = state.height - height * (i + 1)
+  const y = height + themeSize(4)
 
   state.ctx.font = state.breakpoints.md
     ? `bold ${themeFontSize('lg')} monospace`
