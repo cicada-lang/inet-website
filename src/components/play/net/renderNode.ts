@@ -1,6 +1,8 @@
 import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
+import { withinRect } from '../button/withinRect'
 import { selectNode } from '../pages/nodes/selectNode'
+import { Rect } from '../rect/Rect'
 import { themeFontSize } from '../theme/themeFontSize'
 import { renderClickableArea } from '../utils/renderClickableArea'
 
@@ -32,10 +34,18 @@ export function renderNode(
   const boxX = x - boxWidth / 2
   const boxY = y - boxHeight / 2
 
+  const rect: Rect = [boxX, boxY, boxWidth, boxHeight]
   state.ctx.beginPath()
-  state.ctx.clearRect(boxX, boxY, boxWidth, boxHeight)
-  state.ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 8)
+  state.ctx.clearRect(...rect)
+  state.ctx.roundRect(...rect, 8)
   state.ctx.stroke()
+
+  if (withinRect(rect, state.mouse.position)) {
+    state.ctx.beginPath()
+    state.ctx.lineWidth = 1.5
+    state.ctx.roundRect(boxX - 4, boxY - 4, boxWidth + 8, boxHeight + 8, 12)
+    state.ctx.stroke()
+  }
 
   state.ctx.fillText(text, x, y)
 
