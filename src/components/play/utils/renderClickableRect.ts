@@ -13,7 +13,7 @@ type Options = {
 // Can not be used after transform,
 // because we need to record rect.
 
-export function renderClickableArea(
+export function renderClickableRect(
   state: State,
   x: number,
   y: number,

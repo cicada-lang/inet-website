@@ -4,7 +4,7 @@ import { withinRect } from '../button/withinRect'
 import { selectNode } from '../pages/nodes/selectNode'
 import { Rect } from '../rect/Rect'
 import { themeFontSize } from '../theme/themeFontSize'
-import { renderClickableArea } from '../utils/renderClickableArea'
+import { renderClickableRect } from '../utils/renderClickableRect'
 
 export function renderNode(
   state: State,
@@ -51,7 +51,7 @@ export function renderNode(
 
   const key = nodeKey(nodeEntry)
 
-  renderClickableArea(state, boxX, boxY, {
+  renderClickableRect(state, boxX, boxY, {
     name: `nodes/${key}`,
     width: boxWidth,
     height: boxHeight,
