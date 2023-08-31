@@ -6,7 +6,7 @@ type Options = {
   height: number
   paddingX: number
   align?: 'left' | 'right'
-  withBorder?: boolean
+  noBorder?: boolean
   handler: (state: State) => void
   isActive?: (state: State) => void
   isDisabled?: (state: State) => void
@@ -45,7 +45,7 @@ export function renderButton(
   const rect: Rect = [x, y, width, height]
   state.ctx.clearRect(...rect)
   state.ctx.lineWidth = 1
-  if (options.withBorder) {
+  if (!options.noBorder) {
     state.ctx.strokeRect(...rect)
   }
 

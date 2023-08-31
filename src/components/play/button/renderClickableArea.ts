@@ -5,7 +5,7 @@ type Options = {
   name: string
   height: number
   width: number
-  withBorder?: boolean
+  noBorder?: boolean
   handler: (state: State) => void
   isDisabled?: (state: State) => void
 }
@@ -29,7 +29,7 @@ export function renderClickableArea(
 
   const rect: Rect = [x, y, width, height]
 
-  if (options.withBorder) {
+  if (options.noBorder) {
     state.ctx.lineWidth = 1
     state.ctx.strokeRect(...rect)
   }

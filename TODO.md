@@ -1,6 +1,5 @@
 # play
 
-[play] simple button
 [play] add label to locals
 [play] add label to definition
 [play] add label to type list
