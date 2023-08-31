@@ -3,7 +3,7 @@ import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
 
-export function renderButtonTypes(
+export function renderButtonWord(
   state: State,
   options: {
     height: number
@@ -14,16 +14,16 @@ export function renderButtonTypes(
   const { height, marginT, paddingX } = options
 
   const lang = useGlobalLang()
-  const text = lang.isZh() ? `类型` : `Types`
+  const text = lang.isZh() ? `词` : `Word`
 
   const x = state.width
-  const y = 0 + marginT
+  const y = height * 2 + marginT
 
   state.ctx.font = state.breakpoints.md
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  const name = 'types'
+  const name = 'words'
 
   renderButton(state, text, x, y, {
     name,

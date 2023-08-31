@@ -3,7 +3,7 @@ import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
 
-export function renderButtonNodes(
+export function renderButtonNode(
   state: State,
   options: {
     height: number
@@ -14,7 +14,7 @@ export function renderButtonNodes(
   const { height, marginT, paddingX } = options
 
   const lang = useGlobalLang()
-  const text = lang.isZh() ? `节点` : `Nodes`
+  const text = lang.isZh() ? `节点` : `Node`
 
   const x = state.width
   const y = height + marginT

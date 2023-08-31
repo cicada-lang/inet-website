@@ -1,11 +1,11 @@
 # play
 
-[play] add label to locals
-[play] add label to definition
-[play] add label to type list
-[play] add label to node list
-[play] add label to word list
-[play] add label to rule list
+[play] add label to Locals
+[play] add label to Definitions
+[play] add label to Types
+[play] add label to Nodes
+[play] add label to Words
+[play] add label to Rules
 
 [play] hover an node show highlight
 
