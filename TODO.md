@@ -1,20 +1,21 @@
 # play
 
-[play] add label to Definitions
-[play] add label to Types
-[play] add label to Nodes
-[play] add label to Words
-[play] add label to Rules
+[play] `renderLabelDefinitions`
+[play] `renderLabelTypes`
+[play] `renderLabelNodes`
+[play] `renderLabelWords`
+[play] `renderLabelRules`
 
-[play] hover an node show highlight
+[play] hover a button show highlight
+[play] hover a node show highlight
 
 [play] hover an edge make the edge longer -- to practice movement along a line
 
-- reset `maximumSteps` or quit using `maximumSteps`
+- need to reset `maximumSteps`
+
+  - [maybe] quit using `maximumSteps`
 
 [play] `NetRendering` use circle instead of box as boundary
-
-[play] keyboard -- esc to go back
 
 [play] `renderSelectedNode` -- add a button to only present current rule
 

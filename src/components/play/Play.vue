@@ -3,6 +3,7 @@ import { Mod } from '@cicada-lang/inet'
 import { onMounted, ref, watch } from 'vue'
 import { State } from './State'
 import { createState } from './createState'
+import { listenKeyboard } from './keyboard/listenKeyboard'
 import { trackMouse } from './mouse/trackMouse'
 import { renderLoop } from './renderLoop'
 import { resizeCanvas } from './resizeCanvas'
@@ -27,6 +28,7 @@ onMounted(() => {
 
     resizeCanvas(state.value)
     trackMouse(state.value)
+    listenKeyboard(state.value)
     stateRefresh(state.value)
     renderLoop(state.value)
   }
