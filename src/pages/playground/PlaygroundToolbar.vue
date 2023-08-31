@@ -42,11 +42,9 @@ async function share() {
 </script>
 
 <template>
-  <div
-    class="border-b flex dark:border-white border-black px-3 py-2 justify-end space-x-4"
-  >
+  <div class="border-b flex dark:border-white border-black justify-end">
     <button
-      class="text-xl hover:underline underline-offset-4 decoration-2"
+      class="text-xl hover:underline underline-offset-4 px-3 py-2 decoration-2 border-l border-black dark:border-white"
       @click="run()"
     >
       <Lang class="inline">
@@ -62,7 +60,7 @@ async function share() {
     </button>
 
     <button
-      class="text-xl hover:underline underline-offset-4 decoration-2"
+      class="text-xl px-3 py-2 hover:underline underline-offset-4 decoration-2 border-l border-black dark:border-white"
       @click="share()"
     >
       <Lang>
