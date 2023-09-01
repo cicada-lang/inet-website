@@ -18,5 +18,9 @@ export function runGivenEdge(
 
   const [activeEdge] = net.activeEdges.splice(index, 1)
 
+  // TODO Can not just pass the `givenEdge` to `runActiveEdge`,
+  //   must pass the original `activeEdge` from `net.activeEdges`,
+  //   this should not be, but I do not know why.
+
   runActiveEdge(state, rendering, activeEdge)
 }
