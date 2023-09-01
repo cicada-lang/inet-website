@@ -1,6 +1,5 @@
 # play
 
-[play] move `NetRendering` to `net/`
 [play] `NetRendering` has `hoverableEdges` and `hoveredEdge`
 
 [play] hover an edge make the edge longer -- to practice movement along a line

@@ -1,6 +1,6 @@
 import { allEdges, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
-import { NetRendering } from '../net-rendering/NetRendering'
+import { NetRendering } from '../net/NetRendering'
 import { renderCap } from './renderCap'
 import { renderEdge } from './renderEdge'
 import { renderNode } from './renderNode'

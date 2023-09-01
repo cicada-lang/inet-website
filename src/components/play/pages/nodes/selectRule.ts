@@ -1,7 +1,7 @@
 import { presentRuleAsNets } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { createRandomNetLayout } from '../../net-layout/createRandomNetLayout'
-import { createNetRendering } from '../../net-rendering/createNetRendering'
+import { createNetRendering } from '../../net/createNetRendering'
+import { createRandomNetLayout } from '../../net/createRandomNetLayout'
 import { SelectedNode } from './SelectedNode'
 
 export function selectRule(

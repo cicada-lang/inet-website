@@ -1,7 +1,7 @@
 import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
 import { withinRect } from '../button/withinRect'
-import { NetRendering } from '../net-rendering/NetRendering'
+import { NetRendering } from '../net/NetRendering'
 import { selectNode } from '../pages/nodes/selectNode'
 import { Rect } from '../rect/Rect'
 import { themeFontSize } from '../theme/themeFontSize'

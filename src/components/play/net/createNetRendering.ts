@@ -1,5 +1,5 @@
 import { Net } from '@cicada-lang/inet'
-import { NetLayout } from '../net-layout/NetLayout'
+import { NetLayout } from '../net/NetLayout'
 import { NetRendering } from './NetRendering'
 
 export function createNetRendering(net: Net, layout: NetLayout): NetRendering {

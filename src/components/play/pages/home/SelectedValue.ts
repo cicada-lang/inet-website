@@ -1,5 +1,5 @@
 import { Port, Value } from '@cicada-lang/inet'
-import { NetRendering } from '../../net-rendering/NetRendering'
+import { NetRendering } from '../../net/NetRendering'
 
 export type SelectedValue = (SelectedValuePort | SelectedValueGeneric) & {
   stackIndex?: number

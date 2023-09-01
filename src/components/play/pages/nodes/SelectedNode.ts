@@ -1,6 +1,6 @@
 import { NodeDefinition } from '@cicada-lang/inet'
 import { RuleEntry } from '@cicada-lang/inet/lib/lang/mod/RuleEntry'
-import { NetRendering } from '../../net-rendering/NetRendering'
+import { NetRendering } from '../../net/NetRendering'
 import { SelectedRule } from './SelectedRule'
 
 export type SelectedNode = {
