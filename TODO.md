@@ -1,17 +1,10 @@
 # play
 
-[play] `net/runOneEdge`
-[play] `net/runAllSteps`
-
 [play] `NetRendering` rename `step` to `evolvingStep`
-[play] `NetRendering` as `runningStep`
+[play] `NetRendering` has `runningStep`
+[play] `renderSelectedNet` -- show step counter
 
-[play] `renderButtonRun`
-
-[play] `renderSelectedNet` -- support `Step` button
-[play] `renderSelectedNet` -- add step counter
-[play] `renderSelectedNet` -- support `Run` button
-
+[play] `net/runOneEdge`
 [play] `renderNet` -- support click an active edge to run one step
 
 [play] `renderStack` -- with scrollbar -- show number of entries
