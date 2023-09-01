@@ -46,7 +46,7 @@ watch(
 </script>
 
 <template>
-  <div class="h-full w-full" ref="containerElement">
+  <div class="h-full w-full overflow-hidden" ref="containerElement">
     <canvas
       @click="canvasElement?.focus()"
       tabindex="1"
