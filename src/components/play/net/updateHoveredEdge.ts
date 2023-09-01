@@ -2,7 +2,7 @@ import { NetRendering } from './NetRendering'
 
 export function updateHoveredEdge(rendering: NetRendering): void {
   rendering.hoveredEdge = undefined
-  let distance = Infinity
+  let distance = 4
   for (const [key, hoverableEdge] of rendering.hoverableEdges) {
     if (hoverableEdge.distance < distance) {
       rendering.hoveredEdge = hoverableEdge

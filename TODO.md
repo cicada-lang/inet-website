@@ -1,8 +1,6 @@
 # play
 
-[play] `renderEdge` hover an edge make the edge longer -- to practice movement along a line
-
-- need to reset `step`
+[play] `NetRendering` has `hoveredNode`
 
 [play] `renderSelectedNode` -- add a button to only present current rule
 

@@ -16,11 +16,23 @@ export function renderEdge(
     position: [number, number]
   },
 ): void {
+  const id = formatEdge({ first: first.port, second: second.port })
+
+  const distance = edgeDistance(
+    first.position,
+    second.position,
+    state.mouse.position,
+  )
+
+  rendering.hoverableEdges.set(id, { id, distance, first, second })
+
+  const isHovered = id === rendering.hoveredEdge?.id
+
   state.ctx.save()
 
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
-  state.ctx.lineWidth = 1.3
+  state.ctx.lineWidth = isHovered ? 3 : 1.3
 
   if (first.port.isPrincipal && second.port.isPrincipal) {
     if (state.theme.name === 'dark') {
@@ -29,7 +41,7 @@ export function renderEdge(
       state.ctx.strokeStyle = colors.rose[500]
     }
 
-    state.ctx.lineWidth = 2
+    state.ctx.lineWidth = isHovered ? 4 : 2
   }
 
   if (first.port.isPrincipal && !second.port.isPrincipal) {
@@ -51,7 +63,7 @@ export function renderEdge(
     }
 
     state.ctx.strokeStyle = gradient
-    state.ctx.lineWidth = 1.3
+    state.ctx.lineWidth = isHovered ? 3 : 1.3
   }
 
   if (!first.port.isPrincipal && second.port.isPrincipal) {
@@ -73,7 +85,7 @@ export function renderEdge(
     }
 
     state.ctx.strokeStyle = gradient
-    state.ctx.lineWidth = 1.3
+    state.ctx.lineWidth = isHovered ? 3 : 1.3
   }
 
   state.ctx.beginPath()
@@ -82,14 +94,4 @@ export function renderEdge(
   state.ctx.stroke()
 
   state.ctx.restore()
-
-  const key = formatEdge({ first: first.port, second: second.port })
-
-  const distance = edgeDistance(
-    first.position,
-    second.position,
-    state.mouse.position,
-  )
-
-  rendering.hoverableEdges.set(key, { distance, first, second })
 }
