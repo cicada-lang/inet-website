@@ -1,4 +1,4 @@
-import { Edge } from '@cicada-lang/inet'
+import { Edge, formatEdge } from '@cicada-lang/inet'
 import { createEnv } from '@cicada-lang/inet/lib/lang/env'
 import { interact } from '@cicada-lang/inet/lib/lang/interact'
 import { closeAllFreePorts } from '@cicada-lang/inet/lib/lang/run/closeAllFreePorts'
@@ -31,7 +31,13 @@ export function runActiveEdge(
   }
 
   if (deletedNodePositions.length === 0) {
-    return
+    throw new Error(
+      [
+        `[runActiveEdge] I expect two deleted node after one interaction.`,
+        ``,
+        `  activeEdge: ${formatEdge(activeEdge)}`,
+      ].join('\n'),
+    )
   }
 
   const [maxX, maxY] = vectorMax(deletedNodePositions)
