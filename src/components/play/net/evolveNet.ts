@@ -5,13 +5,13 @@ import { NetLayout } from '../net/NetLayout'
 import { NetRendering } from '../net/NetRendering'
 
 export function evolveNet(state: State, rendering: NetRendering): void {
-  const { net, layout, step, maximumStep } = rendering
+  const { net, layout, evolvingStep, maximumStep } = rendering
 
-  if (step > maximumStep) {
+  if (evolvingStep > maximumStep) {
     return
   }
 
-  rendering.step++
+  rendering.evolvingStep++
 
   const coolingFactor = 0.999
 
@@ -24,15 +24,15 @@ export function evolveNet(state: State, rendering: NetRendering): void {
 
     const springForce = springForces.get(nodeId)
     if (springForce) {
-      position[0] += springForce[0] * coolingFactor ** step
-      position[1] += springForce[1] * coolingFactor ** step
+      position[0] += springForce[0] * coolingFactor ** evolvingStep
+      position[1] += springForce[1] * coolingFactor ** evolvingStep
       boundPosition(position, layout)
     }
 
     const electricalForce = electricalForces.get(nodeId)
     if (electricalForce) {
-      position[0] += electricalForce[0] * coolingFactor ** step
-      position[1] += electricalForce[1] * coolingFactor ** step
+      position[0] += electricalForce[0] * coolingFactor ** evolvingStep
+      position[1] += electricalForce[1] * coolingFactor ** evolvingStep
       boundPosition(position, layout)
     }
   }

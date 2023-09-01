@@ -42,5 +42,5 @@ export function runOneStep(state: State, rendering: NetRendering): void {
     }
   }
 
-  rendering.step = 0
+  rendering.evolvingStep = 0
 }

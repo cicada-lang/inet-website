@@ -1,6 +1,5 @@
 # play
 
-[play] `NetRendering` rename `step` to `evolvingStep`
 [play] `NetRendering` has `runningStep`
 [play] `renderSelectedNet` -- show step counter
 

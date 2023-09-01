@@ -6,7 +6,7 @@ import { HoverableNode } from './HoverableNode'
 export type NetRendering = {
   net: Net
   layout: NetLayout
-  step: number
+  evolvingStep: number
   maximumStep: number
   hoverableEdges: Map<string, HoverableEdge>
   hoveredEdge?: HoverableEdge
