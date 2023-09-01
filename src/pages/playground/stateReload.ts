@@ -1,4 +1,4 @@
-import { ParsingError, Report, createMod, parseStmts } from '@cicada-lang/inet'
+import { ParsingError, Report } from '@cicada-lang/inet'
 import { State } from './State'
 
 export async function stateReload(state: State): Promise<void> {
@@ -10,19 +10,11 @@ export async function stateReload(state: State): Promise<void> {
     state.output += '\n'
   }
 
-  state.mod = createMod({
-    loader: state.mod.loader,
-    url: state.mod.url,
-    text: state.text,
-    stmts: [],
-  })
-
   try {
-    state.mod.stmts = parseStmts(state.text)
-
-    for (const stmt of state.mod.stmts) {
-      await stmt.execute(state.mod)
-    }
+    state.mod.loader.loaded.delete(state.mod.url.href)
+    state.mod = await state.mod.loader.load(state.mod.url, {
+      text: state.text,
+    })
 
     // NOTE After async execution, update `tick`
     // for `Play` component to refresh state.
