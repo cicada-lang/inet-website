@@ -1,7 +1,5 @@
 # play
 
-[play] `renderLabelInteract`
-
 [play] `net/runOneEdge`
 [play] `net/runAllSteps`
 
