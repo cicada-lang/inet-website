@@ -14,9 +14,9 @@
 
 [play] `forces/` -- a button to introduce gravity and fix root node
 
-# maybe
+# playground tabs
 
-[maybe] [playground] support tabs
+[playground] support tabs
 
 # bug
 
