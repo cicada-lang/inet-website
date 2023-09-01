@@ -1,5 +1,3 @@
-[home] link to playground
-
 # play
 
 [play] be able to fix show list of imported node

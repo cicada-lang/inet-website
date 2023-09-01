@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Base64 } from 'js-base64'
 import { onMounted, ref } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import Play from '../../components/play/Play.vue'
@@ -20,8 +21,8 @@ onMounted(async () => {
 
 <template>
   <PageLayout>
-    <div class="flex flex-col p-3">
-      <div class="w-full flex flex-col md:max-w-[64rem] self-center px-6 py-20">
+    <div class="flex flex-col py-3">
+      <div class="w-full flex flex-col md:max-w-[64rem] self-center px-3 py-20">
         <div class="text-7xl text-blance font-bold">iNet</div>
         <div class="text-4xl text-blance pt-2">
           <Lang>
@@ -32,7 +33,7 @@ onMounted(async () => {
       </div>
 
       <div
-        class="px-6 flex md:flex-row flex-col md:max-w-[64rem] my-12 w-full self-center"
+        class="px-3 flex md:flex-row flex-col md:max-w-[64rem] mt-12 w-full self-center"
       >
         <div class="md:w-1/3 border-2 border-black dark:border-white">
           <pre
@@ -41,14 +42,30 @@ onMounted(async () => {
           >
         </div>
 
-        <div class="md:px-3 md:py-0 py-3 md:w-2/3">
+        <div class="md:pl-3 md:py-0 pt-3 md:w-2/3">
           <div class="flex h-full border border-black dark:border-white">
-            <Play v-if="state" :mod="state.mod" :tick="0" />
+            <Play
+              class="md:min-h-full min-h-[32rem]"
+              v-if="state"
+              :mod="state.mod"
+              :tick="0"
+            />
           </div>
         </div>
       </div>
 
-      <div class="w-full md:max-w-[64rem] flex px-6 pt-10 self-center">
+      <div
+        class="w-full md:max-w-[64rem] flex flex-col px-3 pt-1 items-end self-center"
+      >
+        <RouterLink :to="`/playground/${Base64.encode(code)}`">
+          <Lang class="md:text-lg text-base hover:underline">
+            <template #zh> 去演算场 </template>
+            <template #en> Goto The Playground </template>
+          </Lang>
+        </RouterLink>
+      </div>
+
+      <div class="w-full md:max-w-[64rem] flex px-3 pt-10 self-center">
         <div class="md:w-1/3"></div>
 
         <div class="w-full md:w-2/3">
@@ -79,7 +96,7 @@ onMounted(async () => {
       </div>
 
       <div
-        class="w-full space-y-6 md:max-w-[64rem] flex flex-col items-start px-6 md:pt-4 pt-3 self-center"
+        class="w-full space-y-6 md:max-w-[64rem] flex flex-col items-start px-3 md:pt-4 pt-3 self-center"
       >
         <div
           v-for="{ name, examples, title } of sections"
