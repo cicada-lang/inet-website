@@ -16,6 +16,7 @@ export function renderNet(state: State, rendering: NetRendering): void {
 
     renderEdge(
       state,
+      rendering,
       { port: edge.first, position: firstPosition },
       { port: edge.second, position: secondPosition },
     )
@@ -26,9 +27,9 @@ export function renderNet(state: State, rendering: NetRendering): void {
     if (position === undefined) continue
 
     if (nodeEntry.asTypeCap || nodeEntry.asPortCap) {
-      renderCap(state, nodeEntry, position)
+      renderCap(state, rendering, nodeEntry, position)
     } else {
-      renderNode(state, nodeEntry, position)
+      renderNode(state, rendering, nodeEntry, position)
     }
   }
 }

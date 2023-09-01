@@ -1,5 +1,9 @@
 # play
 
+[play] `HoverableEdge`
+
+[play] `NetRendering` has `hoverableEdges` and `hoveredEdge`
+
 [play] hover an edge make the edge longer -- to practice movement along a line
 
 - need to reset `step`

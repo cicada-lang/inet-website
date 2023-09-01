@@ -1,6 +1,7 @@
 import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
 import { withinRect } from '../button/withinRect'
+import { NetRendering } from '../net-rendering/NetRendering'
 import { selectNode } from '../pages/nodes/selectNode'
 import { Rect } from '../rect/Rect'
 import { themeFontSize } from '../theme/themeFontSize'
@@ -8,6 +9,7 @@ import { renderClickableRect } from '../utils/renderClickableRect'
 
 export function renderNode(
   state: State,
+  rendering: NetRendering,
   nodeEntry: NodeEntry,
   [x, y]: [number, number],
 ): void {

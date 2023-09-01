@@ -1,9 +1,11 @@
 import { Port } from '@cicada-lang/inet'
 import colors from 'tailwindcss/colors'
 import { State } from '../State'
+import { NetRendering } from '../net-rendering/NetRendering'
 
 export function renderEdge(
   state: State,
+  rendering: NetRendering,
   first: {
     port: Port
     position: [number, number]
