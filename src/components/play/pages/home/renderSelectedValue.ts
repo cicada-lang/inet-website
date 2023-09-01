@@ -1,6 +1,6 @@
 import { State } from '../../State'
-import { renderNet } from '../../net/renderNet'
 import { SelectedValue } from './SelectedValue'
+import { renderSelectedNet } from './renderSelectedNet'
 import { renderValue } from './renderValue'
 
 export function renderSelectedValue(
@@ -8,7 +8,7 @@ export function renderSelectedValue(
   selectedValue: SelectedValue,
 ): void {
   if (selectedValue['@kind'] === 'SelectedValuePort') {
-    renderNet(state, selectedValue.rendering)
+    renderSelectedNet(state, selectedValue.port, selectedValue.rendering)
   } else {
     renderValue(state, selectedValue.value)
   }
