@@ -10,5 +10,7 @@ export function renderStack(state: State): void {
     renderStackEntry(state, i, value, { height })
   }
 
-  renderLabelStack(state, state.mod.env.stack.length, { height })
+  if (state.mod.env.stack.length > 0) {
+    renderLabelStack(state, state.mod.env.stack.length, { height })
+  }
 }

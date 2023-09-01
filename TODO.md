@@ -2,11 +2,7 @@
 
 [play] hover an edge make the edge longer -- to practice movement along a line
 
-- need to reset `maximumSteps`
-
-  - [maybe] quit using `maximumSteps`
-
-[play] `NetRendering` use circle instead of box as boundary
+- need to reset `step`
 
 [play] `renderSelectedNode` -- add a button to only present current rule
 
@@ -16,6 +12,8 @@
 [play] `renderSelectedValue` -- support click an active edge to run one step
 
 [play] `renderNet` -- scale by number of nodes
+
+[play] `NetRendering` use circle instead of box as boundary
 
 [play] `renderStack` -- with scrollbar -- show number of entries
 [play] `renderLocals` -- with scrollbar -- show number of of entries
@@ -33,3 +31,7 @@
 [maybe] `components/utils/Await` -- #then #catch
 
 [maybe] [playground] support tabs
+
+# bug
+
+[play] fix mouse touch on mobile

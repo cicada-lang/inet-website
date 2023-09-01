@@ -3,7 +3,9 @@ import { renderLabelLocals } from './renderLabelLocals'
 import { renderLocalEntry } from './renderLocalEntry'
 
 export function renderLocals(state: State): void {
-  renderLabelLocals(state)
+  if (state.mod.env.locals.size > 0) {
+    renderLabelLocals(state)
+  }
 
   let i = 0
   for (const [name, value] of state.mod.env.locals.entries()) {
