@@ -7,11 +7,10 @@ export function updateHoveredEdge(rendering: NetRendering): void {
   }
 
   rendering.hoveredEdge = undefined
-  let distance = 4
+  const distance = 6
   for (const [key, hoverableEdge] of rendering.hoverableEdges) {
     if (hoverableEdge.distance < distance) {
       rendering.hoveredEdge = hoverableEdge
-      distance = hoverableEdge.distance
     }
   }
 }

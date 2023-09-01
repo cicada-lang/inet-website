@@ -35,14 +35,14 @@ onMounted(async () => {
       <div
         class="px-3 flex md:flex-row flex-col md:max-w-[64rem] mt-12 w-full self-center"
       >
-        <div class="md:w-1/3 border-2 border-black dark:border-white">
+        <div class="md:w-1/3 border-2 border-black dark:border-white md:mr-3">
           <pre
             class="md:p-6 p-4 md:text-lg text-base whitespace-pre font-code"
             >{{ codeFragment }}</pre
           >
         </div>
 
-        <div class="md:pl-3 md:py-0 pt-3 md:w-2/3">
+        <div class="md:py-0 pt-3 md:w-2/3">
           <div class="flex h-full border border-black dark:border-white">
             <Play
               class="md:min-h-full min-h-[32rem]"
