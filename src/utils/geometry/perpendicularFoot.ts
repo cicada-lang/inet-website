@@ -7,10 +7,6 @@ export function perpendicularFoot(
     return [x0, y]
   }
 
-  if (y0 === y1) {
-    return [x, y0]
-  }
-
   const h = (y1 - y0) / (x1 - x0)
   const x2 = (x + h * h * x0 + h * y - h * y0) / (1 + h * h)
   const y2 = h * (x2 - x0) + y0
