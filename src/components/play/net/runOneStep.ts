@@ -22,6 +22,8 @@ export function runOneStep(state: State, rendering: NetRendering): void {
   interact(env, activeEdge, {})
   releaseCapPorts(net, capForFreePorts)
 
+  rendering.runningStep++
+
   const deletedNodePositions = []
   for (const [key, position] of layout.nodePositions) {
     if (!net.nodeEntries.has(key)) {

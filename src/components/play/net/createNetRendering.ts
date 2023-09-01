@@ -7,7 +7,8 @@ export function createNetRendering(net: Net, layout: NetLayout): NetRendering {
     net,
     layout,
     evolvingStep: 0,
-    maximumStep: 1000,
+    evolvingStepMaximum: 1000,
+    runningStep: 0,
     hoverableEdges: new Map(),
   }
 }

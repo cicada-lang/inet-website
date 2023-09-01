@@ -1,8 +1,5 @@
 # play
 
-[play] `NetRendering` has `runningStep`
-[play] `renderSelectedNet` -- show step counter
-
 [play] `net/runOneEdge`
 [play] `renderNet` -- support click an active edge to run one step
 
