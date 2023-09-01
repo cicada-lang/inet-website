@@ -1,14 +1,14 @@
 # play
 
+[play] `renderLabelInteract`
+
 [play] `net/runOneEdge`
 [play] `net/runAllSteps`
 
 [play] `NetRendering` rename `step` to `evolvingStep`
 [play] `NetRendering` as `runningStep`
 
-[play] `renderButtonStep`
 [play] `renderButtonRun`
-[play] `renderLabelInteract`
 
 [play] `renderSelectedNet` -- support `Step` button
 [play] `renderSelectedNet` -- add step counter

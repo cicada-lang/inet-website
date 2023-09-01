@@ -2,6 +2,7 @@ import { Port } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { NetRendering } from '../../net/NetRendering'
 import { renderNet } from '../../net/renderNet'
+import { renderButtonStep } from './renderButtonStep'
 
 export function renderSelectedNet(
   state: State,
@@ -9,4 +10,5 @@ export function renderSelectedNet(
   rendering: NetRendering,
 ): void {
   renderNet(state, rendering)
+  renderButtonStep(state, rendering)
 }
