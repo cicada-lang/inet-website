@@ -41,7 +41,7 @@ export function renderEdge(
       state.ctx.strokeStyle = colors.rose[500]
     }
 
-    state.ctx.lineWidth = isHovered ? 4 : 2
+    state.ctx.lineWidth = isHovered ? 6 : 3
   }
 
   if (first.port.isPrincipal && !second.port.isPrincipal) {
@@ -63,7 +63,7 @@ export function renderEdge(
     }
 
     state.ctx.strokeStyle = gradient
-    state.ctx.lineWidth = isHovered ? 3 : 1.3
+    state.ctx.lineWidth = isHovered ? 4 : 1.3
   }
 
   if (!first.port.isPrincipal && second.port.isPrincipal) {
@@ -85,7 +85,7 @@ export function renderEdge(
     }
 
     state.ctx.strokeStyle = gradient
-    state.ctx.lineWidth = isHovered ? 3 : 1.3
+    state.ctx.lineWidth = isHovered ? 4 : 1.3
   }
 
   state.ctx.beginPath()

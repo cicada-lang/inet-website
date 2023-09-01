@@ -29,6 +29,7 @@ export function renderLocalEntry(
     handler: (state) => {
       state.selectedValue = createSelectedValue(state, value)
       state.selectedValue.localName = name
+      state.selectedValue.stackIndex = undefined
     },
   })
 }
