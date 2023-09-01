@@ -81,4 +81,6 @@ export function renderEdge(
   state.ctx.stroke()
 
   state.ctx.restore()
+
+  // rendering.hoverableEdges.set()
 }

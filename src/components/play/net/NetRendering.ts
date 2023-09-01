@@ -7,6 +7,6 @@ export type NetRendering = {
   layout: NetLayout
   step: number
   maximumStep: number
-  hoverableEdges: Array<HoverableEdge>
+  hoverableEdges: Map<string, HoverableEdge>
   hoveredEdge?: HoverableEdge
 }
