@@ -1,7 +1,5 @@
 # play
 
-[play] `renderEdge` -- click an active edge call `runGivenEdge`
-
 [play] `renderStack` -- with scrollbar -- show number of entries
 [play] `renderLocals` -- with scrollbar -- show number of of entries
 

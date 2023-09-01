@@ -22,14 +22,16 @@ export function runActiveEdge(
   interact(env, activeEdge, {})
   releaseCapPorts(net, capForFreePorts)
 
-  rendering.runningStep++
-
   const deletedNodePositions = []
   for (const [key, position] of layout.nodePositions) {
     if (!net.nodeEntries.has(key)) {
       layout.nodePositions.delete(key)
       deletedNodePositions.push(position)
     }
+  }
+
+  if (deletedNodePositions.length === 0) {
+    return
   }
 
   const [maxX, maxY] = vectorMax(deletedNodePositions)
@@ -44,5 +46,6 @@ export function runActiveEdge(
     }
   }
 
+  rendering.runningStep++
   rendering.evolvingStep = 0
 }

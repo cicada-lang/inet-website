@@ -16,7 +16,7 @@ export function runGivenEdge(
     return
   }
 
-  net.activeEdges.splice(index, 1)
+  const [activeEdge] = net.activeEdges.splice(index, 1)
 
-  runActiveEdge(state, rendering, givenEdge)
+  runActiveEdge(state, rendering, activeEdge)
 }

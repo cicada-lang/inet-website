@@ -94,13 +94,4 @@ export function renderEdge(
   state.ctx.stroke()
 
   state.ctx.restore()
-
-  if (first.port.isPrincipal && second.port.isPrincipal) {
-    if (isHovered && state.mouse.isDown) {
-      // runGivenEdge(state, rendering, {
-      //   first: first.port,
-      //   second: second.port,
-      // })
-    }
-  }
 }
