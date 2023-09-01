@@ -15,11 +15,7 @@ export async function loadState(options: StateOptions): Promise<State> {
   const mod = await loader.load(url, { text })
 
   return {
-    kind: 'Play',
     text,
     mod,
-    output: '',
-    errorMessage: '',
-    tick: 0,
   }
 }

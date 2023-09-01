@@ -1,4 +1,6 @@
-[home] add `Play`
+[playground] fix loading
+
+[home] link to playground
 
 # play
 

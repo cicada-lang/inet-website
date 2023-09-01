@@ -1,4 +1,4 @@
-export type Example = {
+export type Illustration = {
   name: string
   description: {
     zh: string

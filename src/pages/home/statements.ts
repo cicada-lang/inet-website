@@ -1,6 +1,6 @@
-import { Example } from './Example'
+import { Illustration } from './Illustration'
 
-export const statements: Array<Example> = [
+export const statements: Array<Illustration> = [
   {
     name: 'type',
     description: {

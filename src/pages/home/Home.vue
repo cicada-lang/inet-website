@@ -1,9 +1,21 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
+import Play from '../../components/play/Play.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import HomeFoot from './HomeFoot.vue'
-import { main } from './main'
+import { State } from './State'
+import { code, codeFragment } from './example'
+import { loadState } from './loadState'
 import { sections } from './sections'
+
+const state = ref<State | undefined>(undefined)
+
+onMounted(async () => {
+  state.value = await loadState({
+    text: code,
+  })
+})
 </script>
 
 <template>
@@ -25,12 +37,14 @@ import { sections } from './sections'
         <div class="md:w-1/3 border-2 border-black dark:border-white">
           <pre
             class="md:p-6 p-4 md:text-lg text-base whitespace-pre font-code"
-            >{{ main.code }}</pre
+            >{{ codeFragment }}</pre
           >
         </div>
 
         <div class="md:px-3 md:py-0 py-3 md:w-2/3">
-          <pre>TODO Canvas animation</pre>
+          <div class="flex h-full border border-black dark:border-white">
+            <Play v-if="state" :mod="state.mod" :tick="0" />
+          </div>
         </div>
       </div>
 

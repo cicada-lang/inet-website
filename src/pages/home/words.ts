@@ -1,6 +1,6 @@
-import { Example } from './Example'
+import { Illustration } from './Illustration'
 
-export const words: Array<Example> = [
+export const words: Array<Illustration> = [
   {
     name: 'Call',
     description: {

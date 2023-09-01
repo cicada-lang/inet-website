@@ -1,6 +1,6 @@
-import { Example } from './Example'
+import { Illustration } from './Illustration'
 
-export const builtins: Array<Example> = [
+export const builtins: Array<Illustration> = [
   {
     name: 'connect',
     description: {
