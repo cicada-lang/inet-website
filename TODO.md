@@ -1,8 +1,8 @@
-[home] rename TypeVar to Symbol
-
 [home] add `Play`
 
 # play
+
+[play] be able to fix show list of imported node
 
 [play] `renderSelectedValue` -- support `Run` button to run a net
 [play] `renderSelectedValue` -- support click an active edge to run one step

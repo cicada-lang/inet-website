@@ -22,10 +22,10 @@ export const words: Array<Example> = [
   },
 
   {
-    name: 'TypeVar',
+    name: 'Symbol',
     description: {
-      zh: '返回一个类型变元。',
-      en: 'Return a type variable.',
+      zh: '返回一个记号，可以作为类型变元。',
+      en: 'Return a symbol which can be used as a type variable.',
     },
     code: `\
 ... 'A List ...
