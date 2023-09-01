@@ -17,8 +17,8 @@ export function createRandomNetLayout(
 
   const nodePositions = new Map()
 
-  for (const [id, nodeEntry] of net.nodeEntries) {
-    nodePositions.set(id, [
+  for (const [key, nodeEntry] of net.nodeEntries) {
+    nodePositions.set(key, [
       x + width * Math.random(),
       y + height * Math.random(),
     ])

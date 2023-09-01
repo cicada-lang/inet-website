@@ -1,8 +1,18 @@
 # play
 
-[play] `renderSelectedNet` -- support `Run` button
-[play] `renderSelectedNet` -- add step counter
+[play] `net/runOneEdge`
+[play] `net/runAllSteps`
+
+[play] `NetRendering` rename `step` to `evolvingStep`
+[play] `NetRendering` as `runningStep`
+
+[play] `renderButtonStep`
+[play] `renderButtonRun`
+[play] `renderLabelInteract`
+
 [play] `renderSelectedNet` -- support `Step` button
+[play] `renderSelectedNet` -- add step counter
+[play] `renderSelectedNet` -- support `Run` button
 
 [play] `renderNet` -- support click an active edge to run one step
 
