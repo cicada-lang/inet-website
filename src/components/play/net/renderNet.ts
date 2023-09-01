@@ -4,9 +4,12 @@ import { NetRendering } from '../net/NetRendering'
 import { renderCap } from './renderCap'
 import { renderEdge } from './renderEdge'
 import { renderNode } from './renderNode'
+import { updateHoveredEdge } from './updateHoveredEdge'
 
 export function renderNet(state: State, rendering: NetRendering): void {
   const { net, layout } = rendering
+
+  updateHoveredEdge(rendering)
 
   for (const edge of allEdges(net)) {
     const firstPosition = layout.nodePositions.get(nodeKey(edge.first.node))
