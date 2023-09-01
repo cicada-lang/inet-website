@@ -1,5 +1,3 @@
-[playground] fix loading
-
 [home] link to playground
 
 # play

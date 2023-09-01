@@ -10,11 +10,13 @@ rule add1 add
   add1 return-(add)
 end
 
-claim one -- Nat end
-define one zero add1 end
+zero add1
+zero add1
+add
 
-one one add
-one one add run $result
+zero add1
+zero add1
+add run $result
 `
 
 export const code = `\
@@ -49,9 +51,11 @@ rule add1 add
   add1 return-(add)
 end
 
-claim one -- Nat end
-define one zero add1 end
+zero add1
+zero add1
+add
 
-one one add
-one one add run $result
+zero add1
+zero add1
+add run $result
 `
