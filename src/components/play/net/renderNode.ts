@@ -43,6 +43,10 @@ export function renderNode(
   state.ctx.stroke()
 
   if (withinRect(rect, state.mouse.position)) {
+    rendering.hoveredNode = {
+      position: [x, y],
+    }
+
     state.ctx.beginPath()
     state.ctx.lineWidth = 1.5
     state.ctx.roundRect(boxX - 4, boxY - 4, boxWidth + 8, boxHeight + 8, 12)

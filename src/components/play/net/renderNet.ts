@@ -25,6 +25,8 @@ export function renderNet(state: State, rendering: NetRendering): void {
     )
   }
 
+  rendering.hoveredNode = undefined
+
   for (const [id, nodeEntry] of net.nodeEntries) {
     const position = layout.nodePositions.get(id)
     if (position === undefined) continue

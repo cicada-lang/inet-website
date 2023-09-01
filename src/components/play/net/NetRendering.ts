@@ -9,4 +9,5 @@ export type NetRendering = {
   maximumStep: number
   hoverableEdges: Map<string, HoverableEdge>
   hoveredEdge?: HoverableEdge
+  hoveredNode?: HoverableNode
 }

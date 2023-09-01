@@ -1,7 +1,5 @@
 # play
 
-[play] `NetRendering` has `hoveredNode`
-
 [play] `renderSelectedNode` -- add a button to only present current rule
 
 - `Present` / `单独显示`
