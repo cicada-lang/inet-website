@@ -8,5 +8,6 @@ export function createNetRendering(net: Net, layout: NetLayout): NetRendering {
     layout,
     step: 0,
     maximumStep: 1000,
+    hoverableEdges: [],
   }
 }
