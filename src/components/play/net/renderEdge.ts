@@ -1,7 +1,8 @@
-import { Port } from '@cicada-lang/inet'
+import { formatEdge, Port } from '@cicada-lang/inet'
 import colors from 'tailwindcss/colors'
-import { State } from '../State'
+import { edgeDistance } from '../../../utils/geometry/edgeDistance'
 import { NetRendering } from '../net/NetRendering'
+import { State } from '../State'
 
 export function renderEdge(
   state: State,
@@ -82,5 +83,13 @@ export function renderEdge(
 
   state.ctx.restore()
 
-  // rendering.hoverableEdges.set()
+  const key = formatEdge({ first: first.port, second: second.port })
+
+  const distance = edgeDistance(
+    first.position,
+    second.position,
+    state.mouse.position,
+  )
+
+  rendering.hoverableEdges.set(key, { distance, first, second })
 }

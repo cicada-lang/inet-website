@@ -1,7 +1,5 @@
 # play
 
-[play] `renderEdge` record `HoverableEdge`
-
 [play] `updateHoveredEdge`
 
 [play] `renderEdge` hover an edge make the edge longer -- to practice movement along a line
