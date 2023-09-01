@@ -1,6 +1,7 @@
 import { Net } from '@cicada-lang/inet'
 import { NetLayout } from '../net/NetLayout'
 import { HoverableEdge } from './HoverableEdge'
+import { HoverableNode } from './HoverableNode'
 
 export type NetRendering = {
   net: Net
