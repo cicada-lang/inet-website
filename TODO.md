@@ -17,7 +17,3 @@
 # playground tabs
 
 [playground] support tabs
-
-# bug
-
-[play] fix mouse touch on mobile
