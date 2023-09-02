@@ -10,16 +10,24 @@ function resizeCanvasOnce(state: State) {
   const width = state.container.offsetWidth
   const height = state.container.offsetHeight
 
-  state.width = width
-  state.height = height
-
-  const ratio = state.devicePixelRatio
-
-  state.canvas.width = width * ratio
-  state.canvas.height = height * ratio
+  // Resize canvas element.
 
   state.canvas.style.width = width + 'px'
   state.canvas.style.height = height + 'px'
 
+  // Adjust canvas resolution by `window.devicePixelRatio`.
+
+  const ratio = window.devicePixelRatio || 1
+
+  state.canvas.width = width * ratio
+  state.canvas.height = height * ratio
+
   state.ctx.scale(ratio, ratio)
+
+  // After the adjustment, the canvas size
+  // is no longer the DOM size,
+  // so we define our own size.
+
+  state.width = width
+  state.height = height
 }
