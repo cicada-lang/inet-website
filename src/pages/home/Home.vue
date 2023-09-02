@@ -21,7 +21,7 @@ onMounted(async () => {
 
 <template>
   <PageLayout>
-    <div class="flex flex-col py-3">
+    <div class="flex flex-col">
       <div class="w-full flex flex-col md:max-w-[64rem] self-center px-3 py-20">
         <div class="text-7xl text-blance font-bold">iNet</div>
         <div class="text-4xl text-blance pt-2">
@@ -33,7 +33,7 @@ onMounted(async () => {
       </div>
 
       <div
-        class="px-3 flex md:flex-row flex-col md:max-w-[64rem] mt-12 w-full self-center"
+        class="px-3 flex md:flex-row flex-col md:max-w-[64rem] w-full self-center"
       >
         <div class="md:w-1/3 border-2 border-black dark:border-white md:mr-3">
           <pre
