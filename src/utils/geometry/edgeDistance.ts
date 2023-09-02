@@ -7,7 +7,12 @@ export function edgeDistance(
   [x, y]: [number, number],
 ): number {
   const [footX, footY] = perpendicularFoot([x0, y0], [x1, y1], [x, y])
-  if ((x0 <= footX && footX <= x1) || (x1 <= footX && footX <= x0)) {
+  if (
+    (x0 <= footX && footX <= x1 && y0 <= footY && footY <= y1) ||
+    (x0 <= footX && footX <= x1 && y1 <= footY && footY <= y0) ||
+    (x1 <= footX && footX <= x0 && y0 <= footY && footY <= y1) ||
+    (x1 <= footX && footX <= x0 && y1 <= footY && footY <= y0)
+  ) {
     return vectorDistance([footX, footY], [x, y])
   } else {
     return Math.min(
