@@ -1,5 +1,3 @@
-[diary] click-on-mobile
-
 # scrollbar
 
 [play] `renderStack` -- with scrollbar -- show number of entries

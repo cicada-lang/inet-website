@@ -1,9 +1,11 @@
+import { touchEventOffset } from '../../../utils/browser/touchEventOffset'
 import { State } from '../State'
 
 export function trackMouse(state: State) {
   state.canvas.addEventListener('mousedown', (event) => {
     event.preventDefault()
 
+    state.mouse.position = [event.offsetX, event.offsetY]
     state.mouse.isDown = true
   })
 
@@ -23,11 +25,7 @@ export function trackMouse(state: State) {
     event.preventDefault()
     event.stopPropagation()
 
-    const rect = (event.target as any).getBoundingClientRect()
-    const offsetX = event.targetTouches[0].pageX - rect.left
-    const offsetY = event.targetTouches[0].pageY - rect.top
-
-    state.mouse.position = [offsetX, offsetY]
+    state.mouse.position = touchEventOffset(event)
     state.mouse.isDown = true
   })
 
@@ -38,15 +36,11 @@ export function trackMouse(state: State) {
     state.mouse.isDown = false
   })
 
-  state.canvas.addEventListener('touchmove', (event: TouchEvent) => {
+  state.canvas.addEventListener('touchmove', (event) => {
     event.preventDefault()
     event.stopPropagation()
 
-    const rect = (event.target as any).getBoundingClientRect()
-    const offsetX = event.targetTouches[0].pageX - rect.left
-    const offsetY = event.targetTouches[0].pageY - rect.top
-
-    state.mouse.position = [offsetX, offsetY]
+    state.mouse.position = touchEventOffset(event)
     state.mouse.isDown = true
   })
 }
