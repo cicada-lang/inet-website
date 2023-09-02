@@ -24,9 +24,9 @@ function resizeCanvasOnce(state: State) {
 
   state.ctx.scale(ratio, ratio)
 
-  // After the adjustment, the canvas size
-  // is no longer the DOM size,
-  // so we define our own size.
+  // After the adjustment, the canvas size is no longer the DOM size,
+  // but we need DOM size, because it is used by DOM event like
+  // `mousemove` and `touchmove`, so we define our own size.
 
   state.width = width
   state.height = height
