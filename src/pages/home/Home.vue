@@ -22,7 +22,7 @@ onMounted(async () => {
 <template>
   <PageLayout>
     <div class="flex flex-col">
-      <div class="w-full flex flex-col md:max-w-[64rem] self-center px-3 py-20">
+      <div class="w-full flex flex-col md:max-w-[64rem] self-center px-3 py-32">
         <div class="text-7xl text-blance font-bold">iNet</div>
         <div class="text-4xl text-blance pt-2">
           <Lang>

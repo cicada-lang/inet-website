@@ -20,24 +20,41 @@ export function trackMouse(state: State) {
   })
 
   state.canvas.addEventListener('touchstart', (event) => {
-    const offsetX =
-      event.touches[0].pageX - (event.touches[0].target as any).offsetLeft
-    const offsetY =
-      event.touches[0].pageY - (event.touches[0].target as any).offsetTop
+    event.preventDefault()
+    event.stopPropagation()
+
+    // const offsetX =
+    //   event.touches[0].pageX - (event.touches[0].target as any).offsetLeft
+    // const offsetY =
+    //   event.touches[0].pageY - (event.touches[0].target as any).offsetTop
+
+    const rect = (event.target as any).getBoundingClientRect()
+    const offsetX = event.targetTouches[0].pageX - rect.left
+    const offsetY = event.targetTouches[0].pageY - rect.top
 
     state.mouse.position = [offsetX, offsetY]
     state.mouse.isDown = true
   })
 
   state.canvas.addEventListener('touchend', (event) => {
+    event.preventDefault()
+    event.stopPropagation()
+
     state.mouse.isDown = false
   })
 
   state.canvas.addEventListener('touchmove', (event: TouchEvent) => {
-    const offsetX =
-      event.touches[0].pageX - (event.touches[0].target as any).offsetLeft
-    const offsetY =
-      event.touches[0].pageY - (event.touches[0].target as any).offsetTop
+    event.preventDefault()
+    event.stopPropagation()
+
+    // const offsetX =
+    //   event.touches[0].pageX - (event.touches[0].target as any).offsetLeft
+    // const offsetY =
+    //   event.touches[0].pageY - (event.touches[0].target as any).offsetTop
+
+    const rect = (event.target as any).getBoundingClientRect()
+    const offsetX = event.targetTouches[0].pageX - rect.left
+    const offsetY = event.targetTouches[0].pageY - rect.top
 
     state.mouse.position = [offsetX, offsetY]
     state.mouse.isDown = true
