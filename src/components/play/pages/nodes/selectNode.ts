@@ -14,13 +14,11 @@ export function selectNode(state: State, givenName: string): void {
         })
 
         const net = presentNodeAsNet(state.mod, name)
-        const layout = createRandomNetLayout(
-          net,
-          state.width / 3,
-          state.height / 5,
-          state.width / 3,
-          state.height / 3,
-        )
+        const x = state.width / 3
+        const y = state.height / 12
+        const width = state.width / 3
+        const height = state.height / 3
+        const layout = createRandomNetLayout(net, x, y, width, height)
 
         state.selectedNode = {
           name,

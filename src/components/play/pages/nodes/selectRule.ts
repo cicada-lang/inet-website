@@ -12,26 +12,21 @@ export function selectRule(
   for (const ruleEntry of selectedNode.ruleEntries) {
     const [initialNet, finalNet] = presentRuleAsNets(state.mod, name)
 
+    const width = (state.width * 3) / 8
+    const height = state.height / 2
+
+    const initialX = (state.width * 2) / 8
+    const initialY = state.height / 2
     const initial = createNetRendering(
       initialNet,
-      createRandomNetLayout(
-        initialNet,
-        state.width / 3,
-        (state.height * 2) / 3,
-        state.width / 3,
-        state.height / 3,
-      ),
+      createRandomNetLayout(initialNet, initialX, initialY, width, height),
     )
 
+    const finalX = (state.width * 5) / 8
+    const finalY = state.height / 2
     const final = createNetRendering(
       finalNet,
-      createRandomNetLayout(
-        finalNet,
-        (state.width * 2) / 3,
-        (state.height * 2) / 3,
-        state.width / 3,
-        state.height / 3,
-      ),
+      createRandomNetLayout(finalNet, finalX, finalY, width, height),
     )
 
     selectedNode.selectedRule = {

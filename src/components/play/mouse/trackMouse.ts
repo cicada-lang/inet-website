@@ -20,8 +20,6 @@ export function trackMouse(state: State) {
   })
 
   state.canvas.addEventListener('touchstart', (event) => {
-    event.preventDefault()
-
     const offsetX =
       event.touches[0].pageX - (event.touches[0].target as any).offsetLeft
     const offsetY =
@@ -32,14 +30,10 @@ export function trackMouse(state: State) {
   })
 
   state.canvas.addEventListener('touchend', (event) => {
-    event.preventDefault()
-
     state.mouse.isDown = false
   })
 
   state.canvas.addEventListener('touchmove', (event: TouchEvent) => {
-    event.preventDefault()
-
     const offsetX =
       event.touches[0].pageX - (event.touches[0].target as any).offsetLeft
     const offsetY =
