@@ -43,7 +43,9 @@ onMounted(async () => {
         </div>
 
         <div class="md:py-0 pt-3 md:w-2/3">
-          <div class="flex h-full border border-black dark:border-white">
+          <div
+            class="flex-col flex h-full border border-black dark:border-white"
+          >
             <Play
               class="md:min-h-full min-h-[32rem]"
               v-if="state"

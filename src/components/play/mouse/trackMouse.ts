@@ -23,11 +23,6 @@ export function trackMouse(state: State) {
     event.preventDefault()
     event.stopPropagation()
 
-    // const offsetX =
-    //   event.touches[0].pageX - (event.touches[0].target as any).offsetLeft
-    // const offsetY =
-    //   event.touches[0].pageY - (event.touches[0].target as any).offsetTop
-
     const rect = (event.target as any).getBoundingClientRect()
     const offsetX = event.targetTouches[0].pageX - rect.left
     const offsetY = event.targetTouches[0].pageY - rect.top
@@ -46,11 +41,6 @@ export function trackMouse(state: State) {
   state.canvas.addEventListener('touchmove', (event: TouchEvent) => {
     event.preventDefault()
     event.stopPropagation()
-
-    // const offsetX =
-    //   event.touches[0].pageX - (event.touches[0].target as any).offsetLeft
-    // const offsetY =
-    //   event.touches[0].pageY - (event.touches[0].target as any).offsetTop
 
     const rect = (event.target as any).getBoundingClientRect()
     const offsetX = event.targetTouches[0].pageX - rect.left

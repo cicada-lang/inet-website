@@ -66,11 +66,15 @@ watch(
       </div>
 
       <div
-        class="md:border-l flex flex-col min-h-screen md:overflow-auto h-full border-black dark:border-white md:w-1/2"
+        class="md:border-l flex flex-col min-h-[32rem] md:overflow-auto h-full border-black dark:border-white md:w-1/2"
       >
         <PlaygroundTabs :state="state" />
 
-        <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
+        <PlaygroundPlay
+          v-if="state.kind === 'Play'"
+          class="min-h-[32rem]"
+          :state="state"
+        />
 
         <PlaygroundOutput
           v-if="state.output && state.kind === 'Output'"
