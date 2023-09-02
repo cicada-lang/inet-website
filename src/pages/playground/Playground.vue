@@ -56,7 +56,7 @@ watch(
     <PageHead class="border-b border-black dark:border-white px-3 py-2" />
 
     <div v-if="state" class="flex flex-col h-full md:overflow-auto md:flex-row">
-      <div class="flex min-h-[23rem] flex-col md:overflow-auto h-full md:w-1/2">
+      <div class="flex min-h-[26rem] flex-col md:overflow-auto h-full md:w-1/2">
         <PlaygroundToolbar :state="state" />
 
         <PlaygroundEditor
@@ -66,7 +66,7 @@ watch(
       </div>
 
       <div
-        class="md:border-l flex flex-col min-h-[23rem] md:overflow-auto h-full border-black dark:border-white md:w-1/2"
+        class="md:border-l flex flex-col min-h-screen md:overflow-auto h-full border-black dark:border-white md:w-1/2"
       >
         <PlaygroundTabs :state="state" />
 
