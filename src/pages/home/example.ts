@@ -10,12 +10,12 @@ rule add1 add
   add1 return-(add)
 end
 
-zero add1
-zero add1
+zero add1 add1
+zero add1 add1
 add
 
-zero add1
-zero add1
+zero add1 add1
+zero add1 add1
 add run $result
 `
 
@@ -51,11 +51,11 @@ rule add1 add
   add1 return-(add)
 end
 
-zero add1
-zero add1
+zero add1 add1
+zero add1 add1
 add
 
-zero add1
-zero add1
+zero add1 add1
+zero add1 add1
 add run $result
 `
