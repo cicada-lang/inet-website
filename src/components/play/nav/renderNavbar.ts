@@ -7,7 +7,7 @@ import { renderLabelDefinitions } from './renderLabelDefinitions'
 
 export function renderNavbar(state: State): void {
   const height = themeSize(10)
-  const marginT = height * 2 + themeSize(4)
+  const marginT = height * 2
 
   renderLabelDefinitions(state)
 

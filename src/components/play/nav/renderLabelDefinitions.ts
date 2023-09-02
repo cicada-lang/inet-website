@@ -11,7 +11,7 @@ export function renderLabelDefinitions(state: State): void {
 
   const text = lang.isZh() ? '定义' : 'Definitions'
   const x = state.width
-  const y = height + themeSize(4)
+  const y = height
 
   state.ctx.font = state.breakpoints.md
     ? `bold ${themeFontSize('lg')} monospace`

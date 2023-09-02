@@ -11,7 +11,7 @@ export function renderLabelTypes(state: State): void {
 
   const text = lang.isZh() ? '类型列表' : 'Types'
   const x = 0
-  const y = height + themeSize(4)
+  const y = height
 
   state.ctx.font = state.breakpoints.md
     ? `bold ${themeFontSize('lg')} monospace`

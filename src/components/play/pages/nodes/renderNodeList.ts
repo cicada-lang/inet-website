@@ -11,7 +11,7 @@ export function renderNodeList(state: State): void {
   state.ctx.save()
 
   const height = themeSize(10)
-  const marginT = height * 2 + themeSize(4)
+  const marginT = height * 2
 
   state.ctx.font = state.breakpoints.md
     ? `${themeFontSize('lg')} monospace`

@@ -11,7 +11,7 @@ export function renderLabelNodes(state: State): void {
 
   const text = lang.isZh() ? '节点列表' : 'Nodes'
   const x = 0
-  const y = height + themeSize(4)
+  const y = height
 
   state.ctx.font = state.breakpoints.md
     ? `bold ${themeFontSize('lg')} monospace`

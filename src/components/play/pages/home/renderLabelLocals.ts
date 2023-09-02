@@ -11,7 +11,7 @@ export function renderLabelLocals(state: State): void {
 
   const text = lang.isZh() ? '局部变元' : 'Locals'
   const x = 0
-  const y = height + themeSize(4)
+  const y = height
 
   state.ctx.font = state.breakpoints.md
     ? `bold ${themeFontSize('lg')} monospace`
