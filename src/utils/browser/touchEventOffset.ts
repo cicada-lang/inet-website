@@ -1,4 +1,6 @@
-export function touchEventOffset(event: TouchEvent): [number, number] {
+export function touchEventOffset(
+  event: TouchEvent,
+): [offsetX: number, offsetY: number] {
   if (!(event.target instanceof Element)) {
     console.error({
       who: 'touchEventOffset',
@@ -10,8 +12,10 @@ export function touchEventOffset(event: TouchEvent): [number, number] {
   }
 
   const rect = event.target.getBoundingClientRect()
-  const offsetX = event.targetTouches[0].pageX - rect.left
-  const offsetY = event.targetTouches[0].pageY - rect.top
+  const touch = event.targetTouches[0]
+
+  const offsetX = touch.pageX - rect.left
+  const offsetY = touch.pageY - rect.top
 
   return [offsetX, offsetY]
 }
