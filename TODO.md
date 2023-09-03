@@ -1,6 +1,10 @@
 # scrollbar
 
-[play] `renderButtonListScrollable`
+[play] [maybe] extract `renderButtonListScrollable`
+
+[play] fix the use of `stackIndex` -- `isActive` is wrong
+
+- [maybe] should be `stackInViewIndex`
 
 [play] `renderLocals` -- call `renderScrollbar`
 [play] `renderTypeList` -- call `renderScrollbar`
