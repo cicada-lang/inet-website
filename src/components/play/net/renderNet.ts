@@ -10,6 +10,7 @@ export function renderNet(state: State, rendering: NetRendering): void {
   const { net, layout } = rendering
 
   updateHoveredEdge(rendering)
+  rendering.hoverableEdges = new Map()
 
   for (const edge of allEdges(net)) {
     const firstPosition = layout.nodePositions.get(nodeKey(edge.first.node))
