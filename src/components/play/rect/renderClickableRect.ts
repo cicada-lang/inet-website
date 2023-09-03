@@ -1,25 +1,15 @@
 import { State } from '../State'
 import { Rect } from '../rect/Rect'
-
-type Options = {
-  name: string
-  height: number
-  width: number
-  noBorder?: boolean
-  handler: (state: State) => void
-  isDisabled?: (state: State) => void
-}
+import { ClickableRect } from './ClickableRect'
 
 // Can not be used after transform,
 // because we need to record rect.
 
 export function renderClickableRect(
   state: State,
-  x: number,
-  y: number,
-  options: Options,
+  clickableRect: ClickableRect,
 ): void {
-  const { name, width, height } = options
+  const { x, y, width, height } = clickableRect
 
   state.ctx.save()
 
@@ -29,21 +19,9 @@ export function renderClickableRect(
 
   const rect: Rect = [x, y, width, height]
 
-  if (options.noBorder) {
+  if (clickableRect.noBorder) {
     state.ctx.lineWidth = 1
     state.ctx.strokeRect(...rect)
-  }
-
-  if (options.isDisabled?.(state)) {
-    state.clickableRects.delete(name)
-  } else {
-    state.clickableRects.set(name, {
-      ...options,
-      name,
-      x,
-      y,
-      rect,
-    })
   }
 
   state.ctx.restore()

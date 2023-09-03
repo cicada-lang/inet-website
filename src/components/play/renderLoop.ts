@@ -2,6 +2,7 @@ import { State } from './State'
 import { renderButton } from './button/renderButton'
 import { renderToggleUIButton } from './hide-ui/renderToggleUIButton'
 import { handleClickWithThrottle } from './mouse/handleClickWithThrottle'
+import { renderClickableRect } from './rect/renderClickableRect'
 import { findRoute } from './route/findRoute'
 
 export function renderLoop(state: State, passedTime?: number): void {
@@ -28,6 +29,10 @@ export function renderLoop(state: State, passedTime?: number): void {
 
   for (const button of state.buttons.values()) {
     renderButton(state, button)
+  }
+
+  for (const clickableRect of state.clickableRects.values()) {
+    renderClickableRect(state, clickableRect)
   }
 
   handleClickWithThrottle(state, { deltaTime })

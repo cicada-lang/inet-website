@@ -3,7 +3,7 @@ import { State } from '../State'
 import { NetRendering } from '../net/NetRendering'
 import { selectNode } from '../pages/nodes/selectNode'
 import { Rect } from '../rect/Rect'
-import { renderClickableRect } from '../rect/renderClickableRect'
+import { createClickableRect } from '../rect/createClickableRect'
 import { withinRect } from '../rect/withinRect'
 import { themeFontSize } from '../theme/themeFontSize'
 
@@ -57,7 +57,7 @@ export function renderNode(
 
   const key = nodeKey(nodeEntry)
 
-  renderClickableRect(state, boxX, boxY, {
+  createClickableRect(state, boxX, boxY, {
     name: `nodes/${key}`,
     width: boxWidth,
     height: boxHeight,

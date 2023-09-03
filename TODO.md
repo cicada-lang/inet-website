@@ -1,10 +1,13 @@
 # scrollbar
 
-[play] `createClickableRect`
+[play] `components/[button|rect]`
+
 [play] `createLabel` -- `State` has `labels`
 [play] `createText` -- `State` has `texts`
 
-[play] `components/[button|label|text|rect]`
+[play] `components/[label|text]`
+
+[play] `components/group`
 
 [play] `component/Component`
 

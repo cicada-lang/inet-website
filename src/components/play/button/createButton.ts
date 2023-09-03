@@ -12,6 +12,9 @@ type Options = {
   isDisabled?: (state: State) => void
 }
 
+// Can not be used after transform,
+// because we need to record rect.
+
 export function createButton(
   state: State,
   text: string,
