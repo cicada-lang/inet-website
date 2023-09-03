@@ -7,6 +7,7 @@ import { SelectedValue } from './pages/home/SelectedValue'
 import { SelectedNode } from './pages/nodes/SelectedNode'
 import { SelectedType } from './pages/types/SelectedType'
 import { SelectedWord } from './pages/words/SelectedWord'
+import { ClickableRect } from './rect/ClickableRect'
 import { Route, RouteExp } from './route/Route'
 
 export type State = {
@@ -33,6 +34,7 @@ export type State = {
 
   // Entity stores:
   buttons: Map<string, Button>
+  clickableRects: Map<string, ClickableRect>
 
   // Sub-states:
   selectedValue?: SelectedValue

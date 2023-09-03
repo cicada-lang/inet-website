@@ -1,7 +1,7 @@
 # scrollbar
 
-[play] `components/Button`
-[play] `components/Labal`
+[play] `createClickableRect`
+[play] `createLabal`
 
 [play] renderButtonList
 

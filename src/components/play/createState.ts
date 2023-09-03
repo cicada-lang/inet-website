@@ -41,5 +41,6 @@ export function createState(options: StateOptions): State {
     mouse,
     mod,
     buttons: new Map(),
+    clickableRects: new Map(),
   }
 }

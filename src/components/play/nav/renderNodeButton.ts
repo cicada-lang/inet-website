@@ -1,6 +1,6 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
-import { renderButton } from '../button/renderButton'
+import { createButton } from '../button/createButton'
 import { themeFontSize } from '../theme/themeFontSize'
 
 export function renderNodeButton(
@@ -24,7 +24,7 @@ export function renderNodeButton(
 
   const name = 'nodes'
 
-  renderButton(state, text, x, y, {
+  createButton(state, text, x, y, {
     name,
     height,
     align: 'right',

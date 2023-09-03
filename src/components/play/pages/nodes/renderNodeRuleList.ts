@@ -1,5 +1,5 @@
 import { State } from '../../State'
-import { renderButton } from '../../button/renderButton'
+import { createButton } from '../../button/createButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 import { SelectedNode } from './SelectedNode'
@@ -20,7 +20,7 @@ export function renderNodeRuleList(
 
   let i = 0
   for (const { name } of [...selectedNode.ruleEntries].reverse()) {
-    renderButton(state, name, 0, state.height - height - height * i, {
+    createButton(state, name, 0, state.height - height - height * i, {
       name: `rules/${name}`,
       height,
       isActive: (state) => state.selectedNode?.selectedRule?.name === name,

@@ -1,11 +1,19 @@
 import { State } from '../State'
-import { withinRect } from '../button/withinRect'
 import { runGivenEdge } from '../net/runGivenEdge'
+import { withinRect } from '../rect/withinRect'
 
 export function onClick(state: State): void {
   for (const button of state.buttons.values()) {
     if (withinRect(button.rect, state.mouse.position)) {
-      button.handler(state)
+      if (!button.isDisabled?.(state)) {
+        button.handler(state)
+      }
+    }
+  }
+
+  for (const clickableRect of state.clickableRects.values()) {
+    if (withinRect(clickableRect.rect, state.mouse.position)) {
+      clickableRect.handler(state)
     }
   }
 

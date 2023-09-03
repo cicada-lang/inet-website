@@ -35,9 +35,15 @@ export function renderClickableRect(
   }
 
   if (options.isDisabled?.(state)) {
-    state.buttons.delete(name)
+    state.clickableRects.delete(name)
   } else {
-    state.buttons.set(name, { rect, handler: options.handler })
+    state.clickableRects.set(name, {
+      ...options,
+      name,
+      x,
+      y,
+      rect,
+    })
   }
 
   state.ctx.restore()

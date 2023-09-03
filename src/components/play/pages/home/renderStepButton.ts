@@ -1,6 +1,6 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
-import { renderButton } from '../../button/renderButton'
+import { createButton } from '../../button/createButton'
 import { NetRendering } from '../../net/NetRendering'
 import { runOneStep } from '../../net/runOneStep'
 import { themeFontSize } from '../../theme/themeFontSize'
@@ -17,7 +17,7 @@ export function renderStepButton(state: State, rendering: NetRendering): void {
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  renderButton(state, text, x, y, {
+  createButton(state, text, x, y, {
     name: 'step',
     align: 'right',
     height,

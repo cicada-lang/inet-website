@@ -1,4 +1,5 @@
 import { State } from './State'
+import { renderButton } from './button/renderButton'
 import { renderToggleUIButton } from './hide-ui/renderToggleUIButton'
 import { handleClick } from './mouse/handleClick'
 import { findRoute } from './route/findRoute'
@@ -20,9 +21,15 @@ export function renderLoop(state: State, passedTime?: number): void {
   }
 
   state.buttons = new Map()
+  state.clickableRects = new Map()
 
   route.render(state, { passedTime, deltaTime })
   renderToggleUIButton(state)
+
+  for (const button of state.buttons.values()) {
+    renderButton(state, button)
+  }
+
   handleClick(state, { deltaTime })
 
   requestAnimationFrame((passedTime) => renderLoop(state, passedTime))
