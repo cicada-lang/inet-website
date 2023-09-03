@@ -34,7 +34,7 @@ export function renderScrollbar(
   if (cursor > 0) {
     renderClickableRect(state, x, y + (height / length) * cursor, {
       name: `${name}/-1`,
-      height: ((height / length) * inViewLength) / 2,
+      height: ((height / length) * inViewLength) / 2 - height / length / 2,
       width,
       // withBorder: true,
       handler: () => onScroll(cursor - 1),
@@ -52,10 +52,13 @@ export function renderScrollbar(
     renderClickableRect(
       state,
       x,
-      y + (height / length) * cursor + ((height / length) * inViewLength) / 2,
+      y +
+        (height / length) * cursor +
+        ((height / length) * inViewLength) / 2 +
+        height / length / 2,
       {
         name: `${name}/+1`,
-        height: ((height / length) * inViewLength) / 2,
+        height: ((height / length) * inViewLength) / 2 - height / length / 2,
         width,
         // withBorder: true,
         handler: () => onScroll(cursor + 1),
