@@ -1,10 +1,7 @@
 import { Port, Value } from '@cicada-lang/inet'
 import { NetRendering } from '../../components/net/NetRendering'
 
-export type SelectedValue = (SelectedValuePort | SelectedValueGeneric) & {
-  stackInViewIndex?: number
-  localName?: string
-}
+export type SelectedValue = SelectedValuePort | SelectedValueGeneric
 
 export type SelectedValuePort = {
   '@type': 'SelectedValue'
