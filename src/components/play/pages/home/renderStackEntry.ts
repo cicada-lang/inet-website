@@ -10,12 +10,13 @@ export function renderStackEntry(
   value: Value,
   options: {
     height: number
+    marginL?: number
   },
 ): void {
-  const { height } = options
+  const { height, marginL } = options
 
   const text = formatValue(value)
-  const x = 0
+  const x = marginL || 0
   const y = state.height - height * (i + 1)
 
   state.ctx.font = state.breakpoints.lg

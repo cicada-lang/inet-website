@@ -15,11 +15,14 @@ export function renderHome(state: State, options: RenderOptions): void {
     if (state.selectedValue['@kind'] === 'SelectedValuePort') {
       evolveNet(state, state.selectedValue.rendering)
     }
+
+    if (!state.isHidingUI) {
+      renderStack(state, state.selectedValue)
+      renderLocals(state)
+    }
   }
 
   if (!state.isHidingUI) {
-    renderStack(state)
-    renderLocals(state)
     renderNavbar(state)
   }
 }

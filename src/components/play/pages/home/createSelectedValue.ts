@@ -23,14 +23,14 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
       '@kind': 'SelectedValuePort',
       port: value,
       rendering: createNetRendering(net, layout),
-      stackIndex,
+      stackIndex: stackIndex,
     }
   } else {
     return {
       '@type': 'SelectedValue',
       '@kind': 'SelectedValueGeneric',
       value,
-      stackIndex,
+      stackIndex: stackIndex,
     }
   }
 }

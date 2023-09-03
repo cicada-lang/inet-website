@@ -5,7 +5,7 @@ type Options = {
   name: string
   height: number
   width: number
-  noBorder?: boolean
+  withBorder?: boolean
   handler: (state: State) => void
   isDisabled?: (state: State) => void
 }
@@ -37,7 +37,7 @@ export function renderClickableRect(
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
-  if (options.noBorder) {
+  if (options.withBorder) {
     state.ctx.lineWidth = 1
     state.ctx.strokeRect(...rect)
   }

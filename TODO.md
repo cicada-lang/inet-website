@@ -1,9 +1,6 @@
 # scrollbar
 
-[play] `components/button-list` -- `renderButtonList`
-
-[play] `renderStack` -- with scrollbar
-[play] `renderLocals` -- with scrollbar
+[play] `renderLocalsS` -- call `renderScrollbar`
 
 [play] `renderSelectedWord` -- show stack
 
