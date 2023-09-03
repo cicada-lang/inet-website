@@ -1,5 +1,4 @@
-import { NodeDefinition } from '@cicada-lang/inet'
-import { RuleEntry } from '@cicada-lang/inet/lib/lang/mod/RuleEntry'
+import { NodeDefinition, RuleEntry } from '@cicada-lang/inet'
 import { NetRendering } from '../../components/net/NetRendering'
 import { SelectedRule } from './SelectedRule'
 

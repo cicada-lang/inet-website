@@ -1,8 +1,11 @@
-import { Edge, formatEdge } from '@cicada-lang/inet'
-import { createEnv } from '@cicada-lang/inet/lib/lang/env'
-import { interact } from '@cicada-lang/inet/lib/lang/interact'
-import { closeAllFreePorts } from '@cicada-lang/inet/lib/lang/run/closeAllFreePorts'
-import { releaseCapPorts } from '@cicada-lang/inet/lib/lang/run/releaseCapPorts'
+import {
+  Edge,
+  closeAllFreePorts,
+  createEnv,
+  formatEdge,
+  interact,
+  releaseCapPorts,
+} from '@cicada-lang/inet'
 import { vectorMax } from '../../../../utils/vector/vectorMax'
 import { vectorMin } from '../../../../utils/vector/vectorMin'
 import { State } from '../../State'
