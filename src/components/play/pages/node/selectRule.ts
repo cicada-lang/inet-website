@@ -29,7 +29,7 @@ export function selectRule(
       createRandomNetLayout(finalNet, finalX, finalY, width, height),
     )
 
-    selectedNode.selectedRule = {
+    state.nodeState.selectedRule = {
       name,
       rule: ruleEntry,
       initial,

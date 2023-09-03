@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] `NodeState` has `selectedRule`
-
 [play] fix mobile click
 
 [play] [maybe] extract `renderButtonListScrollable`

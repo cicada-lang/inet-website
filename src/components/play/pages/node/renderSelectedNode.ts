@@ -10,9 +10,9 @@ export function renderSelectedNode(
 
   renderNet(state, selectedNode.rendering)
 
-  if (selectedNode.selectedRule) {
-    renderNet(state, selectedNode.selectedRule.initial)
-    renderNet(state, selectedNode.selectedRule.final)
+  if (state.nodeState.selectedRule) {
+    renderNet(state, state.nodeState.selectedRule.initial)
+    renderNet(state, state.nodeState.selectedRule.final)
   }
 
   state.ctx.restore()

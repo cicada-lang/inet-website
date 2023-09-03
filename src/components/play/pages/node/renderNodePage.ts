@@ -18,9 +18,9 @@ export function renderNodePage(state: State): void {
     renderSelectedNode(state, state.nodeState.selectedNode)
     evolveNet(state, state.nodeState.selectedNode.rendering)
 
-    if (state.nodeState.selectedNode.selectedRule) {
-      evolveNet(state, state.nodeState.selectedNode.selectedRule.initial)
-      evolveNet(state, state.nodeState.selectedNode.selectedRule.final)
+    if (state.nodeState.selectedRule) {
+      evolveNet(state, state.nodeState.selectedRule.initial)
+      evolveNet(state, state.nodeState.selectedRule.final)
     }
   }
 

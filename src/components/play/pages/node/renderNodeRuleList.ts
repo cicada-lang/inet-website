@@ -23,10 +23,8 @@ export function renderNodeRuleList(
     renderButton(state, name, 0, state.height - height - height * i, {
       name: `rules/${name}`,
       height,
-      isActive: (state) =>
-        state.nodeState.selectedNode?.selectedRule?.name === name,
-      isDisabled: (state) =>
-        state.nodeState.selectedNode?.selectedRule?.name === name,
+      isActive: (state) => state.nodeState.selectedRule?.name === name,
+      isDisabled: (state) => state.nodeState.selectedRule?.name === name,
       handler: (state) => selectRule(state, selectedNode, name),
     })
 
