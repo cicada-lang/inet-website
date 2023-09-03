@@ -1,6 +1,6 @@
 import { State } from '../State'
+import { runGivenEdge } from '../components/net/runGivenEdge'
 import { withinRect } from '../components/rect/withinRect'
-import { runGivenEdge } from '../net/runGivenEdge'
 
 export function handleClick(state: State): void {
   for (const button of state.buttons.values()) {

@@ -1,7 +1,7 @@
 import { presentWordAsEnv } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { createNetRendering } from '../../net/createNetRendering'
-import { createRandomNetLayout } from '../../net/createRandomNetLayout'
+import { createNetRendering } from '../../components/net/createNetRendering'
+import { createRandomNetLayout } from '../../components/net/createRandomNetLayout'
 
 export function selectWord(state: State, givenName: string): void {
   for (const [name, definition] of state.mod.definitions) {

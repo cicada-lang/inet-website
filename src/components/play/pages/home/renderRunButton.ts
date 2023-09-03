@@ -1,8 +1,8 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
-import { NetRendering } from '../../net/NetRendering'
-import { runAllSteps } from '../../net/runAllSteps'
+import { NetRendering } from '../../components/net/NetRendering'
+import { runAllSteps } from '../../components/net/runAllSteps'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 

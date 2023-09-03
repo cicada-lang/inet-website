@@ -1,5 +1,5 @@
 import { Net } from '@cicada-lang/inet'
-import { NetLayout } from '../net/NetLayout'
+import { NetLayout } from '../NetLayout'
 import { computeElectricalForce } from './computeElectricalForce'
 
 export function computeElectricalForces(

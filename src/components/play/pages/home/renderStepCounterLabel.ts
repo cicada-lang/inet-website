@@ -1,7 +1,7 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
 import { renderLabel } from '../../components/label/renderLabel'
-import { NetRendering } from '../../net/NetRendering'
+import { NetRendering } from '../../components/net/NetRendering'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 

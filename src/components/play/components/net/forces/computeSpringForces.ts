@@ -1,6 +1,6 @@
 import { Net } from '@cicada-lang/inet'
-import { NetLayout } from '../net/NetLayout'
-import { netNodeNeighbors } from '../net/netNodeNeighbors'
+import { NetLayout } from '../NetLayout'
+import { netNodeNeighbors } from '../netNodeNeighbors'
 import { computeSpringForce } from './computeSpringForce'
 
 export function computeSpringForces(

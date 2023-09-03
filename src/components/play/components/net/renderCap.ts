@@ -1,7 +1,7 @@
 import { NodeEntry } from '@cicada-lang/inet'
-import { State } from '../State'
+import { State } from '../../State'
+import { themeFontSize } from '../../theme/themeFontSize'
 import { NetRendering } from '../net/NetRendering'
-import { themeFontSize } from '../theme/themeFontSize'
 
 export function renderCap(
   state: State,

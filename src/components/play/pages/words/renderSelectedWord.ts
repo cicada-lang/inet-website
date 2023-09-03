@@ -1,5 +1,5 @@
 import { State } from '../../State'
-import { renderNet } from '../../net/renderNet'
+import { renderNet } from '../../components/net/renderNet'
 import { SelectedWord } from './SelectedWord'
 
 export function renderSelectedWord(

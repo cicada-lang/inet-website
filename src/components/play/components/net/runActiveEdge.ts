@@ -3,9 +3,9 @@ import { createEnv } from '@cicada-lang/inet/lib/lang/env'
 import { interact } from '@cicada-lang/inet/lib/lang/interact'
 import { closeAllFreePorts } from '@cicada-lang/inet/lib/lang/run/closeAllFreePorts'
 import { releaseCapPorts } from '@cicada-lang/inet/lib/lang/run/releaseCapPorts'
-import { vectorMax } from '../../../utils/vector/vectorMax'
-import { vectorMin } from '../../../utils/vector/vectorMin'
-import { State } from '../State'
+import { vectorMax } from '../../../../utils/vector/vectorMax'
+import { vectorMin } from '../../../../utils/vector/vectorMin'
+import { State } from '../../State'
 import { NetRendering } from './NetRendering'
 
 export function runActiveEdge(

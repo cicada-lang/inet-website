@@ -1,6 +1,6 @@
 import { Edge } from '@cicada-lang/inet'
 import { edgeEqual } from '@cicada-lang/inet/lib/lang/edge/edgeEqual'
-import { State } from '../State'
+import { State } from '../../State'
 import { NetRendering } from './NetRendering'
 import { runActiveEdge } from './runActiveEdge'
 

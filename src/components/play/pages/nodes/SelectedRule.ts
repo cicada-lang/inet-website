@@ -1,5 +1,5 @@
 import { Rule } from '@cicada-lang/inet/lib/lang/rule'
-import { NetRendering } from '../../net/NetRendering'
+import { NetRendering } from '../../components/net/NetRendering'
 
 export type SelectedRule = {
   name: string

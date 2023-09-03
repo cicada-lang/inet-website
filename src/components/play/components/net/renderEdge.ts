@@ -1,8 +1,8 @@
 import { formatEdge, Port } from '@cicada-lang/inet'
 import colors from 'tailwindcss/colors'
-import { edgeDistance } from '../../../utils/geometry/edgeDistance'
+import { edgeDistance } from '../../../../utils/geometry/edgeDistance'
+import { State } from '../../State'
 import { NetRendering } from '../net/NetRendering'
-import { State } from '../State'
 
 export function renderEdge(
   state: State,

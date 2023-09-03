@@ -1,8 +1,8 @@
-import { State } from '../State'
-import { computeElectricalForces } from '../forces/computeElectricalForces'
-import { computeSpringForces } from '../forces/computeSpringForces'
+import { State } from '../../State'
 import { NetLayout } from '../net/NetLayout'
 import { NetRendering } from '../net/NetRendering'
+import { computeElectricalForces } from './forces/computeElectricalForces'
+import { computeSpringForces } from './forces/computeSpringForces'
 
 export function evolveNet(state: State, rendering: NetRendering): void {
   const { net, layout, evolvingStep, evolvingStepMaximum } = rendering
