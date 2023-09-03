@@ -1,7 +1,7 @@
 import { formatWord } from '@cicada-lang/inet'
 import { State } from '../../State'
+import { renderText } from '../../components/text/renderText'
 import { themeFontSize } from '../../theme/themeFontSize'
-import { renderText } from '../../utils/renderText'
 import { SelectedType } from './SelectedType'
 
 export function renderSelectedType(

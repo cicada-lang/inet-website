@@ -1,6 +1,6 @@
-import { State } from '../State'
-import { Rect } from '../components/rect/Rect'
-import { themeSize } from '../theme/themeSize'
+import { State } from '../../State'
+import { themeSize } from '../../theme/themeSize'
+import { Rect } from '../rect/Rect'
 
 type Options = {
   height: number

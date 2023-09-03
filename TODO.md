@@ -3,8 +3,6 @@
 [play] `createLabel` -- `State` has `labels`
 [play] `createText` -- `State` has `texts`
 
-[play] `components/[label|text]`
-
 [play] `components/group`
 
 [play] `component/Component`

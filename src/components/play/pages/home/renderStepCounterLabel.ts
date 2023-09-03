@@ -1,9 +1,9 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
+import { renderLabel } from '../../components/label/renderLabel'
 import { NetRendering } from '../../net/NetRendering'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
-import { renderLabel } from '../../utils/renderLabel'
 
 export function renderStepCounterLabel(
   state: State,

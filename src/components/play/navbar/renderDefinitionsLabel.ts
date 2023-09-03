@@ -1,8 +1,8 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
+import { renderLabel } from '../components/label/renderLabel'
 import { themeFontSize } from '../theme/themeFontSize'
 import { themeSize } from '../theme/themeSize'
-import { renderLabel } from '../utils/renderLabel'
 
 export function renderDefinitionsLabel(state: State): void {
   const height = themeSize(10)

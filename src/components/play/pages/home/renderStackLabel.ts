@@ -1,7 +1,7 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
+import { renderLabel } from '../../components/label/renderLabel'
 import { themeFontSize } from '../../theme/themeFontSize'
-import { renderLabel } from '../../utils/renderLabel'
 
 export function renderStackLabel(
   state: State,
