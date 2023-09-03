@@ -1,15 +1,19 @@
 # scrollbar
 
+[play] `createRandomNetLayout` -- take more options
+[play] `renderButton` -- take only options
+[play] `renderLabel` -- take only options
+[play] `renderText` -- take only options
+[play] `renderClickableRect` -- take only options
+
 [play] extract `renderTypeListEntry`
-[play] `renderTypeList` -- call `renderScrollbar`
-
 [play] extract `renderNodeListEntry`
-[play] `renderNodeList` -- call `renderScrollbar`
-
 [play] extract `renderWordListEntry`
-[play] `renderWordList` -- call `renderScrollbar`
-
 [play] extract `renderNodeRuleListEntry`
+
+[play] `renderTypeList` -- call `renderScrollbar`
+[play] `renderNodeList` -- call `renderScrollbar`
+[play] `renderWordList` -- call `renderScrollbar`
 [play] `renderNodeRuleList` -- call `renderScrollbar`
 
 [play] `renderSelectedWord` -- show stack
