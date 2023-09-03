@@ -5,7 +5,7 @@ import { renderSelectedType } from './renderSelectedType'
 import { renderTypeList } from './renderTypeList'
 import { selectFirstType } from './selectFirstType'
 
-export function renderTypes(state: State): void {
+export function renderTypePage(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   if (state.selectedType === undefined) {

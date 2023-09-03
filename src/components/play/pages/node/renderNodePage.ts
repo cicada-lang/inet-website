@@ -7,7 +7,7 @@ import { renderNodeRuleList } from './renderNodeRuleList'
 import { renderSelectedNode } from './renderSelectedNode'
 import { selectFirstNode } from './selectFirstNode'
 
-export function renderNodes(state: State): void {
+export function renderNodePage(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   if (state.selectedNode === undefined) {

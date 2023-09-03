@@ -6,7 +6,7 @@ import { renderLocals } from './renderLocals'
 import { renderSelectedValue } from './renderSelectedValue'
 import { renderStack } from './renderStack'
 
-export function renderHome(state: State, options: RenderOptions): void {
+export function renderHomePage(state: State, options: RenderOptions): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   if (state.selectedValue) {

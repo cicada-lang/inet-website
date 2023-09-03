@@ -1,6 +1,6 @@
 import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { selectNode } from '../../pages/nodes/selectNode'
+import { selectNode } from '../../pages/node/selectNode'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { NetRendering } from '../net/NetRendering'
 import { Rect } from '../rect/Rect'
@@ -62,14 +62,14 @@ export function renderNode(
     width: boxWidth,
     height: boxHeight,
     isDisabled: (state) =>
-      state.currentRoute.name === 'nodes' &&
+      state.currentRoute.name === 'node' &&
       state.selectedNode?.name === nodeEntry.name,
     handler: (state) => {
       if (state.currentRoute.name === 'home') {
         state.history.push(state.currentRoute)
       }
 
-      state.currentRoute = { name: 'nodes' }
+      state.currentRoute = { name: 'node' }
 
       selectNode(state, nodeEntry.name)
     },

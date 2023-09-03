@@ -19,9 +19,9 @@ export function renderBackButton(state: State): void {
     name: 'back',
     height,
     handler: (state) => {
-      const path = state.history.pop()
-      if (path) {
-        state.currentRoute = path
+      const route = state.history.pop()
+      if (route) {
+        state.currentRoute = route
       }
     },
   })

@@ -7,7 +7,7 @@ import { renderSelectedWord } from './renderSelectedWord'
 import { renderWordList } from './renderWordList'
 import { selectFirstWord } from './selectFirstWord'
 
-export function renderWords(state: State, options: RenderOptions): void {
+export function renderWordPage(state: State, options: RenderOptions): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   if (state.selectedWord === undefined) {

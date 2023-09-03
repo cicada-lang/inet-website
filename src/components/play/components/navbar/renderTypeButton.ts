@@ -22,7 +22,7 @@ export function renderTypeButton(
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  const name = 'types'
+  const name = 'type'
 
   renderButton(state, text, x, y, {
     name,

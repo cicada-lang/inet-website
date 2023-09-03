@@ -22,7 +22,7 @@ export function renderWordButton(
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  const name = 'words'
+  const name = 'word'
 
   renderButton(state, text, x, y, {
     name,

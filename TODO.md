@@ -1,12 +1,14 @@
 # scrollbar
 
-[play] [maybe] extract `renderButtonListScrollable`
-
-[play] fix mobile click
+[play] fix scrollbar color for dark mode
 
 [play] fix the use of `stackIndex` -- `isActive` is wrong
 
 - [maybe] should be `stackInViewIndex`
+
+[play] fix mobile click
+
+[play] [maybe] extract `renderButtonListScrollable`
 
 [play] `renderLocals` -- call `renderScrollbar`
 [play] `renderTypeList` -- call `renderScrollbar`

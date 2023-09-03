@@ -5,9 +5,9 @@ import { Button } from './components/button/Button'
 import { ClickableRect } from './components/rect/ClickableRect'
 import { Mouse } from './mouse/Mouse'
 import { SelectedValue } from './pages/home/SelectedValue'
-import { SelectedNode } from './pages/nodes/SelectedNode'
-import { SelectedType } from './pages/types/SelectedType'
-import { SelectedWord } from './pages/words/SelectedWord'
+import { SelectedNode } from './pages/node/SelectedNode'
+import { SelectedType } from './pages/type/SelectedType'
+import { SelectedWord } from './pages/word/SelectedWord'
 import { Route, RouteExp } from './route/Route'
 
 export type State = {

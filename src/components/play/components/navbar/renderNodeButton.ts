@@ -22,7 +22,7 @@ export function renderNodeButton(
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  const name = 'nodes'
+  const name = 'node'
 
   renderButton(state, text, x, y, {
     name,
