@@ -12,7 +12,7 @@ const lang = useGlobalLang()
 
 <template>
   <div
-    class="border-b flex md:border-t-0 border-t dark:border-white border-black"
+    class="border-b flex lg:border-t-0 border-t dark:border-white border-black"
   >
     <button
       class="text-xl hover:underline underline-offset-4 decoration-2 border-r px-3 py-2 border-black dark:border-white"

@@ -17,7 +17,7 @@ export function renderLocalEntry(
   const x = 0
   const y = 0 + height * i + marginT
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 

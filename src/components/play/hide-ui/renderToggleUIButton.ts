@@ -16,7 +16,7 @@ export function renderToggleUIButton(state: State): void {
   const x = state.width
   const y = 0
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 

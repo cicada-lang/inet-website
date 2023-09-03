@@ -55,18 +55,18 @@ watch(
 
     <PageHead class="border-b border-black dark:border-white px-3 py-2" />
 
-    <div v-if="state" class="flex flex-col h-full md:overflow-auto md:flex-row">
-      <div class="flex min-h-[26rem] flex-col md:overflow-auto h-full md:w-1/2">
+    <div v-if="state" class="flex flex-col h-full lg:overflow-auto lg:flex-row">
+      <div class="flex min-h-[26rem] flex-col lg:overflow-auto h-full lg:w-1/2">
         <PlaygroundToolbar :state="state" />
 
         <PlaygroundEditor
-          class="h-full md:overflow-auto resize-none"
+          class="h-full lg:overflow-auto resize-none"
           :state="state"
         />
       </div>
 
       <div
-        class="md:border-l flex flex-col min-h-[38rem] md:overflow-auto h-full border-black dark:border-white md:w-1/2"
+        class="lg:border-l flex flex-col min-h-[38rem] lg:overflow-auto h-full border-black dark:border-white lg:w-1/2"
       >
         <PlaygroundTabs :state="state" />
 

@@ -7,7 +7,7 @@ export function renderValue(state: State, value: Value): void {
 
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('3xl')} monospace`
     : `${themeFontSize('2xl')} monospace`
 

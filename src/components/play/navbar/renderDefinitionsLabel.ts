@@ -13,7 +13,7 @@ export function renderDefinitionsLabel(state: State): void {
   const x = state.width
   const y = height
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `bold ${themeFontSize('lg')} monospace`
     : `bold ${themeFontSize('base')} monospace`
 

@@ -9,6 +9,6 @@ defineProps<{
 
 <template>
   <div class="flex flex-col h-full w-full overflow-auto p-3">
-    <pre class="text-sm md:text-base">{{ output }}</pre>
+    <pre class="text-sm lg:text-base">{{ output }}</pre>
   </div>
 </template>

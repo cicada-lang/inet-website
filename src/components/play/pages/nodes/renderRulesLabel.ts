@@ -13,7 +13,7 @@ export function renderRulesLabel(state: State, i: number): void {
   const x = 0
   const y = state.height - height * (i + 1)
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `bold ${themeFontSize('lg')} monospace`
     : `bold ${themeFontSize('base')} monospace`
 

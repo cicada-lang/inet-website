@@ -14,7 +14,7 @@ export function renderNodeRuleList(
 
   const height = themeSize(10)
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 

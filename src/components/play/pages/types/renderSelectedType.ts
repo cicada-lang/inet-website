@@ -15,7 +15,7 @@ export function renderSelectedType(
   const x = state.width / 3
   const y = state.height / 2
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('3xl')} monospace`
     : `${themeFontSize('2xl')} monospace`
 
@@ -23,7 +23,7 @@ export function renderSelectedType(
     lineHeight: 30,
   })
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('2xl')} monospace`
     : `${themeFontSize('xl')} monospace`
 

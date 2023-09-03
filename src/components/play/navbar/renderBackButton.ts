@@ -11,7 +11,7 @@ export function renderBackButton(state: State): void {
   const x = 0
   const y = 0
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 

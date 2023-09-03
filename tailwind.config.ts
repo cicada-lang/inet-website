@@ -6,9 +6,6 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      screens: {
-        md: '800px',
-      },
       colors: {
         gray: colors.stone,
         theme: colors.rose,

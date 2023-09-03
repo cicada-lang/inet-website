@@ -24,7 +24,7 @@ export function renderCap(
 
     state.ctx.lineWidth = 1
 
-    state.ctx.font = state.breakpoints.md
+    state.ctx.font = state.breakpoints.lg
       ? `${themeFontSize('lg')} monospace`
       : `${themeFontSize('base')} monospace`
 

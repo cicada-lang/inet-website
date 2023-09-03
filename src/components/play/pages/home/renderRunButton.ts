@@ -13,7 +13,7 @@ export function renderRunButton(state: State, rendering: NetRendering): void {
   const x = state.width
   const y = state.height - height * 2
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 

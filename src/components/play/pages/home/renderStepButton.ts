@@ -13,7 +13,7 @@ export function renderStepButton(state: State, rendering: NetRendering): void {
   const x = state.width
   const y = state.height - height
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 

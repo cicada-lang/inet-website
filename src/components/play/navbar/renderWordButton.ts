@@ -18,7 +18,7 @@ export function renderWordButton(
   const x = state.width
   const y = height * 2 + marginT
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 

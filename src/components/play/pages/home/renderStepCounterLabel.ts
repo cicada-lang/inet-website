@@ -21,7 +21,7 @@ export function renderStepCounterLabel(
   const x = state.width
   const y = state.height - height * (i + 1)
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 

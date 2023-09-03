@@ -13,7 +13,7 @@ export function renderWordsLabel(state: State): void {
   const x = 0
   const y = height
 
-  state.ctx.font = state.breakpoints.md
+  state.ctx.font = state.breakpoints.lg
     ? `bold ${themeFontSize('lg')} monospace`
     : `bold ${themeFontSize('base')} monospace`
 
