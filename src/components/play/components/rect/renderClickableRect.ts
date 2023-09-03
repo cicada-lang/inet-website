@@ -1,6 +1,6 @@
-import { State } from '../State'
-import { Rect } from '../rect/Rect'
+import { State } from '../../State'
 import { ClickableRect } from './ClickableRect'
+import { Rect } from './Rect'
 
 // Can not be used after transform,
 // because we need to record rect.

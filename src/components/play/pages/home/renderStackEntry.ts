@@ -1,6 +1,6 @@
 import { Value, formatValue } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { createButton } from '../../button/createButton'
+import { createButton } from '../../components/button/createButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { createSelectedValue } from './createSelectedValue'
 

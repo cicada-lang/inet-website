@@ -1,5 +1,5 @@
-import { State } from '../State'
-import { Rect } from '../rect/Rect'
+import { State } from '../../State'
+import { Rect } from './Rect'
 
 export type ClickableRect = {
   name: string

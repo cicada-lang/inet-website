@@ -1,6 +1,6 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
-import { createButton } from '../../button/createButton'
+import { createButton } from '../../components/button/createButton'
 import { NetRendering } from '../../net/NetRendering'
 import { runOneStep } from '../../net/runOneStep'
 import { themeFontSize } from '../../theme/themeFontSize'

@@ -1,6 +1,6 @@
-import { State } from '../State'
+import { State } from '../../State'
+import { themeSize } from '../../theme/themeSize'
 import { withinRect } from '../rect/withinRect'
-import { themeSize } from '../theme/themeSize'
 import { Button } from './Button'
 
 // Can not be used after transform,

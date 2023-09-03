@@ -1,13 +1,13 @@
 import { Mod } from '@cicada-lang/inet'
 import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { Theme } from '../../reactives/useGlobalTheme'
-import { Button } from './button/Button'
+import { Button } from './components/button/Button'
+import { ClickableRect } from './components/rect/ClickableRect'
 import { Mouse } from './mouse/Mouse'
 import { SelectedValue } from './pages/home/SelectedValue'
 import { SelectedNode } from './pages/nodes/SelectedNode'
 import { SelectedType } from './pages/types/SelectedType'
 import { SelectedWord } from './pages/words/SelectedWord'
-import { ClickableRect } from './rect/ClickableRect'
 import { Route, RouteExp } from './route/Route'
 
 export type State = {

@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] `components/[button|rect]`
-
 [play] `createLabel` -- `State` has `labels`
 [play] `createText` -- `State` has `texts`
 

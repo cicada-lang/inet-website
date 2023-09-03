@@ -1,6 +1,6 @@
-import { State } from '../State'
+import { State } from '../../State'
+import { themeSize } from '../../theme/themeSize'
 import { Rect } from '../rect/Rect'
-import { themeSize } from '../theme/themeSize'
 
 type Options = {
   name: string

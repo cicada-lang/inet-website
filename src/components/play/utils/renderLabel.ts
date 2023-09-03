@@ -1,5 +1,5 @@
 import { State } from '../State'
-import { Rect } from '../rect/Rect'
+import { Rect } from '../components/rect/Rect'
 import { themeSize } from '../theme/themeSize'
 
 type Options = {

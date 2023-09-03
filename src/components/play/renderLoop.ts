@@ -1,8 +1,8 @@
 import { State } from './State'
-import { renderButton } from './button/renderButton'
+import { renderButton } from './components/button/renderButton'
+import { renderClickableRect } from './components/rect/renderClickableRect'
 import { renderToggleUIButton } from './hide-ui/renderToggleUIButton'
 import { handleClickWithThrottle } from './mouse/handleClickWithThrottle'
-import { renderClickableRect } from './rect/renderClickableRect'
 import { findRoute } from './route/findRoute'
 
 export function renderLoop(state: State, passedTime?: number): void {

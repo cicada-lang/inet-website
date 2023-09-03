@@ -1,10 +1,10 @@
 import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
+import { Rect } from '../components/rect/Rect'
+import { createClickableRect } from '../components/rect/createClickableRect'
+import { withinRect } from '../components/rect/withinRect'
 import { NetRendering } from '../net/NetRendering'
 import { selectNode } from '../pages/nodes/selectNode'
-import { Rect } from '../rect/Rect'
-import { createClickableRect } from '../rect/createClickableRect'
-import { withinRect } from '../rect/withinRect'
 import { themeFontSize } from '../theme/themeFontSize'
 
 export function renderNode(
