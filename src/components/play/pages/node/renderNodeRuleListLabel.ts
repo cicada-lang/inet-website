@@ -4,7 +4,7 @@ import { renderLabel } from '../../components/label/renderLabel'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 
-export function renderRulesLabel(state: State, i: number): void {
+export function renderNodeRuleListLabel(state: State, i: number): void {
   const height = themeSize(10)
 
   const lang = useGlobalLang()

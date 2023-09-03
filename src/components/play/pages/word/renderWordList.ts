@@ -2,11 +2,11 @@ import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
-import { renderWordsLabel } from './renderWordsLabel'
+import { renderWordListLabel } from './renderWordListLabel'
 import { selectWord } from './selectWord'
 
 export function renderWordList(state: State): void {
-  renderWordsLabel(state)
+  renderWordListLabel(state)
 
   state.ctx.save()
 

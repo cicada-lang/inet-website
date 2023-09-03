@@ -3,7 +3,7 @@ import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 import { SelectedNode } from './SelectedNode'
-import { renderRulesLabel } from './renderRulesLabel'
+import { renderNodeRuleListLabel } from './renderNodeRuleListLabel'
 import { selectRule } from './selectRule'
 
 export function renderNodeRuleList(
@@ -33,5 +33,5 @@ export function renderNodeRuleList(
 
   state.ctx.restore()
 
-  renderRulesLabel(state, selectedNode.ruleEntries.length)
+  renderNodeRuleListLabel(state, selectedNode.ruleEntries.length)
 }

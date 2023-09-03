@@ -2,11 +2,11 @@ import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
-import { renderTypesLabel } from './renderTypesLabel'
+import { renderTypeListLabel } from './renderTypeListLabel'
 import { selectType } from './selectType'
 
 export function renderTypeList(state: State): void {
-  renderTypesLabel(state)
+  renderTypeListLabel(state)
 
   state.ctx.save()
 
