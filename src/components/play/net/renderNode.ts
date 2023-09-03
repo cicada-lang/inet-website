@@ -3,9 +3,9 @@ import { State } from '../State'
 import { NetRendering } from '../net/NetRendering'
 import { selectNode } from '../pages/nodes/selectNode'
 import { Rect } from '../rect/Rect'
+import { renderClickableRect } from '../rect/renderClickableRect'
 import { withinRect } from '../rect/withinRect'
 import { themeFontSize } from '../theme/themeFontSize'
-import { renderClickableRect } from '../utils/renderClickableRect'
 
 export function renderNode(
   state: State,
