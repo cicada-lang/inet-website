@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] merge createClickableRect and renderClickableRect
-
 [play] `components/button-list` -- `renderButtonList`
 
 [play] `renderStack` -- with scrollbar

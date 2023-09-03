@@ -1,7 +1,7 @@
 import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
 import { State } from '../State'
 import { Rect } from '../components/rect/Rect'
-import { createClickableRect } from '../components/rect/createClickableRect'
+import { renderClickableRect } from '../components/rect/renderClickableRect'
 import { withinRect } from '../components/rect/withinRect'
 import { NetRendering } from '../net/NetRendering'
 import { selectNode } from '../pages/nodes/selectNode'
@@ -57,7 +57,7 @@ export function renderNode(
 
   const key = nodeKey(nodeEntry)
 
-  createClickableRect(state, boxX, boxY, {
+  renderClickableRect(state, boxX, boxY, {
     name: `nodes/${key}`,
     width: boxWidth,
     height: boxHeight,
