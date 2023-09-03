@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] fix mobile click
-
 [play] [maybe] extract `renderButtonListScrollable`
 
 [play] `renderLocals` -- call `renderScrollbar`

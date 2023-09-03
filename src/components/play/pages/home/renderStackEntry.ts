@@ -31,6 +31,7 @@ export function renderStackEntry(
     handler: (state) => {
       state.homeState.selectedValue = createSelectedValue(state, value)
       state.homeState.stackInViewIndex = i
+      state.homeState.localName = undefined
     },
   })
 }

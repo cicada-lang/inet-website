@@ -46,7 +46,7 @@ watch(
 
 <template>
   <div
-    class="flex overflow-auto h-screen flex-col dark:bg-black dark:text-white"
+    class="flex overflow-auto h-screen-dynamic flex-col dark:bg-black dark:text-white"
   >
     <Head>
       <title v-if="lang.isZh()">演算场 | iNet</title>
@@ -66,7 +66,7 @@ watch(
       </div>
 
       <div
-        class="lg:border-l flex flex-col min-h-[38rem] lg:overflow-auto h-full border-black dark:border-white lg:w-1/2"
+        class="lg:border-l flex flex-col min-h-full lg:overflow-auto h-full border-black dark:border-white lg:w-1/2"
       >
         <PlaygroundTabs :state="state" />
 
