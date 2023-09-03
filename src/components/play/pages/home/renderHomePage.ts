@@ -9,11 +9,11 @@ import { renderStack } from './renderStack'
 export function renderHomePage(state: State, options: RenderOptions): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  if (state.selectedValue) {
-    renderSelectedValue(state, state.selectedValue)
+  if (state.homeState.selectedValue) {
+    renderSelectedValue(state, state.homeState.selectedValue)
 
-    if (state.selectedValue['@kind'] === 'SelectedValuePort') {
-      evolveNet(state, state.selectedValue.rendering)
+    if (state.homeState.selectedValue['@kind'] === 'SelectedValuePort') {
+      evolveNet(state, state.homeState.selectedValue.rendering)
     }
   }
 

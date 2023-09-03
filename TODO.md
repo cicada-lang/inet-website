@@ -1,6 +1,6 @@
 # scrollbar
 
-[play] `HomeState`
+[play] `HomeState` has `stackInViewIndex` and `localName`
 
 [play] fix the use of `stackInViewIndex` -- `isActive` is wrong
 

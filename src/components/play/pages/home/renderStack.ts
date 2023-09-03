@@ -21,7 +21,7 @@ export function renderStack(state: State): void {
   if (state.mod.env.stack.length > inViewLength) {
     const marginL = themeSize(10)
     const length = state.mod.env.stack.length
-    const cursor = state.homeStackScrollCursor || 0
+    const cursor = state.homeState.homeStackScrollCursor || 0
 
     renderScrollbar(state, {
       name: 'stack-scrollbar',
@@ -33,7 +33,7 @@ export function renderStack(state: State): void {
       inViewLength,
       cursor,
       onScroll: (cursor) => {
-        state.homeStackScrollCursor = cursor
+        state.homeState.homeStackScrollCursor = cursor
       },
     })
 

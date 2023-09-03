@@ -4,7 +4,7 @@ import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './components/button/Button'
 import { ClickableRect } from './components/rect/ClickableRect'
 import { Mouse } from './mouse/Mouse'
-import { SelectedValue } from './pages/home/SelectedValue'
+import { HomeState } from './pages/home/HomeState'
 import { SelectedNode } from './pages/node/SelectedNode'
 import { SelectedType } from './pages/type/SelectedType'
 import { SelectedWord } from './pages/word/SelectedWord'
@@ -37,8 +37,7 @@ export type State = {
   clickableRects: Map<string, ClickableRect>
 
   // Sub-states:
-  selectedValue?: SelectedValue
-  homeStackScrollCursor?: number
+  homeState: HomeState
   selectedType?: SelectedType
   selectedNode?: SelectedNode
   selectedWord?: SelectedWord

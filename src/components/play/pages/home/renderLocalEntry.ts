@@ -24,12 +24,12 @@ export function renderLocalEntry(
   renderButton(state, '$' + name, x, y, {
     name: `locals.${name}`,
     height,
-    isDisabled: (state) => name === state.selectedValue?.localName,
-    isActive: (state) => name === state.selectedValue?.localName,
+    isDisabled: (state) => name === state.homeState.selectedValue?.localName,
+    isActive: (state) => name === state.homeState.selectedValue?.localName,
     handler: (state) => {
-      state.selectedValue = createSelectedValue(state, value)
-      state.selectedValue.localName = name
-      state.selectedValue.stackInViewIndex = undefined
+      state.homeState.selectedValue = createSelectedValue(state, value)
+      state.homeState.selectedValue.localName = name
+      state.homeState.selectedValue.stackInViewIndex = undefined
     },
   })
 }

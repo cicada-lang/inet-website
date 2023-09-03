@@ -3,6 +3,7 @@ import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { useGlobalTheme } from '../../reactives/useGlobalTheme'
 import { State } from './State'
 import { createMouse } from './mouse/createMouse'
+import { createHomeState } from './pages/home/createHomeState'
 import { routes } from './pages/routes'
 
 export type StateOptions = {
@@ -42,5 +43,6 @@ export function createState(options: StateOptions): State {
     mod,
     buttons: new Map(),
     clickableRects: new Map(),
+    homeState: createHomeState(),
   }
 }
