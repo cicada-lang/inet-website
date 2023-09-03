@@ -23,8 +23,8 @@ export function renderNodeList(state: State): void {
       renderButton(state, name, 0, marginT + height * i, {
         name: `nodes/${name}`,
         height,
-        isActive: (state) => state.selectedNode?.name === name,
-        isDisabled: (state) => state.selectedNode?.name === name,
+        isActive: (state) => state.nodeState.selectedNode?.name === name,
+        isDisabled: (state) => state.nodeState.selectedNode?.name === name,
         handler: (state) => selectNode(state, name),
       })
 

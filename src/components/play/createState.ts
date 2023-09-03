@@ -4,6 +4,7 @@ import { useGlobalTheme } from '../../reactives/useGlobalTheme'
 import { State } from './State'
 import { createMouse } from './mouse/createMouse'
 import { createHomeState } from './pages/home/createHomeState'
+import { createNodeState } from './pages/node/createNodeState'
 import { routes } from './pages/routes'
 import { createTypeState } from './pages/type/createTypeState'
 import { createWordState } from './pages/word/createWordState'
@@ -47,6 +48,7 @@ export function createState(options: StateOptions): State {
     clickableRects: new Map(),
     homeState: createHomeState(),
     typeState: createTypeState(),
+    nodeState: createNodeState(),
     wordState: createWordState(),
   }
 }

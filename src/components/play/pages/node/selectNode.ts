@@ -20,7 +20,7 @@ export function selectNode(state: State, givenName: string): void {
         const height = state.height / 3
         const layout = createRandomNetLayout(net, x, y, width, height)
 
-        state.selectedNode = {
+        state.nodeState.selectedNode = {
           name,
           definition,
           rendering: createNetRendering(net, layout),
@@ -29,7 +29,7 @@ export function selectNode(state: State, givenName: string): void {
 
         const [firstRuleEntry] = ruleEntries
         if (firstRuleEntry) {
-          selectRule(state, state.selectedNode, firstRuleEntry.name)
+          selectRule(state, state.nodeState.selectedNode, firstRuleEntry.name)
         }
       }
     }

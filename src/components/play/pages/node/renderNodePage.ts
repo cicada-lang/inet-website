@@ -10,25 +10,25 @@ import { selectFirstNode } from './selectFirstNode'
 export function renderNodePage(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  if (state.selectedNode === undefined) {
+  if (state.nodeState.selectedNode === undefined) {
     selectFirstNode(state)
   }
 
-  if (state.selectedNode) {
-    renderSelectedNode(state, state.selectedNode)
-    evolveNet(state, state.selectedNode.rendering)
+  if (state.nodeState.selectedNode) {
+    renderSelectedNode(state, state.nodeState.selectedNode)
+    evolveNet(state, state.nodeState.selectedNode.rendering)
 
-    if (state.selectedNode.selectedRule) {
-      evolveNet(state, state.selectedNode.selectedRule.initial)
-      evolveNet(state, state.selectedNode.selectedRule.final)
+    if (state.nodeState.selectedNode.selectedRule) {
+      evolveNet(state, state.nodeState.selectedNode.selectedRule.initial)
+      evolveNet(state, state.nodeState.selectedNode.selectedRule.final)
     }
   }
 
   if (!state.isHidingUI) {
     renderNodeList(state)
 
-    if (state.selectedNode) {
-      renderNodeRuleList(state, state.selectedNode)
+    if (state.nodeState.selectedNode) {
+      renderNodeRuleList(state, state.nodeState.selectedNode)
     }
 
     renderNavbar(state)

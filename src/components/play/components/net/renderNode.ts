@@ -63,7 +63,7 @@ export function renderNode(
     height: boxHeight,
     isDisabled: (state) =>
       state.currentRoute.name === 'node' &&
-      state.selectedNode?.name === nodeEntry.name,
+      state.nodeState.selectedNode?.name === nodeEntry.name,
     handler: (state) => {
       if (state.currentRoute.name === 'home') {
         state.history.push(state.currentRoute)

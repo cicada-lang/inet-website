@@ -1,6 +1,6 @@
 # scrollbar
 
-[play] `NodeState`
+[play] `NodeState` has `selectedRule`
 
 [play] fix mobile click
 

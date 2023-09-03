@@ -5,7 +5,7 @@ import { Button } from './components/button/Button'
 import { ClickableRect } from './components/rect/ClickableRect'
 import { Mouse } from './mouse/Mouse'
 import { HomeState } from './pages/home/HomeState'
-import { SelectedNode } from './pages/node/SelectedNode'
+import { NodeState } from './pages/node/NodeState'
 import { TypeState } from './pages/type/TypeState'
 import { WordState } from './pages/word/WordState'
 import { Route, RouteExp } from './route/Route'
@@ -39,6 +39,6 @@ export type State = {
   // Sub-states:
   homeState: HomeState
   typeState: TypeState
-  selectedNode?: SelectedNode
+  nodeState: NodeState
   wordState: WordState
 }
