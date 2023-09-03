@@ -8,12 +8,12 @@ import { selectFirstType } from './selectFirstType'
 export function renderTypePage(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  if (state.selectedType === undefined) {
+  if (state.typeState.selectedType === undefined) {
     selectFirstType(state)
   }
 
-  if (state.selectedType) {
-    renderSelectedType(state, state.selectedType)
+  if (state.typeState.selectedType) {
+    renderSelectedType(state, state.typeState.selectedType)
   }
 
   if (!state.isHidingUI) {

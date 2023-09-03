@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] `TypeState`
 [play] `WordState`
 [play] `NodeState`
 

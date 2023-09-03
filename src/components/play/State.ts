@@ -6,7 +6,7 @@ import { ClickableRect } from './components/rect/ClickableRect'
 import { Mouse } from './mouse/Mouse'
 import { HomeState } from './pages/home/HomeState'
 import { SelectedNode } from './pages/node/SelectedNode'
-import { SelectedType } from './pages/type/SelectedType'
+import { TypeState } from './pages/type/TypeState'
 import { SelectedWord } from './pages/word/SelectedWord'
 import { Route, RouteExp } from './route/Route'
 
@@ -38,7 +38,7 @@ export type State = {
 
   // Sub-states:
   homeState: HomeState
-  selectedType?: SelectedType
+  typeState: TypeState
   selectedNode?: SelectedNode
   selectedWord?: SelectedWord
 }
