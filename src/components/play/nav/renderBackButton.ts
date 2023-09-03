@@ -4,7 +4,7 @@ import { renderButton } from '../button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
 import { themeSize } from '../theme/themeSize'
 
-export function renderButtonBack(state: State): void {
+export function renderBackButton(state: State): void {
   const lang = useGlobalLang()
   const text = lang.isZh() ? `返回` : `Back`
   const height = themeSize(10)

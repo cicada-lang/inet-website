@@ -2,11 +2,11 @@ import { State } from '../../State'
 import { renderButton } from '../../button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
-import { renderLabelNodes } from './renderLabelNodes'
+import { renderNodesLabel } from './renderNodesLabel'
 import { selectNode } from './selectNode'
 
 export function renderNodeList(state: State): void {
-  renderLabelNodes(state)
+  renderNodesLabel(state)
 
   state.ctx.save()
 

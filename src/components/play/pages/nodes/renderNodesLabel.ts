@@ -4,14 +4,14 @@ import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 import { renderLabel } from '../../utils/renderLabel'
 
-export function renderLabelRules(state: State, i: number): void {
+export function renderNodesLabel(state: State): void {
   const height = themeSize(10)
 
   const lang = useGlobalLang()
 
-  const text = lang.isZh() ? '规则列表' : 'Rules'
+  const text = lang.isZh() ? '节点列表' : 'Nodes'
   const x = 0
-  const y = state.height - height * (i + 1)
+  const y = height
 
   state.ctx.font = state.breakpoints.md
     ? `bold ${themeFontSize('lg')} monospace`

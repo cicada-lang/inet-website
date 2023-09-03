@@ -4,7 +4,7 @@ import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 import { renderLabel } from '../../utils/renderLabel'
 
-export function renderLabelLocals(state: State): void {
+export function renderLocalsLabel(state: State): void {
   const height = themeSize(10)
 
   const lang = useGlobalLang()

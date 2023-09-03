@@ -4,7 +4,7 @@ import { renderButton } from '../button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
 import { themeSize } from '../theme/themeSize'
 
-export function renderButtonToggleUI(state: State): void {
+export function renderToggleUIButton(state: State): void {
   const lang = useGlobalLang()
 
   const hideText = lang.isZh() ? `隐藏 UI` : `Hide UI`

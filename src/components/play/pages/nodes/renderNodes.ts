@@ -1,5 +1,5 @@
 import { State } from '../../State'
-import { renderButtonBack } from '../../nav/renderButtonBack'
+import { renderBackButton } from '../../nav/renderBackButton'
 import { renderNavbar } from '../../nav/renderNavbar'
 import { evolveNet } from '../../net/evolveNet'
 import { renderNodeList } from './renderNodeList'
@@ -32,6 +32,6 @@ export function renderNodes(state: State): void {
     }
 
     renderNavbar(state)
-    if (state.history.length > 0) renderButtonBack(state)
+    if (state.history.length > 0) renderBackButton(state)
   }
 }

@@ -1,10 +1,10 @@
 import { State } from '../../State'
-import { renderLabelLocals } from './renderLabelLocals'
 import { renderLocalEntry } from './renderLocalEntry'
+import { renderLocalsLabel } from './renderLocalsLabel'
 
 export function renderLocals(state: State): void {
   if (state.mod.env.locals.size > 0) {
-    renderLabelLocals(state)
+    renderLocalsLabel(state)
   }
 
   let i = 0

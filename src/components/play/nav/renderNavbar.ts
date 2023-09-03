@@ -1,17 +1,17 @@
 import { State } from '../State'
 import { themeSize } from '../theme/themeSize'
-import { renderButtonNode } from './renderButtonNode'
-import { renderButtonType } from './renderButtonType'
-import { renderButtonWord } from './renderButtonWord'
-import { renderLabelDefinitions } from './renderLabelDefinitions'
+import { renderDefinitionsLabel } from './renderDefinitionsLabel'
+import { renderNodeButton } from './renderNodeButton'
+import { renderTypeButton } from './renderTypeButton'
+import { renderWordButton } from './renderWordButton'
 
 export function renderNavbar(state: State): void {
   const height = themeSize(10)
   const marginT = height * 2
 
-  renderLabelDefinitions(state)
+  renderDefinitionsLabel(state)
 
-  renderButtonType(state, { height, marginT })
-  renderButtonNode(state, { height, marginT })
-  renderButtonWord(state, { height, marginT })
+  renderTypeButton(state, { height, marginT })
+  renderNodeButton(state, { height, marginT })
+  renderWordButton(state, { height, marginT })
 }

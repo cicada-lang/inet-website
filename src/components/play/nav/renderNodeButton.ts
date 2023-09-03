@@ -3,7 +3,7 @@ import { State } from '../State'
 import { renderButton } from '../button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
 
-export function renderButtonWord(
+export function renderNodeButton(
   state: State,
   options: {
     height: number
@@ -13,16 +13,16 @@ export function renderButtonWord(
   const { height, marginT } = options
 
   const lang = useGlobalLang()
-  const text = lang.isZh() ? `词汇` : `Word`
+  const text = lang.isZh() ? `节点` : `Node`
 
   const x = state.width
-  const y = height * 2 + marginT
+  const y = height + marginT
 
   state.ctx.font = state.breakpoints.md
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  const name = 'words'
+  const name = 'nodes'
 
   renderButton(state, text, x, y, {
     name,

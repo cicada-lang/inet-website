@@ -1,8 +1,7 @@
 # scrollbar
 
-[play] rename Button and Label components
-
 [play] `components/Button`
+[play] `components/Labal`
 
 [play] renderButtonList
 

@@ -1,5 +1,5 @@
 import { State } from '../../State'
-import { renderButtonBack } from '../../nav/renderButtonBack'
+import { renderBackButton } from '../../nav/renderBackButton'
 import { renderNavbar } from '../../nav/renderNavbar'
 import { renderSelectedType } from './renderSelectedType'
 import { renderTypeList } from './renderTypeList'
@@ -19,6 +19,6 @@ export function renderTypes(state: State): void {
   if (!state.isHidingUI) {
     renderTypeList(state)
     renderNavbar(state)
-    if (state.history.length > 0) renderButtonBack(state)
+    if (state.history.length > 0) renderBackButton(state)
   }
 }
