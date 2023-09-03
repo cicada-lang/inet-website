@@ -5,4 +5,5 @@ export type HomeState = {
   stackScrollCursor?: number
   stackInViewIndex?: number
   localName?: string
+  stackInViewLength: number
 }

@@ -7,7 +7,8 @@ import { renderStackLabel } from './renderStackLabel'
 export function renderStack(state: State): void {
   const height = themeSize(10)
 
-  const inViewLength = 7
+  const inViewLength = state.homeState.stackInViewLength
+
   if (state.mod.env.stack.length > 0) {
     renderStackLabel(
       state,

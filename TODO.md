@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] fix the use of `stackInViewIndex` -- `isActive` is wrong
-
 [play] `TypeState`
 [play] `WordState`
 [play] `NodeState`
