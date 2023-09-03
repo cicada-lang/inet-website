@@ -1,17 +1,32 @@
 import { State } from '../State'
-import { onClick } from '../mouse/onClick'
+import { runGivenEdge } from '../net/runGivenEdge'
+import { withinRect } from '../rect/withinRect'
 
-export function handleClick(
-  state: State,
-  options: { deltaTime: number },
-): void {
-  const clickPeriod = 120
-  if (state.clickCoollingTimer <= 0) {
-    if (state.mouse.isDown) {
-      onClick(state)
-      state.clickCoollingTimer = clickPeriod
+export function handleClick(state: State): void {
+  for (const button of state.buttons.values()) {
+    if (withinRect(button.rect, state.mouse.position)) {
+      if (!button.isDisabled?.(state)) {
+        button.handler(state)
+      }
     }
-  } else {
-    state.clickCoollingTimer -= options.deltaTime
+  }
+
+  for (const clickableRect of state.clickableRects.values()) {
+    if (withinRect(clickableRect.rect, state.mouse.position)) {
+      clickableRect.handler(state)
+    }
+  }
+
+  if (state.selectedValue?.['@kind'] === 'SelectedValuePort') {
+    const { rendering } = state.selectedValue
+    if (rendering.hoveredEdge) {
+      const { first, second } = rendering.hoveredEdge
+      if (first.port.isPrincipal && second.port.isPrincipal) {
+        runGivenEdge(state, rendering, {
+          first: first.port,
+          second: second.port,
+        })
+      }
+    }
   }
 }

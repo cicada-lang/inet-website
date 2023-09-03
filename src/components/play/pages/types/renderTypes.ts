@@ -1,6 +1,6 @@
 import { State } from '../../State'
-import { renderBackButton } from '../../nav/renderBackButton'
-import { renderNavbar } from '../../nav/renderNavbar'
+import { renderBackButton } from '../../navbar/renderBackButton'
+import { renderNavbar } from '../../navbar/renderNavbar'
 import { renderSelectedType } from './renderSelectedType'
 import { renderTypeList } from './renderTypeList'
 import { selectFirstType } from './selectFirstType'

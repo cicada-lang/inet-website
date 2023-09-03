@@ -1,7 +1,7 @@
 import { State } from './State'
 import { renderButton } from './button/renderButton'
 import { renderToggleUIButton } from './hide-ui/renderToggleUIButton'
-import { handleClick } from './mouse/handleClick'
+import { handleClickWithThrottle } from './mouse/handleClickWithThrottle'
 import { findRoute } from './route/findRoute'
 
 export function renderLoop(state: State, passedTime?: number): void {
@@ -30,7 +30,7 @@ export function renderLoop(state: State, passedTime?: number): void {
     renderButton(state, button)
   }
 
-  handleClick(state, { deltaTime })
+  handleClickWithThrottle(state, { deltaTime })
 
   requestAnimationFrame((passedTime) => renderLoop(state, passedTime))
 }

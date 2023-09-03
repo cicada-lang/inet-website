@@ -39,17 +39,4 @@ export function createButton(
     height,
     rect,
   })
-
-  // if (options.isDisabled?.(state)) {
-  //   state.buttons.delete(name)
-  // } else {
-  //   state.buttons.set(name, {
-  //     ...options,
-  //     text,
-  //     x,
-  //     y,
-  //     height,
-  //     rect,
-  //   })
-  // }
 }

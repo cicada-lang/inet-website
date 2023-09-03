@@ -1,6 +1,6 @@
 import { State } from '../../State'
-import { renderBackButton } from '../../nav/renderBackButton'
-import { renderNavbar } from '../../nav/renderNavbar'
+import { renderBackButton } from '../../navbar/renderBackButton'
+import { renderNavbar } from '../../navbar/renderNavbar'
 import { evolveNet } from '../../net/evolveNet'
 import { renderNodeList } from './renderNodeList'
 import { renderNodeRuleList } from './renderNodeRuleList'

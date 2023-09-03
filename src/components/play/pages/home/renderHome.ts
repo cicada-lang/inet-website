@@ -1,5 +1,5 @@
 import { State } from '../../State'
-import { renderNavbar } from '../../nav/renderNavbar'
+import { renderNavbar } from '../../navbar/renderNavbar'
 import { evolveNet } from '../../net/evolveNet'
 import { RenderOptions } from '../../route/Route'
 import { renderLocals } from './renderLocals'
