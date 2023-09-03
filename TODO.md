@@ -1,6 +1,12 @@
 # scrollbar
 
-[play] `renderLocalsS` -- call `renderScrollbar`
+[play] `renderButtonListScrollable`
+
+[play] `renderLocals` -- call `renderScrollbar`
+[play] `renderTypeList` -- call `renderScrollbar`
+[play] `renderNodeList` -- call `renderScrollbar`
+[play] `renderWordList` -- call `renderScrollbar`
+[play] `renderNodeRuleList` -- call `renderScrollbar`
 
 [play] `renderSelectedWord` -- show stack
 

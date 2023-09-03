@@ -3,7 +3,6 @@ import { NetRendering } from '../../components/net/NetRendering'
 
 export type SelectedValue = (SelectedValuePort | SelectedValueGeneric) & {
   stackIndex?: number
-  stackScrollCursor?: number
   localName?: string
 }
 

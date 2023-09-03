@@ -1,11 +1,10 @@
 import { State } from '../../State'
 import { renderScrollbar } from '../../components/scrollbar/renderScrollbar'
 import { themeSize } from '../../theme/themeSize'
-import { SelectedValue } from './SelectedValue'
 import { renderStackEntry } from './renderStackEntry'
 import { renderStackLabel } from './renderStackLabel'
 
-export function renderStack(state: State, selectedValue: SelectedValue): void {
+export function renderStack(state: State): void {
   const height = themeSize(10)
 
   const inViewLength = 7
@@ -22,7 +21,8 @@ export function renderStack(state: State, selectedValue: SelectedValue): void {
   if (state.mod.env.stack.length > inViewLength) {
     const marginL = themeSize(10)
     const length = state.mod.env.stack.length
-    const cursor = selectedValue.stackScrollCursor || 0
+    const cursor = state.homeStackScrollCursor || 0
+
     renderScrollbar(state, {
       name: 'stack-scrollbar',
       x: 0,
@@ -33,7 +33,7 @@ export function renderStack(state: State, selectedValue: SelectedValue): void {
       inViewLength,
       cursor,
       onScroll: (cursor) => {
-        selectedValue.stackScrollCursor = cursor
+        state.homeStackScrollCursor = cursor
       },
     })
 

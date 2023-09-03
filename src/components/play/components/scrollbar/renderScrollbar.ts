@@ -31,12 +31,37 @@ export function renderScrollbar(
     })
   }
 
+  if (cursor > 0) {
+    renderClickableRect(state, x, y + (height / length) * cursor, {
+      name: `${name}/-1`,
+      height: ((height / length) * inViewLength) / 2,
+      width,
+      // withBorder: true,
+      handler: () => onScroll(cursor - 1),
+    })
+  }
+
   state.ctx.strokeRect(
     x + padding,
     y + (height / length) * cursor + padding,
     width - padding * 2,
     height * (inViewLength / length) - padding * 2,
   )
+
+  if (cursor < length - inViewLength) {
+    renderClickableRect(
+      state,
+      x,
+      y + (height / length) * cursor + ((height / length) * inViewLength) / 2,
+      {
+        name: `${name}/+1`,
+        height: ((height / length) * inViewLength) / 2,
+        width,
+        // withBorder: true,
+        handler: () => onScroll(cursor + 1),
+      },
+    )
+  }
 
   for (let i = cursor; i < length - inViewLength; i++) {
     renderClickableRect(state, x, y + (height / length) * (i + inViewLength), {

@@ -38,6 +38,7 @@ export type State = {
 
   // Sub-states:
   selectedValue?: SelectedValue
+  homeStackScrollCursor?: number
   selectedType?: SelectedType
   selectedNode?: SelectedNode
   selectedWord?: SelectedWord
