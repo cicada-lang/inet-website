@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] merge createButton and renderButton
 [play] merge createClickableRect and renderClickableRect
 
 [play] `components/button-list` -- `renderButtonList`

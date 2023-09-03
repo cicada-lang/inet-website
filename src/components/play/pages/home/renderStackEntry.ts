@@ -1,6 +1,6 @@
 import { Value, formatValue } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { createButton } from '../../components/button/createButton'
+import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { createSelectedValue } from './createSelectedValue'
 
@@ -22,7 +22,7 @@ export function renderStackEntry(
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  createButton(state, text, x, y, {
+  renderButton(state, text, x, y, {
     name: `state[${i}]`,
     height,
     isDisabled: (state) => i === state.selectedValue?.stackIndex,

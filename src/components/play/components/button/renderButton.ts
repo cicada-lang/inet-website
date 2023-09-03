@@ -1,43 +1,67 @@
 import { State } from '../../State'
 import { themeSize } from '../../theme/themeSize'
+import { Rect } from '../rect/Rect'
 import { withinRect } from '../rect/withinRect'
-import { Button } from './Button'
+
+type Options = {
+  name: string
+  height: number
+  align?: 'left' | 'right'
+  noBorder?: boolean
+  handler: (state: State) => void
+  isActive?: (state: State) => void
+  isDisabled?: (state: State) => void
+}
 
 // Can not be used after transform,
 // because we need to record rect.
 
-export function renderButton(state: State, button: Button): void {
-  const { text, height } = button
-  let { x, y } = button
+export function renderButton(
+  state: State,
+  text: string,
+  x: number,
+  y: number,
+  options: Options,
+): void {
+  const { name } = options
 
   const paddingX = themeSize(3)
 
-  state.ctx.save()
-
   const textMetrics = state.ctx.measureText(text)
   const width = textMetrics.width + paddingX * 2
+  const height = options.height
 
-  if (button.align === 'right') {
+  if (options.align === 'right') {
     x = x - width
   }
+
+  const rect: Rect = [x, y, width, height]
+
+  state.buttons.set(name, {
+    ...options,
+    text,
+    x,
+    y,
+    height,
+    rect,
+  })
+
+  state.ctx.save()
 
   state.ctx.beginPath()
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
-  state.ctx.clearRect(...button.rect)
+  state.ctx.clearRect(...rect)
   state.ctx.lineWidth = 1
-  if (!button.noBorder) {
-    state.ctx.strokeRect(...button.rect)
+  if (!options.noBorder) {
+    state.ctx.strokeRect(...rect)
   }
 
   const textOffset = 12
   state.ctx.fillText(text, x + paddingX, y + height - textOffset)
 
-  if (
-    withinRect(button.rect, state.mouse.position) ||
-    button.isActive?.(state)
-  ) {
+  if (withinRect(rect, state.mouse.position) || options.isActive?.(state)) {
     state.ctx.lineWidth = 1.5
     const underlineOffset = 8
     state.ctx.moveTo(x + paddingX, y + height - underlineOffset)

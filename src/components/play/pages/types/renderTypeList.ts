@@ -1,5 +1,5 @@
 import { State } from '../../State'
-import { createButton } from '../../components/button/createButton'
+import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 import { renderTypesLabel } from './renderTypesLabel'
@@ -20,7 +20,7 @@ export function renderTypeList(state: State): void {
   let i = 0
   for (const [name, definition] of state.mod.definitions) {
     if (definition['@kind'] === 'TypeDefinition') {
-      createButton(state, name, 0, marginT + height * i, {
+      renderButton(state, name, 0, marginT + height * i, {
         name: `types/${name}`,
         height,
         isActive: (state) => state.selectedType?.name === name,

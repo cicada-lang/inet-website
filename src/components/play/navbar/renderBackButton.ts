@@ -1,6 +1,6 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
-import { createButton } from '../components/button/createButton'
+import { renderButton } from '../components/button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
 import { themeSize } from '../theme/themeSize'
 
@@ -15,7 +15,7 @@ export function renderBackButton(state: State): void {
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  createButton(state, text, x, y, {
+  renderButton(state, text, x, y, {
     name: 'back',
     height,
     handler: (state) => {

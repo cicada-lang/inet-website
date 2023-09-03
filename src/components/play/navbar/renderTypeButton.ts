@@ -1,6 +1,6 @@
 import { useGlobalLang } from '../../lang/useGlobalLang'
 import { State } from '../State'
-import { createButton } from '../components/button/createButton'
+import { renderButton } from '../components/button/renderButton'
 import { themeFontSize } from '../theme/themeFontSize'
 
 export function renderTypeButton(
@@ -24,7 +24,7 @@ export function renderTypeButton(
 
   const name = 'types'
 
-  createButton(state, text, x, y, {
+  renderButton(state, text, x, y, {
     name,
     height,
     align: 'right',

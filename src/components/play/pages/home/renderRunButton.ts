@@ -1,6 +1,6 @@
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
-import { createButton } from '../../components/button/createButton'
+import { renderButton } from '../../components/button/renderButton'
 import { NetRendering } from '../../net/NetRendering'
 import { runAllSteps } from '../../net/runAllSteps'
 import { themeFontSize } from '../../theme/themeFontSize'
@@ -17,7 +17,7 @@ export function renderRunButton(state: State, rendering: NetRendering): void {
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  createButton(state, text, x, y, {
+  renderButton(state, text, x, y, {
     name: 'run',
     align: 'right',
     height,

@@ -1,6 +1,6 @@
 import { Value } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { createButton } from '../../components/button/createButton'
+import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 import { createSelectedValue } from './createSelectedValue'
@@ -21,7 +21,7 @@ export function renderLocalEntry(
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  createButton(state, '$' + name, x, y, {
+  renderButton(state, '$' + name, x, y, {
     name: `locals.${name}`,
     height,
     isDisabled: (state) => name === state.selectedValue?.localName,
