@@ -1,9 +1,9 @@
-import { useGlobalLang } from '../../lang/useGlobalLang'
-import { State } from '../State'
-import { renderButton } from '../components/button/renderButton'
-import { themeFontSize } from '../theme/themeFontSize'
+import { useGlobalLang } from '../../../lang/useGlobalLang'
+import { State } from '../../State'
+import { themeFontSize } from '../../theme/themeFontSize'
+import { renderButton } from '../button/renderButton'
 
-export function renderTypeButton(
+export function renderNodeButton(
   state: State,
   options: {
     height: number
@@ -13,16 +13,16 @@ export function renderTypeButton(
   const { height, marginT } = options
 
   const lang = useGlobalLang()
-  const text = lang.isZh() ? `类型` : `Type`
+  const text = lang.isZh() ? `节点` : `Node`
 
   const x = state.width
-  const y = 0 + marginT
+  const y = height + marginT
 
   state.ctx.font = state.breakpoints.lg
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  const name = 'types'
+  const name = 'nodes'
 
   renderButton(state, text, x, y, {
     name,

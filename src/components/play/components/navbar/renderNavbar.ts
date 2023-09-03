@@ -1,5 +1,5 @@
-import { State } from '../State'
-import { themeSize } from '../theme/themeSize'
+import { State } from '../../State'
+import { themeSize } from '../../theme/themeSize'
 import { renderDefinitionsLabel } from './renderDefinitionsLabel'
 import { renderNodeButton } from './renderNodeButton'
 import { renderTypeButton } from './renderTypeButton'

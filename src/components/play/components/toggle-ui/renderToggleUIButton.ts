@@ -1,8 +1,8 @@
-import { useGlobalLang } from '../../lang/useGlobalLang'
-import { State } from '../State'
-import { renderButton } from '../components/button/renderButton'
-import { themeFontSize } from '../theme/themeFontSize'
-import { themeSize } from '../theme/themeSize'
+import { useGlobalLang } from '../../../lang/useGlobalLang'
+import { State } from '../../State'
+import { themeFontSize } from '../../theme/themeFontSize'
+import { themeSize } from '../../theme/themeSize'
+import { renderButton } from '../button/renderButton'
 
 export function renderToggleUIButton(state: State): void {
   const lang = useGlobalLang()

@@ -1,5 +1,5 @@
 import { State } from './State'
-import { renderToggleUIButton } from './hide-ui/renderToggleUIButton'
+import { renderToggleUIButton } from './components/toggle-ui/renderToggleUIButton'
 import { handleClickWithThrottle } from './mouse/handleClickWithThrottle'
 import { findRoute } from './route/findRoute'
 

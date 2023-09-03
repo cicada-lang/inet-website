@@ -1,7 +1,7 @@
-import { useGlobalLang } from '../../lang/useGlobalLang'
-import { State } from '../State'
-import { renderButton } from '../components/button/renderButton'
-import { themeFontSize } from '../theme/themeFontSize'
+import { useGlobalLang } from '../../../lang/useGlobalLang'
+import { State } from '../../State'
+import { themeFontSize } from '../../theme/themeFontSize'
+import { renderButton } from '../button/renderButton'
 
 export function renderWordButton(
   state: State,

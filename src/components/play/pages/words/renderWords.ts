@@ -1,6 +1,6 @@
 import { State } from '../../State'
-import { renderBackButton } from '../../navbar/renderBackButton'
-import { renderNavbar } from '../../navbar/renderNavbar'
+import { renderBackButton } from '../../components/navbar/renderBackButton'
+import { renderNavbar } from '../../components/navbar/renderNavbar'
 import { evolveNet } from '../../net/evolveNet'
 import { RenderOptions } from '../../route/Route'
 import { renderSelectedWord } from './renderSelectedWord'
