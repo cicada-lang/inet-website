@@ -1,8 +1,5 @@
 # scrollbar
 
-[play] [maybe] extract `renderButtonListScrollable`
-
-[play] `renderLocals` -- call `renderScrollbar`
 [play] `renderTypeList` -- call `renderScrollbar`
 [play] `renderNodeList` -- call `renderScrollbar`
 [play] `renderWordList` -- call `renderScrollbar`

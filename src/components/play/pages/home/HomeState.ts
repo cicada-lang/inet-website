@@ -2,8 +2,10 @@ import { SelectedValue } from './SelectedValue'
 
 export type HomeState = {
   selectedValue?: SelectedValue
+  stackInViewLength: number
   stackScrollCursor?: number
   stackInViewIndex?: number
   localName?: string
-  stackInViewLength: number
+  localsInViewLength: number
+  localsScrollCursor?: number
 }

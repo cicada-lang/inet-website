@@ -48,7 +48,7 @@ export function renderStack(state: State): void {
     }
   } else {
     for (const [i, value] of state.mod.env.stack.entries()) {
-      renderStackEntry(state, i, value, { height })
+      renderStackEntry(state, i, value, { height, marginL: 0 })
     }
   }
 }

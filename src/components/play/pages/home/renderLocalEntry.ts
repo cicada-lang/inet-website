@@ -2,7 +2,6 @@ import { Value } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
-import { themeSize } from '../../theme/themeSize'
 import { createSelectedValue } from './createSelectedValue'
 
 export function renderLocalEntry(
@@ -10,11 +9,16 @@ export function renderLocalEntry(
   i: number,
   name: string,
   value: Value,
+  options: {
+    height: number
+    marginL: number
+  },
 ): void {
-  const height = themeSize(10)
+  const { height, marginL } = options
+
   const marginT = height * 2
 
-  const x = 0
+  const x = marginL
   const y = 0 + height * i + marginT
 
   state.ctx.font = state.breakpoints.lg

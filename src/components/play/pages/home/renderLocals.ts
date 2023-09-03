@@ -1,15 +1,48 @@
 import { State } from '../../State'
+import { renderScrollbar } from '../../components/scrollbar/renderScrollbar'
+import { themeSize } from '../../theme/themeSize'
 import { renderLocalEntry } from './renderLocalEntry'
 import { renderLocalsLabel } from './renderLocalsLabel'
 
 export function renderLocals(state: State): void {
+  const inViewLength = state.homeState.localsInViewLength
+  const height = themeSize(10)
+
   if (state.mod.env.locals.size > 0) {
     renderLocalsLabel(state)
   }
 
-  let i = 0
-  for (const [name, value] of state.mod.env.locals.entries()) {
-    renderLocalEntry(state, i, name, value)
-    i++
+  if (state.mod.env.locals.size > inViewLength) {
+    const marginL = themeSize(10)
+    const length = state.mod.env.locals.size
+    const cursor = state.homeState.localsScrollCursor || 0
+
+    renderScrollbar(state, {
+      name: 'locals-scrollbar',
+      x: 0,
+      y: height * 2,
+      width: marginL,
+      height: height * inViewLength,
+      length,
+      inViewLength,
+      cursor,
+      onScroll: (cursor) => {
+        state.homeState.localsScrollCursor = cursor
+      },
+    })
+
+    const localEntries = Array.from(state.mod.env.locals.entries())
+      .slice(cursor, cursor + inViewLength)
+      .entries()
+
+    for (const [i, [name, value]] of localEntries) {
+      renderLocalEntry(state, i, name, value, { height, marginL })
+    }
+  } else {
+    const localEntries = Array.from(state.mod.env.locals.entries()).entries()
+
+    for (const [i, [name, value]] of localEntries) {
+      renderLocalEntry(state, i, name, value, { height, marginL: 0 })
+    }
   }
 }
