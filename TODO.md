@@ -1,8 +1,12 @@
 # scrollbar
 
-[play] fix the use of `stackIndex` -- `isActive` is wrong
+[play] `HomeState`
 
-- [maybe] should be `stackInViewIndex`
+[play] fix the use of `stackInViewIndex` -- `isActive` is wrong
+
+[play] `TypeState`
+[play] `WordState`
+[play] `NodeState`
 
 [play] fix mobile click
 

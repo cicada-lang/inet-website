@@ -5,7 +5,7 @@ import { createRandomNetLayout } from '../../components/net/createRandomNetLayou
 import { SelectedValue } from './SelectedValue'
 
 export function createSelectedValue(state: State, value: Value): SelectedValue {
-  const stackIndex = state.mod.env.stack.length - 1
+  const stackInViewIndex = state.mod.env.stack.length - 1
 
   if (value['@kind'] === 'Port') {
     const net = createNet()
@@ -23,14 +23,14 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
       '@kind': 'SelectedValuePort',
       port: value,
       rendering: createNetRendering(net, layout),
-      stackIndex,
+      stackInViewIndex,
     }
   } else {
     return {
       '@type': 'SelectedValue',
       '@kind': 'SelectedValueGeneric',
       value,
-      stackIndex,
+      stackInViewIndex,
     }
   }
 }

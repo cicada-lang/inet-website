@@ -26,11 +26,11 @@ export function renderStackEntry(
   renderButton(state, text, x, y, {
     name: `state[${i}]`,
     height,
-    isDisabled: (state) => i === state.selectedValue?.stackIndex,
-    isActive: (state) => i === state.selectedValue?.stackIndex,
+    isDisabled: (state) => i === state.selectedValue?.stackInViewIndex,
+    isActive: (state) => i === state.selectedValue?.stackInViewIndex,
     handler: (state) => {
       state.selectedValue = createSelectedValue(state, value)
-      state.selectedValue.stackIndex = i
+      state.selectedValue.stackInViewIndex = i
     },
   })
 }
