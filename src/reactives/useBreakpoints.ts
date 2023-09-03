@@ -14,7 +14,8 @@ export type Breakpoints = {
 export function useBreakpoints(): Breakpoints {
   return reactive({
     sm: useMediaQuery('(min-width: 640px)'),
-    md: useMediaQuery('(min-width: 768px)'),
+    // md: useMediaQuery('(min-width: 768px)'),
+    md: useMediaQuery('(min-width: 800px)'),
     lg: useMediaQuery('(min-width: 1024px)'),
     xl: useMediaQuery('(min-width: 1280px)'),
     '2xl': useMediaQuery('(min-width: 1536px)'),
