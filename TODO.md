@@ -2,6 +2,8 @@
 
 [play] [maybe] extract `renderButtonListScrollable`
 
+[play] fix mobile click
+
 [play] fix the use of `stackIndex` -- `isActive` is wrong
 
 - [maybe] should be `stackInViewIndex`

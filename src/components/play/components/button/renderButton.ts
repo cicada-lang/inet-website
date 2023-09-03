@@ -49,16 +49,22 @@ export function renderButton(
   state.ctx.save()
 
   state.ctx.beginPath()
-  state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
-  state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
-  state.ctx.clearRect(...rect)
+  state.ctx.fillStyle =
+    state.theme.name === 'dark'
+      ? 'hsla(0, 50%, 0%, 40%)'
+      : 'hsla(0, 50%, 100%, 40%)'
+
+  state.ctx.fillRect(...rect)
+
+  state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.lineWidth = 1
   if (!options.noBorder) {
     state.ctx.strokeRect(...rect)
   }
 
   const textOffset = 12
+  state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillText(text, x + paddingX, y + height - textOffset)
 
   if (withinRect(rect, state.mouse.position) || options.isActive?.(state)) {
