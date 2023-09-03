@@ -4,14 +4,19 @@ import { renderLabel } from '../../components/label/renderLabel'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 
-export function renderLocalsLabel(state: State): void {
+export function renderLocalsLabel(
+  state: State,
+  options: { marginT: number },
+): void {
+  const { marginT } = options
+
   const height = themeSize(10)
 
   const lang = useGlobalLang()
 
   const text = lang.isZh() ? '局部变元' : 'Locals'
   const x = 0
-  const y = height
+  const y = marginT
 
   state.ctx.font = state.breakpoints.lg
     ? `bold ${themeFontSize('lg')} monospace`

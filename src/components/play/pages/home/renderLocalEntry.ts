@@ -12,11 +12,10 @@ export function renderLocalEntry(
   options: {
     height: number
     marginL: number
+    marginT: number
   },
 ): void {
-  const { height, marginL } = options
-
-  const marginT = height * 2
+  const { height, marginL, marginT } = options
 
   const x = marginL
   const y = 0 + height * i + marginT

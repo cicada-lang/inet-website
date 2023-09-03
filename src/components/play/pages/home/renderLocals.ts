@@ -9,8 +9,10 @@ export function renderLocals(state: State): void {
   const height = themeSize(10)
 
   if (state.mod.env.locals.size > 0) {
-    renderLocalsLabel(state)
+    renderLocalsLabel(state, { marginT: 0 })
   }
+
+  const marginT = height
 
   if (state.mod.env.locals.size > inViewLength) {
     const marginL = themeSize(10)
@@ -20,7 +22,7 @@ export function renderLocals(state: State): void {
     renderScrollbar(state, {
       name: 'locals-scrollbar',
       x: 0,
-      y: height * 2,
+      y: marginT,
       width: marginL,
       height: height * inViewLength,
       length,
@@ -36,13 +38,13 @@ export function renderLocals(state: State): void {
       .entries()
 
     for (const [i, [name, value]] of localEntries) {
-      renderLocalEntry(state, i, name, value, { height, marginL })
+      renderLocalEntry(state, i, name, value, { height, marginL, marginT })
     }
   } else {
     const localEntries = Array.from(state.mod.env.locals.entries()).entries()
 
     for (const [i, [name, value]] of localEntries) {
-      renderLocalEntry(state, i, name, value, { height, marginL: 0 })
+      renderLocalEntry(state, i, name, value, { height, marginL: 0, marginT })
     }
   }
 }
