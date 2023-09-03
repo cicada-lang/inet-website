@@ -7,7 +7,6 @@ export type RenderOptions = {
 
 export type RouteExp = {
   name: string
-  properties?: Record<string, string>
 }
 
 export type Route = RouteExp & {

@@ -1,19 +1,9 @@
 # scrollbar
 
-[play] `createLabel` -- `State` has `labels`
-[play] `createText` -- `State` has `texts`
+[play] merge createButton and renderButton
+[play] merge createClickableRect and renderClickableRect
 
-[play] `components/group`
-
-[play] `component/Component`
-
-[play] `renderComponent`
-
-[play] `State` has `components`
-
-[play] all other components use lazy render, `net/` still use direct render?
-
-[play] `components/button-list`
+[play] `components/button-list` -- `renderButtonList`
 
 [play] `renderStack` -- with scrollbar
 [play] `renderLocals` -- with scrollbar

@@ -32,7 +32,7 @@ export type State = {
   isHidingUI?: boolean
   mouse: Mouse
 
-  // Entity stores:
+  // Components:
   buttons: Map<string, Button>
   clickableRects: Map<string, ClickableRect>
 
