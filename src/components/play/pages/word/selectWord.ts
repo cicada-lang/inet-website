@@ -16,7 +16,7 @@ export function selectWord(state: State, givenName: string): void {
           (state.height * 4) / 6,
         )
 
-        state.selectedWord = {
+        state.wordState.selectedWord = {
           name,
           definition,
           rendering: createNetRendering(env.net, layout),

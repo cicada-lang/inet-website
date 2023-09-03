@@ -6,6 +6,7 @@ import { createMouse } from './mouse/createMouse'
 import { createHomeState } from './pages/home/createHomeState'
 import { routes } from './pages/routes'
 import { createTypeState } from './pages/type/createTypeState'
+import { createWordState } from './pages/word/createWordState'
 
 export type StateOptions = {
   canvas: HTMLCanvasElement
@@ -46,5 +47,6 @@ export function createState(options: StateOptions): State {
     clickableRects: new Map(),
     homeState: createHomeState(),
     typeState: createTypeState(),
+    wordState: createWordState(),
   }
 }

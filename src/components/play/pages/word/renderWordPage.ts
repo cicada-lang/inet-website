@@ -10,13 +10,13 @@ import { selectFirstWord } from './selectFirstWord'
 export function renderWordPage(state: State, options: RenderOptions): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  if (state.selectedWord === undefined) {
+  if (state.wordState.selectedWord === undefined) {
     selectFirstWord(state)
   }
 
-  if (state.selectedWord) {
-    renderSelectedWord(state, state.selectedWord)
-    evolveNet(state, state.selectedWord.rendering)
+  if (state.wordState.selectedWord) {
+    renderSelectedWord(state, state.wordState.selectedWord)
+    evolveNet(state, state.wordState.selectedWord.rendering)
   }
 
   if (!state.isHidingUI) {

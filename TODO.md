@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] `WordState`
 [play] `NodeState`
 
 [play] fix mobile click
