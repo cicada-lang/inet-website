@@ -19,7 +19,10 @@ export function renderScrollbar(
     options
 
   const padding = 5
+
   state.ctx.save()
+
+  state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
   for (let i = 0; i < cursor; i++) {
     renderClickableRect(state, x, y + (height / length) * i, {

@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] fix scrollbar color for dark mode
-
 [play] fix the use of `stackIndex` -- `isActive` is wrong
 
 - [maybe] should be `stackInViewIndex`
