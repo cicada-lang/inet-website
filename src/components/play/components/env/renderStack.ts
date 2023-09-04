@@ -26,7 +26,7 @@ export function renderStack(state: State, rendering: EnvRendering): void {
     const cursor = rendering.stackScrollCursor || 0
 
     renderScrollbar(state, {
-      name: 'stack-scrollbar',
+      name: `${rendering.name}/stack-scrollbar`,
       x: 0,
       y: state.height - height * inViewLength,
       width: marginL,

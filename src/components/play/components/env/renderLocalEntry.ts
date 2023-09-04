@@ -27,7 +27,7 @@ export function renderLocalEntry(
     : `${themeFontSize('base')} monospace`
 
   renderButton(state, {
-    name: `locals.${name}`,
+    name: `${rendering.name}/locals.${name}`,
     text: '$' + name,
     x,
     y,

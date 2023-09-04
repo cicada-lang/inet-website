@@ -21,7 +21,7 @@ export function renderLocals(state: State, rendering: EnvRendering): void {
     const cursor = rendering.localsScrollCursor || 0
 
     renderScrollbar(state, {
-      name: 'locals-scrollbar',
+      name: `${rendering.name}/locals-scrollbar`,
       x: 0,
       y: marginT,
       width: marginL,

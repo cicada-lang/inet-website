@@ -18,7 +18,7 @@ export function renderRunButton(state: State, rendering: NetRendering): void {
     : `${themeFontSize('base')} monospace`
 
   renderButton(state, {
-    name: 'run',
+    name: `${rendering.name}/run`,
     text,
     x,
     y,
