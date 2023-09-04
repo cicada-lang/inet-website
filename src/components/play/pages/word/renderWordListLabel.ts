@@ -17,7 +17,10 @@ export function renderWordListLabel(state: State): void {
     ? `bold ${themeFontSize('lg')} monospace`
     : `bold ${themeFontSize('base')} monospace`
 
-  renderLabel(state, text, x, y, {
+  renderLabel(state, {
+    text,
+    x,
+    y,
     height,
   })
 }

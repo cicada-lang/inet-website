@@ -17,7 +17,5 @@ export function renderNodeListLabel(state: State): void {
     ? `bold ${themeFontSize('lg')} monospace`
     : `bold ${themeFontSize('base')} monospace`
 
-  renderLabel(state, text, x, y, {
-    height,
-  })
+  renderLabel(state, { text, x, y, height })
 }

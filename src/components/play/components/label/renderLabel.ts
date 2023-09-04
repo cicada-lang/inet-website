@@ -3,6 +3,9 @@ import { themeSize } from '../../theme/themeSize'
 import { Rect } from '../rect/Rect'
 
 type Options = {
+  text: string
+  x: number
+  y: number
   height: number
   align?: 'left' | 'right'
 }
@@ -10,13 +13,10 @@ type Options = {
 // Can not be used after transform,
 // because we need to record rect.
 
-export function renderLabel(
-  state: State,
-  text: string,
-  x: number,
-  y: number,
-  options: Options,
-): void {
+export function renderLabel(state: State, options: Options): void {
+  const { text } = options
+  let { x, y } = options
+
   const paddingX = themeSize(3)
 
   state.ctx.save()

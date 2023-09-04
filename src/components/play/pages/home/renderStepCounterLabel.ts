@@ -25,7 +25,10 @@ export function renderStepCounterLabel(
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  renderLabel(state, text, x, y, {
+  renderLabel(state, {
+    text,
+    x,
+    y,
     align: 'right',
     height,
   })
