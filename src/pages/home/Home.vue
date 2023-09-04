@@ -64,9 +64,17 @@ onMounted(async () => {
         <div class="w-full lg:w-2/3 flex flex-col">
           <div>
             <Lang class="lg:text-xl text-lg">
-              <template #zh> 点击红边，以观察反应。 </template>
+              <template #zh>
+                点击<span class="dark:text-rose-400 text-rose-500 font-bold"
+                  >红边</span
+                >，以观察反应。
+              </template>
               <template #en>
-                Click red edges to observe interactions.
+                Click
+                <span class="dark:text-rose-400 text-rose-500 font-bold"
+                  >red edges</span
+                >
+                to observe interactions.
               </template>
             </Lang>
           </div>
@@ -75,7 +83,7 @@ onMounted(async () => {
             <template #zh>
               去<RouterLink
                 :to="`/playground/${Base64.encode(code)}`"
-                class="underline underline-offset-4 decoration-2"
+                class="underline underline-offset-4 decoration-2 font-bold"
                 >演算场</RouterLink
               >，以修改代码。
             </template>
@@ -83,10 +91,9 @@ onMounted(async () => {
               Goto
               <RouterLink
                 :to="`/playground/${Base64.encode(code)}`"
-                class="underline underline-offset-4 decoration-2"
+                class="underline underline-offset-4 decoration-2 font-bold"
+                >The Playground</RouterLink
               >
-                The Playground
-              </RouterLink>
               to edit the code.
             </template>
           </Lang>
