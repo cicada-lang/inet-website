@@ -1,5 +1,7 @@
 import { NodeState } from './NodeState'
 
 export function createNodeState(): NodeState {
-  return {}
+  return {
+    nodesInViewLength: 6,
+  }
 }

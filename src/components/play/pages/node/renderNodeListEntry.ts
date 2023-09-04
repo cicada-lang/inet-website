@@ -11,9 +11,10 @@ export function renderNodeListEntry(
   options: {
     height: number
     marginT: number
+    marginL: number
   },
 ): void {
-  const { height, marginT } = options
+  const { height, marginT, marginL } = options
 
   state.ctx.save()
 
@@ -24,7 +25,7 @@ export function renderNodeListEntry(
   renderButton(state, {
     name: `nodes/${definition.name}`,
     text: definition.name,
-    x: 0,
+    x: marginL,
     y: marginT + height * i,
     height,
     isActive: (state) => state.nodeState.selectedNode?.name === definition.name,
