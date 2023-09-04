@@ -1,8 +1,8 @@
 import { Value } from '@cicada-lang/inet'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
+import { createSelectedValue } from '../../components/env/createSelectedValue'
 import { themeFontSize } from '../../theme/themeFontSize'
-import { createSelectedValue } from './createSelectedValue'
 
 export function renderLocalEntry(
   state: State,

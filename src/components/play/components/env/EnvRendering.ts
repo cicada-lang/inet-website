@@ -1,5 +1,5 @@
 import { Env } from '@cicada-lang/inet'
-import { SelectedValue } from '../../pages/home/SelectedValue'
+import { SelectedValue } from './SelectedValue'
 
 export type EnvRendering = {
   name: string

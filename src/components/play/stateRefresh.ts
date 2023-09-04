@@ -1,5 +1,5 @@
 import { State } from './State'
-import { createSelectedValue } from './pages/home/createSelectedValue'
+import { createSelectedValue } from './components/env/createSelectedValue'
 
 export function stateRefresh(state: State): void {
   const value = state.mod.env.stack[state.mod.env.stack.length - 1]

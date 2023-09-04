@@ -1,8 +1,11 @@
 # scrollbar
 
-[play] `stateRefresh` -- `createNetRendering`
+[play] move `home/` render functions to `components/env/`
 
-[play] move `SelectedValue` to `components/env/`
+[play] `components/env/` render functions should not use `homeState`
+
+[play] extract `selectValue`
+[play] `stateRefresh` -- should call `createEnvRendering`
 
 [play] extract `components/env/renderStack` -- for `renderSelectedWord`
 [play] extract `components/env/renderLocals` -- to be symmetric with `renderStack`

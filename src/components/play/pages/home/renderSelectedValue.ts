@@ -1,5 +1,5 @@
 import { State } from '../../State'
-import { SelectedValue } from './SelectedValue'
+import { SelectedValue } from '../../components/env/SelectedValue'
 import { renderSelectedNet } from './renderSelectedNet'
 import { renderValue } from './renderValue'
 
