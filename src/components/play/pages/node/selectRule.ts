@@ -19,14 +19,24 @@ export function selectRule(
     const initialY = state.height / 2
     const initial = createNetRendering(
       initialNet,
-      createRandomNetLayout(initialNet, initialX, initialY, width, height),
+      createRandomNetLayout(initialNet, {
+        x: initialX,
+        y: initialY,
+        width,
+        height,
+      }),
     )
 
     const finalX = (state.width * 5) / 8
     const finalY = state.height / 2
     const final = createNetRendering(
       finalNet,
-      createRandomNetLayout(finalNet, finalX, finalY, width, height),
+      createRandomNetLayout(finalNet, {
+        x: finalX,
+        y: finalY,
+        width,
+        height,
+      }),
     )
 
     state.nodeState.selectedRule = {

@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] `createRandomNetLayout` -- take more options
 [play] `renderButton` -- take only options
 [play] `renderLabel` -- take only options
 [play] `renderText` -- take only options

@@ -8,13 +8,12 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
   if (value['@kind'] === 'Port') {
     const net = createNet()
     copyConnectedComponent(state.mod.env.net, net, value.node)
-    const layout = createRandomNetLayout(
-      net,
-      state.width / 5,
-      state.height / 5,
-      (state.width * 3) / 5,
-      (state.height * 3) / 5,
-    )
+    const layout = createRandomNetLayout(net, {
+      x: state.width / 5,
+      y: state.height / 5,
+      width: (state.width * 3) / 5,
+      height: (state.height * 3) / 5,
+    })
 
     return {
       '@type': 'SelectedValue',

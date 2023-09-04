@@ -8,13 +8,12 @@ export function selectWord(state: State, givenName: string): void {
     if (definition['@kind'] === 'WordDefinition') {
       if (name === givenName) {
         const env = presentWordAsEnv(state.mod, name)
-        const layout = createRandomNetLayout(
-          env.net,
-          state.width / 6,
-          state.height / 6,
-          (state.width * 4) / 6,
-          (state.height * 4) / 6,
-        )
+        const layout = createRandomNetLayout(env.net, {
+          x: state.width / 6,
+          y: state.height / 6,
+          width: (state.width * 4) / 6,
+          height: (state.height * 4) / 6,
+        })
 
         state.wordState.selectedWord = {
           name,

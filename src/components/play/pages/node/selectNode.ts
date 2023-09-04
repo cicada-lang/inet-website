@@ -18,7 +18,7 @@ export function selectNode(state: State, givenName: string): void {
         const y = state.height / 12
         const width = state.width / 3
         const height = state.height / 3
-        const layout = createRandomNetLayout(net, x, y, width, height)
+        const layout = createRandomNetLayout(net, { x, y, width, height })
 
         state.nodeState.selectedNode = {
           name,

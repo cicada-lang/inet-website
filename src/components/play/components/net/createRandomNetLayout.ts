@@ -3,17 +3,19 @@ import { NetLayout } from './NetLayout'
 
 export function createRandomNetLayout(
   net: Net,
-  x: number,
-  y: number,
-  width: number,
-  height: number,
-  options?: {
-    paddingX: number
-    paddingY: number
+  options: {
+    x: number
+    y: number
+    width: number
+    height: number
+    paddingX?: number
+    paddingY?: number
   },
 ): NetLayout {
-  const paddingX = options?.paddingX || 30
-  const paddingY = options?.paddingY || 30
+  const { x, y, width, height } = options
+
+  const paddingX = options.paddingX || 30
+  const paddingY = options.paddingY || 30
 
   const nodePositions = new Map()
 
