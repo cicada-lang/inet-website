@@ -18,6 +18,7 @@ export function selectRule(
     const initialX = (state.width * 2) / 8
     const initialY = state.height / 2
     const initial = createNetRendering(
+      'rule/selected-initial-net',
       initialNet,
       createRandomNetLayout(initialNet, {
         x: initialX,
@@ -30,6 +31,7 @@ export function selectRule(
     const finalX = (state.width * 5) / 8
     const finalY = state.height / 2
     const final = createNetRendering(
+      'rule/selected-final-net',
       finalNet,
       createRandomNetLayout(finalNet, {
         x: finalX,

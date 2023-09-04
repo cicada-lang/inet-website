@@ -23,7 +23,7 @@ export function selectNode(state: State, givenName: string): void {
         state.nodeState.selectedNode = {
           name,
           definition,
-          rendering: createNetRendering(net, layout),
+          rendering: createNetRendering('node/selected-node-net', net, layout),
           ruleEntries,
         }
 

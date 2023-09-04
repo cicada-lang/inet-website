@@ -19,8 +19,7 @@ export function handleClick(state: State): void {
     }
   }
 
-  if (state.homeState.selectedValue?.['@kind'] === 'SelectedValuePort') {
-    const { rendering } = state.homeState.selectedValue
+  for (const rendering of state.netRenderings.values()) {
     if (rendering.hoveredEdge) {
       const { first, second } = rendering.hoveredEdge
       if (first.port.isPrincipal && second.port.isPrincipal) {

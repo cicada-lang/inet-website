@@ -46,6 +46,7 @@ export function createState(options: StateOptions): State {
     mod,
     buttons: new Map(),
     clickableRects: new Map(),
+    netRenderings: new Map(),
     homeState: createHomeState(),
     typeState: createTypeState(),
     nodeState: createNodeState(),

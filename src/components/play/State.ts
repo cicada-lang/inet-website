@@ -2,6 +2,7 @@ import { Mod } from '@cicada-lang/inet'
 import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './components/button/Button'
+import { NetRendering } from './components/net/NetRendering'
 import { ClickableRect } from './components/rect/ClickableRect'
 import { Mouse } from './mouse/Mouse'
 import { HomeState } from './pages/home/HomeState'
@@ -35,6 +36,7 @@ export type State = {
   // Components:
   buttons: Map<string, Button>
   clickableRects: Map<string, ClickableRect>
+  netRenderings: Map<string, NetRendering>
 
   // Sub-states:
   homeState: HomeState

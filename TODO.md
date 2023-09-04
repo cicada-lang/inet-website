@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] [refactor] `handleClick` -- handle recored `renderings` -- all nets are interact-able
-
 [play] extract `components/stack/renderStack` -- for `renderSelectedWord`
 [play] extract `components/locals/renderLocals` -- to be symmetric with `renderStack`
 

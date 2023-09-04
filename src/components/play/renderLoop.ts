@@ -21,6 +21,7 @@ export function renderLoop(state: State, passedTime?: number): void {
 
   state.buttons = new Map()
   state.clickableRects = new Map()
+  state.netRenderings = new Map()
 
   route.render(state, { passedTime, deltaTime })
 

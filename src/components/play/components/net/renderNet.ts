@@ -9,6 +9,8 @@ import { updateHoveredEdge } from './updateHoveredEdge'
 export function renderNet(state: State, rendering: NetRendering): void {
   const { net, layout } = rendering
 
+  state.netRenderings.set(rendering.name, rendering)
+
   updateHoveredEdge(rendering)
   rendering.hoverableEdges = new Map()
 
