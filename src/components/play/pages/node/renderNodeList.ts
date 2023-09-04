@@ -39,7 +39,11 @@ export function renderNodeList(state: State): void {
     for (const [i, definition] of definitions
       .slice(cursor, cursor + inViewLength)
       .entries()) {
-      renderNodeListEntry(state, i, definition, { height, marginT, marginL })
+      renderNodeListEntry(state, i, definition, {
+        height,
+        marginT,
+        marginL,
+      })
     }
   } else {
     for (const [i, definition] of definitions.entries()) {
