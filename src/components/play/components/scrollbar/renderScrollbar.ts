@@ -29,8 +29,10 @@ export function renderScrollbar(
   state.ctx.strokeRect(x, y, width, height)
 
   for (let i = 0; i < cursor; i++) {
-    renderClickableRect(state, x, y + unitHeight * i, {
+    renderClickableRect(state, {
       name: `${name}/${i}`,
+      x,
+      y: y + unitHeight * i,
       height: height / length,
       width,
       // withBorder: true,
@@ -39,8 +41,10 @@ export function renderScrollbar(
   }
 
   if (cursor > 0) {
-    renderClickableRect(state, x, y + unitHeight * cursor, {
+    renderClickableRect(state, {
       name: `${name}/-1`,
+      x,
+      y: y + unitHeight * cursor,
       height: (unitHeight * inViewLength) / 2 - unitHeight / 2,
       width,
       // withBorder: true,
@@ -56,26 +60,26 @@ export function renderScrollbar(
   )
 
   if (cursor < length - inViewLength) {
-    renderClickableRect(
-      state,
+    renderClickableRect(state, {
+      name: `${name}/+1`,
       x,
-      y +
+      y:
+        y +
         unitHeight * cursor +
         (unitHeight * inViewLength) / 2 +
         unitHeight / 2,
-      {
-        name: `${name}/+1`,
-        height: (unitHeight * inViewLength) / 2 - unitHeight / 2,
-        width,
-        // withBorder: true,
-        handler: () => onScroll(cursor + 1),
-      },
-    )
+      height: (unitHeight * inViewLength) / 2 - unitHeight / 2,
+      width,
+      // withBorder: true,
+      handler: () => onScroll(cursor + 1),
+    })
   }
 
   for (let i = cursor; i < length - inViewLength; i++) {
-    renderClickableRect(state, x, y + unitHeight * (i + inViewLength), {
+    renderClickableRect(state, {
       name: `${name}/${i + 1}`,
+      x,
+      y: y + unitHeight * (i + inViewLength),
       height: unitHeight,
       width,
       // withBorder: true,

@@ -57,8 +57,10 @@ export function renderNode(
 
   const key = nodeKey(nodeEntry)
 
-  renderClickableRect(state, boxX, boxY, {
+  renderClickableRect(state, {
     name: `nodes/${key}`,
+    x: boxX,
+    y: boxY,
     width: boxWidth,
     height: boxHeight,
     isDisabled: (state) =>

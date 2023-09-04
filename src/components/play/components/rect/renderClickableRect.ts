@@ -3,6 +3,8 @@ import { Rect } from './Rect'
 
 type Options = {
   name: string
+  x: number
+  y: number
   height: number
   width: number
   withBorder?: boolean
@@ -13,13 +15,8 @@ type Options = {
 // Can not be used after transform,
 // because we need to record rect.
 
-export function renderClickableRect(
-  state: State,
-  x: number,
-  y: number,
-  options: Options,
-): void {
-  const { name, width, height } = options
+export function renderClickableRect(state: State, options: Options): void {
+  const { name, x, y, width, height } = options
 
   const rect: Rect = [x, y, width, height]
 
