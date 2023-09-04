@@ -9,15 +9,15 @@ export function renderLocals(state: State, rendering: EnvRendering): void {
   const inViewLength = rendering.localsInViewLength
   const height = themeSize(10)
 
-  if (state.mod.env.locals.size > 0) {
+  if (rendering.env.locals.size > 0) {
     renderLocalsLabel(state, { marginT: 0 })
   }
 
   const marginT = height
 
-  if (state.mod.env.locals.size > inViewLength) {
+  if (rendering.env.locals.size > inViewLength) {
     const marginL = themeSize(10)
-    const length = state.mod.env.locals.size
+    const length = rendering.env.locals.size
     const cursor = rendering.localsScrollCursor || 0
 
     renderScrollbar(state, {
@@ -34,7 +34,7 @@ export function renderLocals(state: State, rendering: EnvRendering): void {
       },
     })
 
-    const localEntries = Array.from(state.mod.env.locals.entries()).slice(
+    const localEntries = Array.from(rendering.env.locals.entries()).slice(
       cursor,
       cursor + inViewLength,
     )
@@ -47,7 +47,7 @@ export function renderLocals(state: State, rendering: EnvRendering): void {
       })
     }
   } else {
-    const localEntries = Array.from(state.mod.env.locals.entries())
+    const localEntries = Array.from(rendering.env.locals.entries())
 
     for (const [i, [name, value]] of localEntries.entries()) {
       renderLocalEntry(state, rendering, i, name, value, {

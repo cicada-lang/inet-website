@@ -1,7 +1,3 @@
-# scrollbar
-
-[play] `WordState` has `envRendering` and show stack
-
 # net rendering
 
 [play] `evolveNet` -- use circle instead of box as boundary

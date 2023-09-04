@@ -9,20 +9,19 @@ import { RenderOptions } from '../../route/Route'
 export function renderHomePage(state: State, options: RenderOptions): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  if (state.homeState.envRendering.selectedValue) {
-    renderSelectedValue(state, state.homeState.envRendering.selectedValue)
+  const { envRendering } = state.homeState
 
-    if (
-      state.homeState.envRendering.selectedValue['@kind'] ===
-      'SelectedValuePort'
-    ) {
-      evolveNet(state, state.homeState.envRendering.selectedValue.netRendering)
+  if (envRendering.selectedValue) {
+    renderSelectedValue(state, envRendering.selectedValue)
+
+    if (envRendering.selectedValue['@kind'] === 'SelectedValuePort') {
+      evolveNet(state, envRendering.selectedValue.netRendering)
     }
   }
 
   if (!state.isHidingUI) {
-    renderStack(state, state.homeState.envRendering)
-    renderLocals(state, state.homeState.envRendering)
+    renderStack(state, envRendering)
+    renderLocals(state, envRendering)
     renderNavbar(state)
   }
 }

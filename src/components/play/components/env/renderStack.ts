@@ -10,19 +10,19 @@ export function renderStack(state: State, rendering: EnvRendering): void {
 
   const inViewLength = rendering.stackInViewLength
 
-  if (state.mod.env.stack.length > 0) {
+  if (rendering.env.stack.length > 0) {
     renderStackLabel(
       state,
-      Math.min(state.mod.env.stack.length, inViewLength),
+      Math.min(rendering.env.stack.length, inViewLength),
       {
         height,
       },
     )
   }
 
-  if (state.mod.env.stack.length > inViewLength) {
+  if (rendering.env.stack.length > inViewLength) {
     const marginL = themeSize(10)
-    const length = state.mod.env.stack.length
+    const length = rendering.env.stack.length
     const cursor = rendering.stackScrollCursor || 0
 
     renderScrollbar(state, {
@@ -39,7 +39,7 @@ export function renderStack(state: State, rendering: EnvRendering): void {
       },
     })
 
-    const stack = state.mod.env.stack.slice(
+    const stack = rendering.env.stack.slice(
       length - inViewLength - cursor,
       length - cursor,
     )
@@ -48,7 +48,7 @@ export function renderStack(state: State, rendering: EnvRendering): void {
       renderStackEntry(state, rendering, i, value, { height, marginL })
     }
   } else {
-    for (const [i, value] of state.mod.env.stack.entries()) {
+    for (const [i, value] of rendering.env.stack.entries()) {
       renderStackEntry(state, rendering, i, value, { height, marginL: 0 })
     }
   }
