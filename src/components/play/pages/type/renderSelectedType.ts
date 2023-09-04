@@ -19,7 +19,10 @@ export function renderSelectedType(
     ? `${themeFontSize('3xl')} monospace`
     : `${themeFontSize('2xl')} monospace`
 
-  renderText(state, selectedType.definition.name, x, y - 60, {
+  renderText(state, {
+    text: selectedType.definition.name,
+    x,
+    y: y - 60,
     lineHeight: 30,
   })
 
@@ -30,7 +33,10 @@ export function renderSelectedType(
   const inputText = selectedType.definition.input.map(formatWord).join(' ')
   const outputText = selectedType.definition.output.map(formatWord).join(' ')
   const text = [`input: ${inputText}`, `output: ${outputText}`].join('\n')
-  renderText(state, text, x, y, {
+  renderText(state, {
+    text,
+    x,
+    y,
     lineHeight: 30,
   })
 

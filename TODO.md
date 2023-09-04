@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] `renderText` -- take only options
 [play] `renderClickableRect` -- take only options
 
 [play] extract `renderTypeListEntry`

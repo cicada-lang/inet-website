@@ -1,17 +1,14 @@
 import { State } from '../../State'
 
 export type RenderTextOptions = {
+  text: string
+  x: number
+  y: number
   lineHeight: number
 }
 
-export function renderText(
-  state: State,
-  text: string,
-  x: number,
-  y: number,
-  options: RenderTextOptions,
-): void {
-  const { lineHeight } = options
+export function renderText(state: State, options: RenderTextOptions): void {
+  const { text, x, y, lineHeight } = options
 
   state.ctx.save()
 
