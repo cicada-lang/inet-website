@@ -1,25 +1,34 @@
 import { Value, copyConnectedComponent, createNet } from '@cicada-lang/inet'
-import { State } from '../../State'
+import { EnvRendering } from '../../components/env/EnvRendering'
 import { createNetRendering } from '../../components/net/createNetRendering'
 import { createRandomNetLayout } from '../../components/net/createRandomNetLayout'
 import { SelectedValue } from './SelectedValue'
 
-export function createSelectedValue(state: State, value: Value): SelectedValue {
+export function createSelectedValue(
+  envRendering: EnvRendering,
+  value: Value,
+): SelectedValue {
   if (value['@kind'] === 'Port') {
     const net = createNet()
-    copyConnectedComponent(state.mod.env.net, net, value.node)
+    copyConnectedComponent(envRendering.env.net, net, value.node)
+
+    const { x, y, width, height } = envRendering
     const layout = createRandomNetLayout(net, {
-      x: state.width / 5,
-      y: state.height / 5,
-      width: (state.width * 3) / 5,
-      height: (state.height * 3) / 5,
+      x: x + width / 5,
+      y: y + height / 5,
+      width: (width * 3) / 5,
+      height: (height * 3) / 5,
     })
 
     return {
       '@type': 'SelectedValue',
       '@kind': 'SelectedValuePort',
       port: value,
-      netRendering: createNetRendering('home/selected-net', net, layout),
+      netRendering: createNetRendering(
+        `${envRendering.name}/selected-net`,
+        net,
+        layout,
+      ),
     }
   } else {
     return {

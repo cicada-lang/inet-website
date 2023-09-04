@@ -5,7 +5,7 @@ export function stateRefresh(state: State): void {
   const value = state.mod.env.stack[state.mod.env.stack.length - 1]
   if (value) {
     state.homeState.envRendering.selectedValue = createSelectedValue(
-      state,
+      state.homeState.envRendering,
       value,
     )
     state.homeState.envRendering.stackInViewIndex = Math.min(

@@ -1,8 +1,6 @@
 # scrollbar
 
-[play] `createSelectedValue` take `envRendering`
-[play] `createSelectedValue` take `name`
-[play] `createSelectedValue` should not take `state`
+[play] `stateRefresh` -- `createNetRendering`
 
 [play] move `SelectedValue` to `components/env/`
 

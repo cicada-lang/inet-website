@@ -34,7 +34,7 @@ export function renderLocalEntry(
     isActive: (state) => name === state.homeState.envRendering.localName,
     handler: (state) => {
       state.homeState.envRendering.selectedValue = createSelectedValue(
-        state,
+        state.homeState.envRendering,
         value,
       )
       state.homeState.envRendering.localName = name

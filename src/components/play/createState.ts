@@ -47,7 +47,7 @@ export function createState(options: StateOptions): State {
     buttons: new Map(),
     clickableRects: new Map(),
     netRenderings: new Map(),
-    homeState: createHomeState(),
+    homeState: createHomeState({ env: mod.env, x: 0, y: 0, width, height }),
     typeState: createTypeState(),
     nodeState: createNodeState(),
     wordState: createWordState(),

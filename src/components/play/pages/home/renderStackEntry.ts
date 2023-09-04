@@ -33,7 +33,7 @@ export function renderStackEntry(
     isActive: (state) => i === state.homeState.envRendering.stackInViewIndex,
     handler: (state) => {
       state.homeState.envRendering.selectedValue = createSelectedValue(
-        state,
+        state.homeState.envRendering,
         value,
       )
       state.homeState.envRendering.stackInViewIndex = i
