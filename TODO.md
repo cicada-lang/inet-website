@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] `renderButton` -- take only options
 [play] `renderLabel` -- take only options
 [play] `renderText` -- take only options
 [play] `renderClickableRect` -- take only options

@@ -20,8 +20,11 @@ export function renderNodeList(state: State): void {
   let i = 0
   for (const [name, definition] of state.mod.definitions) {
     if (definition['@kind'] === 'NodeDefinition') {
-      renderButton(state, name, 0, marginT + height * i, {
+      renderButton(state, {
         name: `nodes/${name}`,
+        text: name,
+        x: 0,
+        y: marginT + height * i,
         height,
         isActive: (state) => state.nodeState.selectedNode?.name === name,
         isDisabled: (state) => state.nodeState.selectedNode?.name === name,

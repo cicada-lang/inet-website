@@ -15,8 +15,11 @@ export function renderBackButton(state: State): void {
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  renderButton(state, text, x, y, {
+  renderButton(state, {
     name: 'back',
+    text,
+    x,
+    y,
     height,
     handler: (state) => {
       const route = state.history.pop()

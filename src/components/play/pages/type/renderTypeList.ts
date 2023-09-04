@@ -20,8 +20,11 @@ export function renderTypeList(state: State): void {
   let i = 0
   for (const [name, definition] of state.mod.definitions) {
     if (definition['@kind'] === 'TypeDefinition') {
-      renderButton(state, name, 0, marginT + height * i, {
+      renderButton(state, {
         name: `types/${name}`,
+        text: name,
+        x: 0,
+        y: marginT + height * i,
         height,
         isActive: (state) => state.typeState.selectedType?.name === name,
         isDisabled: (state) => state.typeState.selectedType?.name === name,

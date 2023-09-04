@@ -5,6 +5,9 @@ import { withinRect } from '../rect/withinRect'
 
 type Options = {
   name: string
+  text: string
+  x: number
+  y: number
   height: number
   align?: 'left' | 'right'
   noBorder?: boolean
@@ -16,14 +19,9 @@ type Options = {
 // Can not be used after transform,
 // because we need to record rect.
 
-export function renderButton(
-  state: State,
-  text: string,
-  x: number,
-  y: number,
-  options: Options,
-): void {
-  const { name } = options
+export function renderButton(state: State, options: Options): void {
+  const { name, text } = options
+  let { x, y } = options
 
   const paddingX = themeSize(3)
 

@@ -20,8 +20,11 @@ export function renderWordList(state: State): void {
   let i = 0
   for (const [name, definition] of state.mod.definitions) {
     if (definition['@kind'] === 'WordDefinition') {
-      renderButton(state, name, 0, marginT + height * i, {
+      renderButton(state, {
         name: `words/${name}`,
+        text: name,
+        x: 0,
+        y: marginT + height * i,
         height,
         isActive: (state) => state.wordState.selectedWord?.name === name,
         isDisabled: (state) => state.wordState.selectedWord?.name === name,

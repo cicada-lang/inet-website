@@ -20,8 +20,11 @@ export function renderNodeRuleList(
 
   let i = 0
   for (const { name } of [...selectedNode.ruleEntries].reverse()) {
-    renderButton(state, name, 0, state.height - height - height * i, {
+    renderButton(state, {
       name: `rules/${name}`,
+      text: name,
+      x: 0,
+      y: state.height - height - height * i,
       height,
       isActive: (state) => state.nodeState.selectedRule?.name === name,
       isDisabled: (state) => state.nodeState.selectedRule?.name === name,

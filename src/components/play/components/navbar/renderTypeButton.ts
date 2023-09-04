@@ -24,8 +24,11 @@ export function renderTypeButton(
 
   const name = 'type'
 
-  renderButton(state, text, x, y, {
+  renderButton(state, {
     name,
+    text,
+    x,
+    y,
     height,
     align: 'right',
     isActive: (state) => state.currentRoute.name === name,

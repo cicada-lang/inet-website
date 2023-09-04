@@ -24,8 +24,11 @@ export function renderWordButton(
 
   const name = 'word'
 
-  renderButton(state, text, x, y, {
+  renderButton(state, {
     name,
+    text,
+    x,
+    y,
     height,
     align: 'right',
     isActive: (state) => state.currentRoute.name === name,

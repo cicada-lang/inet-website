@@ -24,8 +24,11 @@ export function renderLocalEntry(
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  renderButton(state, '$' + name, x, y, {
+  renderButton(state, {
     name: `locals.${name}`,
+    text: '$' + name,
+    x,
+    y,
     height,
     isDisabled: (state) => name === state.homeState.localName,
     isActive: (state) => name === state.homeState.localName,

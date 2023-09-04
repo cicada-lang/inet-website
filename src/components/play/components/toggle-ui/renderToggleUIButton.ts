@@ -20,8 +20,11 @@ export function renderToggleUIButton(state: State): void {
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  renderButton(state, text, x, y, {
+  renderButton(state, {
     name: 'toggleUI',
+    text,
+    x,
+    y,
     height,
     align: 'right',
     handler: (state) => {

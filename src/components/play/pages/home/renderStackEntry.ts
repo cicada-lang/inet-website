@@ -23,8 +23,11 @@ export function renderStackEntry(
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  renderButton(state, text, x, y, {
+  renderButton(state, {
     name: `state[${i}]`,
+    text,
+    x,
+    y,
     height,
     isDisabled: (state) => i === state.homeState.stackInViewIndex,
     isActive: (state) => i === state.homeState.stackInViewIndex,

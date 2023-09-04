@@ -17,8 +17,11 @@ export function renderRunButton(state: State, rendering: NetRendering): void {
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  renderButton(state, text, x, y, {
+  renderButton(state, {
     name: 'run',
+    text,
+    x,
+    y,
     align: 'right',
     height,
     handler: (state) => runAllSteps(state, rendering),
