@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] `renderLabel` -- should be transparent
-
 [play] `renderTypeList` -- call `renderScrollbar`
 [play] `renderNodeList` -- call `renderScrollbar`
 [play] `renderWordList` -- call `renderScrollbar`

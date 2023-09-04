@@ -30,7 +30,14 @@ export function renderLabel(state: State, options: Options): void {
   }
 
   const rect: Rect = [x, y, width, height]
-  state.ctx.clearRect(...rect)
+
+  state.ctx.fillStyle =
+    state.theme.name === 'dark'
+      ? 'hsla(0, 50%, 0%, 40%)'
+      : 'hsla(0, 50%, 100%, 40%)'
+
+  state.ctx.fillRect(...rect)
+
   state.ctx.lineWidth = 1
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.strokeRect(...rect)
