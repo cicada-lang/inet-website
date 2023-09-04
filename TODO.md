@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] move `home/` render functions to `components/env/`
-
 [play] `components/env/` render functions should not use `homeState`
 
 [play] extract `selectValue`
