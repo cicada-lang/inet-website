@@ -7,8 +7,6 @@ import { renderNodeListLabel } from './renderNodeListLabel'
 export function renderNodeList(state: State): void {
   renderNodeListLabel(state)
 
-  state.ctx.save()
-
   const height = themeSize(10)
   const marginT = height * 2
 
@@ -23,6 +21,4 @@ export function renderNodeList(state: State): void {
       marginT,
     })
   }
-
-  state.ctx.restore()
 }

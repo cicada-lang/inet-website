@@ -1,6 +1,6 @@
 # scrollbar
 
-[play] extract `renderNodeRuleListEntry`
+[play] `renderLabel` -- should be transparent
 
 [play] `renderTypeList` -- call `renderScrollbar`
 [play] `renderNodeList` -- call `renderScrollbar`

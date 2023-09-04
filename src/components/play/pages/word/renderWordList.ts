@@ -7,8 +7,6 @@ import { renderWordListLabel } from './renderWordListLabel'
 export function renderWordList(state: State): void {
   renderWordListLabel(state)
 
-  state.ctx.save()
-
   const height = themeSize(10)
   const marginT = height * 2
 
@@ -23,6 +21,4 @@ export function renderWordList(state: State): void {
       marginT,
     })
   }
-
-  state.ctx.restore()
 }

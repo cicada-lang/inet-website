@@ -7,8 +7,6 @@ import { renderTypeListLabel } from './renderTypeListLabel'
 export function renderTypeList(state: State): void {
   renderTypeListLabel(state)
 
-  state.ctx.save()
-
   const height = themeSize(10)
   const marginT = height * 2
 
@@ -20,6 +18,4 @@ export function renderTypeList(state: State): void {
   for (const [i, definition] of definitions.entries()) {
     renderTypeListEntry(state, i, definition, { height, marginT })
   }
-
-  state.ctx.restore()
 }
