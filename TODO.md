@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] `renderTypeList` -- call `renderScrollbar`
 [play] `renderNodeList` -- call `renderScrollbar`
 [play] `renderWordList` -- call `renderScrollbar`
 [play] `renderNodeRuleList` -- call `renderScrollbar`
