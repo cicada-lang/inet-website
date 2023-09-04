@@ -1,4 +1,5 @@
 import { formatWord } from '@cicada-lang/inet'
+import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
 import { renderText } from '../../components/text/renderText'
 import { themeFontSize } from '../../theme/themeFontSize'
@@ -8,6 +9,8 @@ export function renderSelectedType(
   state: State,
   selectedType: SelectedType,
 ): void {
+  const lang = useGlobalLang()
+
   state.ctx.save()
 
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
@@ -32,7 +35,11 @@ export function renderSelectedType(
 
   const inputText = selectedType.definition.input.map(formatWord).join(' ')
   const outputText = selectedType.definition.output.map(formatWord).join(' ')
-  const text = [`input: ${inputText}`, `output: ${outputText}`].join('\n')
+
+  const text = lang.isZh()
+    ? [`输入：${inputText}`, `输出：${outputText}`].join('\n')
+    : [`input: ${inputText}`, `output: ${outputText}`].join('\n')
+
   renderText(state, {
     text,
     x,
