@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] extract `renderNodeListEntry`
 [play] extract `renderNodeRuleListEntry`
 
 [play] `renderTypeList` -- call `renderScrollbar`

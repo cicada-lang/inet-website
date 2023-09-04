@@ -1,9 +1,8 @@
+import { NodeDefinition } from '@cicada-lang/inet'
 import { State } from '../../State'
-import { renderButton } from '../../components/button/renderButton'
-import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
+import { renderNodeListEntry } from './renderNodeListEntry'
 import { renderNodeListLabel } from './renderNodeListLabel'
-import { selectNode } from './selectNode'
 
 export function renderNodeList(state: State): void {
   renderNodeListLabel(state)
@@ -13,26 +12,18 @@ export function renderNodeList(state: State): void {
   const height = themeSize(10)
   const marginT = height * 2
 
-  state.ctx.font = state.breakpoints.lg
-    ? `${themeFontSize('lg')} monospace`
-    : `${themeFontSize('base')} monospace`
+  const definitionEntries = Array.from(state.mod.definitions.entries())
+    .filter(
+      (entry): entry is [string, NodeDefinition] =>
+        entry[1]['@kind'] === 'NodeDefinition',
+    )
+    .entries()
 
-  let i = 0
-  for (const [name, definition] of state.mod.definitions) {
-    if (definition['@kind'] === 'NodeDefinition') {
-      renderButton(state, {
-        name: `nodes/${name}`,
-        text: name,
-        x: 0,
-        y: marginT + height * i,
-        height,
-        isActive: (state) => state.nodeState.selectedNode?.name === name,
-        isDisabled: (state) => state.nodeState.selectedNode?.name === name,
-        handler: (state) => selectNode(state, name),
-      })
-
-      i++
-    }
+  for (const [i, [name, definition]] of definitionEntries) {
+    renderNodeListEntry(state, i, name, definition, {
+      height,
+      marginT,
+    })
   }
 
   state.ctx.restore()
