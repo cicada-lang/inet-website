@@ -9,9 +9,10 @@
 
 # net rendering
 
-[play] hover edge to show port info
-
 [play] `NetRendering` -- use circle instead of box as boundary
+[play] `renderNode` -- hover show info
+[play] `renderNode` -- double click jump -- not single click
+[play] `renderEdge` -- hover edge to show port info
 [play] `renderNet` -- adjust node size by number of nodes
 
 # playground tabs

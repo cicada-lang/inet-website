@@ -33,17 +33,18 @@ export function renderLocals(state: State): void {
       },
     })
 
-    const localEntries = Array.from(state.mod.env.locals.entries())
-      .slice(cursor, cursor + inViewLength)
-      .entries()
+    const localEntries = Array.from(state.mod.env.locals.entries()).slice(
+      cursor,
+      cursor + inViewLength,
+    )
 
-    for (const [i, [name, value]] of localEntries) {
+    for (const [i, [name, value]] of localEntries.entries()) {
       renderLocalEntry(state, i, name, value, { height, marginL, marginT })
     }
   } else {
-    const localEntries = Array.from(state.mod.env.locals.entries()).entries()
+    const localEntries = Array.from(state.mod.env.locals.entries())
 
-    for (const [i, [name, value]] of localEntries) {
+    for (const [i, [name, value]] of localEntries.entries()) {
       renderLocalEntry(state, i, name, value, { height, marginL: 0, marginT })
     }
   }
