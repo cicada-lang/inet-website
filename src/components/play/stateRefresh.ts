@@ -1,6 +1,12 @@
 import { State } from './State'
-import { maybeSelectTopValue } from './components/env/maybeSelectTopValue'
+import { createHomeState } from './pages/home/createHomeState'
 
 export function stateRefresh(state: State): void {
-  maybeSelectTopValue(state.homeState.envRendering)
+  state.homeState = createHomeState({
+    env: state.mod.env,
+    x: 0,
+    y: 0,
+    width: state.width,
+    height: state.height,
+  })
 }

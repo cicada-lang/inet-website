@@ -1,5 +1,6 @@
 import { Env } from '@cicada-lang/inet'
 import { createEnvRendering } from '../../components/env/createEnvRendering'
+import { maybeSelectTopValue } from '../../components/env/maybeSelectTopValue'
 import { HomeState } from './HomeState'
 
 export function createHomeState(options: {
@@ -11,14 +12,18 @@ export function createHomeState(options: {
 }): HomeState {
   const { env, x, y, width, height } = options
 
+  const envRendering = createEnvRendering({
+    name: 'home-env',
+    env,
+    x,
+    y,
+    width,
+    height,
+  })
+
+  maybeSelectTopValue(envRendering)
+
   return {
-    envRendering: createEnvRendering({
-      name: 'home-env',
-      env,
-      x,
-      y,
-      width,
-      height,
-    }),
+    envRendering,
   }
 }
