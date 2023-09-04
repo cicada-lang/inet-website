@@ -12,9 +12,10 @@ export function renderNodeRuleListEntry(
   ruleEntry: RuleEntry,
   options: {
     height: number
+    marginL: number
   },
 ): void {
-  const { height } = options
+  const { height, marginL } = options
   const { name } = ruleEntry
 
   state.ctx.save()
@@ -26,7 +27,7 @@ export function renderNodeRuleListEntry(
   renderButton(state, {
     name: `rules/${name}`,
     text: name,
-    x: 0,
+    x: marginL,
     y: state.height - height - height * i,
     height,
     isActive: (state) => state.nodeState.selectedRule?.name === name,

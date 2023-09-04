@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] `renderNodeRuleList` -- call `renderScrollbar`
-
 [play] `renderSelectedWord` -- show stack
 
 # net rendering

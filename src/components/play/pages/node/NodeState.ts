@@ -6,4 +6,6 @@ export type NodeState = {
   selectedRule?: SelectedRule
   nodesInViewLength: number
   nodesScrollCursor?: number
+  rulesInViewLength: number
+  rulesScrollCursor?: number
 }
