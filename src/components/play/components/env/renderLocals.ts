@@ -1,11 +1,12 @@
 import { State } from '../../State'
 import { renderScrollbar } from '../../components/scrollbar/renderScrollbar'
 import { themeSize } from '../../theme/themeSize'
+import { EnvRendering } from './EnvRendering'
 import { renderLocalEntry } from './renderLocalEntry'
 import { renderLocalsLabel } from './renderLocalsLabel'
 
-export function renderLocals(state: State): void {
-  const inViewLength = state.homeState.envRendering.localsInViewLength
+export function renderLocals(state: State, rendering: EnvRendering): void {
+  const inViewLength = rendering.localsInViewLength
   const height = themeSize(10)
 
   if (state.mod.env.locals.size > 0) {
@@ -17,7 +18,7 @@ export function renderLocals(state: State): void {
   if (state.mod.env.locals.size > inViewLength) {
     const marginL = themeSize(10)
     const length = state.mod.env.locals.size
-    const cursor = state.homeState.envRendering.localsScrollCursor || 0
+    const cursor = rendering.localsScrollCursor || 0
 
     renderScrollbar(state, {
       name: 'locals-scrollbar',
@@ -29,7 +30,7 @@ export function renderLocals(state: State): void {
       inViewLength,
       cursor,
       onScroll: (cursor) => {
-        state.homeState.envRendering.localsScrollCursor = cursor
+        rendering.localsScrollCursor = cursor
       },
     })
 
@@ -39,13 +40,21 @@ export function renderLocals(state: State): void {
     )
 
     for (const [i, [name, value]] of localEntries.entries()) {
-      renderLocalEntry(state, i, name, value, { height, marginL, marginT })
+      renderLocalEntry(state, rendering, i, name, value, {
+        height,
+        marginT,
+        marginL,
+      })
     }
   } else {
     const localEntries = Array.from(state.mod.env.locals.entries())
 
     for (const [i, [name, value]] of localEntries.entries()) {
-      renderLocalEntry(state, i, name, value, { height, marginL: 0, marginT })
+      renderLocalEntry(state, rendering, i, name, value, {
+        height,
+        marginT,
+        marginL: 0,
+      })
     }
   }
 }

@@ -5,14 +5,14 @@ import { createRandomNetLayout } from '../../components/net/createRandomNetLayou
 import { SelectedValue } from './SelectedValue'
 
 export function createSelectedValue(
-  envRendering: EnvRendering,
+  rendering: EnvRendering,
   value: Value,
 ): SelectedValue {
   if (value['@kind'] === 'Port') {
     const net = createNet()
-    copyConnectedComponent(envRendering.env.net, net, value.node)
+    copyConnectedComponent(rendering.env.net, net, value.node)
 
-    const { x, y, width, height } = envRendering
+    const { x, y, width, height } = rendering
     const layout = createRandomNetLayout(net, {
       x: x + width / 5,
       y: y + height / 5,
@@ -25,7 +25,7 @@ export function createSelectedValue(
       '@kind': 'SelectedValuePort',
       port: value,
       netRendering: createNetRendering(
-        `${envRendering.name}/selected-net`,
+        `${rendering.name}/selected-net`,
         net,
         layout,
       ),

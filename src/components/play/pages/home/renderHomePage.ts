@@ -21,8 +21,8 @@ export function renderHomePage(state: State, options: RenderOptions): void {
   }
 
   if (!state.isHidingUI) {
-    renderStack(state)
-    renderLocals(state)
+    renderStack(state, state.homeState.envRendering)
+    renderLocals(state, state.homeState.envRendering)
     renderNavbar(state)
   }
 }

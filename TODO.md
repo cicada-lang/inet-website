@@ -1,7 +1,5 @@
 # scrollbar
 
-[play] `components/env/` render functions should not use `homeState`
-
 [play] extract `selectValue`
 [play] `stateRefresh` -- should call `createEnvRendering`
 

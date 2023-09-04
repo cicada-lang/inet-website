@@ -3,9 +3,11 @@ import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { createSelectedValue } from '../../components/env/createSelectedValue'
 import { themeFontSize } from '../../theme/themeFontSize'
+import { EnvRendering } from './EnvRendering'
 
 export function renderStackEntry(
   state: State,
+  rendering: EnvRendering,
   i: number,
   value: Value,
   options: {
@@ -29,15 +31,12 @@ export function renderStackEntry(
     x,
     y,
     height,
-    isDisabled: (state) => i === state.homeState.envRendering.stackInViewIndex,
-    isActive: (state) => i === state.homeState.envRendering.stackInViewIndex,
+    isDisabled: (state) => i === rendering.stackInViewIndex,
+    isActive: (state) => i === rendering.stackInViewIndex,
     handler: (state) => {
-      state.homeState.envRendering.selectedValue = createSelectedValue(
-        state.homeState.envRendering,
-        value,
-      )
-      state.homeState.envRendering.stackInViewIndex = i
-      state.homeState.envRendering.localName = undefined
+      rendering.selectedValue = createSelectedValue(rendering, value)
+      rendering.stackInViewIndex = i
+      rendering.localName = undefined
     },
   })
 }
