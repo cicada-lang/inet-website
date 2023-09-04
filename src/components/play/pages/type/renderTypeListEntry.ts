@@ -7,7 +7,6 @@ import { selectType } from './selectType'
 export function renderTypeListEntry(
   state: State,
   i: number,
-  name: string,
   definition: TypeDefinition,
   options: {
     height: number
@@ -23,14 +22,15 @@ export function renderTypeListEntry(
     : `${themeFontSize('base')} monospace`
 
   renderButton(state, {
-    name: `types/${name}`,
-    text: name,
+    name: `types/${definition.name}`,
+    text: definition.name,
     x: 0,
     y: marginT + height * i,
     height,
-    isActive: (state) => state.typeState.selectedType?.name === name,
-    isDisabled: (state) => state.typeState.selectedType?.name === name,
-    handler: (state) => selectType(state, name),
+    isActive: (state) => state.typeState.selectedType?.name === definition.name,
+    isDisabled: (state) =>
+      state.typeState.selectedType?.name === definition.name,
+    handler: (state) => selectType(state, definition.name),
   })
 
   state.ctx.restore()

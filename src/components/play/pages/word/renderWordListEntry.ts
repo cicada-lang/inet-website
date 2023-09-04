@@ -7,7 +7,6 @@ import { selectWord } from './selectWord'
 export function renderWordListEntry(
   state: State,
   i: number,
-  name: string,
   definition: WordDefinition,
   options: {
     height: number
@@ -23,14 +22,15 @@ export function renderWordListEntry(
     : `${themeFontSize('base')} monospace`
 
   renderButton(state, {
-    name: `words/${name}`,
-    text: name,
+    name: `words/${definition.name}`,
+    text: definition.name,
     x: 0,
     y: marginT + height * i,
     height,
-    isActive: (state) => state.wordState.selectedWord?.name === name,
-    isDisabled: (state) => state.wordState.selectedWord?.name === name,
-    handler: (state) => selectWord(state, name),
+    isActive: (state) => state.wordState.selectedWord?.name === definition.name,
+    isDisabled: (state) =>
+      state.wordState.selectedWord?.name === definition.name,
+    handler: (state) => selectWord(state, definition.name),
   })
 
   state.ctx.restore()

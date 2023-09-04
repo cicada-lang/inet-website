@@ -12,15 +12,13 @@ export function renderWordList(state: State): void {
   const height = themeSize(10)
   const marginT = height * 2
 
-  const definitionEntries = Array.from(state.mod.definitions.entries())
-    .filter(
-      (entry): entry is [string, WordDefinition] =>
-        entry[1]['@kind'] === 'WordDefinition',
-    )
-    .entries()
+  const definitions = Array.from(state.mod.definitions.values()).filter(
+    (definition): definition is WordDefinition =>
+      definition['@kind'] === 'WordDefinition',
+  )
 
-  for (const [i, [name, definition]] of definitionEntries) {
-    renderWordListEntry(state, i, name, definition, {
+  for (const [i, definition] of definitions.entries()) {
+    renderWordListEntry(state, i, definition, {
       height,
       marginT,
     })

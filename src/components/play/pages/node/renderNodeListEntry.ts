@@ -7,7 +7,6 @@ import { selectNode } from './selectNode'
 export function renderNodeListEntry(
   state: State,
   i: number,
-  name: string,
   definition: NodeDefinition,
   options: {
     height: number
@@ -23,14 +22,15 @@ export function renderNodeListEntry(
     : `${themeFontSize('base')} monospace`
 
   renderButton(state, {
-    name: `nodes/${name}`,
-    text: name,
+    name: `nodes/${definition.name}`,
+    text: definition.name,
     x: 0,
     y: marginT + height * i,
     height,
-    isActive: (state) => state.nodeState.selectedNode?.name === name,
-    isDisabled: (state) => state.nodeState.selectedNode?.name === name,
-    handler: (state) => selectNode(state, name),
+    isActive: (state) => state.nodeState.selectedNode?.name === definition.name,
+    isDisabled: (state) =>
+      state.nodeState.selectedNode?.name === definition.name,
+    handler: (state) => selectNode(state, definition.name),
   })
 
   state.ctx.restore()

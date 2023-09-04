@@ -12,15 +12,13 @@ export function renderTypeList(state: State): void {
   const height = themeSize(10)
   const marginT = height * 2
 
-  const definitionEntries = Array.from(state.mod.definitions.entries())
-    .filter(
-      (entry): entry is [string, TypeDefinition] =>
-        entry[1]['@kind'] === 'TypeDefinition',
-    )
-    .entries()
+  const definitions = Array.from(state.mod.definitions.values()).filter(
+    (definition): definition is TypeDefinition =>
+      definition['@kind'] === 'TypeDefinition',
+  )
 
-  for (const [i, [name, definition]] of definitionEntries) {
-    renderTypeListEntry(state, i, name, definition, { height, marginT })
+  for (const [i, definition] of definitions.entries()) {
+    renderTypeListEntry(state, i, definition, { height, marginT })
   }
 
   state.ctx.restore()

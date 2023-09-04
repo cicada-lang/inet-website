@@ -12,15 +12,13 @@ export function renderNodeList(state: State): void {
   const height = themeSize(10)
   const marginT = height * 2
 
-  const definitionEntries = Array.from(state.mod.definitions.entries())
-    .filter(
-      (entry): entry is [string, NodeDefinition] =>
-        entry[1]['@kind'] === 'NodeDefinition',
-    )
-    .entries()
+  const definitions = Array.from(state.mod.definitions.values()).filter(
+    (definition): definition is NodeDefinition =>
+      definition['@kind'] === 'NodeDefinition',
+  )
 
-  for (const [i, [name, definition]] of definitionEntries) {
-    renderNodeListEntry(state, i, name, definition, {
+  for (const [i, definition] of definitions.entries()) {
+    renderNodeListEntry(state, i, definition, {
       height,
       marginT,
     })
