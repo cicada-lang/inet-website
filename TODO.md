@@ -1,7 +1,11 @@
 # scrollbar
 
-[play] extract `components/stack/renderStack` -- for `renderSelectedWord`
-[play] extract `components/locals/renderLocals` -- to be symmetric with `renderStack`
+[play] `SelectedValue` has `netRendering` instead of `rendering`
+[play] move `SelectedValue` to `components/env/`
+[play] extract `components/env/renderStack` -- for `renderSelectedWord`
+[play] extract `components/env/renderLocals` -- to be symmetric with `renderStack`
+[play] extract `components/env/renderInteract`
+[play] extract `components/env/renderEnv`
 
 [play] `renderSelectedWord` -- show stack
 

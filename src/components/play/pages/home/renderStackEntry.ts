@@ -24,7 +24,7 @@ export function renderStackEntry(
     : `${themeFontSize('base')} monospace`
 
   renderButton(state, {
-    name: `state[${i}]`,
+    name: `stack[${i}]`,
     text,
     x,
     y,
