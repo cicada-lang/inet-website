@@ -35,11 +35,13 @@ onMounted(async () => {
       <div
         class="px-3 flex lg:flex-row flex-col lg:max-w-[64rem] w-full self-center"
       >
-        <div class="lg:w-1/3 border-2 border-black dark:border-white lg:mr-3">
-          <pre
-            class="lg:p-6 p-4 lg:text-lg text-base whitespace-pre font-code"
-            >{{ codeFragment }}</pre
-          >
+        <div class="lg:w-1/3 lg:pr-3">
+          <div class="border-2 border-black dark:border-white">
+            <pre
+              class="lg:p-6 p-4 lg:text-lg text-base whitespace-pre font-code"
+              >{{ codeFragment }}</pre
+            >
+          </div>
         </div>
 
         <div class="lg:py-0 pt-3 lg:w-2/3">
@@ -56,15 +58,39 @@ onMounted(async () => {
         </div>
       </div>
 
-      <div
-        class="w-full lg:max-w-[64rem] flex flex-col px-3 pt-1 items-end self-center"
-      >
-        <RouterLink :to="`/playground/${Base64.encode(code)}`">
-          <Lang class="lg:text-lg text-base hover:underline">
-            <template #zh> 去演算场 </template>
-            <template #en> Goto The Playground </template>
+      <div class="w-full lg:max-w-[64rem] flex px-3 pt-3 pb-28 self-center">
+        <div class="lg:w-1/3"></div>
+
+        <div class="w-full lg:w-2/3 flex flex-col">
+          <div>
+            <Lang class="lg:text-xl text-lg">
+              <template #zh> 点击红边，以观察反应。 </template>
+              <template #en>
+                Click red edges to observe interactions.
+              </template>
+            </Lang>
+          </div>
+
+          <Lang class="lg:text-xl text-lg">
+            <template #zh>
+              去<RouterLink
+                :to="`/playground/${Base64.encode(code)}`"
+                class="underline"
+                >演算场</RouterLink
+              >，以修改代码。
+            </template>
+            <template #en>
+              Goto
+              <RouterLink
+                :to="`/playground/${Base64.encode(code)}`"
+                class="underline"
+              >
+                The Playground
+              </RouterLink>
+              to edit the code.
+            </template>
           </Lang>
-        </RouterLink>
+        </div>
       </div>
 
       <div class="w-full lg:max-w-[64rem] flex px-3 pt-10 self-center">
