@@ -16,7 +16,7 @@ export function renderWordPage(state: State, options: RenderOptions): void {
 
   if (state.wordState.selectedWord) {
     renderSelectedWord(state, state.wordState.selectedWord)
-    evolveNet(state, state.wordState.selectedWord.rendering)
+    evolveNet(state, state.wordState.selectedWord.netRendering)
   }
 
   if (!state.isHidingUI) {

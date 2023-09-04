@@ -8,7 +8,7 @@ export function renderSelectedWord(
 ): void {
   state.ctx.save()
 
-  renderNet(state, selectedWord.rendering)
+  renderNet(state, selectedWord.netRendering)
 
   state.ctx.restore()
 }

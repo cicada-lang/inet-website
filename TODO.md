@@ -1,14 +1,6 @@
 # scrollbar
 
-[play] extract `selectValue`
-[play] `stateRefresh` -- should call `createEnvRendering`
-
-[play] extract `components/env/renderStack` -- for `renderSelectedWord`
-[play] extract `components/env/renderLocals` -- to be symmetric with `renderStack`
-[play] extract `components/env/renderInteract`
-[play] extract `components/env/renderEnv`
-
-[play] `renderSelectedWord` -- show stack
+[play] `WordState` has `envRendering` and show stack
 
 # net rendering
 

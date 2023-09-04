@@ -18,7 +18,11 @@ export function selectWord(state: State, givenName: string): void {
         state.wordState.selectedWord = {
           name,
           definition,
-          rendering: createNetRendering('word/selected-net', env.net, layout),
+          netRendering: createNetRendering(
+            'word/selected-net',
+            env.net,
+            layout,
+          ),
         }
       }
     }
