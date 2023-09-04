@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] extract `renderTypeListEntry`
 [play] extract `renderNodeListEntry`
 [play] extract `renderWordListEntry`
 [play] extract `renderNodeRuleListEntry`

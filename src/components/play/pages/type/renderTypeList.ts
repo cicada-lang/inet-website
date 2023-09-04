@@ -1,9 +1,8 @@
 import { State } from '../../State'
-import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
+import { renderTypeListEntry } from './renderTypeListEntry'
 import { renderTypeListLabel } from './renderTypeListLabel'
-import { selectType } from './selectType'
 
 export function renderTypeList(state: State): void {
   renderTypeListLabel(state)
@@ -17,21 +16,13 @@ export function renderTypeList(state: State): void {
     ? `${themeFontSize('lg')} monospace`
     : `${themeFontSize('base')} monospace`
 
-  let i = 0
-  for (const [name, definition] of state.mod.definitions) {
-    if (definition['@kind'] === 'TypeDefinition') {
-      renderButton(state, {
-        name: `types/${name}`,
-        text: name,
-        x: 0,
-        y: marginT + height * i,
-        height,
-        isActive: (state) => state.typeState.selectedType?.name === name,
-        isDisabled: (state) => state.typeState.selectedType?.name === name,
-        handler: (state) => selectType(state, name),
-      })
+  const definitionEntries = Array.from(
+    state.mod.definitions.entries(),
+  ).entries()
 
-      i++
+  for (const [i, [name, definition]] of definitionEntries) {
+    if (definition['@kind'] === 'TypeDefinition') {
+      renderTypeListEntry(state, i, name, definition, { height, marginT })
     }
   }
 
