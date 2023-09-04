@@ -1,6 +1,11 @@
 # scrollbar
 
+[play] `createSelectedValue` take `envRendering`
+[play] `createSelectedValue` take `name`
+[play] `createSelectedValue` should not take `state`
+
 [play] move `SelectedValue` to `components/env/`
+
 [play] extract `components/env/renderStack` -- for `renderSelectedWord`
 [play] extract `components/env/renderLocals` -- to be symmetric with `renderStack`
 [play] extract `components/env/renderInteract`

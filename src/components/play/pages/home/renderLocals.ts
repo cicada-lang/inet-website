@@ -5,7 +5,7 @@ import { renderLocalEntry } from './renderLocalEntry'
 import { renderLocalsLabel } from './renderLocalsLabel'
 
 export function renderLocals(state: State): void {
-  const inViewLength = state.homeState.localsInViewLength
+  const inViewLength = state.homeState.envRendering.localsInViewLength
   const height = themeSize(10)
 
   if (state.mod.env.locals.size > 0) {
@@ -17,7 +17,7 @@ export function renderLocals(state: State): void {
   if (state.mod.env.locals.size > inViewLength) {
     const marginL = themeSize(10)
     const length = state.mod.env.locals.size
-    const cursor = state.homeState.localsScrollCursor || 0
+    const cursor = state.homeState.envRendering.localsScrollCursor || 0
 
     renderScrollbar(state, {
       name: 'locals-scrollbar',
@@ -29,7 +29,7 @@ export function renderLocals(state: State): void {
       inViewLength,
       cursor,
       onScroll: (cursor) => {
-        state.homeState.localsScrollCursor = cursor
+        state.homeState.envRendering.localsScrollCursor = cursor
       },
     })
 

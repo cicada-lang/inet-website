@@ -29,12 +29,15 @@ export function renderStackEntry(
     x,
     y,
     height,
-    isDisabled: (state) => i === state.homeState.stackInViewIndex,
-    isActive: (state) => i === state.homeState.stackInViewIndex,
+    isDisabled: (state) => i === state.homeState.envRendering.stackInViewIndex,
+    isActive: (state) => i === state.homeState.envRendering.stackInViewIndex,
     handler: (state) => {
-      state.homeState.selectedValue = createSelectedValue(state, value)
-      state.homeState.stackInViewIndex = i
-      state.homeState.localName = undefined
+      state.homeState.envRendering.selectedValue = createSelectedValue(
+        state,
+        value,
+      )
+      state.homeState.envRendering.stackInViewIndex = i
+      state.homeState.envRendering.localName = undefined
     },
   })
 }

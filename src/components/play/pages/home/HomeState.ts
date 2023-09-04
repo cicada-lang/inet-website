@@ -1,11 +1,5 @@
-import { SelectedValue } from './SelectedValue'
+import { EnvRendering } from '../../components/env/EnvRendering'
 
 export type HomeState = {
-  selectedValue?: SelectedValue
-  stackInViewLength: number
-  stackScrollCursor?: number
-  stackInViewIndex?: number
-  localName?: string
-  localsInViewLength: number
-  localsScrollCursor?: number
+  envRendering: EnvRendering
 }

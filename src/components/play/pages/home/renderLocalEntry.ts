@@ -30,12 +30,15 @@ export function renderLocalEntry(
     x,
     y,
     height,
-    isDisabled: (state) => name === state.homeState.localName,
-    isActive: (state) => name === state.homeState.localName,
+    isDisabled: (state) => name === state.homeState.envRendering.localName,
+    isActive: (state) => name === state.homeState.envRendering.localName,
     handler: (state) => {
-      state.homeState.selectedValue = createSelectedValue(state, value)
-      state.homeState.localName = name
-      state.homeState.stackInViewIndex = undefined
+      state.homeState.envRendering.selectedValue = createSelectedValue(
+        state,
+        value,
+      )
+      state.homeState.envRendering.localName = name
+      state.homeState.envRendering.stackInViewIndex = undefined
     },
   })
 }

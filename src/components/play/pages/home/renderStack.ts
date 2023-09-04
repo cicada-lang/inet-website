@@ -7,7 +7,7 @@ import { renderStackLabel } from './renderStackLabel'
 export function renderStack(state: State): void {
   const height = themeSize(10)
 
-  const inViewLength = state.homeState.stackInViewLength
+  const inViewLength = state.homeState.envRendering.stackInViewLength
 
   if (state.mod.env.stack.length > 0) {
     renderStackLabel(
@@ -22,7 +22,7 @@ export function renderStack(state: State): void {
   if (state.mod.env.stack.length > inViewLength) {
     const marginL = themeSize(10)
     const length = state.mod.env.stack.length
-    const cursor = state.homeState.stackScrollCursor || 0
+    const cursor = state.homeState.envRendering.stackScrollCursor || 0
 
     renderScrollbar(state, {
       name: 'stack-scrollbar',
@@ -34,7 +34,7 @@ export function renderStack(state: State): void {
       inViewLength,
       cursor,
       onScroll: (cursor) => {
-        state.homeState.stackScrollCursor = cursor
+        state.homeState.envRendering.stackScrollCursor = cursor
       },
     })
 
