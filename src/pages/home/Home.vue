@@ -75,7 +75,7 @@ onMounted(async () => {
             <template #zh>
               去<RouterLink
                 :to="`/playground/${Base64.encode(code)}`"
-                class="underline"
+                class="underline underline-offset-4 decoration-2"
                 >演算场</RouterLink
               >，以修改代码。
             </template>
@@ -83,7 +83,7 @@ onMounted(async () => {
               Goto
               <RouterLink
                 :to="`/playground/${Base64.encode(code)}`"
-                class="underline"
+                class="underline underline-offset-4 decoration-2"
               >
                 The Playground
               </RouterLink>
