@@ -3,6 +3,6 @@ import { HomeState } from './HomeState'
 
 export function createHomeState(): HomeState {
   return {
-    envRendering: createEnvRendering(),
+    envRendering: createEnvRendering({ name: 'home-env' }),
   }
 }
