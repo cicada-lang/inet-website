@@ -1,6 +1,5 @@
 # scrollbar
 
-[play] `SelectedValue` has `netRendering` instead of `rendering`
 [play] move `SelectedValue` to `components/env/`
 [play] extract `components/env/renderStack` -- for `renderSelectedWord`
 [play] extract `components/env/renderLocals` -- to be symmetric with `renderStack`

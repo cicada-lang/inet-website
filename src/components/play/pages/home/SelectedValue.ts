@@ -7,7 +7,7 @@ export type SelectedValuePort = {
   '@type': 'SelectedValue'
   '@kind': 'SelectedValuePort'
   port: Port
-  rendering: NetRendering
+  netRendering: NetRendering
 }
 
 export type SelectedValueGeneric = {

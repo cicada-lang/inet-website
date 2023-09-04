@@ -8,7 +8,7 @@ export function renderSelectedValue(
   selectedValue: SelectedValue,
 ): void {
   if (selectedValue['@kind'] === 'SelectedValuePort') {
-    renderSelectedNet(state, selectedValue.port, selectedValue.rendering)
+    renderSelectedNet(state, selectedValue.port, selectedValue.netRendering)
   } else {
     renderValue(state, selectedValue.value)
   }

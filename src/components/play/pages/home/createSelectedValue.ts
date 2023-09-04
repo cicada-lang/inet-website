@@ -19,7 +19,7 @@ export function createSelectedValue(state: State, value: Value): SelectedValue {
       '@type': 'SelectedValue',
       '@kind': 'SelectedValuePort',
       port: value,
-      rendering: createNetRendering('home/selected-net', net, layout),
+      netRendering: createNetRendering('home/selected-net', net, layout),
     }
   } else {
     return {
