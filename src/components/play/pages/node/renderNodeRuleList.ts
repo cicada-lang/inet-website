@@ -23,7 +23,7 @@ export function renderNodeRuleList(
   if (ruleEntries.length > inViewLength) {
     const marginL = themeSize(10)
     const length = ruleEntries.length
-    const cursor = state.nodeState.rulesScrollCursor || 0
+    const cursor = selectedNode.rulesScrollCursor || 0
 
     renderScrollbar(state, {
       name: 'rules-scrollbar',
@@ -35,7 +35,7 @@ export function renderNodeRuleList(
       inViewLength,
       cursor,
       onScroll: (cursor) => {
-        state.nodeState.rulesScrollCursor = cursor
+        selectedNode.rulesScrollCursor = cursor
       },
     })
 

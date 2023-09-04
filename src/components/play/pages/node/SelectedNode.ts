@@ -6,4 +6,5 @@ export type SelectedNode = {
   definition: NodeDefinition
   rendering: NetRendering
   ruleEntries: Array<RuleEntry>
+  rulesScrollCursor?: number
 }

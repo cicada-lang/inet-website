@@ -7,5 +7,4 @@ export type NodeState = {
   nodesInViewLength: number
   nodesScrollCursor?: number
   rulesInViewLength: number
-  rulesScrollCursor?: number
 }
