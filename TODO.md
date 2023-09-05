@@ -1,5 +1,3 @@
-[play] fix show of rule list for imported node -- use `(mul)` in docs as test
-
 # playground tabs
 
 [playground] support tabs
