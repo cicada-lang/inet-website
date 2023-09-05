@@ -24,7 +24,7 @@ export async function loadState(options: StateOptions): Promise<State> {
     tick: 0,
   }
 
-  stateReload(state)
+  await stateReload(state)
 
   return state
 }
