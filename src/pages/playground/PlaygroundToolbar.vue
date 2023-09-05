@@ -19,12 +19,6 @@ async function run() {
   await stateReload(props.state)
   const timeAdter = performance.now()
   timeUsedToRun.value = timeAdter - timeBefore
-
-  if (props.state.errorMessage) {
-    props.state.kind = 'Error'
-  } else {
-    props.state.kind = 'Play'
-  }
 }
 
 async function share() {

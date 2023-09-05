@@ -20,6 +20,8 @@ export async function stateReload(state: State): Promise<void> {
     // for `Play` component to refresh state.
     state.tick++
   } catch (error) {
+    state.kind = 'Error'
+
     if (error instanceof ParsingError) {
       state.errorMessage = error.report(state.text)
     } else if (error instanceof Report) {

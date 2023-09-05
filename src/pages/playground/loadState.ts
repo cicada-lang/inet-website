@@ -1,5 +1,6 @@
 import { Fetcher, Loader } from '@cicada-lang/inet'
 import { State } from './State'
+import { stateReload } from './stateReload'
 
 export type StateOptions = {
   text: string
@@ -12,9 +13,9 @@ export async function loadState(options: StateOptions): Promise<State> {
   const loader = new Loader({ fetcher })
   const url = new URL(window.location.href)
 
-  const mod = await loader.load(url, { text })
+  const mod = await loader.load(url, { text: '' })
 
-  return {
+  const state: State = {
     kind: 'Play',
     text,
     mod,
@@ -22,4 +23,8 @@ export async function loadState(options: StateOptions): Promise<State> {
     errorMessage: '',
     tick: 0,
   }
+
+  stateReload(state)
+
+  return state
 }
