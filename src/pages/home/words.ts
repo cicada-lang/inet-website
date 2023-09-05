@@ -11,6 +11,15 @@ export const words: Array<Illustration> = [
   },
 
   {
+    name: 'Builtin',
+    description: {
+      zh: '根据名字，调用一个内置定义。',
+      en: 'Given name, call a builtin definition.',
+    },
+    code: `... @run ...`,
+  },
+
+  {
     name: 'Local',
     description: {
       zh: '将栈顶的值保存到局部变量种，以在后面的段落中引用。',

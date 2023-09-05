@@ -16,11 +16,11 @@ add
 
 zero add1 add1
 zero add1 add1
-add run $result
+add @run $result
 `
 
 export const code = `\
-type Nat -- Type end
+type Nat -- @Type end
 
 node zero
   ------------
@@ -57,5 +57,5 @@ add
 
 zero add1 add1
 zero add1 add1
-add run $result
+add @run $result
 `

@@ -16,8 +16,8 @@ export const sections = [
     name: 'words',
     examples: words,
     title: {
-      zh: '7 种词',
-      en: '7 kinds of words',
+      zh: '8 种词',
+      en: '8 kinds of words',
     },
   },
 

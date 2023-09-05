@@ -116,13 +116,13 @@ onMounted(async () => {
               <template #zh>
                 <span class="font-bold">iNet</span> 有 <br />
                 8 种语句，<br />
-                7 种词，<br />
+                8 种词，<br />
                 6 个预定义词。<br />
               </template>
               <template #en>
                 <span class="font-bold">iNet</span> has <br />
                 8 kinds of statements, <br />
-                7 kinds of words, <br />
+                8 kinds of words, <br />
                 6 built-in words. <br />
               </template>
             </Lang>
