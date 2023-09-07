@@ -3,9 +3,9 @@ import { touchEventOffset } from '../../../../utils/browser/touchEventOffset'
 import { State } from '../../State'
 import { selectNode } from '../../pages/node/selectNode'
 import { themeFontSize } from '../../theme/themeFontSize'
+import { renderClickableRect } from '../clickable-rect/renderClickableRect'
 import { NetRendering } from '../net/NetRendering'
 import { Rect } from '../rect/Rect'
-import { renderClickableRect } from '../rect/renderClickableRect'
 import { withinRect } from '../rect/withinRect'
 
 export function renderNode(

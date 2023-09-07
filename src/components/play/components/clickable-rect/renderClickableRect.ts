@@ -1,8 +1,8 @@
 import { State } from '../../State'
+import { Rect } from '../rect/Rect'
 import { ClickableRect } from './ClickableRect'
-import { Rect } from './Rect'
 
-type Options = Omit<ClickableRect, 'rect'>
+type Options = ClickableRect
 
 // Can not be used after transform,
 // because we need to record rect.
@@ -12,13 +12,7 @@ export function renderClickableRect(state: State, options: Options): void {
 
   const rect: Rect = [x, y, width, height]
 
-  state.clickableRects.set(name, {
-    ...options,
-    name,
-    x,
-    y,
-    rect,
-  })
+  state.clickableRects.set(name, options)
 
   state.ctx.save()
 

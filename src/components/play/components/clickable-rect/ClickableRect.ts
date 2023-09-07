@@ -1,5 +1,4 @@
 import { State } from '../../State'
-import { Rect } from './Rect'
 
 export type ClickableRect = {
   name: string
@@ -12,5 +11,4 @@ export type ClickableRect = {
   isDisabled?: (state: State) => void
   onMousemove?: (state: State, event: MouseEvent) => void
   onTouchmove?: (state: State, event: TouchEvent) => void
-  rect: Rect
 }

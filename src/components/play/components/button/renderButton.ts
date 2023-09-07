@@ -25,14 +25,7 @@ export function renderButton(state: State, options: Options): void {
 
   const rect: Rect = [x, y, width, height]
 
-  state.buttons.set(name, {
-    ...options,
-    text,
-    x,
-    y,
-    height,
-    rect,
-  })
+  state.buttons.set(name, { ...options, rect })
 
   state.ctx.save()
 

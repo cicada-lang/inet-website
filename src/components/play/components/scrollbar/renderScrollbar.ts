@@ -1,5 +1,5 @@
 import { State } from '../../State'
-import { renderClickableRect } from '../rect/renderClickableRect'
+import { renderClickableRect } from '../clickable-rect/renderClickableRect'
 
 export function renderScrollbar(
   state: State,

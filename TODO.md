@@ -1,11 +1,5 @@
 # net rendering
 
-[play] `Button` should have no `rect`
-
-[play] remove `renderButton` `Options` type -- just use `Button` type
-
-[play] merge `ClickableRect` with `Rect`
-
 [play] `renderCap` -- hover show port type
 [play] `renderEdge` -- hover edge to show port info
 

@@ -9,7 +9,8 @@ export function handleMousemove(state: State, event: MouseEvent): void {
   }
 
   for (const clickableRect of state.clickableRects.values()) {
-    if (withinRect(clickableRect.rect, state.mouse.position)) {
+    const { x, y, width, height } = clickableRect
+    if (withinRect([x, y, width, height], state.mouse.position)) {
       clickableRect.onMousemove?.(state, event)
     }
   }
