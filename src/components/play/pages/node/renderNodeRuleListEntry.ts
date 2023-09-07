@@ -32,7 +32,7 @@ export function renderNodeRuleListEntry(
     height,
     isActive: (state) => state.nodeState.selectedRule?.name === name,
     isDisabled: (state) => state.nodeState.selectedRule?.name === name,
-    handler: (state) => selectRule(state, selectedNode, name),
+    onClick: (state) => selectRule(state, selectedNode, name),
   })
 
   state.ctx.restore()

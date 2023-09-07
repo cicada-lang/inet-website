@@ -31,7 +31,7 @@ export function renderNodeListEntry(
     isActive: (state) => state.nodeState.selectedNode?.name === definition.name,
     isDisabled: (state) =>
       state.nodeState.selectedNode?.name === definition.name,
-    handler: (state) => selectNode(state, definition.name),
+    onClick: (state) => selectNode(state, definition.name),
   })
 
   state.ctx.restore()

@@ -31,7 +31,7 @@ export function renderTypeListEntry(
     isActive: (state) => state.typeState.selectedType?.name === definition.name,
     isDisabled: (state) =>
       state.typeState.selectedType?.name === definition.name,
-    handler: (state) => selectType(state, definition.name),
+    onClick: (state) => selectType(state, definition.name),
   })
 
   state.ctx.restore()

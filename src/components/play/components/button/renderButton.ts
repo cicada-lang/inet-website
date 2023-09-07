@@ -11,7 +11,7 @@ type Options = {
   height: number
   align?: 'left' | 'right'
   noBorder?: boolean
-  handler: (state: State) => void
+  onClick: (state: State) => void
   isActive?: (state: State) => void
   isDisabled?: (state: State) => void
 }

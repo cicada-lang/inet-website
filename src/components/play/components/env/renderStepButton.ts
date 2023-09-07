@@ -24,6 +24,6 @@ export function renderStepButton(state: State, rendering: NetRendering): void {
     y,
     align: 'right',
     height,
-    handler: (state) => runOneStep(state, rendering),
+    onClick: (state) => runOneStep(state, rendering),
   })
 }

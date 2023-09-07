@@ -1,7 +1,5 @@
 # net rendering
 
-[play] rename button and clickableRect 's handler to onClick
-
 [play] `renderNode` -- be able to drag node
 
 [play] `renderCap` -- hover show port type

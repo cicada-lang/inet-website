@@ -66,7 +66,7 @@ export function renderNode(
     isDisabled: (state) =>
       state.currentRoute.name === 'node' &&
       state.nodeState.selectedNode?.name === nodeEntry.name,
-    handler: (state) => {
+    onClick: (state) => {
       if (state.mouse.ctrlKey) {
         if (state.currentRoute.name === 'home') {
           state.history.push(state.currentRoute)

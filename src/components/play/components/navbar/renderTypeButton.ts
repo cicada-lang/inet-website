@@ -32,7 +32,7 @@ export function renderTypeButton(
     height,
     align: 'right',
     isActive: (state) => state.currentRoute.name === name,
-    handler: (state) => {
+    onClick: (state) => {
       if (state.currentRoute.name === 'home') {
         state.history.push(state.currentRoute)
       }

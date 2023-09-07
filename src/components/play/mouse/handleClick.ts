@@ -6,7 +6,7 @@ export function handleClick(state: State): void {
   for (const button of state.buttons.values()) {
     if (withinRect(button.rect, state.mouse.position)) {
       if (!button.isDisabled?.(state)) {
-        button.handler(state)
+        button.onClick(state)
       }
     }
   }
@@ -14,7 +14,7 @@ export function handleClick(state: State): void {
   for (const clickableRect of state.clickableRects.values()) {
     if (withinRect(clickableRect.rect, state.mouse.position)) {
       if (!clickableRect.isDisabled?.(state)) {
-        clickableRect.handler(state)
+        clickableRect.onClick(state)
       }
     }
   }

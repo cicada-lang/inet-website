@@ -24,6 +24,6 @@ export function renderRunButton(state: State, rendering: NetRendering): void {
     y,
     align: 'right',
     height,
-    handler: (state) => runAllSteps(state, rendering),
+    onClick: (state) => runAllSteps(state, rendering),
   })
 }

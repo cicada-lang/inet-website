@@ -8,7 +8,7 @@ type Options = {
   height: number
   width: number
   withBorder?: boolean
-  handler: (state: State) => void
+  onClick: (state: State) => void
   isDisabled?: (state: State) => void
 }
 

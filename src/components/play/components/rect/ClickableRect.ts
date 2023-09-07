@@ -8,7 +8,7 @@ export type ClickableRect = {
   height: number
   width: number
   noBorder?: boolean
-  handler: (state: State) => void
+  onClick: (state: State) => void
   isDisabled?: (state: State) => void
   rect: Rect
 }

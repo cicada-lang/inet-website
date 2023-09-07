@@ -34,7 +34,7 @@ export function renderLocalEntry(
     height,
     isDisabled: (state) => name === rendering.localName,
     isActive: (state) => name === rendering.localName,
-    handler: (state) => {
+    onClick: (state) => {
       rendering.selectedValue = createSelectedValue(rendering, value)
       rendering.localName = name
       rendering.stackInViewIndex = undefined

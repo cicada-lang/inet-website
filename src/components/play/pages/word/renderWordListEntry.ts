@@ -31,7 +31,7 @@ export function renderWordListEntry(
     isActive: (state) => state.wordState.selectedWord?.name === definition.name,
     isDisabled: (state) =>
       state.wordState.selectedWord?.name === definition.name,
-    handler: (state) => selectWord(state, definition.name),
+    onClick: (state) => selectWord(state, definition.name),
   })
 
   state.ctx.restore()

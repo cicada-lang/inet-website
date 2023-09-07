@@ -27,7 +27,7 @@ export function renderToggleUIButton(state: State): void {
     y,
     height,
     align: 'right',
-    handler: (state) => {
+    onClick: (state) => {
       state.isHidingUI = !state.isHidingUI
     },
   })

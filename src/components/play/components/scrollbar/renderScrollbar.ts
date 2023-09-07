@@ -36,7 +36,7 @@ export function renderScrollbar(
       height: height / length,
       width,
       // withBorder: true,
-      handler: () => onScroll(i),
+      onClick: () => onScroll(i),
     })
   }
 
@@ -48,7 +48,7 @@ export function renderScrollbar(
       height: (unitHeight * inViewLength) / 2 - unitHeight / 2,
       width,
       // withBorder: true,
-      handler: () => onScroll(cursor - 1),
+      onClick: () => onScroll(cursor - 1),
     })
   }
 
@@ -71,7 +71,7 @@ export function renderScrollbar(
       height: (unitHeight * inViewLength) / 2 - unitHeight / 2,
       width,
       // withBorder: true,
-      handler: () => onScroll(cursor + 1),
+      onClick: () => onScroll(cursor + 1),
     })
   }
 
@@ -83,7 +83,7 @@ export function renderScrollbar(
       height: unitHeight,
       width,
       // withBorder: true,
-      handler: () => onScroll(i + 1),
+      onClick: () => onScroll(i + 1),
     })
   }
 
