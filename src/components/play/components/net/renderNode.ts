@@ -67,13 +67,15 @@ export function renderNode(
       state.currentRoute.name === 'node' &&
       state.nodeState.selectedNode?.name === nodeEntry.name,
     handler: (state) => {
-      if (state.currentRoute.name === 'home') {
-        state.history.push(state.currentRoute)
+      if (state.mouse.ctrlKey) {
+        if (state.currentRoute.name === 'home') {
+          state.history.push(state.currentRoute)
+        }
+
+        state.currentRoute = { name: 'node' }
+
+        selectNode(state, nodeEntry.name)
       }
-
-      state.currentRoute = { name: 'node' }
-
-      selectNode(state, nodeEntry.name)
     },
   })
 

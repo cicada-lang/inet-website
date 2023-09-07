@@ -1,13 +1,10 @@
-# playground tabs
-
-[playground] support tabs
-
 # net rendering
 
-[play] `renderNode` -- double click jump -- not single click
+[play] rename button and clickableRect 's handler to onClick
+
+[play] `renderNode` -- be able to drag node
 
 [play] `renderCap` -- hover show port type
-
 [play] `renderEdge` -- hover edge to show port info
 
 [play] `renderNet` -- adjust node size by number of nodes
