@@ -1,12 +1,9 @@
 # net rendering
 
-[play] `handleMousemove` -- pass `MouseEvent`
-
-[play] `ClickableRect` has `onMousemove`
-
-[play] `renderNode` -- be able to drag node
-
 [play] `Button` should have no `rect`
+
+[play] remove `renderButton` `Options` type -- just use `Button` type
+
 [play] merge `ClickableRect` with `Rect`
 
 [play] `renderCap` -- hover show port type

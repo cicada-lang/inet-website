@@ -14,6 +14,7 @@ type Options = {
   onClick: (state: State, event: MouseEvent) => void
   isActive?: (state: State) => void
   isDisabled?: (state: State) => void
+  onMousemove?: (state: State, event: MouseEvent) => void
 }
 
 // Can not be used after transform,

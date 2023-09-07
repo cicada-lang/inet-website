@@ -66,15 +66,20 @@ export function renderNode(
     isDisabled: (state) =>
       state.currentRoute.name === 'node' &&
       state.nodeState.selectedNode?.name === nodeEntry.name,
-    onClick: (state, event) => {
+    onClick(state, event) {
       if (event.ctrlKey) {
         if (state.currentRoute.name === 'home') {
           state.history.push(state.currentRoute)
         }
 
         state.currentRoute = { name: 'node' }
-
         selectNode(state, nodeEntry.name)
+      }
+    },
+    onMousemove(state, event) {
+      if (state.mouse.isDown) {
+        rendering.layout.nodePositions.set(key, [event.offsetX, event.offsetY])
+        rendering.evolvingStep = 0
       }
     },
   })

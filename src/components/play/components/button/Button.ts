@@ -13,4 +13,5 @@ export type Button = {
   onClick: (state: State, event: MouseEvent) => void
   isActive?: (state: State) => void
   isDisabled?: (state: State) => void
+  onMousemove?: (state: State, event: MouseEvent) => void
 }
