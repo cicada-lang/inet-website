@@ -1,6 +1,5 @@
 import { State } from './State'
 import { renderToggleUIButton } from './components/toggle-ui/renderToggleUIButton'
-import { handleClickWithThrottle } from './mouse/handleClickWithThrottle'
 import { findRoute } from './route/findRoute'
 
 export function renderLoop(state: State, passedTime?: number): void {
@@ -26,8 +25,6 @@ export function renderLoop(state: State, passedTime?: number): void {
   route.render(state, { passedTime, deltaTime })
 
   renderToggleUIButton(state)
-
-  handleClickWithThrottle(state, { deltaTime })
 
   requestAnimationFrame((passedTime) => renderLoop(state, passedTime))
 }

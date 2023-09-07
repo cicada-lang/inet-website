@@ -25,7 +25,7 @@ export function createState(options: StateOptions): State {
   const width = container.offsetWidth
   const height = container.offsetHeight
 
-  const mouse = createMouse({ width, height })
+  const mouse = createMouse()
 
   const breakpoints = useBreakpoints()
 

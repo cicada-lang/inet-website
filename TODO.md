@@ -1,5 +1,8 @@
 # net rendering
 
+[play] `handleClick` -- pass `MouseEvent`
+[play] `handleMousemove` -- pass `MouseEvent`
+
 [play] `renderNode` -- be able to drag node
 
 [play] `renderCap` -- hover show port type
