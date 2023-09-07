@@ -7,9 +7,10 @@ export type ClickableRect = {
   y: number
   height: number
   width: number
-  noBorder?: boolean
+  withBorder?: boolean
   onClick: (state: State, event: MouseEvent) => void
   isDisabled?: (state: State) => void
   onMousemove?: (state: State, event: MouseEvent) => void
+  onTouchmove?: (state: State, event: TouchEvent) => void
   rect: Rect
 }

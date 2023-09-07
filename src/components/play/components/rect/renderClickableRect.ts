@@ -1,17 +1,8 @@
 import { State } from '../../State'
+import { ClickableRect } from './ClickableRect'
 import { Rect } from './Rect'
 
-type Options = {
-  name: string
-  x: number
-  y: number
-  height: number
-  width: number
-  withBorder?: boolean
-  onClick: (state: State, event: MouseEvent) => void
-  onMousemove?: (state: State, event: MouseEvent) => void
-  isDisabled?: (state: State) => void
-}
+type Options = Omit<ClickableRect, 'rect'>
 
 // Can not be used after transform,
 // because we need to record rect.

@@ -2,20 +2,9 @@ import { State } from '../../State'
 import { themeSize } from '../../theme/themeSize'
 import { Rect } from '../rect/Rect'
 import { withinRect } from '../rect/withinRect'
+import { Button } from './Button'
 
-type Options = {
-  name: string
-  text: string
-  x: number
-  y: number
-  height: number
-  align?: 'left' | 'right'
-  noBorder?: boolean
-  onClick: (state: State, event: MouseEvent) => void
-  isActive?: (state: State) => void
-  isDisabled?: (state: State) => void
-  onMousemove?: (state: State, event: MouseEvent) => void
-}
+type Options = Omit<Button, 'rect'>
 
 // Can not be used after transform,
 // because we need to record rect.

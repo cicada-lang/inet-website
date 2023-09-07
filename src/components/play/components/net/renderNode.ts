@@ -1,4 +1,5 @@
 import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
+import { touchEventOffset } from '../../../../utils/browser/touchEventOffset'
 import { State } from '../../State'
 import { selectNode } from '../../pages/node/selectNode'
 import { themeFontSize } from '../../theme/themeFontSize'
@@ -79,6 +80,12 @@ export function renderNode(
     onMousemove(state, event) {
       if (state.mouse.isDown) {
         rendering.layout.nodePositions.set(key, [event.offsetX, event.offsetY])
+        rendering.evolvingStep = 0
+      }
+    },
+    onTouchmove(state, event) {
+      if (state.mouse.isDown) {
+        rendering.layout.nodePositions.set(key, touchEventOffset(event))
         rendering.evolvingStep = 0
       }
     },

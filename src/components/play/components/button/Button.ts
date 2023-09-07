@@ -14,4 +14,5 @@ export type Button = {
   isActive?: (state: State) => void
   isDisabled?: (state: State) => void
   onMousemove?: (state: State, event: MouseEvent) => void
+  onTouchmove?: (state: State, event: TouchEvent) => void
 }
