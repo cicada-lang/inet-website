@@ -39,19 +39,19 @@ export function evolveNet(state: State, rendering: NetRendering): void {
 }
 
 function boundPosition(position: [number, number], layout: NetLayout): void {
-  if (position[0] < layout.x + layout.paddingX) {
-    position[0] = layout.x + layout.paddingX
-  }
+  const factor = 0.1
 
-  if (position[0] > layout.x + layout.width - layout.paddingX) {
-    position[0] = layout.x + layout.width - layout.paddingX
+  if (position[0] < layout.x + layout.paddingX) {
+    position[0] += (layout.x + layout.paddingX - position[0]) * factor
+  } else if (position[0] > layout.x + layout.width - layout.paddingX) {
+    position[0] -=
+      (position[0] - (layout.x + layout.width - layout.paddingX)) * factor
   }
 
   if (position[1] < layout.y + layout.paddingY) {
-    position[1] = layout.y + layout.paddingY
-  }
-
-  if (position[1] > layout.y + layout.height - layout.paddingY) {
-    position[1] = layout.y + layout.height - layout.paddingY
+    position[1] += (layout.y + layout.paddingY - position[1]) * factor
+  } else if (position[1] > layout.y + layout.height - layout.paddingY) {
+    position[1] -=
+      (position[1] - (layout.y + layout.height - layout.paddingY)) * factor
   }
 }
