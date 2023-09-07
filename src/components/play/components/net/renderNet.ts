@@ -3,6 +3,7 @@ import { State } from '../../State'
 import { NetRendering } from '../net/NetRendering'
 import { renderCap } from './renderCap'
 import { renderEdge } from './renderEdge'
+import { renderHoveredEdge } from './renderHoveredEdge'
 import { renderNode } from './renderNode'
 import { updateHoveredEdge } from './updateHoveredEdge'
 
@@ -39,5 +40,9 @@ export function renderNet(state: State, rendering: NetRendering): void {
     } else {
       renderNode(state, rendering, nodeEntry, position)
     }
+  }
+
+  if (rendering.hoveredEdge) {
+    renderHoveredEdge(state, rendering, rendering.hoveredEdge)
   }
 }

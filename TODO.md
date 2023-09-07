@@ -1,4 +1,4 @@
-[play] `renderEdge` -- hover edge to show port info
+[play] `renderHoveredEdge` -- `deepWalk` `port.t`
 
 # later
 
