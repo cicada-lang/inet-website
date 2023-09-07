@@ -8,7 +8,7 @@ type Options = {
   height: number
   width: number
   withBorder?: boolean
-  onClick: (state: State) => void
+  onClick: (state: State, event: MouseEvent) => void
   isDisabled?: (state: State) => void
 }
 

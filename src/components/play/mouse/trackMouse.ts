@@ -7,18 +7,12 @@ export function trackMouse(state: State) {
 
     state.mouse.position = [event.offsetX, event.offsetY]
 
-    state.mouse.ctrlKey = event.ctrlKey
-    state.mouse.altKey = event.altKey
-
-    handleClick(state)
+    handleClick(state, event)
   })
 
   state.canvas.addEventListener('mousemove', (event) => {
     event.preventDefault()
 
     state.mouse.position = [event.offsetX, event.offsetY]
-
-    state.mouse.ctrlKey = event.ctrlKey
-    state.mouse.altKey = event.altKey
   })
 }

@@ -11,7 +11,7 @@ type Options = {
   height: number
   align?: 'left' | 'right'
   noBorder?: boolean
-  onClick: (state: State) => void
+  onClick: (state: State, event: MouseEvent) => void
   isActive?: (state: State) => void
   isDisabled?: (state: State) => void
 }
