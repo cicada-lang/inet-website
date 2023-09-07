@@ -78,12 +78,16 @@ export function renderNode(
       }
     },
     onMousemove(state, event) {
+      event.preventDefault()
+
       if (state.mouse.isDown) {
         rendering.layout.nodePositions.set(key, [event.offsetX, event.offsetY])
         rendering.evolvingStep = 0
       }
     },
     onTouchmove(state, event) {
+      event.preventDefault()
+
       if (state.mouse.isDown) {
         rendering.layout.nodePositions.set(key, touchEventOffset(event))
         rendering.evolvingStep = 0
