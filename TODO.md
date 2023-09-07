@@ -1,5 +1,3 @@
-[play] `renderHoveredEdge` -- `deepWalk` `port.t`
-
 # later
 
 [play] `renderNet` -- adjust node size by number of nodes
