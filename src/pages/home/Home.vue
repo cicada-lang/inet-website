@@ -2,6 +2,7 @@
 import { Base64 } from 'js-base64'
 import { onMounted, ref } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Play from '../../components/play/Play.vue'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import HomeFoot from './HomeFoot.vue'
@@ -11,6 +12,8 @@ import { loadState } from './loadState'
 import { sections } from './sections'
 
 const state = ref<State | undefined>(undefined)
+
+const lang = useGlobalLang()
 
 onMounted(async () => {
   state.value = await loadState({
@@ -29,6 +32,23 @@ onMounted(async () => {
             <template #zh> 用可反应的网编程。 </template>
             <template #en> Programming with interaction nets. </template>
           </Lang>
+
+          <div class="flex pt-5">
+            <a
+              class="text-2xl underline underline-offset-4 decoration-2"
+              target="_blank"
+              :href="
+                lang.isZh()
+                  ? 'https://readonly.link/articles/https://cdn.inet.cic.run/docs/articles/反应网编程.md'
+                  : 'https://readonly.link/articles/https://cdn.inet.cic.run/docs/articles/programming-with-interaction-nets.md'
+              "
+            >
+              <Lang>
+                <template #zh> 阅读文档 </template>
+                <template #en> Get Started </template>
+              </Lang>
+            </a>
+          </div>
         </div>
       </div>
 
