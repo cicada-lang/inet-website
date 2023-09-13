@@ -26,8 +26,8 @@ export const words: Array<Illustration> = [
   {
     name: 'LiteralNode',
     description: {
-      zh: '返回一个节点。',
-      en: 'Return a node.',
+      zh: '创建一个新节点，并返回到栈中。',
+      en: 'Create a new node and return it to the stack.',
     },
     code: `\
 ... (add) ...
