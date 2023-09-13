@@ -117,7 +117,7 @@ from "./Nat.i"
 
 import
    one, two, three
-from "https://cdn.inet.run/tests/datatype/Nat.i"
+from "https://code-of-inet.fidb.app/tests/datatype/Nat.i"
 `,
   },
 
