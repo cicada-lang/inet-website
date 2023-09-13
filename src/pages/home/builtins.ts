@@ -18,10 +18,32 @@ export const builtins: Array<Illustration> = [
     name: '@inspect',
     description: {
       zh: '不取出栈顶值，打印栈顶值的信息。',
-      en: 'Print info of the value at the top of the stack, without taking it',
+      en: 'Print info of the value at the top of the stack, without taking it.',
     },
     code: `\
 two two add @inspect
+`,
+  },
+
+  {
+    name: '@apply',
+    description: {
+      zh: '取栈顶的节点，将其作用于栈中的接口。',
+      en: 'Take the node from the top of the stack, and apply it to the ports in the stack.',
+    },
+    code: `\
+(add) @apply
+`,
+  },
+
+  {
+    name: '@spread',
+    description: {
+      zh: '取栈顶的节点，将其所有接口按定义中相反的顺序返回到栈中。',
+      en: "Take the node from the top of the stack, and put all it's ports to the stack in reverse order of the definition.",
+    },
+    code: `\
+(add) @spread $return $addend $target
 `,
   },
 

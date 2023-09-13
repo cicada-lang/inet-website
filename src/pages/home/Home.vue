@@ -135,15 +135,15 @@ onMounted(async () => {
             <Lang>
               <template #zh>
                 <span class="font-bold">iNet</span> 有 <br />
-                8 种语句，<br />
-                8 种词，<br />
-                6 个预定义词。<br />
+                {{ sections.statements.title.zh }}，<br />
+                {{ sections.words.title.zh }}，<br />
+                {{ sections.builtins.title.zh }}。<br />
               </template>
               <template #en>
                 <span class="font-bold">iNet</span> has <br />
-                8 kinds of statements, <br />
-                8 kinds of words, <br />
-                6 built-in words. <br />
+                {{ sections.statements.title.en }}, <br />
+                {{ sections.words.title.en }}, <br />
+                {{ sections.builtins.title.en }}. <br />
               </template>
             </Lang>
           </div>
@@ -154,8 +154,8 @@ onMounted(async () => {
         class="w-full space-y-6 lg:max-w-[64rem] flex flex-col items-start px-3 lg:pt-4 pt-3 self-center"
       >
         <div
-          v-for="{ name, examples, title } of sections"
-          :key="name"
+          v-for="({ illustrations, title }, key) of sections"
+          :key="key"
           class="w-full"
         >
           <div class="flex lg:flex-row flex-col w-full lg:pb-1">
@@ -171,19 +171,19 @@ onMounted(async () => {
           </div>
 
           <div
-            v-for="(example, index) of examples"
+            v-for="(illustration, index) of illustrations"
             :key="index"
             class="flex lg:flex-row flex-col w-full"
           >
             <div class="lg:text-xl text-lg lg:w-1/3 pr-6 lg:pt-6 pt-2 pb-2">
-              <div class="font-bold">{{ example.name }}</div>
+              <div class="font-bold">{{ illustration.name }}</div>
 
               <Lang>
                 <template #zh>
-                  <div>{{ example.description.zh }}</div>
+                  <div>{{ illustration.description.zh }}</div>
                 </template>
                 <template #en>
-                  <div>{{ example.description.en }}</div>
+                  <div>{{ illustration.description.en }}</div>
                 </template>
               </Lang>
             </div>
@@ -192,12 +192,14 @@ onMounted(async () => {
               class="overflow-auto border-2 lg:w-2/3 border-black dark:border-white"
               :class="{
                 'lg:border-b-0': index === 0,
-                'lg:border-t-0': index !== 0 && index === examples.length - 1,
-                'lg:border-y-0': index !== 0 && index !== examples.length - 1,
+                'lg:border-t-0':
+                  index !== 0 && index === illustrations.length - 1,
+                'lg:border-y-0':
+                  index !== 0 && index !== illustrations.length - 1,
               }"
             >
               <pre class="lg:p-6 p-4 lg:text-lg text-base font-code">{{
-                example.code
+                illustration.code
               }}</pre>
             </div>
           </div>

@@ -28,7 +28,12 @@ export function renderNode(
   state.ctx.textBaseline = 'middle'
   state.ctx.textAlign = 'center'
 
-  const text = formatNode(nodeEntry)
+  const text = formatNode({
+    '@type': 'Value',
+    '@kind': 'Node',
+    ...nodeEntry,
+  })
+
   const textMetrics = state.ctx.measureText(text)
 
   const xPadding = 4
@@ -56,7 +61,11 @@ export function renderNode(
 
   state.ctx.fillText(text, x, y)
 
-  const key = nodeKey(nodeEntry)
+  const key = nodeKey({
+    '@type': 'Value',
+    '@kind': 'Node',
+    ...nodeEntry,
+  })
 
   renderClickableRect(state, {
     name: `nodes/${key}`,

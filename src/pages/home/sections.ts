@@ -1,32 +1,30 @@
+import { Section } from './Section'
 import { builtins } from './builtins'
 import { statements } from './statements'
 import { words } from './words'
 
-export const sections = [
-  {
-    name: 'statements',
-    examples: statements,
+export const sections: Record<string, Section> = {
+  statements: {
+    illustrations: statements,
     title: {
-      zh: '8 种语句',
-      en: '8 kinds of statements',
+      zh: `${statements.length} 种语句`,
+      en: `${statements.length} kinds of statements`,
     },
   },
 
-  {
-    name: 'words',
-    examples: words,
+  words: {
+    illustrations: words,
     title: {
-      zh: '8 种词',
-      en: '8 kinds of words',
+      zh: `${words.length} 种词`,
+      en: `${words.length} kinds of words`,
     },
   },
 
-  {
-    name: 'builtins',
-    examples: builtins,
+  builtins: {
+    illustrations: builtins,
     title: {
-      zh: '6 个预定义词',
-      en: '6 built-in words',
+      zh: `${builtins.length} 个预定义词`,
+      en: `${builtins.length} built-in words`,
     },
   },
-]
+}

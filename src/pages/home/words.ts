@@ -7,7 +7,9 @@ export const words: Array<Illustration> = [
       zh: '根据名字，调用一个定义。',
       en: 'Given name, call a definition.',
     },
-    code: `... add ...`,
+    code: `\
+... add ...
+`,
   },
 
   {
@@ -16,7 +18,20 @@ export const words: Array<Illustration> = [
       zh: '根据名字，调用一个内置定义。',
       en: 'Given name, call a builtin definition.',
     },
-    code: `... @run ...`,
+    code: `\
+... @run ...
+`,
+  },
+
+  {
+    name: 'LiteralNode',
+    description: {
+      zh: '返回一个节点。',
+      en: 'Return a node.',
+    },
+    code: `\
+... (add) ...
+`,
   },
 
   {
@@ -31,7 +46,7 @@ export const words: Array<Illustration> = [
   },
 
   {
-    name: 'Symbol',
+    name: 'GenerateSymbol',
     description: {
       zh: '返回一个记号，可以作为类型变元。',
       en: 'Return a symbol which can be used as a type variable.',
@@ -49,17 +64,6 @@ export const words: Array<Illustration> = [
     },
     code: `\
 ... 'A List :tail ...
-`,
-  },
-
-  {
-    name: 'NodeRearrange',
-    description: {
-      zh: '在调用一个节点之前，重新排列它的输入与输出接口。',
-      en: `Rearrange a node's input and output ports before calling it.`,
-    },
-    code: `\
-... (cons :tail) ...
 `,
   },
 
