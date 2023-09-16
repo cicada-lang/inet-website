@@ -70,7 +70,7 @@ export const words: Array<Illustration> = [
   {
     name: 'PortPush',
     description: {
-      zh: '返回将节点的接口，只能用于当前规则的节点。',
+      zh: '将节点的接口返回到栈中，只能用于当前规则的节点。',
       en: 'Return port of a node, only for nodes of a rule.',
     },
     code: `\
