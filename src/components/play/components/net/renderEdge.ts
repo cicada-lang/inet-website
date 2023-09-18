@@ -1,4 +1,4 @@
-import { formatEdge, Port } from '@cicada-lang/inet'
+import { formatEdge, Port } from '@cicada-lang/inet-cute'
 import colors from 'tailwindcss/colors'
 import { edgeDistance } from '../../../../utils/geometry/edgeDistance'
 import { State } from '../../State'

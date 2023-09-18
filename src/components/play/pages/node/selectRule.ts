@@ -1,4 +1,4 @@
-import { presentRuleAsNets } from '@cicada-lang/inet'
+import { presentRuleAsNets } from '@cicada-lang/inet-cute'
 import { State } from '../../State'
 import { createNetRendering } from '../../components/net/createNetRendering'
 import { createRandomNetLayout } from '../../components/net/createRandomNetLayout'

@@ -1,4 +1,4 @@
-import { formatValue } from '@cicada-lang/inet'
+import { formatValue } from '@cicada-lang/inet-cute'
 import { State } from '../../State'
 import { themeSize } from '../../theme/themeSize'
 import { NetRendering } from '../net/NetRendering'

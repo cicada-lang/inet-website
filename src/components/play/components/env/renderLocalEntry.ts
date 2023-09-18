@@ -1,4 +1,4 @@
-import { Value } from '@cicada-lang/inet'
+import { Value } from '@cicada-lang/inet-cute'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { createSelectedValue } from '../../components/env/createSelectedValue'

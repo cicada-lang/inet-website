@@ -1,4 +1,4 @@
-import { Fetcher, Loader } from '@cicada-lang/inet'
+import { Fetcher, Loader } from '@cicada-lang/inet-cute'
 import { State } from './State'
 import { stateReload } from './stateReload'
 

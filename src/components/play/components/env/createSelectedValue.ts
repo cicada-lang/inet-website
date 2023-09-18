@@ -1,4 +1,8 @@
-import { Value, copyConnectedComponent, createNet } from '@cicada-lang/inet'
+import {
+  Value,
+  copyConnectedComponent,
+  createNet,
+} from '@cicada-lang/inet-cute'
 import { EnvRendering } from '../../components/env/EnvRendering'
 import { createNetRendering } from '../../components/net/createNetRendering'
 import { createRandomNetLayout } from '../../components/net/createRandomNetLayout'

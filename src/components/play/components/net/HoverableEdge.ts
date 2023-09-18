@@ -1,4 +1,4 @@
-import { Port } from '@cicada-lang/inet'
+import { Port } from '@cicada-lang/inet-cute'
 
 export type HoverableEdge = {
   id: string

@@ -45,8 +45,8 @@ const route = useRoute()
         target="_blank"
         :href="
           lang.isZh()
-            ? 'https://readonly.link/articles/https://code-of-inet.fidb.app/docs/articles/反应网编程.md'
-            : 'https://readonly.link/articles/https://code-of-inet.fidb.app/docs/articles/programming-with-interaction-nets.md'
+            ? 'https://readonly.link/articles/https://code-of-inet-cute.fidb.app/docs/articles/反应网编程.md'
+            : 'https://readonly.link/articles/https://code-of-inet-cute.fidb.app/docs/articles/programming-with-interaction-nets.md'
         "
         class="pr-4 text-xl hover:underline underline-offset-4 decoration-2"
       >
@@ -58,7 +58,7 @@ const route = useRoute()
 
       <a
         target="_blank"
-        href="https://github.com/cicada-lang/inet"
+        href="https://github.com/cicada-lang/inet-cute"
         class="mt-1"
       >
         <IconGitHub class="w-5 h-5" />

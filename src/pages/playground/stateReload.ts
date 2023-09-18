@@ -1,4 +1,4 @@
-import { ParsingError, Report } from '@cicada-lang/inet'
+import { ParsingError, Report } from '@cicada-lang/inet-cute'
 import { State } from './State'
 
 export async function stateReload(state: State): Promise<void> {

@@ -1,4 +1,4 @@
-import { WordDefinition } from '@cicada-lang/inet'
+import { WordDefinition } from '@cicada-lang/inet-cute'
 import { State } from '../../State'
 import { renderScrollbar } from '../../components/scrollbar/renderScrollbar'
 import { themeSize } from '../../theme/themeSize'

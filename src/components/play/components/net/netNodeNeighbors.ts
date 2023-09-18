@@ -1,4 +1,4 @@
-import { Net, nodeKey } from '@cicada-lang/inet'
+import { Net, nodeKey } from '@cicada-lang/inet-cute'
 
 export function netNodeNeighbors(net: Net, nodeId: string): Set<string> {
   const neighbors: Set<string> = new Set()

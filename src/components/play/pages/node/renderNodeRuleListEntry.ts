@@ -1,4 +1,4 @@
-import { RuleEntry } from '@cicada-lang/inet'
+import { RuleEntry } from '@cicada-lang/inet-cute'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'

@@ -1,4 +1,4 @@
-import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet'
+import { NodeEntry, formatNode, nodeKey } from '@cicada-lang/inet-cute'
 import { touchEventOffset } from '../../../../utils/browser/touchEventOffset'
 import { State } from '../../State'
 import { selectNode } from '../../pages/node/selectNode'

@@ -1,4 +1,4 @@
-import { TypeDefinition } from '@cicada-lang/inet'
+import { TypeDefinition } from '@cicada-lang/inet-cute'
 
 export type SelectedType = {
   name: string

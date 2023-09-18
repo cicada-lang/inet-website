@@ -1,4 +1,4 @@
-import { Net } from '@cicada-lang/inet'
+import { Net } from '@cicada-lang/inet-cute'
 import { NetLayout } from '../NetLayout'
 import { computeElectricalForce } from './computeElectricalForce'
 

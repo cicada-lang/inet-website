@@ -1,4 +1,4 @@
-import { presentWordAsEnv } from '@cicada-lang/inet'
+import { presentWordAsEnv } from '@cicada-lang/inet-cute'
 import { State } from '../../State'
 import { createEnvRendering } from '../../components/env/createEnvRendering'
 import { maybeSelectTopValue } from '../../components/env/maybeSelectTopValue'

@@ -5,7 +5,7 @@ import {
   formatEdge,
   interact,
   releaseCapPorts,
-} from '@cicada-lang/inet'
+} from '@cicada-lang/inet-cute'
 import { vectorMax } from '../../../../utils/vector/vectorMax'
 import { vectorMin } from '../../../../utils/vector/vectorMin'
 import { State } from '../../State'

@@ -1,4 +1,4 @@
-import { Env } from '@cicada-lang/inet'
+import { Env } from '@cicada-lang/inet-cute'
 import { EnvRendering } from './EnvRendering'
 
 export function createEnvRendering(options: {

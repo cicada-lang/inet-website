@@ -1,4 +1,4 @@
-import { formatWord } from '@cicada-lang/inet'
+import { formatWord } from '@cicada-lang/inet-cute'
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
 import { renderText } from '../../components/text/renderText'

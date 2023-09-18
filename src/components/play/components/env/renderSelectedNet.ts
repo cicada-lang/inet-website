@@ -1,4 +1,4 @@
-import { Port } from '@cicada-lang/inet'
+import { Port } from '@cicada-lang/inet-cute'
 import { State } from '../../State'
 import { NetRendering } from '../../components/net/NetRendering'
 import { renderNet } from '../../components/net/renderNet'

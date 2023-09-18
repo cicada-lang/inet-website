@@ -39,8 +39,8 @@ onMounted(async () => {
               target="_blank"
               :href="
                 lang.isZh()
-                  ? 'https://readonly.link/articles/https://code-of-inet.fidb.app/docs/articles/反应网编程.md'
-                  : 'https://readonly.link/articles/https://code-of-inet.fidb.app/docs/articles/programming-with-interaction-nets.md'
+                  ? 'https://readonly.link/articles/https://code-of-inet-cute.fidb.app/docs/articles/反应网编程.md'
+                  : 'https://readonly.link/articles/https://code-of-inet-cute.fidb.app/docs/articles/programming-with-interaction-nets.md'
               "
             >
               <Lang>

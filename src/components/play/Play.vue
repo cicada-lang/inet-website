@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Mod } from '@cicada-lang/inet'
+import { Mod } from '@cicada-lang/inet-cute'
 import { onMounted, ref, watch } from 'vue'
 import { State } from './State'
 import { createState } from './createState'
