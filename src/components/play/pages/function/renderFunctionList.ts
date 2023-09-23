@@ -23,7 +23,7 @@ export function renderFunctionList(state: State): void {
     const cursor = state.functionState.functionsScrollCursor || 0
 
     renderScrollbar(state, {
-      name: 'words-scrollbar',
+      name: 'functions-scrollbar',
       x: 0,
       y: marginT,
       width: marginL,

@@ -1,6 +1,5 @@
 # play
 
-[play] change route name to `function`
 [play] fix node page -- should not show principle port name
 [play] fix `selectFunction`
 [play] fix `renderSelectedType`

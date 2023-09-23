@@ -9,7 +9,7 @@ export function selectFunction(state: State, givenName: string): void {
       if (name === givenName) {
         const net = presentFunction(state.mod, name)
         const envRendering = createEnvRendering({
-          name: `word/selected-word/${name}`,
+          name: `function/selected-function/${name}`,
           env: createEnv(state.mod, { net }),
           x: 0,
           y: 0,

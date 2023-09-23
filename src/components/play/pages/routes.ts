@@ -8,5 +8,5 @@ export const routes: Array<Route> = [
   { name: 'home', render: renderHomePage },
   { name: 'type', render: renderTypePage },
   { name: 'node', render: renderNodePage },
-  { name: 'word', render: renderFunctionPage },
+  { name: 'function', render: renderFunctionPage },
 ]

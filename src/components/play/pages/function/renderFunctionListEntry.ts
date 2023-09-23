@@ -23,7 +23,7 @@ export function renderFunctionListEntry(
     : `${themeFontSize('base')} monospace`
 
   renderButton(state, {
-    name: `words/${definition.name}`,
+    name: `functions/${definition.name}`,
     text: definition.name,
     x: marginL,
     y: marginT + height * i,
