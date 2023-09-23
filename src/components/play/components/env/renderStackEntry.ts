@@ -1,4 +1,8 @@
-import { Value, formatValue } from '@cicada-lang/inet-js'
+import {
+  Value,
+  formatHalfEdgeOtherPort,
+  formatValue,
+} from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { createSelectedValue } from '../../components/env/createSelectedValue'
@@ -17,7 +21,10 @@ export function renderStackEntry(
 ): void {
   const { height, marginL } = options
 
-  const text = formatValue(rendering.env, value)
+  const text =
+    value['@kind'] === 'HalfEdge'
+      ? formatHalfEdgeOtherPort(rendering.env.net, value)
+      : formatValue(rendering.env, value)
   const x = marginL
   const y = state.height - height * (i + 1)
 

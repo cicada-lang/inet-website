@@ -1,7 +1,8 @@
 # play
 
-[play] fix `renderSelectedType`
+[play] fix render of `hoveredEdge`
 [play] fix node page -- should not show principle port name
+[play] fix `renderSelectedType`
 
 # home
 
