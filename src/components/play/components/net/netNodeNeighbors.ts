@@ -1,6 +1,9 @@
-import { Net, nodeKey } from '@cicada-lang/inet-js'
-import { findHalfEdgeEntryOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgeEntryOrFail'
-import { findHalfEdgePort } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgePort'
+import {
+  Net,
+  findHalfEdgeEntryOrFail,
+  findHalfEdgePort,
+  nodeKey,
+} from '@cicada-lang/inet-js'
 
 export function netNodeNeighbors(net: Net, nodeId: string): Set<string> {
   const neighbors: Set<string> = new Set()

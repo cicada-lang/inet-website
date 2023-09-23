@@ -1,5 +1,4 @@
-import { Value } from '@cicada-lang/inet-js'
-import { HalfEdge } from '@cicada-lang/inet-js/lib/lang/half-edge'
+import { HalfEdge, Value } from '@cicada-lang/inet-js'
 import { NetRendering } from '../../components/net/NetRendering'
 
 export type SelectedValue = SelectedValueHalfEdge | SelectedValueGeneric

@@ -1,4 +1,4 @@
-import { findHalfEdgePortOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgePortOrFail'
+import { findHalfEdgePortOrFail } from '@cicada-lang/inet-js'
 import { State } from '../State'
 import { runGivenEdge } from '../components/net/runGivenEdge'
 import { withinRect } from '../components/rect/withinRect'

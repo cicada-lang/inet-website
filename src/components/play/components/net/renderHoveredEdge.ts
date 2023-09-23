@@ -1,4 +1,4 @@
-import { formatHalfEdge } from '@cicada-lang/inet-js/lib/lang/half-edge/formatHalfEdge'
+import { formatHalfEdge } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { themeSize } from '../../theme/themeSize'
 import { NetRendering } from '../net/NetRendering'

@@ -17,7 +17,7 @@ export function renderStackEntry(
 ): void {
   const { height, marginL } = options
 
-  const text = formatValue(state.mod.env, value)
+  const text = formatValue(rendering.env, value)
   const x = marginL
   const y = state.height - height * (i + 1)
 

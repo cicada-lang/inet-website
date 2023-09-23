@@ -1,6 +1,10 @@
-import { Value, copyConnectedComponent, createNet } from '@cicada-lang/inet-js'
-import { findHalfEdgeEntryOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgeEntryOrFail'
-import { findHalfEdgePortOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgePortOrFail'
+import {
+  Value,
+  copyConnectedComponent,
+  createNet,
+  findHalfEdgeEntryOrFail,
+  findHalfEdgePortOrFail,
+} from '@cicada-lang/inet-js'
 import { EnvRendering } from '../../components/env/EnvRendering'
 import { createNetRendering } from '../../components/net/createNetRendering'
 import { createRandomNetLayout } from '../../components/net/createRandomNetLayout'
