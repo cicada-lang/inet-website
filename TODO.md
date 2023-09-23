@@ -1,6 +1,7 @@
 # home
 
-[home] update illustrations
+[home] update illustrations -- builtins
+[home] update illustrations -- expressions
 
 # later
 
