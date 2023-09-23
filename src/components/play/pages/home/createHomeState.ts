@@ -1,4 +1,4 @@
-import { Env } from '@cicada-lang/inet-cute'
+import { Env } from '@cicada-lang/inet-js'
 import { createEnvRendering } from '../../components/env/createEnvRendering'
 import { maybeSelectTopValue } from '../../components/env/maybeSelectTopValue'
 import { HomeState } from './HomeState'

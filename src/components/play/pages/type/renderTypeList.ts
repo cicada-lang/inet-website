@@ -1,4 +1,4 @@
-import { TypeDefinition } from '@cicada-lang/inet-cute'
+import { TypeDefinition } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { renderScrollbar } from '../../components/scrollbar/renderScrollbar'
 import { themeSize } from '../../theme/themeSize'

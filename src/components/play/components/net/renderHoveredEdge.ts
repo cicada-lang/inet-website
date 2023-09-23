@@ -1,4 +1,4 @@
-import { formatValue } from '@cicada-lang/inet-cute'
+import { formatHalfEdge } from '@cicada-lang/inet-js/lib/lang/half-edge/formatHalfEdge'
 import { State } from '../../State'
 import { themeSize } from '../../theme/themeSize'
 import { NetRendering } from '../net/NetRendering'
@@ -17,21 +17,21 @@ export function renderHoveredEdge(
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
-  const firstPortText = formatValue(first.port)
-  const firstTypeText = `  ${formatValue(first.port.t)}`
-  const secondPortText = formatValue(second.port)
-  const secondTypeText = `  ${formatValue(second.port.t)}`
+  const firstPortText = formatHalfEdge(rendering.net, first.halfEdge)
+  // const firstTypeText = `  ${formatValue(first.port.t)}`
+  const secondPortText = formatHalfEdge(rendering.net, second.halfEdge)
+  // const secondTypeText = `  ${formatValue(second.port.t)}`
 
   const firstPortTextMetrics = state.ctx.measureText(firstPortText)
-  const firstTypeTextMetrics = state.ctx.measureText(firstTypeText)
+  // const firstTypeTextMetrics = state.ctx.measureText(firstTypeText)
   const secondPortTextMetrics = state.ctx.measureText(secondPortText)
-  const secondTypeTextMetrics = state.ctx.measureText(secondTypeText)
+  // const secondTypeTextMetrics = state.ctx.measureText(secondTypeText)
 
   const maxWidth = Math.max(
     firstPortTextMetrics.width,
-    firstTypeTextMetrics.width,
+    // firstTypeTextMetrics.width,
     secondPortTextMetrics.width,
-    secondTypeTextMetrics.width,
+    // secondTypeTextMetrics.width,
   )
 
   const lineHeight = themeSize(5)
@@ -61,20 +61,11 @@ export function renderHoveredEdge(
     x + paddingX,
     y + lineHeight * 0 + textOffset,
   )
-  state.ctx.fillText(
-    secondTypeText,
-    x + paddingX,
-    y + lineHeight * 1 + textOffset,
-  )
+
   state.ctx.fillText(
     secondPortText,
     x + paddingX,
-    y + lineHeight * 2 + textOffset,
-  )
-  state.ctx.fillText(
-    secondTypeText,
-    x + paddingX,
-    y + lineHeight * 3 + textOffset,
+    y + lineHeight * 1 + textOffset,
   )
 
   state.ctx.restore()

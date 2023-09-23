@@ -1,4 +1,4 @@
-import { WordDefinition } from '@cicada-lang/inet-cute'
+import { FunctionDefinition } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { renderScrollbar } from '../../components/scrollbar/renderScrollbar'
 import { themeSize } from '../../theme/themeSize'
@@ -13,8 +13,8 @@ export function renderWordList(state: State): void {
   const marginT = height * 2
 
   const definitions = Array.from(state.mod.definitions.values()).filter(
-    (definition): definition is WordDefinition =>
-      definition['@kind'] === 'WordDefinition',
+    (definition): definition is FunctionDefinition =>
+      definition['@kind'] === 'FunctionDefinition',
   )
 
   if (definitions.length > inViewLength) {

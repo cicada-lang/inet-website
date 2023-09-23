@@ -1,4 +1,4 @@
-import { presentRuleAsNets } from '@cicada-lang/inet-cute'
+import { presentRule } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { createNetRendering } from '../../components/net/createNetRendering'
 import { createRandomNetLayout } from '../../components/net/createRandomNetLayout'
@@ -10,7 +10,7 @@ export function selectRule(
   name: string,
 ): void {
   for (const ruleEntry of selectedNode.ruleEntries) {
-    const [initialNet, finalNet] = presentRuleAsNets(state.mod, name)
+    const [initialNet, finalNet] = presentRule(state.mod, name)
 
     const width = (state.width * 3) / 8
     const height = state.height / 2

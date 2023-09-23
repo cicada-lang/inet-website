@@ -1,8 +1,8 @@
-import { WordDefinition } from '@cicada-lang/inet-cute'
+import { FunctionDefinition } from '@cicada-lang/inet-js'
 import { EnvRendering } from '../../components/env/EnvRendering'
 
 export type SelectedWord = {
   name: string
-  definition: WordDefinition
+  definition: FunctionDefinition
   envRendering: EnvRendering
 }

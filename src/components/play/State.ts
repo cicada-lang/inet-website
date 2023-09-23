@@ -1,4 +1,4 @@
-import { Mod } from '@cicada-lang/inet-cute'
+import { Mod } from '@cicada-lang/inet-js'
 import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { Theme } from '../../reactives/useGlobalTheme'
 import { Button } from './components/button/Button'

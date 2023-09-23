@@ -1,4 +1,5 @@
-import { allEdges, nodeKey } from '@cicada-lang/inet-cute'
+import { allEdges, nodeKey } from '@cicada-lang/inet-js'
+import { findHalfEdgePort } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgePort'
 import { State } from '../../State'
 import { NetRendering } from '../net/NetRendering'
 import { renderCap } from './renderCap'
@@ -16,16 +17,21 @@ export function renderNet(state: State, rendering: NetRendering): void {
   rendering.hoverableEdges = new Map()
 
   for (const edge of allEdges(net)) {
-    const firstPosition = layout.nodePositions.get(nodeKey(edge.first.node))
+    const firstPort = findHalfEdgePort(rendering.net, edge.first)
+    if (firstPort === undefined) continue
+    const firstPosition = layout.nodePositions.get(nodeKey(firstPort.node))
     if (firstPosition === undefined) continue
-    const secondPosition = layout.nodePositions.get(nodeKey(edge.second.node))
+
+    const secondPort = findHalfEdgePort(rendering.net, edge.second)
+    if (secondPort === undefined) continue
+    const secondPosition = layout.nodePositions.get(nodeKey(secondPort.node))
     if (secondPosition === undefined) continue
 
     renderEdge(
       state,
       rendering,
-      { port: edge.first, position: firstPosition },
-      { port: edge.second, position: secondPosition },
+      { halfEdge: edge.first, position: firstPosition },
+      { halfEdge: edge.second, position: secondPosition },
     )
   }
 

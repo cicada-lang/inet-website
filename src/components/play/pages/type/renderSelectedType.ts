@@ -1,4 +1,3 @@
-import { formatWord } from '@cicada-lang/inet-cute'
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
 import { renderText } from '../../components/text/renderText'
@@ -33,19 +32,19 @@ export function renderSelectedType(
     ? `${themeFontSize('2xl')} monospace`
     : `${themeFontSize('xl')} monospace`
 
-  const inputText = selectedType.definition.input.map(formatWord).join(' ')
-  const outputText = selectedType.definition.output.map(formatWord).join(' ')
+  // const inputText = selectedType.definition.input.map(formatWord).join(' ')
+  // const outputText = selectedType.definition.output.map(formatWord).join(' ')
 
-  const text = lang.isZh()
-    ? [`输入：${inputText}`, `输出：${outputText}`].join('\n')
-    : [`input: ${inputText}`, `output: ${outputText}`].join('\n')
+  // const text = lang.isZh()
+  //   ? [`输入：${inputText}`, `输出：${outputText}`].join('\n')
+  //   : [`input: ${inputText}`, `output: ${outputText}`].join('\n')
 
-  renderText(state, {
-    text,
-    x,
-    y,
-    lineHeight: 30,
-  })
+  // renderText(state, {
+  //   text,
+  //   x,
+  //   y,
+  //   lineHeight: 30,
+  // })
 
   state.ctx.restore()
 }

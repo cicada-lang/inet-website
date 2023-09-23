@@ -1,4 +1,4 @@
-import { Value, formatValue } from '@cicada-lang/inet-cute'
+import { Value, formatValue } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { themeFontSize } from '../../theme/themeFontSize'
 
@@ -11,7 +11,7 @@ export function renderValue(state: State, value: Value): void {
     ? `${themeFontSize('3xl')} monospace`
     : `${themeFontSize('2xl')} monospace`
 
-  const valueText = formatValue(value)
+  const valueText = formatValue(state.mod.env, value)
   const valueTextMetrics = state.ctx.measureText(valueText)
   const x = state.width / 2 - valueTextMetrics.width / 2
   const y = state.height / 2

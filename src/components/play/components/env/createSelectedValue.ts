@@ -1,8 +1,6 @@
-import {
-  Value,
-  copyConnectedComponent,
-  createNet,
-} from '@cicada-lang/inet-cute'
+import { Value, copyConnectedComponent, createNet } from '@cicada-lang/inet-js'
+import { findHalfEdgeEntryOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgeEntryOrFail'
+import { findHalfEdgePortOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgePortOrFail'
 import { EnvRendering } from '../../components/env/EnvRendering'
 import { createNetRendering } from '../../components/net/createNetRendering'
 import { createRandomNetLayout } from '../../components/net/createRandomNetLayout'
@@ -12,9 +10,14 @@ export function createSelectedValue(
   rendering: EnvRendering,
   value: Value,
 ): SelectedValue {
-  if (value['@kind'] === 'Port') {
+  if (value['@kind'] === 'HalfEdge') {
     const net = createNet()
-    copyConnectedComponent(rendering.env.net, net, value.node)
+    const haflEdgeEntry = findHalfEdgeEntryOrFail(rendering.env.net, value)
+    const otherPort = findHalfEdgePortOrFail(
+      rendering.env.net,
+      haflEdgeEntry.otherHalfEdge,
+    )
+    copyConnectedComponent(rendering.env.net, net, otherPort.node)
 
     const { x, y, width, height } = rendering
     const layout = createRandomNetLayout(net, {
@@ -26,8 +29,8 @@ export function createSelectedValue(
 
     return {
       '@type': 'SelectedValue',
-      '@kind': 'SelectedValuePort',
-      port: value,
+      '@kind': 'SelectedValueHalfEdge',
+      halfEdge: value,
       netRendering: createNetRendering(
         `${rendering.name}/selected-net`,
         net,

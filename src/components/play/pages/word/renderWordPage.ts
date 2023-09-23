@@ -22,7 +22,7 @@ export function renderWordPage(state: State, options: RenderOptions): void {
     if (envRendering.selectedValue) {
       renderSelectedValue(state, envRendering.selectedValue)
 
-      if (envRendering.selectedValue['@kind'] === 'SelectedValuePort') {
+      if (envRendering.selectedValue['@kind'] === 'SelectedValueHalfEdge') {
         evolveNet(state, envRendering.selectedValue.netRendering)
       }
     }

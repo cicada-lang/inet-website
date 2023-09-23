@@ -1,4 +1,4 @@
-import { WordDefinition } from '@cicada-lang/inet-cute'
+import { FunctionDefinition } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
@@ -7,7 +7,7 @@ import { selectWord } from './selectWord'
 export function renderWordListEntry(
   state: State,
   i: number,
-  definition: WordDefinition,
+  definition: FunctionDefinition,
   options: {
     height: number
     marginT: number

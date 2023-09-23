@@ -1,4 +1,6 @@
-import { Net, nodeKey } from '@cicada-lang/inet-cute'
+import { Net, nodeKey } from '@cicada-lang/inet-js'
+import { findHalfEdgeEntryOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgeEntryOrFail'
+import { findHalfEdgePort } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgePort'
 
 export function netNodeNeighbors(net: Net, nodeId: string): Set<string> {
   const neighbors: Set<string> = new Set()
@@ -15,7 +17,11 @@ export function netNodeNeighbors(net: Net, nodeId: string): Set<string> {
 
   for (const [portName, portEntry] of Object.entries(nodeEntry.ports)) {
     if (portEntry.connection) {
-      neighbors.add(nodeKey(portEntry.connection.port.node))
+      const halfEdge = portEntry.connection.halfEdge
+      const halfEdgeEntry = findHalfEdgeEntryOrFail(net, halfEdge)
+      const otherPort = findHalfEdgePort(net, halfEdgeEntry.otherHalfEdge)
+      if (otherPort === undefined) continue
+      neighbors.add(nodeKey(otherPort.node))
     }
   }
 

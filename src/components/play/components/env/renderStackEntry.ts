@@ -1,4 +1,4 @@
-import { Value, formatValue } from '@cicada-lang/inet-cute'
+import { Value, formatValue } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { createSelectedValue } from '../../components/env/createSelectedValue'
@@ -17,7 +17,7 @@ export function renderStackEntry(
 ): void {
   const { height, marginL } = options
 
-  const text = formatValue(value)
+  const text = formatValue(state.mod.env, value)
   const x = marginL
   const y = state.height - height * (i + 1)
 

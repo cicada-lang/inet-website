@@ -1,11 +1,4 @@
-import {
-  Edge,
-  closeAllFreePorts,
-  createEnv,
-  formatEdge,
-  interact,
-  releaseCapPorts,
-} from '@cicada-lang/inet-cute'
+import { Edge, createEnv, formatEdge, interact } from '@cicada-lang/inet-js'
 import { vectorMax } from '../../../../utils/vector/vectorMax'
 import { vectorMin } from '../../../../utils/vector/vectorMin'
 import { State } from '../../State'
@@ -21,9 +14,7 @@ export function runActiveEdge(
 
   const env = createEnv(mod, { net })
 
-  const capForFreePorts = closeAllFreePorts(mod, net)
   interact(env, activeEdge, {})
-  releaseCapPorts(net, capForFreePorts)
 
   const deletedNodePositions = []
   for (const [key, position] of layout.nodePositions) {
@@ -38,7 +29,7 @@ export function runActiveEdge(
       [
         `[runActiveEdge] I expect two deleted node after one interaction.`,
         ``,
-        `  activeEdge: ${formatEdge(activeEdge)}`,
+        `  activeEdge: ${formatEdge(rendering.net, activeEdge)}`,
       ].join('\n'),
     )
   }

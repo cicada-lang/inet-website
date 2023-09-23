@@ -1,14 +1,14 @@
-import { Port } from '@cicada-lang/inet-cute'
+import { HalfEdge } from '@cicada-lang/inet-js/lib/lang/half-edge'
 
 export type HoverableEdge = {
   id: string
   distance: number
   first: {
-    port: Port
+    halfEdge: HalfEdge
     position: [number, number]
   }
   second: {
-    port: Port
+    halfEdge: HalfEdge
     position: [number, number]
   }
 }

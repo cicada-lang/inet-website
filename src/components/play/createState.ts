@@ -1,4 +1,4 @@
-import { Mod } from '@cicada-lang/inet-cute'
+import { Mod } from '@cicada-lang/inet-js'
 import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { useGlobalTheme } from '../../reactives/useGlobalTheme'
 import { State } from './State'

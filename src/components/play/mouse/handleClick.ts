@@ -1,3 +1,4 @@
+import { findHalfEdgePortOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgePortOrFail'
 import { State } from '../State'
 import { runGivenEdge } from '../components/net/runGivenEdge'
 import { withinRect } from '../components/rect/withinRect'
@@ -23,10 +24,12 @@ export function handleClick(state: State, event: MouseEvent): void {
   for (const rendering of state.netRenderings.values()) {
     if (rendering.hoveredEdge) {
       const { first, second } = rendering.hoveredEdge
-      if (first.port.isPrincipal && second.port.isPrincipal) {
+      const firstPort = findHalfEdgePortOrFail(rendering.net, first.halfEdge)
+      const secondPort = findHalfEdgePortOrFail(rendering.net, second.halfEdge)
+      if (firstPort.isPrincipal && secondPort.isPrincipal) {
         runGivenEdge(state, rendering, {
-          first: first.port,
-          second: second.port,
+          first: first.halfEdge,
+          second: second.halfEdge,
         })
       }
     }

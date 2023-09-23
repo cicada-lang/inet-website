@@ -1,4 +1,4 @@
-import { findNodeRuleEntries, presentNodeAsNet } from '@cicada-lang/inet-cute'
+import { findNodeRuleEntries, presentNode } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { createNetRendering } from '../../components/net/createNetRendering'
 import { createRandomNetLayout } from '../../components/net/createRandomNetLayout'
@@ -9,11 +9,11 @@ export function selectNode(state: State, givenName: string): void {
     if (definition['@kind'] === 'NodeDefinition') {
       if (name === givenName) {
         const ruleEntries = findNodeRuleEntries(state.mod, {
-          url: definition.mod.url,
+          modId: definition.mod.url.href,
           name: definition.name,
         })
 
-        const net = presentNodeAsNet(state.mod, name)
+        const net = presentNode(state.mod, name)
         const x = state.width / 3
         const y = state.height / 12
         const width = state.width / 3

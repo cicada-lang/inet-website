@@ -1,8 +1,10 @@
-inet-website for inet.js
+`word/` page should be `function/` page
 
-[bug] fix `runAllSteps`
+fix `renderSelectedType`
 
-- should not call `closeAllFreePorts` and `releaseCapPorts` in every steps
+[home] update main example
+
+[home] update illustrations
 
 # maybe
 

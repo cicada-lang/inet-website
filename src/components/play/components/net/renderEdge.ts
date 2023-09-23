@@ -1,4 +1,6 @@
-import { formatEdge, Port } from '@cicada-lang/inet-cute'
+import { formatEdge } from '@cicada-lang/inet-js'
+import { HalfEdge } from '@cicada-lang/inet-js/lib/lang/half-edge'
+import { findHalfEdgePortOrFail } from '@cicada-lang/inet-js/lib/lang/net/findHalfEdgePortOrFail'
 import colors from 'tailwindcss/colors'
 import { edgeDistance } from '../../../../utils/geometry/edgeDistance'
 import { State } from '../../State'
@@ -8,15 +10,21 @@ export function renderEdge(
   state: State,
   rendering: NetRendering,
   first: {
-    port: Port
+    halfEdge: HalfEdge
     position: [number, number]
   },
   second: {
-    port: Port
+    halfEdge: HalfEdge
     position: [number, number]
   },
 ): void {
-  const id = formatEdge({ first: first.port, second: second.port })
+  const firstPort = findHalfEdgePortOrFail(rendering.net, first.halfEdge)
+  const secondPort = findHalfEdgePortOrFail(rendering.net, second.halfEdge)
+
+  const id = formatEdge(rendering.net, {
+    first: first.halfEdge,
+    second: second.halfEdge,
+  })
 
   const distance = edgeDistance(
     first.position,
@@ -34,7 +42,7 @@ export function renderEdge(
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.lineWidth = isHovered ? 3 : 1.3
 
-  if (first.port.isPrincipal && second.port.isPrincipal) {
+  if (firstPort.isPrincipal && secondPort.isPrincipal) {
     if (state.theme.name === 'dark') {
       state.ctx.strokeStyle = colors.rose[400]
     } else {
@@ -44,7 +52,7 @@ export function renderEdge(
     state.ctx.lineWidth = isHovered ? 6 : 3
   }
 
-  if (first.port.isPrincipal && !second.port.isPrincipal) {
+  if (firstPort.isPrincipal && !secondPort.isPrincipal) {
     const gradient = state.ctx.createLinearGradient(
       ...first.position,
       ...second.position,
@@ -66,7 +74,7 @@ export function renderEdge(
     state.ctx.lineWidth = isHovered ? 4 : 1.3
   }
 
-  if (!first.port.isPrincipal && second.port.isPrincipal) {
+  if (!firstPort.isPrincipal && secondPort.isPrincipal) {
     const gradient = state.ctx.createLinearGradient(
       ...first.position,
       ...second.position,

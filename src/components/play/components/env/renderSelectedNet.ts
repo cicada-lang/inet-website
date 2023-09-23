@@ -1,4 +1,3 @@
-import { Port } from '@cicada-lang/inet-cute'
 import { State } from '../../State'
 import { NetRendering } from '../../components/net/NetRendering'
 import { renderNet } from '../../components/net/renderNet'
@@ -7,11 +6,7 @@ import { renderRunButton } from './renderRunButton'
 import { renderStepButton } from './renderStepButton'
 import { renderStepCounterLabel } from './renderStepCounterLabel'
 
-export function renderSelectedNet(
-  state: State,
-  port: Port,
-  rendering: NetRendering,
-): void {
+export function renderSelectedNet(state: State, rendering: NetRendering): void {
   renderNet(state, rendering)
 
   if (!state.isHidingUI) {

@@ -1,4 +1,4 @@
-import { Env } from '@cicada-lang/inet-cute'
+import { Env } from '@cicada-lang/inet-js'
 import { SelectedValue } from './SelectedValue'
 
 export type EnvRendering = {

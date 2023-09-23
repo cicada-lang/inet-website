@@ -1,4 +1,4 @@
-import { Mod } from '@cicada-lang/inet-cute'
+import { Mod } from '@cicada-lang/inet-js'
 
 export type State = {
   kind: 'Play' | 'Output' | 'Error'

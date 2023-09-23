@@ -1,4 +1,4 @@
-import { NodeEntry } from '@cicada-lang/inet-cute'
+import { NodeEntry } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { NetRendering } from '../net/NetRendering'
