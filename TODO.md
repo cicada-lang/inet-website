@@ -1,7 +1,6 @@
 # play
 
 [play] fix node page -- should not show principle port name
-[play] fix `renderSelectedType`
 
 # home
 

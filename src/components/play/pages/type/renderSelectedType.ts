@@ -1,3 +1,4 @@
+import { formatParameter } from '@cicada-lang/inet-js/lib/lang/stmt/formatParameter'
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
 import { renderText } from '../../components/text/renderText'
@@ -32,19 +33,16 @@ export function renderSelectedType(
     ? `${themeFontSize('2xl')} monospace`
     : `${themeFontSize('xl')} monospace`
 
-  // const inputText = selectedType.definition.input.map(formatWord).join(' ')
-  // const outputText = selectedType.definition.output.map(formatWord).join(' ')
+  const inputText = selectedType.definition.input
+    .map((parameter) => formatParameter(state.mod.env, parameter))
+    .join('\n')
 
-  // const text = lang.isZh()
-  //   ? [`输入：${inputText}`, `输出：${outputText}`].join('\n')
-  //   : [`input: ${inputText}`, `output: ${outputText}`].join('\n')
-
-  // renderText(state, {
-  //   text,
-  //   x,
-  //   y,
-  //   lineHeight: 30,
-  // })
+  renderText(state, {
+    text: inputText,
+    x,
+    y,
+    lineHeight: 30,
+  })
 
   state.ctx.restore()
 }
