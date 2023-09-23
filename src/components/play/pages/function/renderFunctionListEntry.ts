@@ -28,9 +28,10 @@ export function renderFunctionListEntry(
     x: marginL,
     y: marginT + height * i,
     height,
-    isActive: (state) => state.wordState.selectedWord?.name === definition.name,
+    isActive: (state) =>
+      state.functionState.selectedFunction?.name === definition.name,
     isDisabled: (state) =>
-      state.wordState.selectedWord?.name === definition.name,
+      state.functionState.selectedFunction?.name === definition.name,
     onClick: (state) => selectFunction(state, definition.name),
   })
 

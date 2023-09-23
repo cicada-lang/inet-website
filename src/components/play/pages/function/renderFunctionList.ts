@@ -8,7 +8,7 @@ import { renderFunctionListLabel } from './renderFunctionListLabel'
 export function renderFunctionList(state: State): void {
   renderFunctionListLabel(state)
 
-  const inViewLength = state.wordState.wordsInViewLength
+  const inViewLength = state.functionState.functionsInViewLength
   const height = themeSize(10)
   const marginT = height * 2
 
@@ -20,7 +20,7 @@ export function renderFunctionList(state: State): void {
   if (definitions.length > inViewLength) {
     const marginL = themeSize(10)
     const length = definitions.length
-    const cursor = state.wordState.wordsScrollCursor || 0
+    const cursor = state.functionState.functionsScrollCursor || 0
 
     renderScrollbar(state, {
       name: 'words-scrollbar',
@@ -32,7 +32,7 @@ export function renderFunctionList(state: State): void {
       inViewLength,
       cursor,
       onScroll: (cursor) => {
-        state.wordState.wordsScrollCursor = cursor
+        state.functionState.functionsScrollCursor = cursor
       },
     })
 

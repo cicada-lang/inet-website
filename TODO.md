@@ -1,14 +1,18 @@
-change route name to `function`
+# play
 
-fix `selectFunction`
+[play] change route name to `function`
+[play] fix node page -- should not show principle port name
+[play] fix `selectFunction`
+[play] fix `renderSelectedType`
 
-fix `renderSelectedType`
+# home
 
 [home] update main example
-
 [home] update illustrations
 
-fix `trackMouse`
+# later
+
+[play] fix `trackMouse`
 
 - trackMouse.ts:32 [Violation] Added non-passive event listener to a scroll-blocking 'touchstart' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952
 

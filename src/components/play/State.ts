@@ -42,5 +42,5 @@ export type State = {
   homeState: HomeState
   typeState: TypeState
   nodeState: NodeState
-  wordState: FunctionState
+  functionState: FunctionState
 }

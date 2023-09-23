@@ -19,7 +19,7 @@ export function selectFunction(state: State, givenName: string): void {
 
         maybeSelectTopValue(envRendering)
 
-        state.wordState.selectedWord = {
+        state.functionState.selectedFunction = {
           name,
           definition,
           envRendering,

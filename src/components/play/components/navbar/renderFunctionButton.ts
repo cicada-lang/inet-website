@@ -3,7 +3,7 @@ import { State } from '../../State'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { renderButton } from '../button/renderButton'
 
-export function renderWordButton(
+export function renderFunctionButton(
   state: State,
   options: {
     height: number
@@ -13,7 +13,7 @@ export function renderWordButton(
   const { height, marginT } = options
 
   const lang = useGlobalLang()
-  const text = lang.isZh() ? `词汇` : `Word`
+  const text = lang.isZh() ? `函数` : `Function`
 
   const x = state.width
   const y = height * 2 + marginT

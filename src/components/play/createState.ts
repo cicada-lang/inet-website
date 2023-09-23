@@ -50,6 +50,6 @@ export function createState(options: StateOptions): State {
     homeState: createHomeState({ env: mod.env, x: 0, y: 0, width, height }),
     typeState: createTypeState(),
     nodeState: createNodeState(),
-    wordState: createFunctionState(),
+    functionState: createFunctionState(),
   }
 }

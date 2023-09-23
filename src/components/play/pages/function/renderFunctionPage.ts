@@ -11,12 +11,12 @@ import { selectFirstFunction } from './selectFirstFunction'
 export function renderFunctionPage(state: State, options: RenderOptions): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  if (state.wordState.selectedWord === undefined) {
+  if (state.functionState.selectedFunction === undefined) {
     selectFirstFunction(state)
   }
 
-  if (state.wordState.selectedWord) {
-    const { envRendering } = state.wordState.selectedWord
+  if (state.functionState.selectedFunction) {
+    const { envRendering } = state.functionState.selectedFunction
 
     if (envRendering.selectedValue) {
       renderSelectedValue(state, envRendering.selectedValue)
