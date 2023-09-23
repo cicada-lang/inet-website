@@ -42,11 +42,13 @@ node add(
   result: Nat
 )
 
-rule add(target!, addend, result) zero(value!) {
+rule add(target!, addend, result)
+     zero(value!) {
   @connect(addend, result)
 }
 
-rule add(target!, addend, result) add1(prev, value!) {
+rule add(target!, addend, result)
+     add1(prev, value!) {
   @connect(add1(add(prev, addend)), result)
 }
 
