@@ -1,61 +1,59 @@
 export const codeFragment = `\
-rule zero add
-  (add)-addend
-  return-(add)
-end
+type Nat
 
-rule add1 add
-  (add)-addend
-  (add1)-prev add
-  add1 return-(add)
-end
+node zero(
+  ------
+  value!: Nat
+)
 
-zero add1 add1
-zero add1 add1
-add
+node add1(
+  prev: Nat
+  ----------
+  value!: Nat
+)
 
-zero add1 add1
-zero add1 add1
-add @run $result
+node add(
+  target!: Nat,
+  addend: Nat
+  --------
+  result: Nat
+)
 `
 
 export const code = `\
-type Nat -- @Type end
 
-node zero
-  ------------
-  Nat :value!
-end
+type Nat
 
-node add1
-  Nat :prev
-  ------------
-  Nat :value!
-end
+node zero(
+  ------
+  value!: Nat
+)
 
-node add
-  Nat :target!
-  Nat :addend
-  ------------
-  Nat :return
-end
+node add1(
+  prev: Nat
+  ----------
+  value!: Nat
+)
 
-rule zero add
-  (add)-addend
-  return-(add)
-end
+node add(
+  target!: Nat,
+  addend: Nat
+  --------
+  result: Nat
+)
 
-rule add1 add
-  (add)-addend
-  (add1)-prev add
-  add1 return-(add)
-end
+rule add(target!, addend, result) zero(value!) {
+  @connect(addend, result)
+}
 
-zero add1 add1
-zero add1 add1
-add
+rule add(target!, addend, result) add1(prev, value!) {
+  @connect(add1(add(prev, addend)), result)
+}
 
-zero add1 add1
-zero add1 add1
-add @run $result
+
+// TEST
+
+eval @inspect(add(add1(zero()), add1(zero())))
+eval @inspect(@run(add(add1(zero()), add1(zero()))))
+
 `

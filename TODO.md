@@ -1,6 +1,5 @@
 # home
 
-[home] update main example
 [home] update illustrations
 
 # later
