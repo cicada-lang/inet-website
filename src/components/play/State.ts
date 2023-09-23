@@ -5,10 +5,10 @@ import { Button } from './components/button/Button'
 import { ClickableRect } from './components/clickable-rect/ClickableRect'
 import { NetRendering } from './components/net/NetRendering'
 import { Mouse } from './mouse/Mouse'
+import { FunctionState } from './pages/function/FunctionState'
 import { HomeState } from './pages/home/HomeState'
 import { NodeState } from './pages/node/NodeState'
 import { TypeState } from './pages/type/TypeState'
-import { WordState } from './pages/word/WordState'
 import { Route, RouteExp } from './route/Route'
 
 export type State = {
@@ -42,5 +42,5 @@ export type State = {
   homeState: HomeState
   typeState: TypeState
   nodeState: NodeState
-  wordState: WordState
+  wordState: FunctionState
 }

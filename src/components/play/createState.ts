@@ -3,11 +3,11 @@ import { useBreakpoints } from '../../reactives/useBreakpoints'
 import { useGlobalTheme } from '../../reactives/useGlobalTheme'
 import { State } from './State'
 import { createMouse } from './mouse/createMouse'
+import { createFunctionState } from './pages/function/createFunctionState'
 import { createHomeState } from './pages/home/createHomeState'
 import { createNodeState } from './pages/node/createNodeState'
 import { routes } from './pages/routes'
 import { createTypeState } from './pages/type/createTypeState'
-import { createWordState } from './pages/word/createWordState'
 
 export type StateOptions = {
   canvas: HTMLCanvasElement
@@ -50,6 +50,6 @@ export function createState(options: StateOptions): State {
     homeState: createHomeState({ env: mod.env, x: 0, y: 0, width, height }),
     typeState: createTypeState(),
     nodeState: createNodeState(),
-    wordState: createWordState(),
+    wordState: createFunctionState(),
   }
 }

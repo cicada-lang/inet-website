@@ -1,10 +1,16 @@
-`word/` page should be `function/` page
+change route name to `function`
+
+fix `selectFunction`
 
 fix `renderSelectedType`
 
 [home] update main example
 
 [home] update illustrations
+
+fix `trackMouse`
+
+- trackMouse.ts:32 [Violation] Added non-passive event listener to a scroll-blocking 'touchstart' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952
 
 # maybe
 

@@ -4,12 +4,12 @@ import { renderLabel } from '../../components/label/renderLabel'
 import { themeFontSize } from '../../theme/themeFontSize'
 import { themeSize } from '../../theme/themeSize'
 
-export function renderWordListLabel(state: State): void {
+export function renderFunctionListLabel(state: State): void {
   const height = themeSize(10)
 
   const lang = useGlobalLang()
 
-  const text = lang.isZh() ? '词汇列表' : 'Words'
+  const text = lang.isZh() ? '函数列表' : 'Functions'
   const x = 0
   const y = height
 

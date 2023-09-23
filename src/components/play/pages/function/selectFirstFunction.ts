@@ -1,10 +1,10 @@
 import { State } from '../../State'
-import { selectWord } from './selectWord'
+import { selectFunction } from './selectFunction'
 
-export function selectFirstWord(state: State): void {
+export function selectFirstFunction(state: State): void {
   for (const [name, definition] of state.mod.definitions) {
     if (definition['@kind'] === 'FunctionDefinition') {
-      selectWord(state, name)
+      selectFunction(state, name)
       return
     }
   }

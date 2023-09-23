@@ -2,9 +2,9 @@ import { FunctionDefinition } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { renderButton } from '../../components/button/renderButton'
 import { themeFontSize } from '../../theme/themeFontSize'
-import { selectWord } from './selectWord'
+import { selectFunction } from './selectFunction'
 
-export function renderWordListEntry(
+export function renderFunctionListEntry(
   state: State,
   i: number,
   definition: FunctionDefinition,
@@ -31,7 +31,7 @@ export function renderWordListEntry(
     isActive: (state) => state.wordState.selectedWord?.name === definition.name,
     isDisabled: (state) =>
       state.wordState.selectedWord?.name === definition.name,
-    onClick: (state) => selectWord(state, definition.name),
+    onClick: (state) => selectFunction(state, definition.name),
   })
 
   state.ctx.restore()

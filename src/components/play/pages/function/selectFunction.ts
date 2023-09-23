@@ -3,7 +3,7 @@ import { State } from '../../State'
 import { createEnvRendering } from '../../components/env/createEnvRendering'
 import { maybeSelectTopValue } from '../../components/env/maybeSelectTopValue'
 
-export function selectWord(state: State, givenName: string): void {
+export function selectFunction(state: State, givenName: string): void {
   for (const [name, definition] of state.mod.definitions) {
     if (definition['@kind'] === 'FunctionDefinition') {
       if (name === givenName) {

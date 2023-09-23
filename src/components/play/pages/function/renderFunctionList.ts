@@ -2,11 +2,11 @@ import { FunctionDefinition } from '@cicada-lang/inet-js'
 import { State } from '../../State'
 import { renderScrollbar } from '../../components/scrollbar/renderScrollbar'
 import { themeSize } from '../../theme/themeSize'
-import { renderWordListEntry } from './renderWordListEntry'
-import { renderWordListLabel } from './renderWordListLabel'
+import { renderFunctionListEntry } from './renderFunctionListEntry'
+import { renderFunctionListLabel } from './renderFunctionListLabel'
 
-export function renderWordList(state: State): void {
-  renderWordListLabel(state)
+export function renderFunctionList(state: State): void {
+  renderFunctionListLabel(state)
 
   const inViewLength = state.wordState.wordsInViewLength
   const height = themeSize(10)
@@ -39,7 +39,7 @@ export function renderWordList(state: State): void {
     for (const [i, definition] of definitions
       .slice(cursor, cursor + inViewLength)
       .entries()) {
-      renderWordListEntry(state, i, definition, {
+      renderFunctionListEntry(state, i, definition, {
         height,
         marginT,
         marginL,
@@ -47,7 +47,7 @@ export function renderWordList(state: State): void {
     }
   } else {
     for (const [i, definition] of definitions.entries()) {
-      renderWordListEntry(state, i, definition, {
+      renderFunctionListEntry(state, i, definition, {
         height,
         marginT,
         marginL: 0,
