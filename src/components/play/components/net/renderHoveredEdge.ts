@@ -1,4 +1,5 @@
-import { formatHalfEdge } from '@cicada-lang/inet-js'
+import { createEnv, findHalfEdgePort, formatValue } from '@cicada-lang/inet-js'
+import { formatPort } from '@cicada-lang/inet-js/lib/lang/port/formatPort'
 import { State } from '../../State'
 import { themeSize } from '../../theme/themeSize'
 import { NetRendering } from '../net/NetRendering'
@@ -17,21 +18,32 @@ export function renderHoveredEdge(
   state.ctx.strokeStyle = state.theme.name === 'dark' ? 'white' : 'black'
   state.ctx.fillStyle = state.theme.name === 'dark' ? 'white' : 'black'
 
-  const firstPortText = formatHalfEdge(rendering.net, first.halfEdge)
-  // const firstTypeText = `  ${formatValue(first.port.t)}`
-  const secondPortText = formatHalfEdge(rendering.net, second.halfEdge)
-  // const secondTypeText = `  ${formatValue(second.port.t)}`
+  const env = createEnv(state.mod, { net: rendering.net })
+
+  const firstPort = findHalfEdgePort(rendering.net, first.halfEdge)
+  const firstPortText = firstPort
+    ? formatPort(rendering.net, firstPort)
+    : '#unconnected'
+  const firstTypeText = firstPort ? `  ${formatValue(env, firstPort.t)}` : `  `
+
+  const secondPort = findHalfEdgePort(rendering.net, second.halfEdge)
+  const secondPortText = secondPort
+    ? formatPort(rendering.net, secondPort)
+    : '#unconnected'
+  const secondTypeText = secondPort
+    ? `  ${formatValue(env, secondPort.t)}`
+    : `  `
 
   const firstPortTextMetrics = state.ctx.measureText(firstPortText)
-  // const firstTypeTextMetrics = state.ctx.measureText(firstTypeText)
+  const firstTypeTextMetrics = state.ctx.measureText(firstTypeText)
   const secondPortTextMetrics = state.ctx.measureText(secondPortText)
-  // const secondTypeTextMetrics = state.ctx.measureText(secondTypeText)
+  const secondTypeTextMetrics = state.ctx.measureText(secondTypeText)
 
   const maxWidth = Math.max(
     firstPortTextMetrics.width,
-    // firstTypeTextMetrics.width,
+    firstTypeTextMetrics.width,
     secondPortTextMetrics.width,
-    // secondTypeTextMetrics.width,
+    secondTypeTextMetrics.width,
   )
 
   const lineHeight = themeSize(5)
@@ -63,9 +75,21 @@ export function renderHoveredEdge(
   )
 
   state.ctx.fillText(
-    secondPortText,
+    firstTypeText,
     x + paddingX,
     y + lineHeight * 1 + textOffset,
+  )
+
+  state.ctx.fillText(
+    secondPortText,
+    x + paddingX,
+    y + lineHeight * 2 + textOffset,
+  )
+
+  state.ctx.fillText(
+    secondTypeText,
+    x + paddingX,
+    y + lineHeight * 3 + textOffset,
   )
 
   state.ctx.restore()
