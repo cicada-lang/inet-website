@@ -1,3 +1,4 @@
+bui
 <script setup lang="ts">
 import { Base64 } from 'js-base64'
 import { onMounted, ref } from 'vue'
@@ -136,13 +137,13 @@ onMounted(async () => {
               <template #zh>
                 <span class="font-bold">iNet</span> 有 <br />
                 {{ sections.statements.title.zh }}，<br />
-                {{ sections.words.title.zh }}，<br />
+                {{ sections.expressions.title.zh }}，<br />
                 {{ sections.builtins.title.zh }}。<br />
               </template>
               <template #en>
                 <span class="font-bold">iNet</span> has <br />
                 {{ sections.statements.title.en }}, <br />
-                {{ sections.words.title.en }}, <br />
+                {{ sections.expressions.title.en }}, <br />
                 {{ sections.builtins.title.en }}. <br />
               </template>
             </Lang>

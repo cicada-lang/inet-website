@@ -1,7 +1,3 @@
-# home
-
-[home] update illustrations -- expressions
-
 # later
 
 [play] fix `trackMouse`

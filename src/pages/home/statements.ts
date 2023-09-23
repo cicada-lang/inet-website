@@ -71,6 +71,28 @@ function add2(x: Nat): Nat {
   },
 
   {
+    name: 'eval',
+    description: {
+      zh: '求值一个表达式。',
+      en: 'Evaluate an expression.',
+    },
+    code: `\
+eval add(two(), two())
+`,
+  },
+
+  {
+    name: 'let',
+    description: {
+      zh: '给一个变量赋值。',
+      en: 'Assign a value to a variable.',
+    },
+    code: `\
+let x = add(two(), two())
+`,
+  },
+
+  {
     name: 'import',
     description: {
       zh: '从模块引入某些定义。',
@@ -78,12 +100,9 @@ function add2(x: Nat): Nat {
     },
     code: `\
 import {
-  Nat, zero, add1, add
-} from "./Nat.i"
-
-import {
+  Nat, zero, add1, add,
   one, two, three
-} from "https://code-of-inet-js.fidb.app/std/datatype/Nat.i"
+} from "./Nat.i"
 `,
   },
 

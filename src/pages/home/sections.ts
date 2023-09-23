@@ -1,7 +1,7 @@
 import { Section } from './Section'
 import { builtins } from './builtins'
+import { expressions } from './expressions'
 import { statements } from './statements'
-import { words } from './words'
 
 export const sections: Record<string, Section> = {
   statements: {
@@ -12,19 +12,19 @@ export const sections: Record<string, Section> = {
     },
   },
 
-  words: {
-    illustrations: words,
+  expressions: {
+    illustrations: expressions,
     title: {
-      zh: `${words.length} 种词`,
-      en: `${words.length} kinds of words`,
+      zh: `${expressions.length} 种表达式`,
+      en: `${expressions.length} kinds of expressions`,
     },
   },
 
   builtins: {
     illustrations: builtins,
     title: {
-      zh: `${builtins.length} 个预定义词`,
-      en: `${builtins.length} built-in words`,
+      zh: `${builtins.length} 个预定义的东西`,
+      en: `${builtins.length} built-in definition`,
     },
   },
 }
