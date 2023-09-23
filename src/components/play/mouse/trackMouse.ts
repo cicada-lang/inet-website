@@ -29,19 +29,31 @@ export function trackMouse(state: State) {
     handleMousemove(state, event)
   })
 
-  state.canvas.addEventListener('touchstart', (event) => {
-    state.mouse.position = touchEventOffset(event)
-    state.mouse.isDown = true
-  })
+  state.canvas.addEventListener(
+    'touchstart',
+    (event) => {
+      state.mouse.position = touchEventOffset(event)
+      state.mouse.isDown = true
+    },
+    { passive: true },
+  )
 
-  state.canvas.addEventListener('touchend', (event) => {
-    state.mouse.position = touchEventOffset(event)
-    state.mouse.isDown = false
-  })
+  state.canvas.addEventListener(
+    'touchend',
+    (event) => {
+      state.mouse.position = touchEventOffset(event)
+      state.mouse.isDown = false
+    },
+    { passive: true },
+  )
 
-  state.canvas.addEventListener('touchmove', (event) => {
-    state.mouse.position = touchEventOffset(event)
-    state.mouse.isDown = true
-    handleTouchmove(state, event)
-  })
+  state.canvas.addEventListener(
+    'touchmove',
+    (event) => {
+      state.mouse.position = touchEventOffset(event)
+      state.mouse.isDown = true
+      handleTouchmove(state, event)
+    },
+    { passive: true },
+  )
 }
