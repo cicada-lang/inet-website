@@ -1,7 +1,3 @@
-# play
-
-[play] fix node page -- should not show principle port name
-
 # home
 
 [home] update main example
