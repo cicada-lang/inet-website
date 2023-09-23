@@ -1,8 +1,10 @@
+inet-website for inet.js
+
 [bug] fix `runAllSteps`
 
 - should not call `closeAllFreePorts` and `releaseCapPorts` in every steps
 
-# later
+# maybe
 
-[play] `renderNet` -- adjust node size by number of nodes
-[play] `forces/` -- a button to introduce gravity and fix root node
+[play] [maybe] `renderNet` -- adjust node size by number of nodes
+[play] [maybe] `forces/` -- a button to introduce gravity and fix root node
