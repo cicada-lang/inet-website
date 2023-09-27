@@ -24,7 +24,7 @@ export const sections: Record<string, Section> = {
     illustrations: builtins,
     title: {
       zh: `${builtins.length} 个预定义的东西`,
-      en: `${builtins.length} built-in definition`,
+      en: `${builtins.length} built-in definitions`,
     },
   },
 }
