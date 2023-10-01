@@ -12,5 +12,5 @@ export const routes: Array<RouteRecordRaw> = [
     component: Playground,
     props: (route) => ({ encoded: route.params.encoded }),
   },
-  { path: '/:pathMatch(.*)', component: PageNotFound },  
+  { path: '/:pathMatch(.*)', component: PageNotFound },
 ]
