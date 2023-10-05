@@ -14,7 +14,7 @@ const theme = useGlobalTheme()
         v-model="theme.name"
         :entries="[
           { value: 'system', label: '跟随系统' },
-          { value: 'light', label: '普通模式' },
+          { value: 'light', label: '浅色模式' },
           { value: 'dark', label: '深色模式' },
         ]"
       >
