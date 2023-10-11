@@ -12,10 +12,10 @@ const lang = useGlobalLang()
 
 <template>
   <div
-    class="border-b flex lg:border-t-0 border-t dark:border-white border-black"
+    class="flex border-b border-t border-black dark:border-white lg:border-t-0"
   >
     <button
-      class="text-xl hover:underline underline-offset-4 decoration-2 border-r px-3 py-2 border-black dark:border-white"
+      class="border-r border-black px-3 py-2 text-xl decoration-2 underline-offset-4 hover:underline dark:border-white"
       :class="{
         underline: state.kind === 'Play',
       }"
@@ -29,7 +29,7 @@ const lang = useGlobalLang()
 
     <button
       v-if="state.output"
-      class="px-3 py-2 text-xl hover:underline underline-offset-4 decoration-2 border-r border-black dark:border-white"
+      class="border-r border-black px-3 py-2 text-xl decoration-2 underline-offset-4 hover:underline dark:border-white"
       :class="{
         underline: state.kind === 'Output',
       }"
@@ -43,7 +43,7 @@ const lang = useGlobalLang()
 
     <button
       v-if="state.errorMessage"
-      class="px-3 py-2 text-xl hover:underline text-rose-500 dark:text-rose-400 underline-offset-4 decoration-2 border-r border-black dark:border-white"
+      class="border-r border-black px-3 py-2 text-xl text-rose-500 decoration-2 underline-offset-4 hover:underline dark:border-white dark:text-rose-400"
       :class="{
         underline: state.kind === 'Error',
       }"

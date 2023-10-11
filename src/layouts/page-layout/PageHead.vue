@@ -9,15 +9,15 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="flex-wrap flex justify-between">
-    <RouterLink to="/" class="flex items-baseline text-xl font-bold pr-4">
+  <div class="flex flex-wrap justify-between">
+    <RouterLink to="/" class="flex items-baseline pr-4 text-xl font-bold">
       iNet
     </RouterLink>
 
-    <div class="flex-wrap flex">
+    <div class="flex flex-wrap">
       <RouterLink
         to="/playground"
-        class="pr-4 text-xl hover:underline underline-offset-4 decoration-2"
+        class="pr-4 text-xl decoration-2 underline-offset-4 hover:underline"
         :class="{
           underline: route.path.startsWith('/playground'),
         }"
@@ -30,7 +30,7 @@ const route = useRoute()
 
       <RouterLink
         to="/settings"
-        class="text-xl pr-4 flex items-center hover:underline underline-offset-4 decoration-2"
+        class="flex items-center pr-4 text-xl decoration-2 underline-offset-4 hover:underline"
         :class="{
           underline: route.path.startsWith('/settings'),
         }"
@@ -48,7 +48,7 @@ const route = useRoute()
             ? 'https://readonly.link/articles/https://code-of-inet-js.fidb.app/docs/articles/反应网编程.md'
             : 'https://readonly.link/articles/https://code-of-inet-js.fidb.app/docs/articles/programming-with-interaction-nets.md'
         "
-        class="pr-4 text-xl hover:underline underline-offset-4 decoration-2"
+        class="pr-4 text-xl decoration-2 underline-offset-4 hover:underline"
       >
         <Lang>
           <template #zh> 文档 </template>
@@ -61,7 +61,7 @@ const route = useRoute()
         href="https://github.com/cicada-lang/inet-js"
         class="mt-1"
       >
-        <IconGitHub class="w-5 h-5" />
+        <IconGitHub class="h-5 w-5" />
       </a>
     </div>
   </div>

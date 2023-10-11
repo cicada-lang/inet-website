@@ -26,9 +26,9 @@ onMounted(async () => {
 <template>
   <PageLayout>
     <div class="flex flex-col">
-      <div class="w-full flex flex-col lg:max-w-[64rem] self-center px-3 py-32">
-        <div class="text-7xl text-blance font-bold">iNet</div>
-        <div class="text-4xl text-blance pt-2">
+      <div class="flex w-full flex-col self-center px-3 py-32 lg:max-w-[64rem]">
+        <div class="text-blance text-7xl font-bold">iNet</div>
+        <div class="text-blance pt-2 text-4xl">
           <Lang>
             <template #zh> 用可反应的网编程。 </template>
             <template #en> Programming with interaction nets. </template>
@@ -36,7 +36,7 @@ onMounted(async () => {
 
           <div class="flex pt-5">
             <a
-              class="text-2xl underline underline-offset-4 decoration-2"
+              class="text-2xl underline decoration-2 underline-offset-4"
               target="_blank"
               :href="
                 lang.isZh()
@@ -54,23 +54,23 @@ onMounted(async () => {
       </div>
 
       <div
-        class="px-3 flex lg:flex-row flex-col lg:max-w-[64rem] w-full self-center"
+        class="flex w-full flex-col self-center px-3 lg:max-w-[64rem] lg:flex-row"
       >
         <div class="lg:w-1/3 lg:pr-3">
           <div class="border-2 border-black dark:border-white">
             <pre
-              class="lg:p-6 p-4 lg:text-lg text-base whitespace-pre font-code"
+              class="whitespace-pre p-4 font-code text-base lg:p-6 lg:text-lg"
               >{{ codeFragment }}</pre
             >
           </div>
         </div>
 
-        <div class="lg:py-0 pt-3 lg:w-2/3">
+        <div class="pt-3 lg:w-2/3 lg:py-0">
           <div
-            class="flex-col flex h-full border border-black dark:border-white"
+            class="flex h-full flex-col border border-black dark:border-white"
           >
             <Play
-              class="lg:min-h-full min-h-[32rem]"
+              class="min-h-[32rem] lg:min-h-full"
               v-if="state"
               :mod="state.mod"
               :tick="0"
@@ -79,20 +79,20 @@ onMounted(async () => {
         </div>
       </div>
 
-      <div class="w-full lg:max-w-[64rem] flex px-3 pt-3 pb-28 self-center">
+      <div class="flex w-full self-center px-3 pb-28 pt-3 lg:max-w-[64rem]">
         <div class="lg:w-1/3"></div>
 
-        <div class="w-full lg:w-2/3 flex flex-col">
+        <div class="flex w-full flex-col lg:w-2/3">
           <div>
-            <Lang class="lg:text-xl text-lg">
+            <Lang class="text-lg lg:text-xl">
               <template #zh>
-                点击<span class="dark:text-rose-400 text-rose-500 font-bold"
+                点击<span class="font-bold text-rose-500 dark:text-rose-400"
                   >红边</span
                 >，以观察反应。
               </template>
               <template #en>
                 Click
-                <span class="dark:text-rose-400 text-rose-500 font-bold"
+                <span class="font-bold text-rose-500 dark:text-rose-400"
                   >red edges</span
                 >
                 to observe interactions.
@@ -100,11 +100,11 @@ onMounted(async () => {
             </Lang>
           </div>
 
-          <Lang class="lg:text-xl text-lg">
+          <Lang class="text-lg lg:text-xl">
             <template #zh>
               去<RouterLink
                 :to="`/playground/${Base64.encode(code)}`"
-                class="underline underline-offset-4 decoration-2 font-bold"
+                class="font-bold underline decoration-2 underline-offset-4"
                 >演算场</RouterLink
               >，以修改代码。
             </template>
@@ -112,7 +112,7 @@ onMounted(async () => {
               Goto
               <RouterLink
                 :to="`/playground/${Base64.encode(code)}`"
-                class="underline underline-offset-4 decoration-2 font-bold"
+                class="font-bold underline decoration-2 underline-offset-4"
                 >The Playground</RouterLink
               >
               to edit the code.
@@ -121,18 +121,18 @@ onMounted(async () => {
         </div>
       </div>
 
-      <div class="w-full lg:max-w-[64rem] flex px-3 pt-10 self-center">
+      <div class="flex w-full self-center px-3 pt-10 lg:max-w-[64rem]">
         <div class="lg:w-1/3"></div>
 
         <div class="w-full lg:w-2/3">
-          <div class="lg:text-3xl text-2xl text-blance font-bold">
+          <div class="text-blance text-2xl font-bold lg:text-3xl">
             <Lang>
               <template #zh> 语言 </template>
               <template #en> The Language </template>
             </Lang>
           </div>
 
-          <div class="lg:text-xl text-lg py-1">
+          <div class="py-1 text-lg lg:text-xl">
             <Lang>
               <template #zh>
                 <span class="font-bold">iNet</span> 有 <br />
@@ -152,17 +152,17 @@ onMounted(async () => {
       </div>
 
       <div
-        class="w-full space-y-6 lg:max-w-[64rem] flex flex-col items-start px-3 lg:pt-4 pt-3 self-center"
+        class="flex w-full flex-col items-start space-y-6 self-center px-3 pt-3 lg:max-w-[64rem] lg:pt-4"
       >
         <div
           v-for="({ illustrations, title }, key) of sections"
           :key="key"
           class="w-full"
         >
-          <div class="flex lg:flex-row flex-col w-full lg:pb-1">
+          <div class="flex w-full flex-col lg:flex-row lg:pb-1">
             <div class="lg:w-1/3"></div>
             <div
-              class="overflow-auto lg:w-2/3 text-start lg:text-2xl text-xl font-bold"
+              class="overflow-auto text-start text-xl font-bold lg:w-2/3 lg:text-2xl"
             >
               <Lang>
                 <template #zh> {{ title.zh }} </template>
@@ -174,9 +174,9 @@ onMounted(async () => {
           <div
             v-for="(illustration, index) of illustrations"
             :key="index"
-            class="flex lg:flex-row flex-col w-full"
+            class="flex w-full flex-col lg:flex-row"
           >
-            <div class="lg:text-xl text-lg lg:w-1/3 pr-6 lg:pt-6 pt-2 pb-2">
+            <div class="pb-2 pr-6 pt-2 text-lg lg:w-1/3 lg:pt-6 lg:text-xl">
               <div class="font-bold">{{ illustration.name }}</div>
 
               <Lang>
@@ -190,7 +190,7 @@ onMounted(async () => {
             </div>
 
             <div
-              class="overflow-auto border-2 lg:w-2/3 border-black dark:border-white"
+              class="overflow-auto border-2 border-black dark:border-white lg:w-2/3"
               :class="{
                 'lg:border-b-0': index === 0,
                 'lg:border-t-0':
@@ -199,7 +199,7 @@ onMounted(async () => {
                   index !== 0 && index !== illustrations.length - 1,
               }"
             >
-              <pre class="lg:p-6 p-4 lg:text-lg text-base font-code">{{
+              <pre class="p-4 font-code text-base lg:p-6 lg:text-lg">{{
                 illustration.code
               }}</pre>
             </div>

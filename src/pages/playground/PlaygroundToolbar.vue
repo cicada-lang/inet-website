@@ -42,9 +42,9 @@ async function share() {
 </script>
 
 <template>
-  <div class="border-b flex dark:border-white border-black justify-end">
+  <div class="flex justify-end border-b border-black dark:border-white">
     <button
-      class="text-xl hover:underline underline-offset-4 px-3 py-2 decoration-2 border-l border-black dark:border-white"
+      class="border-l border-black px-3 py-2 text-xl decoration-2 underline-offset-4 hover:underline dark:border-white"
       @click="run()"
     >
       <Lang class="inline">
@@ -54,13 +54,13 @@ async function share() {
 
       <span
         v-if="timeUsedToRun"
-        class="text-stone-500 dark:text-stone-300 text-base"
+        class="text-base text-stone-500 dark:text-stone-300"
         >({{ Math.floor(timeUsedToRun) }} ms)</span
       >
     </button>
 
     <button
-      class="text-xl px-3 py-2 hover:underline underline-offset-4 decoration-2 border-l border-black dark:border-white"
+      class="border-l border-black px-3 py-2 text-xl decoration-2 underline-offset-4 hover:underline dark:border-white"
       @click="share()"
     >
       <Lang>

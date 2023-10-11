@@ -3,7 +3,7 @@ import Lang from '../../components/lang/Lang.vue'
 </script>
 
 <template>
-  <div class="p-3 mt-20 text-end">
+  <div class="mt-20 p-3 text-end">
     <Lang>
       <template #zh>
         <div>演算者，有向之变化也。</div>

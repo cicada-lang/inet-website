@@ -46,27 +46,27 @@ watch(
 
 <template>
   <div
-    class="flex overflow-auto h-screen-dynamic flex-col dark:bg-black dark:text-white"
+    class="h-screen-dynamic flex flex-col overflow-auto dark:bg-black dark:text-white"
   >
     <Head>
       <title v-if="lang.isZh()">演算场 | iNet</title>
       <title v-else>Playground | iNet</title>
     </Head>
 
-    <PageHead class="border-b border-black dark:border-white px-3 py-2" />
+    <PageHead class="border-b border-black px-3 py-2 dark:border-white" />
 
-    <div v-if="state" class="flex flex-col h-full lg:overflow-auto lg:flex-row">
-      <div class="flex min-h-[26rem] flex-col lg:overflow-auto h-full lg:w-1/2">
+    <div v-if="state" class="flex h-full flex-col lg:flex-row lg:overflow-auto">
+      <div class="flex h-full min-h-[26rem] flex-col lg:w-1/2 lg:overflow-auto">
         <PlaygroundToolbar :state="state" />
 
         <PlaygroundEditor
-          class="h-full lg:overflow-auto resize-none"
+          class="h-full resize-none lg:overflow-auto"
           :state="state"
         />
       </div>
 
       <div
-        class="lg:border-l flex flex-col min-h-full lg:overflow-auto h-full border-black dark:border-white lg:w-1/2"
+        class="flex h-full min-h-full flex-col border-black dark:border-white lg:w-1/2 lg:overflow-auto lg:border-l"
       >
         <PlaygroundTabs :state="state" />
 
