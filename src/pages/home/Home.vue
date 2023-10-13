@@ -9,8 +9,8 @@ import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import HomeFoot from './HomeFoot.vue'
 import { State } from './State'
 import { code, codeFragment } from './example'
-import { stateLoad } from './stateLoad'
 import { sections } from './sections'
+import { stateLoad } from './stateLoad'
 
 const state = ref<State | undefined>(undefined)
 
