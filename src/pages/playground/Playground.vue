@@ -13,7 +13,7 @@ import PlaygroundPlay from './PlaygroundPlay.vue'
 import PlaygroundTabs from './PlaygroundTabs.vue'
 import PlaygroundToolbar from './PlaygroundToolbar.vue'
 import { State } from './State'
-import { loadStateReactive } from './loadStateReactive'
+import { stateLoadReactive } from './stateLoadReactive'
 
 defineProps<{
   encoded: String
@@ -27,7 +27,7 @@ const lang = useGlobalLang()
 const state = ref<State | undefined>(undefined)
 
 onMounted(async () => {
-  state.value = await loadStateReactive({
+  state.value = await stateLoadReactive({
     text: Base64.decode(String(route.params.encoded)),
   })
 })

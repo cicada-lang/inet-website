@@ -9,7 +9,7 @@ import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import HomeFoot from './HomeFoot.vue'
 import { State } from './State'
 import { code, codeFragment } from './example'
-import { loadState } from './loadState'
+import { stateLoad } from './stateLoad'
 import { sections } from './sections'
 
 const state = ref<State | undefined>(undefined)
@@ -17,7 +17,7 @@ const state = ref<State | undefined>(undefined)
 const lang = useGlobalLang()
 
 onMounted(async () => {
-  state.value = await loadState({
+  state.value = await stateLoad({
     text: code,
   })
 })

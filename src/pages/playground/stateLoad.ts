@@ -6,7 +6,7 @@ export type StateOptions = {
   text: string
 }
 
-export async function loadState(options: StateOptions): Promise<State> {
+export async function stateLoad(options: StateOptions): Promise<State> {
   const { text } = options
 
   const fetcher = new Fetcher()
