@@ -1,4 +1,4 @@
-import { formatParameter } from '@cicada-lang/inet-js/lib/lang/stmt/formatParameter'
+import { formatParameter } from '@cicada-lang/inet-js/lib/lang/parameter/formatParameter.js'
 import { useGlobalLang } from '../../../lang/useGlobalLang'
 import { State } from '../../State'
 import { renderText } from '../../components/text/renderText'
