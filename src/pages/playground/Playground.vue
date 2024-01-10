@@ -57,30 +57,30 @@ watch(
 
     <div v-if="state" class="flex h-full flex-col lg:flex-row lg:overflow-auto">
       <div class="flex h-full min-h-[26rem] flex-col lg:w-1/2 lg:overflow-auto">
-        <PlaygroundToolbar :state="state" />
+        <PlaygroundToolbar :state />
 
         <PlaygroundEditor
           class="h-full resize-none lg:overflow-auto"
-          :state="state"
+          :state
         />
       </div>
 
       <div
         class="flex h-full min-h-full flex-col border-black dark:border-white lg:w-1/2 lg:overflow-auto lg:border-l"
       >
-        <PlaygroundTabs :state="state" />
+        <PlaygroundTabs :state />
 
-        <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
+        <PlaygroundPlay v-if="state.kind === 'Play'" :state />
 
         <PlaygroundOutput
           v-if="state.output && state.kind === 'Output'"
-          :state="state"
+          :state
           :output="state.output"
         />
 
         <PlaygroundError
           v-if="state.errorMessage && state.kind === 'Error'"
-          :state="state"
+          :state
           :errorMessage="state.errorMessage"
         />
       </div>
