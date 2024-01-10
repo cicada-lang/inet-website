@@ -59,10 +59,7 @@ watch(
       <div class="flex h-full min-h-[26rem] flex-col lg:w-1/2 lg:overflow-auto">
         <PlaygroundToolbar :state />
 
-        <PlaygroundEditor
-          class="h-full resize-none lg:overflow-auto"
-          :state
-        />
+        <PlaygroundEditor class="h-full resize-none lg:overflow-auto" :state />
       </div>
 
       <div
